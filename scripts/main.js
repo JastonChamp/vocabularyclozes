@@ -112,7 +112,10 @@ function bindInteractions() {
   document.querySelectorAll('.blank').forEach(b => {
     b.onclick = () => state.selectedWord && placeWord(b, state.selectedWord.textContent);
     b.ondragover = e => e.preventDefault();
-    b.ondrop = e => { placeWord(b, e.dataTransfer.getData('text')); };
+     b.ondrop = e => {
+      e.preventDefault();
+      placeWord(b, e.dataTransfer.getData('text'));
+    };
   });
   document.querySelectorAll('.keyword').forEach(el => {
     el.onclick = () => {
@@ -143,6 +146,9 @@ function placeWord(blank, txt) {
   checkSingle(blank);
   state.selectedWord = null;
   document.querySelectorAll('.word').forEach(w => w.classList.remove('selected'));
+  // remove the used word from the word box to prevent duplicate placement
+  const match = Array.from(document.querySelectorAll('.word')).find(w => w.textContent === txt);
+  if (match) match.remove();
 }
 
 function checkSingle(blank) {
