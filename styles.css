@@ -291,6 +291,10 @@ body:not(.light-mode) #word-box {
   user-select: none;
 }
 .word:hover { background: #2980b9; }
+.word.selected {
+  outline: 2px solid #fff;
+  background: #1a6dcc;
+}
 .hint-for-blank {
   margin-left: 5px; padding: 5px;
   background: #f1c40f; border: none;
