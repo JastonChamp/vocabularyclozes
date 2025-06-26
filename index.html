@@ -6,15 +6,15 @@
   <title>Vocabulary Cloze Adventure</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="sparkle light-mode">
   <!-- Tutorial Modal for Onboarding -->
-  <div id="tutorial-modal" class="modal">
+  <div id="tutorial-modal" class="modal" role="dialog" aria-modal="true">
     <div class="modal-content">
       <h2>Welcome to Vocabulary Cloze Adventure!</h2>
       <p>Follow these steps:</p>
       <ol>
         <li>Drag or tap a word from the word box to fill a blank.</li>
-        <li>Use the 💡 Hint button or keywords for help.</li>
+        <li>Use the 💡 Hint button or click highlighted keywords for help.</li>
         <li>Press ✅ Submit to check your answers.</li>
       </ol>
       <button id="tutorial-close-btn" class="modal-btn">Let's Begin</button>
@@ -24,8 +24,8 @@
   <!-- Header -->
   <header>
     <div class="header-controls">
-      <button id="sidebar-toggle" class="sidebar-toggle">☰</button>
-      <button id="toggle-theme" class="theme-toggle">Light Mode</button>
+      <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle settings">☰</button>
+      <button id="toggle-theme" class="theme-toggle" aria-label="Toggle light/dark mode">Light Mode</button>
     </div>
     <h1>
       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 10px;">
@@ -41,30 +41,30 @@
   <!-- Sidebar for Settings -->
   <aside class="sidebar" aria-label="Settings and controls">
     <label for="vocab-category">📚 Category:</label>
-    <select id="vocab-category" aria-label="Select vocabulary category">
+    <select id="vocab-category">
       <option value="general">General</option>
       <option value="synonyms">Synonyms</option>
       <option value="antonyms">Antonyms</option>
       <option value="academic">Academic Words</option>
     </select>
-    <br>
-    <label for="timer-setting">⏳ Timer (seconds):</label>
-    <select id="timer-setting" aria-label="Select timer duration">
+
+    <label for="timer-setting">⏳ Timer (sec):</label>
+    <select id="timer-setting">
       <option value="60" selected>60</option>
       <option value="30">30</option>
       <option value="off">Off</option>
     </select>
-    <br>
+
     <label for="voice-select">🔊 Voice:</label>
-    <select id="voice-select" aria-label="Select speech voice"></select>
-    <br>
-    <button id="toggle-dyslexia" aria-label="Toggle dyslexia-friendly font">Toggle Dyslexia Font</button>
-    <br>
+    <select id="voice-select"></select>
+
+    <button id="toggle-dyslexia">Toggle Dyslexia Font</button>
+
     <label for="text-size-slider">🔤 Text Size:</label>
-    <input type="range" id="text-size-slider" min="1" max="2" step="0.1" value="1.4" aria-label="Adjust text size">
-    <br>
+    <input type="range" id="text-size-slider" min="1" max="2" step="0.1" value="1.4">
+
     <label for="theme-select">🎨 Theme:</label>
-    <select id="theme-select" aria-label="Select color theme">
+    <select id="theme-select">
       <option value="default">Default</option>
       <option value="light">Light</option>
       <option value="theme1">Pastel</option>
@@ -75,33 +75,35 @@
   <!-- Main Game Content -->
   <main>
     <div class="game-container">
-      <div id="passage-text" aria-label="Vocabulary passage"></div>
-      <div id="word-box" aria-label="Available words"></div>
+      <div id="passage-text" tabindex="0"></div>
+      <div id="word-box"></div>
     </div>
-    <!-- Control Buttons -->
+
     <div class="control-buttons">
-      <button id="hint-btn" aria-label="Get Hint">💡 Hint (H)</button>
-      <button id="clear-btn" aria-label="Clear Answers">Clear</button>
-      <button id="share-btn" aria-label="Share Progress">Share</button>
-      <button id="read-passage-btn" aria-label="Read Passage Aloud">Read Passage</button>
-      <button id="reset-words-btn" aria-label="Reset Words">Reset Words</button>
+      <button id="hint-btn">💡 Hint (H)</button>
+      <button id="clear-btn">Clear</button>
+      <button id="share-btn">Share</button>
+      <button id="read-passage-btn">Read Passage</button>
+      <button id="reset-words-btn">Reset</button>
     </div>
-    <!-- Navigation Buttons including Submit -->
+
     <div class="navigation-buttons">
-      <button id="prev-btn" aria-label="Previous Passage">⬅️ Prev</button>
-      <button id="submit-btn" aria-label="Submit Answers">✅ Submit</button>
-      <button id="next-btn" aria-label="Next Passage">Next ➡️</button>
+      <button id="prev-btn">⬅️ Prev</button>
+      <button id="submit-btn">✅ Submit</button>
+      <button id="next-btn">Next ➡️</button>
     </div>
-    <div id="feedback" aria-live="assertive"></div>
+
+    <div id="feedback" aria-live="polite"></div>
+
     <div class="status-bar">
       <span id="progress"></span>
       <span id="score"></span>
       <span id="stars"></span>
       <span id="timer"></span>
-      <div id="progress-bar-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progress">
+      <div id="progress-bar-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
         <div id="progress-bar"></div>
       </div>
-      <div id="timer-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Time remaining">
+      <div id="timer-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
         <div id="timer-bar"></div>
       </div>
       <span id="level"></span>
@@ -109,7 +111,7 @@
     </div>
   </main>
 
-  <!-- Audio Elements for Sound Effects -->
+  <!-- Audio Elements -->
   <audio id="correct-sound" src="correct.mp3"></audio>
   <audio id="incorrect-sound" src="incorrect.mp3"></audio>
 
