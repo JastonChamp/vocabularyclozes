@@ -1,8 +1,7 @@
 import { passages } from './data/passages.js';
 import { speak, loadVoices } from './utils/speech.js';
 
-// Game State
-export const state = {
+const state = {
   currentCategory: "general",
   currentPassageIndex: 0,
   score: 0,
@@ -11,273 +10,224 @@ export const state = {
   selectedWord: null,
   timeLeft: 60,
   timerInterval: null,
-  challengeMode: true,
   level: "Apprentice",
-  isFlatArray: false,
   achievements: [],
 };
 
-// DOM Elements
-const passageText = document.getElementById("passage-text");
-const wordBox = document.getElementById("word-box");
-const feedbackDisplay = document.getElementById("feedback");
-const submitBtn = document.getElementById("submit-btn");
-const prevBtn = document.getElementById("prev-btn");
-const nextBtn = document.getElementById("next-btn");
-const hintBtn = document.getElementById("hint-btn");
-const clearBtn = document.getElementById("clear-btn");
-const shareBtn = document.getElementById("share-btn");
-const readPassageBtn = document.getElementById("read-passage-btn");
-const resetWordsBtn = document.getElementById("reset-words-btn");
+// DOM references
+const passageText    = document.getElementById("passage-text");
+const wordBox        = document.getElementById("word-box");
+const feedbackDisplay= document.getElementById("feedback");
+const submitBtn      = document.getElementById("submit-btn");
+const prevBtn        = document.getElementById("prev-btn");
+const nextBtn        = document.getElementById("next-btn");
+const hintBtn        = document.getElementById("hint-btn");
+const clearBtn       = document.getElementById("clear-btn");
+const shareBtn       = document.getElementById("share-btn");
+const readBtn        = document.getElementById("read-passage-btn");
+const resetBtn       = document.getElementById("reset-words-btn");
 const categorySelect = document.getElementById("vocab-category");
-const timerSetting = document.getElementById("timer-setting");
-const voiceSelect = document.getElementById("voice-select");
-const toggleDyslexia = document.getElementById("toggle-dyslexia");
+const timerSelect    = document.getElementById("timer-setting");
+const toggleThemeBtn = document.getElementById("toggle-theme");
+const toggleDyslexiaBtn = document.getElementById("toggle-dyslexia");
 const textSizeSlider = document.getElementById("text-size-slider");
-const themeSelect = document.getElementById("theme-select");
-const sidebarToggle = document.getElementById("sidebar-toggle");
-const sidebar = document.querySelector(".sidebar");
-const progress = document.getElementById("progress");
-const scoreDisplay = document.getElementById("score");
-const starsDisplay = document.getElementById("stars");
-const timerDisplay = document.getElementById("timer");
-const progressBar = document.getElementById("progress-bar");
-const timerBar = document.getElementById("timer-bar");
-const levelDisplay = document.getElementById("level");
-const achievementsDisplay = document.getElementById("achievements");
-const tutorialModal = document.getElementById("tutorial-modal");
-const tutorialCloseBtn = document.getElementById("tutorial-close-btn");
-const correctSound = document.getElementById("correct-sound");
-const incorrectSound = document.getElementById("incorrect-sound");
+const themeSelect    = document.getElementById("theme-select");
+const sidebarToggle  = document.getElementById("sidebar-toggle");
+const sidebar        = document.querySelector(".sidebar");
 
-const intros = [
-  "Expand your word knowledge!",
-  "Master new vocabulary!",
-  "Challenge your language skills!",
-];
-
-// Utility Functions
-function shuffle(array) {
-  return array.sort(() => Math.random() - 0.5);
+// Utility: shuffle
+function shuffle(arr) {
+  return arr.sort(() => Math.random() - 0.5);
 }
 
+// Update status bar
 function updateStatus() {
   const total = passages[state.currentCategory].length;
-  progress.textContent = `Passage ${state.currentPassageIndex + 1}/${total}`;
-  scoreDisplay.textContent = `Score: ${state.score}`;
-  starsDisplay.textContent = `Stars: ${"★".repeat(state.stars)}${"☆".repeat(3 - state.stars)}`;
-  timerDisplay.textContent = `Time: ${state.timeLeft}s`;
-  progressBar.style.width = `${((state.currentPassageIndex + 1) / total) * 100}%`;
-  levelDisplay.textContent = `Level: ${state.level}`;
-  achievementsDisplay.textContent = `Achievements: ${state.achievements.join(", ")}`;
+  document.getElementById("progress").textContent = `Passage ${state.currentPassageIndex+1}/${total}`;
+  document.getElementById("score").textContent    = `Score: ${state.score}`;
+  document.getElementById("stars").textContent    = `Stars: ${"★".repeat(state.stars)}${"☆".repeat(3-state.stars)}`;
+  document.getElementById("timer").textContent    = `Time: ${state.timeLeft}s`;
+  document.getElementById("level").textContent    = `Level: ${state.level}`;
+  document.getElementById("achievements").textContent = state.achievements.join(", ");
+  document.getElementById("progress-bar").style.width = `${((state.currentPassageIndex+1)/total)*100}%`;
 }
 
+// Timer logic
 function startTimer() {
-  if (state.timerInterval) clearInterval(state.timerInterval);
-  const duration = parseInt(timerSetting.value) || 0;
-  if (duration === 0) {
-    timerDisplay.textContent = "Time: Off";
-    timerBar.style.width = "100%";
+  clearInterval(state.timerInterval);
+  const dur = timerSelect.value;
+  if (dur === "off") {
+    state.timeLeft = 0;
+    document.getElementById("timer").textContent = "Time: Off";
+    document.getElementById("timer-bar").style.width = "100%";
     return;
   }
-  state.timeLeft = duration;
-  timerBar.style.width = "100%";
+  state.timeLeft = +dur;
+  document.getElementById("timer-bar").style.width = "100%";
   state.timerInterval = setInterval(() => {
     state.timeLeft--;
-    timerDisplay.textContent = `Time: ${state.timeLeft}s`;
-    timerBar.style.width = `${(state.timeLeft / duration) * 100}%`;
+    document.getElementById("timer").textContent = `Time: ${state.timeLeft}s`;
+    document.getElementById("timer-bar").style.width = `${(state.timeLeft / +dur) * 100}%`;
     if (state.timeLeft <= 0) {
       clearInterval(state.timerInterval);
-      checkAnswers(true);
+      checkAnswers();
     }
   }, 1000);
 }
 
-// Display Passage
+// Render current passage
 function displayPassage() {
-  if (state.timerInterval) clearInterval(state.timerInterval);
-  const passage = passages[state.currentCategory][state.currentPassageIndex];
-  let processedText = passage.text;
-  
-  // Process clue words
-  if (passage.clueWords) {
-    passage.clueWords.forEach((clues, index) => {
-      const blankNum = index + 1;
-      clues.forEach(clue => {
-        const regex = new RegExp(`\\b${clue}\\b`, "gi");
-        processedText = processedText.replace(regex, `<span class="keyword keyword-${blankNum}" title="Clue for blank ${blankNum}">${clue}</span>`);
-      });
-    });
-  }
+  clearInterval(state.timerInterval);
+  const p = passages[state.currentCategory][state.currentPassageIndex];
 
-  // Replace blanks
-  processedText = processedText.replace(/___\((\d)\)___/g, (_, num) => {
-    return `<span class="blank-container"><span class="blank" data-blank="${num}" tabindex="0">_</span><button class="hint-for-blank" data-blank="${num}" aria-label="Hint for blank ${num}">💡</button></span>`;
+  // Replace blanks and clue highlights
+  let html = p.text.replace(/___\((\d)\)___/g, (_,n) =>
+    `<span class="blank" data-blank="${n}" tabindex="0"></span>` +
+    `<button class="hint-for-blank" data-blank="${n}">💡</button>`
+  );
+  p.clueWords.forEach((clues,i) => {
+    clues.forEach(w => {
+      html = html.replace(new RegExp(`\\b${w}\\b`, 'g'),
+        `<span class="keyword kw-${i+1}">${w}</span>`
+      );
+    });
   });
 
-  passageText.innerHTML = processedText;
-  wordBox.innerHTML = shuffle(passage.wordBox).map(word => `<div class="word" draggable="true" tabindex="0">${word}</div>`).join("");
-  feedbackDisplay.textContent = intros[state.currentPassageIndex % intros.length];
-  setupPassageInteractions();
+  passageText.innerHTML = html;
+  wordBox.innerHTML = shuffle(p.wordBox)
+    .map(w => `<div class="word" draggable="true" tabindex="0">${w}</div>`)
+    .join("");
+  feedbackDisplay.textContent = "";
   startTimer();
   updateStatus();
+  bindInteractions();
 }
 
-// Setup Interactions
-function setupPassageInteractions() {
-  const words = document.querySelectorAll(".word");
-  const blanks = document.querySelectorAll(".blank");
-
-  words.forEach(word => {
-    word.addEventListener("dragstart", (e) => e.dataTransfer.setData("text", word.textContent));
-    word.addEventListener("click", () => {
-      state.selectedWord = word;
-      words.forEach(w => w.classList.remove("selected"));
-      word.classList.add("selected");
-    });
+// Wire up drag/drop, clicks
+function bindInteractions() {
+  document.querySelectorAll('.word').forEach(w => {
+    w.onclick = () => selectWord(w);
+    w.ondragstart = e => e.dataTransfer.setData('text', w.textContent);
   });
-
-  blanks.forEach(blank => {
-    blank.addEventListener("dragover", (e) => e.preventDefault());
-    blank.addEventListener("drop", (e) => {
-      e.preventDefault();
-      const word = e.dataTransfer.getData("text");
-      placeWord(blank, word);
-    });
-    blank.addEventListener("click", () => {
-      if (state.selectedWord) {
-        placeWord(blank, state.selectedWord.textContent);
-        state.selectedWord = null;
-        words.forEach(w => w.classList.remove("selected"));
-      }
-    });
+  document.querySelectorAll('.blank').forEach(b => {
+    b.onclick = () => state.selectedWord && placeWord(b, state.selectedWord.textContent);
+    b.ondragover = e => e.preventDefault();
+    b.ondrop = e => { placeWord(b, e.dataTransfer.getData('text')); };
   });
-
-  document.querySelectorAll(".keyword").forEach(keyword => {
-    keyword.addEventListener("click", function() {
-      const blankNum = this.className.match(/keyword-(\d+)/)[1];
-      const hintIndex = parseInt(blankNum) - 1;
-      const hint = passages[state.currentCategory][state.currentPassageIndex].hints[hintIndex];
+  document.querySelectorAll('.keyword').forEach(el => {
+    el.onclick = () => {
+      const idx = +el.className.match(/kw-(\d+)/)[1] - 1;
+      const hint = passages[state.currentCategory][state.currentPassageIndex].hints[idx];
       feedbackDisplay.textContent = hint;
-      feedbackDisplay.style.color = "blue";
       speak(hint);
-    });
+    };
   });
-
-  document.querySelectorAll(".hint-for-blank").forEach(button => {
-    button.addEventListener("click", function() {
-      const blankNum = this.getAttribute("data-blank");
-      const hintIndex = parseInt(blankNum) - 1;
-      const hint = passages[state.currentCategory][state.currentPassageIndex].hints[hintIndex];
+  document.querySelectorAll('.hint-for-blank').forEach(btn => {
+    btn.onclick = () => {
+      const idx = +btn.dataset.blank - 1;
+      const hint = passages[state.currentCategory][state.currentPassageIndex].hints[idx];
       feedbackDisplay.textContent = hint;
-      feedbackDisplay.style.color = "blue";
       speak(hint);
-      document.querySelectorAll(`.keyword-${blankNum}`).forEach(el => el.classList.add("highlighted"));
-      setTimeout(() => document.querySelectorAll(`.keyword-${blankNum}`).forEach(el => el.classList.remove("highlighted")), 3000);
-      state.hintUsage[state.currentPassageIndex] = (state.hintUsage[state.currentPassageIndex] || 0) + 1;
-    });
+    };
   });
 }
 
-function placeWord(blank, wordText) {
-  blank.textContent = wordText;
-  checkAnswer(blank);
+function selectWord(el) {
+  document.querySelectorAll('.word').forEach(w => w.classList.remove('selected'));
+  el.classList.add('selected');
+  state.selectedWord = el;
 }
 
-function checkAnswer(blank) {
-  const passage = passages[state.currentCategory][state.currentPassageIndex];
-  const blankNum = parseInt(blank.getAttribute("data-blank")) - 1;
-  const isCorrect = blank.textContent.toLowerCase() === passage.answers[blankNum].toLowerCase();
-  blank.classList.toggle("correct", isCorrect);
-  blank.classList.toggle("incorrect", !isCorrect);
-  feedbackDisplay.textContent = isCorrect ? "Correct!" : "Try again!";
-  feedbackDisplay.style.color = isCorrect ? "green" : "red";
-  if (isCorrect) correctSound.play();
-  else incorrectSound.play();
+function placeWord(blank, txt) {
+  blank.textContent = txt;
+  checkSingle(blank);
+  state.selectedWord = null;
+  document.querySelectorAll('.word').forEach(w => w.classList.remove('selected'));
 }
 
-function checkAnswers(isAutoSubmit = false) {
-  const passage = passages[state.currentCategory][state.currentPassageIndex];
-  const blanks = document.querySelectorAll(".blank");
-  let allCorrect = true;
-  blanks.forEach((blank, i) => {
-    const isCorrect = blank.textContent.toLowerCase() === passage.answers[i].toLowerCase();
-    blank.classList.toggle("correct", isCorrect);
-    blank.classList.toggle("incorrect", !isCorrect);
-    if (!isCorrect) allCorrect = false;
+function checkSingle(blank) {
+  const idx = +blank.dataset.blank - 1;
+  const correct = passages[state.currentCategory][state.currentPassageIndex].answers[idx];
+  if (blank.textContent.toLowerCase() === correct.toLowerCase()) {
+    blank.classList.add('correct');
+    blank.classList.remove('incorrect');
+    feedbackDisplay.textContent = 'Correct!';
+    speak('Correct');
+  } else {
+    blank.classList.add('incorrect');
+    blank.classList.remove('correct');
+    feedbackDisplay.textContent = 'Try again!';
+    speak('Try again');
+  }
+}
+
+function checkAnswers() {
+  const blanks = document.querySelectorAll('.blank');
+  let allGood = true;
+  blanks.forEach((b,i) => {
+    const ans = passages[state.currentCategory][state.currentPassageIndex].answers[i];
+    if (b.textContent.toLowerCase() === ans.toLowerCase()) {
+      b.classList.add('correct');
+    } else {
+      b.classList.add('incorrect');
+      allGood = false;
+    }
   });
-  if (allCorrect) {
+  if (allGood) {
     state.score += 10;
     state.stars = Math.min(3, state.stars + 1);
-    feedbackDisplay.textContent = "Well done!";
-    feedbackDisplay.style.color = "green";
-    correctSound.play();
-    if (state.score >= 50 && !state.achievements.includes("Halfway Hero")) {
-      state.achievements.push("Halfway Hero");
-    }
-    if (state.score >= 100) state.level = "Journeyman";
-    if (state.score >= 200) state.level = "Master Wizard";
+    feedbackDisplay.textContent = 'Well done!';
+    speak('Well done');
+    // handle level/achievements...
   } else {
-    feedbackDisplay.textContent = "Check your answers!";
-    feedbackDisplay.style.color = "red";
-    incorrectSound.play();
+    feedbackDisplay.textContent = 'Check your answers!';
+    speak('Check your answers');
   }
   updateStatus();
 }
 
-// Event Listeners
-submitBtn.addEventListener("click", () => checkAnswers());
-prevBtn.addEventListener("click", () => {
-  if (state.currentPassageIndex > 0) {
-    state.currentPassageIndex--;
-    displayPassage();
+// Event listeners
+submitBtn.onclick       = checkAnswers;
+prevBtn.onclick         = () => { if (state.currentPassageIndex>0) { state.currentPassageIndex--; displayPassage(); } };
+nextBtn.onclick         = () => { 
+  if (state.currentPassageIndex<passages[state.currentCategory].length-1) {
+    state.currentPassageIndex++; displayPassage();
   }
-});
-nextBtn.addEventListener("click", () => {
-  if (state.currentPassageIndex < passages[state.currentCategory].length - 1) {
-    state.currentPassageIndex++;
-    displayPassage();
-  }
-});
-hintBtn.addEventListener("click", () => {
-  const passage = passages[state.currentCategory][state.currentPassageIndex];
-  feedbackDisplay.textContent = passage.hints[0];
-  feedbackDisplay.style.color = "blue";
-  speak(passage.hints[0]);
-  state.hintUsage[state.currentPassageIndex] = (state.hintUsage[state.currentPassageIndex] || 0) + 1;
-});
-clearBtn.addEventListener("click", () => displayPassage());
-shareBtn.addEventListener("click", () => {
-  const text = `I'm playing Vocabulary Cloze Adventure! Score: ${state.score}, Level: ${state.level}`;
-  navigator.clipboard.writeText(text);
-  feedbackDisplay.textContent = "Copied to clipboard!";
-});
-readPassageBtn.addEventListener("click", () => {
-  const text = passages[state.currentCategory][state.currentPassageIndex].text.replace(/___\(\d\)___/g, "blank");
-  speak(text);
-});
-resetWordsBtn.addEventListener("click", () => displayPassage());
-categorySelect.addEventListener("change", () => {
-  state.currentCategory = categorySelect.value;
-  state.currentPassageIndex = 0;
-  displayPassage();
-});
-timerSetting.addEventListener("change", startTimer);
-toggleDyslexia.addEventListener("click", () => document.body.classList.toggle("dyslexia"));
-textSizeSlider.addEventListener("input", () => {
-  passageText.style.fontSize = `${textSizeSlider.value}rem`;
-  wordBox.style.fontSize = `${textSizeSlider.value}rem`;
-});
-themeSelect.addEventListener("change", () => {
-  document.body.className = themeSelect.value === "default" ? "" : themeSelect.value;
-});
-sidebarToggle.addEventListener("click", () => sidebar.classList.toggle("open"));
-tutorialCloseBtn.addEventListener("click", () => tutorialModal.style.display = "none");
+};
+hintBtn.onclick         = () => {
+  const hint = passages[state.currentCategory][state.currentPassageIndex].hints[0];
+  feedbackDisplay.textContent = hint;
+  speak(hint);
+};
+clearBtn.onclick        = displayPassage;
+resetBtn.onclick        = displayPassage;
+shareBtn.onclick        = () => {
+  navigator.clipboard.writeText(`Score: ${state.score}, Level: ${state.level}`);
+  feedbackDisplay.textContent = 'Copied!';
+};
+readBtn.onclick         = () => {
+  speak(passages[state.currentCategory][state.currentPassageIndex].text.replace(/___\(\d\)___/g,'blank'));
+};
+categorySelect.onchange  = e => { state.currentCategory = e.target.value; state.currentPassageIndex=0; displayPassage(); };
+timerSelect.onchange     = startTimer;
+toggleThemeBtn.onclick   = () => {
+  document.body.classList.toggle('light-mode');
+  toggleThemeBtn.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
+};
+toggleDyslexiaBtn.onclick= () => document.body.classList.toggle('dyslexia');
+textSizeSlider.oninput   = e => {
+  passageText.style.fontSize = `${e.target.value}rem`;
+  wordBox.style.fontSize    = `${e.target.value}rem`;
+};
+themeSelect.onchange      = e => {
+  document.body.className = e.target.value === 'default' ? '' : e.target.value;
+};
+sidebarToggle.onclick     = () => sidebar.classList.toggle('open');
+document.getElementById('tutorial-close-btn').onclick = () => {
+  document.getElementById('tutorial-modal').style.display = 'none';
+};
 
-// Initialize
-document.addEventListener("DOMContentLoaded", () => {
-  loadVoices(voiceSelect);
-  tutorialModal.style.display = "block";
+window.addEventListener('DOMContentLoaded', () => {
+  loadVoices(document.getElementById('voice-select'));
   displayPassage();
-  updateStatus();
 });
