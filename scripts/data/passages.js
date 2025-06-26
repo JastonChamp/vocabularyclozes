@@ -5,8 +5,8 @@ export const passages = {
       answers: ["radiant", "gentle"],
       wordBox: ["radiant", "gentle", "dull", "harsh"],
       hints: ["Means bright or glowing", "Means soft or mild"],
-      explanations: ["'Radiant' describes something shining brightly.", "'Gentle' means calm and soothing."],
-      clueWords: [["sunset", "sky"], ["wind", "trees"]]
+      explanations: ["'Radiant' describes shining brightly.", "'Gentle' means calm and soothing."],
+      clueWords: [["sunset","sky"], ["wind","trees"]]
     },
     {
       text: "The ___ (1) ___ explorer ventured into the ___ (2) ___ jungle.",
