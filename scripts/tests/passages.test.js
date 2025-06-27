@@ -10,6 +10,7 @@ const required = [
   'synonyms',
   'antonyms',
   'academic',
+  'contextInference',
   'definitionMatch',
   'synonymContrast',
   'morphologicalAffix',
