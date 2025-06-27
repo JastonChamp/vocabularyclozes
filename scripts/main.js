@@ -81,7 +81,7 @@ function displayPassage() {
   const p = passages[state.currentCategory][state.currentPassageIndex];
 
   // Replace blanks and clue highlights
-  let html = p.text.replace(/___\((\d)\)___/g, (_,n) =>
+ let html = p.text.replace(/___\s*\((\d)\)\s*___/g, (_,n) =>
     `<span class="blank" data-blank="${n}" tabindex="0"></span>` +
     `<button class="hint-for-blank" data-blank="${n}">💡</button>`
   );
@@ -212,7 +212,7 @@ shareBtn.onclick        = () => {
   feedbackDisplay.textContent = 'Copied!';
 };
 readBtn.onclick         = () => {
-  speak(passages[state.currentCategory][state.currentPassageIndex].text.replace(/___\(\d\)___/g,'blank'));
+   speak(passages[state.currentCategory][state.currentPassageIndex].text.replace(/___\s*\(\d\)\s*___/g,'blank'));
 };
 categorySelect.onchange  = e => { state.currentCategory = e.target.value; state.currentPassageIndex=0; displayPassage(); };
 timerSelect.onchange     = startTimer;
