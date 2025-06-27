@@ -107,14 +107,14 @@ function displayPassage() {
 function bindInteractions() {
   document.querySelectorAll('.word').forEach(w => {
     w.onclick = () => selectWord(w);
-    w.ondragstart = e => e.dataTransfer.setData('text', w.textContent);
+ w.ondragstart = e => e.dataTransfer.setData('text/plain', w.textContent);
   });
   document.querySelectorAll('.blank').forEach(b => {
     b.onclick = () => state.selectedWord && placeWord(b, state.selectedWord.textContent);
     b.ondragover = e => e.preventDefault();
      b.ondrop = e => {
       e.preventDefault();
-      placeWord(b, e.dataTransfer.getData('text'));
+   placeWord(b, e.dataTransfer.getData('text/plain'));
     };
   });
   document.querySelectorAll('.keyword').forEach(el => {
