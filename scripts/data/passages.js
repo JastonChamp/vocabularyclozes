@@ -1,5 +1,4 @@
-export const passages = {
-  general: [
+export const general = [
     {
       text: "The ___ (1) ___ sunset painted the sky with shades of orange, while the ___ (2) ___ wind whispered through the trees.",
       answers: ["radiant", "gentle"],
@@ -16,8 +15,8 @@ export const passages = {
       explanations: ["'Brave' means showing courage.", "'Dense' describes something closely packed."],
       clueWords: [["explorer"], ["jungle"]]
     }
-  ],
-  synonyms: [
+    ];
+export const synonyms = [
     {
       text: "Her ___ (1) ___ speech inspired the crowd, despite the ___ (2) ___ conditions outside.",
       answers: ["eloquent", "dreary"],
@@ -26,8 +25,8 @@ export const passages = {
       explanations: ["'Eloquent' means well-spoken.", "'Dreary' describes something bleak."],
       clueWords: [["speech"], ["conditions"]]
     }
-  ],
-  antonyms: [
+  ];
+export const antonyms = [
     {
       text: "The ___ (1) ___ day turned into a ___ (2) ___ night.",
       answers: ["bright", "dark"],
@@ -36,8 +35,8 @@ export const passages = {
       explanations: ["'Bright' means shining.", "'Dark' means lacking light."],
       clueWords: [["day"], ["night"]]
     }
-  ],
-  academic: [
+ ];
+export const academic = [
     {
       text: "The professor’s ___ (1) ___ lecture clarified the ___ (2) ___ concept.",
       answers: ["lucid", "complex"],
@@ -46,7 +45,7 @@ export const passages = {
       explanations: ["'Lucid' means clearly expressed.", "'Complex' means intricate."],
       clueWords: [["lecture"], ["concept"]]
     }
- ],
+];
 
   contextInference: [
   {
@@ -1911,6 +1910,18 @@ export const passages = {
     ],
     clueWords: [["So"],["was"],["he"],["although"],["were"]]
   }
-    ]
-  };
+ ];
+
+export const passages = {
+  general,
+  synonyms,
+  antonyms,
+  academic,
+  contextInference,
+  definitionMatch,
+  synonymContrast,
+  morphologicalAffix,
+  collocationCloze,
+  grammaticalRole,
+  connectorClue
 };
