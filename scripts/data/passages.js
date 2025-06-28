@@ -1873,3 +1873,12 @@ export const passages = {
   grammaticalRole,
   connectorClue
 };
+
+// Auto-generate simple definitions aligned with each wordBox entry
+for (const category of Object.values(passages)) {
+  for (const passage of category) {
+    if (!passage.definitions) {
+      passage.definitions = passage.wordBox.map(w => `Definition of ${w}`);
+    }
+  }
+}
