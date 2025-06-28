@@ -984,7 +984,11 @@ export const morphologicalAffix = [
       "Preventing infection."
     ],
     explanations: [
-      "Each uses 'anti-' prefix + root to mean 'against'."
+     "'Antibacterial' combines 'anti-' with 'bacterial' to mean against bacteria.",
+      "'Antifungal' combines 'anti-' with 'fungal' to mean against fungi.",
+      "'Antiviral' combines 'anti-' with 'viral' to mean against viruses.",
+      "'Anti-inflammatory' uses 'anti-' with 'inflammatory' to mean against inflammation.",
+      "'Antiseptic' uses 'anti-' with 'septic' to signify preventing infection."
     ],
     clueWords: [["tested"],["strains"],["creams"],["compounds"],["sprays"]]
   },
