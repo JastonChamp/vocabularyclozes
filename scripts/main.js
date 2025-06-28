@@ -97,7 +97,9 @@ function displayPassage() {
  const pairs = p.wordBox.map((w,i) => ({ word: w, def: p.definitions[i] }));
   shuffle(pairs);
   wordBox.innerHTML = pairs
-    .map(({word, def}) => `<div class="word" draggable="true" tabindex="0" title="${def}">${word}</div>`)
+      .map(({word, def}) =>
+      `<div class="word" draggable="true" tabindex="0"><span data-def="${def}">${word}</span></div>`
+    )
     .join("");
   feedbackDisplay.textContent = "";
   startTimer();
