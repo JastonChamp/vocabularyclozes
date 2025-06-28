@@ -1874,11 +1874,180 @@ export const passages = {
   connectorClue
 };
 
-// Auto-generate simple definitions aligned with each wordBox entry
+// Manual definitions for common words that lack hints
+const manualDefinitions = {
+  "allergenic": "causing allergic reactions",
+  "alone": "by oneself",
+  "analyze": "examine in detail",
+  "anxiety": "feeling of worry",
+  "approach": "come near",
+  "basic": "simple or fundamental",
+  "beautiful": "pleasing to the senses",
+  "bland": "lacking strong flavor or interest",
+  "bold": "confident and daring",
+  "botanist": "scientist who studies plants",
+  "brief": "short in duration",
+  "bulky": "large and difficult to handle",
+  "busy": "occupied or full of activity",
+  "calm": "peaceful and quiet",
+  "casual": "informal or relaxed",
+  "chemist": "scientist who studies chemicals",
+  "claim": "assert something as true",
+  "complete": "whole or finished",
+  "concrete": "real or tangible",
+  "consent": "agreement or permission",
+  "conventional": "traditional or usual",
+  "create": "bring into existence",
+  "critical": "very important or negative judgment",
+  "data": "information",
+  "delay": "postponement",
+  "destructive": "causing damage",
+  "deterrence": "discouraging action",
+  "device": "tool or piece of equipment",
+  "directive": "official instruction",
+  "dry": "without moisture",
+  "dull": "not interesting or bright",
+  "emotional": "related to feelings",
+  "environmentalist": "advocate for protecting the environment",
+  "exclusion": "act of keeping out",
+  "exotic": "unusual or foreign",
+  "extreme": "very great or intense",
+  "fail": "not succeed",
+  "fake": "not genuine",
+  "familiar": "well known",
+  "few": "not many",
+  "formal": "following established customs",
+  "fragile": "easily broken",
+  "frozen": "turned to ice",
+  "furniture": "movable items like tables or chairs",
+  "generic": "not specific or brand-name",
+  "genuine": "real or authentic",
+  "geologist": "scientist who studies earth",
+  "graceful": "elegant in movement",
+  "group": "collection of individuals",
+  "haphazard": "lacking order or planning",
+  "happen": "take place",
+  "happy": "feeling joy",
+  "harmony": "agreement or pleasant combination",
+  "hesitant": "unsure or slow to act",
+  "humid": "moist or damp",
+  "ignore": "pay no attention to",
+  "joyful": "full of happiness",
+  "late": "after the expected time",
+  "lazy": "unwilling to work",
+  "lenient": "not strict",
+  "light": "not heavy or bright",
+  "little": "small in size or amount",
+  "local": "nearby or relating to a place",
+  "login": "process of signing in",
+  "lost": "unable to find the way",
+  "loud": "having a high volume",
+  "low": "not high",
+  "low-key": "restrained or not showy",
+  "maintain": "keep in good condition",
+  "mild": "not severe",
+  "minimal": "very small in amount",
+  "minor": "less important",
+  "mistrust": "lack of trust",
+  "modern": "current or up to date",
+  "mundane": "ordinary or dull",
+  "national": "relating to a nation",
+  "natural": "existing in nature",
+  "new": "not existing before",
+  "novice": "beginner",
+  "obedience": "act of following orders",
+  "old": "having existed for a long time",
+  "optional": "not required",
+  "ordinary": "usual or common",
+  "output": "something produced",
+  "passive": "accepting without resistance",
+  "password": "secret word for access",
+  "permanent": "lasting indefinitely",
+  "personal": "relating to one person",
+  "pessimistic": "expecting the worst",
+  "plain": "simple and undecorated",
+  "pleasant": "agreeable or enjoyable",
+  "productive": "yielding results",
+  "quick": "fast",
+  "quiet": "making little noise",
+  "random": "without pattern",
+  "risky": "involving danger",
+  "routine": "regularly followed practice",
+  "rudimentary": "basic or undeveloped",
+  "scientist": "person who studies science",
+  "scissor": "cutting instrument",
+  "short-term": "lasting a short time",
+  "shrunk": "made smaller",
+  "silent": "without sound",
+  "simple": "not complicated",
+  "single": "only one",
+  "slow": "not fast",
+  "sluggish": "slow and lacking energy",
+  "smooth": "even surface",
+  "sporadic": "occurring irregularly",
+  "standard": "widely accepted norm",
+  "start": "begin",
+  "startup": "new business venture",
+  "stationary": "not moving",
+  "sterile": "free from germs",
+  "supportive": "providing help",
+  "synthetic": "artificially made",
+  "takeout": "food to be eaten elsewhere",
+  "timid": "shy or lacking courage",
+  "toxic": "poisonous",
+  "trainee": "person in training",
+  "transience": "state of being temporary",
+  "turbulent": "characterized by disorder",
+  "vague": "not clear",
+  "validate": "confirm or check",
+  "venue": "place where an event is held",
+  "verbose": "using too many words",
+  "warm": "moderately hot",
+  "weak": "lacking strength",
+  "wealthy": "rich"
+};
+
+function deriveDefinition(word) {
+  const w = word.toLowerCase();
+  if (manualDefinitions[w]) return manualDefinitions[w];
+  if (w.endsWith('ly')) return `in a ${w.slice(0, -2)} manner`;
+  if (w.endsWith('ed')) return `past form of ${w.slice(0, -2)}`;
+  if (w.endsWith('ing')) return `in the process of ${w.slice(0, -3)}`;
+  if (w.endsWith('ness')) return `state of being ${w.slice(0, -4)}`;
+  if (w.endsWith('ment')) return `the act of ${w.slice(0, -4)}`;
+  if (w.endsWith('tion') || w.endsWith('sion')) return `process of ${w.replace(/(tion|sion)$/,'')}`;
+  if (w.endsWith('able') || w.endsWith('ible')) return `capable of being ${w.slice(0, -4)}`;
+  if (w.endsWith('less')) return `without ${w.slice(0, -4)}`;
+  if (w.endsWith('ful')) return `full of ${w.slice(0, -3)}`;
+  if (w.endsWith('ous')) return `full of ${w.slice(0, -3)}`;
+  if (w.endsWith('ive')) return `having a quality of ${w.slice(0, -3)}`;
+  if (w.endsWith('est')) return `most ${w.slice(0, -3)}`;
+  if (w.endsWith('er')) return `one who ${w.slice(0, -2)}`;
+  if (w.endsWith('ity')) return `state of being ${w.slice(0, -3)}`;
+  if (w.endsWith('al')) return `relating to ${w.slice(0, -2)}`;
+  if (w.startsWith('un')) return `not ${w.slice(2)}`;
+  if (w.startsWith('im')) return `not ${w.slice(2)}`;
+  if (w.startsWith('in')) return `not ${w.slice(2)}`;
+  if (w.startsWith('ir')) return `not ${w.slice(2)}`;
+  if (w.startsWith('il')) return `not ${w.slice(2)}`;
+  if (w.startsWith('dis')) return `opposite of ${w.slice(3)}`;
+  if (w.startsWith('non')) return `not ${w.slice(3)}`;
+  if (w.startsWith('re')) return `again ${w.slice(2)}`;
+  if (w.startsWith('pre')) return `before ${w.slice(3)}`;
+  if (w.startsWith('post')) return `after ${w.slice(4)}`;
+  if (w.startsWith('anti')) return `against ${w.slice(4)}`;
+  if (w.startsWith('inter')) return `between ${w.slice(5)}`;
+  return `meaning of ${word}`;
+}
+
+// Build definitions using hints, manual entries, and simple morphology
 for (const category of Object.values(passages)) {
   for (const passage of category) {
-    if (!passage.definitions) {
-      passage.definitions = passage.wordBox.map(w => `Definition of ${w}`);
-    }
+    passage.definitions = passage.wordBox.map((w, i) => {
+      if (passage.hints && i < passage.hints.length) {
+        return passage.hints[i];
+      }
+      return deriveDefinition(w);
+    });
   }
 }
