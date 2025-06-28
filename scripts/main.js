@@ -94,8 +94,10 @@ function displayPassage() {
   });
 
   passageText.innerHTML = html;
-  wordBox.innerHTML = shuffle(p.wordBox)
-    .map(w => `<div class="word" draggable="true" tabindex="0">${w}</div>`)
+ const pairs = p.wordBox.map((w,i) => ({ word: w, def: p.definitions[i] }));
+  shuffle(pairs);
+  wordBox.innerHTML = pairs
+    .map(({word, def}) => `<div class="word" draggable="true" tabindex="0" title="${def}">${word}</div>`)
     .join("");
   feedbackDisplay.textContent = "";
   startTimer();
