@@ -1925,6 +1925,7 @@ const manualDefinitions = {
   "frozen": "turned to ice",
   "furniture": "movable items like tables or chairs",
   "generic": "not specific or brand-name",
+  "gentle": "kind or mild in manner",
   "genuine": "real or authentic",
   "geologist": "scientist who studies earth",
   "graceful": "elegant in movement",
