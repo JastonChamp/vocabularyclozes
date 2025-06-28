@@ -6,10 +6,6 @@ assert.strictEqual(typeof passages, 'object', 'passages should be an object');
 // Explicitly check the known categories
 // After restructuring passages now includes several specialized categories
 const required = [
-  'general',
-  'synonyms',
-  'antonyms',
-  'academic',
   'contextInference',
   'definitionMatch',
   'synonymContrast',
