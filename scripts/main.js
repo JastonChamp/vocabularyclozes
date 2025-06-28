@@ -2,7 +2,7 @@ import { passages } from './data/passages.js';
 import { speak, loadVoices } from './utils/speech.js';
 
 const state = {
-  currentCategory: "general",
+  currentCategory: "contextInference",
   currentPassageIndex: 0,
   score: 0,
   stars: 0,
