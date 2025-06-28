@@ -24,4 +24,14 @@ for (const [key, value] of Object.entries(passages)) {
   assert.ok(Array.isArray(value), `Category '${key}' should be an array`);
 }
 
+// Verify each wordBox entry has a matching definition
+for (const [catName, arr] of Object.entries(passages)) {
+  arr.forEach((p, idx) => {
+    assert.ok(Array.isArray(p.wordBox), `${catName}[${idx}].wordBox should be an array`);
+    assert.ok(Array.isArray(p.definitions), `${catName}[${idx}].definitions should be an array`);
+    assert.strictEqual(p.wordBox.length, p.definitions.length,
+      `${catName}[${idx}] definitions should match wordBox length`);
+  });
+}
+
 console.log('passages.test.js completed');
