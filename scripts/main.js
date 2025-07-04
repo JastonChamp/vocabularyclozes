@@ -211,11 +211,44 @@ function checkSingle(blank) {
     blank.classList.remove('incorrect');
     feedbackDisplay.textContent = 'Correct!';
     speak('Correct');
+     // remove any existing explanation when the answer is correct
+    const after = blank.nextElementSibling &&
+      blank.nextElementSibling.classList.contains('hint-for-blank')
+        ? blank.nextElementSibling
+        : blank;
+    const span = after.nextElementSibling;
+    if (span && span.classList.contains('explanation')) {
+      span.remove();
+    }
+    // remove clue word highlighting if present
+    document.querySelectorAll('.kw-' + (idx + 1)).forEach(el => {
+      el.classList.remove('highlighted');
+    });
   } else {
     blank.classList.add('incorrect');
     blank.classList.remove('correct');
     feedbackDisplay.textContent = 'Try again!';
     speak('Try again');
+    
+    // show explanation under the blank
+    const exp = blank.dataset.exp;
+    if (exp) {
+      const after = blank.nextElementSibling &&
+        blank.nextElementSibling.classList.contains('hint-for-blank')
+          ? blank.nextElementSibling
+          : blank;
+      let span = after.nextElementSibling;
+      if (!(span && span.classList.contains('explanation'))) {
+        span = document.createElement('span');
+        span.className = 'explanation';
+        after.insertAdjacentElement('afterend', span);
+      }
+      span.textContent = exp;
+    }
+    // highlight the associated clue words
+    document.querySelectorAll('.kw-' + (idx + 1)).forEach(el => {
+      el.classList.add('highlighted');
+    });
   }
 }
 
