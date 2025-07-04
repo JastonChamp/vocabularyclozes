@@ -85,10 +85,11 @@ function displayPassage() {
   const p = passages[state.currentCategory][state.currentPassageIndex];
 
   // Replace blanks and clue highlights
- let html = p.text.replace(/___\s*\((\d)\)\s*___/g, (_,n) =>
-    `<span class="blank" data-blank="${n}" tabindex="0"></span>` +
-    `<button class="hint-for-blank" data-blank="${n}">💡</button>`
-  );
+let html = p.text.replace(/___\s*\((\d)\)\s*___/g, (_,n) => {
+    const exp = p.explanations ? p.explanations[n-1].replace(/"/g, '&quot;') : '';
+    return `<span class="blank" data-blank="${n}" data-exp="${exp}" tabindex="0"></span>` +
+           `<button class="hint-for-blank" data-blank="${n}">💡</button>`;
+  });
   p.clueWords.forEach((clues,i) => {
     clues.forEach(w => {
       html = html.replace(new RegExp(`\\b${w}\\b`, 'g'),
@@ -176,15 +177,29 @@ function checkSingle(blank) {
 }
 
 function checkAnswers() {
+ const p = passages[state.currentCategory][state.currentPassageIndex];
   const blanks = document.querySelectorAll('.blank');
   let allGood = true;
   blanks.forEach((b,i) => {
-    const ans = passages[state.currentCategory][state.currentPassageIndex].answers[i];
+    const ans = p.answers[i];
     if (b.textContent.toLowerCase() === ans.toLowerCase()) {
       b.classList.add('correct');
     } else {
       b.classList.add('incorrect');
       allGood = false;
+    }
+    const exp = b.dataset.exp;
+    if (exp) {
+      const after = b.nextElementSibling && b.nextElementSibling.classList.contains('hint-for-blank')
+        ? b.nextElementSibling
+        : b;
+      let span = after.nextElementSibling;
+      if (!(span && span.classList.contains('explanation'))) {
+        span = document.createElement('span');
+        span.className = 'explanation';
+        after.insertAdjacentElement('afterend', span);
+      }
+      span.textContent = exp;
     }
   });
   if (allGood) {
