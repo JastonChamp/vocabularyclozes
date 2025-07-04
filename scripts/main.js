@@ -12,6 +12,9 @@ const state = {
   timerInterval: null,
   level: "Apprentice",
   achievements: [],
+  coins: Number(localStorage.getItem('coins')) || 0,
+  badges: JSON.parse(localStorage.getItem('badges') || '[]'),
+  unlockedThemes: JSON.parse(localStorage.getItem('unlockedThemes') || '[]'),
 };
 
 // DOM references
@@ -49,11 +52,50 @@ function updateStatus() {
   const total = passages[state.currentCategory].length;
   document.getElementById("progress").textContent = `Passage ${state.currentPassageIndex+1}/${total}`;
   document.getElementById("score").textContent    = `Score: ${state.score}`;
+   coinsDisplay.textContent = `Coins: ${state.coins}`;
   document.getElementById("stars").textContent    = `Stars: ${"★".repeat(state.stars)}${"☆".repeat(3-state.stars)}`;
   document.getElementById("timer").textContent    = `Time: ${state.timeLeft}s`;
   document.getElementById("level").textContent    = `Level: ${state.level}`;
   document.getElementById("achievements").textContent = state.achievements.join(", ");
+  themesInfo.textContent = `Themes: ${['default','light','theme1','theme2',...state.unlockedThemes].join(', ')}`;
   document.getElementById("progress-bar").style.width = `${((state.currentPassageIndex+1)/total)*100}%`;
+}
+
+function saveProgress() {
+  localStorage.setItem('coins', state.coins);
+  localStorage.setItem('badges', JSON.stringify(state.badges));
+  localStorage.setItem('unlockedThemes', JSON.stringify(state.unlockedThemes));
+}
+
+const unlockMilestones = [
+  { points: 50, theme: 'theme3', label: 'Ocean Adventurer', name: 'Ocean' },
+  { points: 100, theme: 'theme4', label: 'Galaxy Ranger', name: 'Galaxy' },
+];
+
+function applyUnlockedThemes() {
+  state.unlockedThemes.forEach(t => {
+    if (!Array.from(themeSelect.options).some(o => o.value === t)) {
+      const opt = document.createElement('option');
+      opt.value = t;
+      opt.textContent = t.charAt(0).toUpperCase() + t.slice(1);
+      themeSelect.appendChild(opt);
+    }
+  });
+}
+
+function checkUnlocks() {
+  unlockMilestones.forEach(m => {
+    if (state.coins >= m.points && !state.badges.includes(m.label)) {
+      state.badges.push(m.label);
+      if (!state.unlockedThemes.includes(m.theme)) {
+        state.unlockedThemes.push(m.theme);
+        const opt = document.createElement('option');
+        opt.value = m.theme;
+        opt.textContent = m.name;
+        themeSelect.appendChild(opt);
+      }
+    }
+  });
 }
 
 // Timer logic
@@ -206,6 +248,9 @@ function checkAnswers() {
   if (allGood) {
     state.score += 10;
     state.stars = Math.min(3, state.stars + 1);
+     state.coins += 10;
+    checkUnlocks();
+    saveProgress();
     feedbackDisplay.textContent = 'Well done!';
     speak('Well done');
     // handle level/achievements...
@@ -259,5 +304,8 @@ document.getElementById('tutorial-close-btn').onclick = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   loadVoices(document.getElementById('voice-select'));
+applyUnlockedThemes();
   displayPassage();
-});
+  saveProgress();
+  updateStatus();
+  });
