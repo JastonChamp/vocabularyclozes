@@ -375,3 +375,11 @@ button:hover {
   background: linear-gradient(90deg, #2ecc71, #27ae60);
   width: 0; transition: width 0.3s;
 }
+
+/* Explanation text shown after submitting */
+.explanation {
+  display: block;
+  margin: 4px 0 8px;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+}
