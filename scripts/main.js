@@ -84,18 +84,19 @@ function displayPassage() {
   clearInterval(state.timerInterval);
   const p = passages[state.currentCategory][state.currentPassageIndex];
 
-  // Replace blanks and clue highlights
-let html = p.text.replace(/___\s*\((\d)\)\s*___/g, (_,n) => {
-    const exp = p.explanations ? p.explanations[n-1].replace(/"/g, '&quot;') : '';
-    return `<span class="blank" data-blank="${n}" data-exp="${exp}" tabindex="0"></span>` +
-           `<button class="hint-for-blank" data-blank="${n}">💡</button>`;
-  });
+  // Highlight clue words before inserting blanks to avoid corrupting attributes
+  let html = p.text;
   p.clueWords.forEach((clues,i) => {
     clues.forEach(w => {
       html = html.replace(new RegExp(`\\b${w}\\b`, 'g'),
         `<span class="keyword kw-${i+1}">${w}</span>`
       );
     });
+  });
+ html = html.replace(/___\s*\((\d)\)\s*___/g, (_,n) => {
+    const exp = p.explanations ? p.explanations[n-1].replace(/"/g, '&quot;') : '';
+    return `<span class="blank" data-blank="${n}" data-exp="${exp}" tabindex="0"></span>` +
+           `<button class="hint-for-blank" data-blank="${n}">💡</button>`;
   });
 
   passageText.innerHTML = html;
