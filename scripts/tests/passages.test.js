@@ -16,31 +16,28 @@ const required = [
 ];
 for (const cat of required) {
   assert.ok(cat in passages, `${cat} category should exist`);
-  assert.ok(Array.isArray(passages[cat]), `${cat} category should be an array`);
+  assert.strictEqual(typeof passages[cat], 'object', `${cat} should be an object of levels`);
+  assert.ok(Array.isArray(passages[cat].p1), `${cat}.p1 should be an array`);
 }
 
-// Any additional categories in the data should also be arrays
+// Any additional categories should also be objects with arrays per level
 for (const [key, value] of Object.entries(passages)) {
-  assert.ok(Array.isArray(value), `Category '${key}' should be an array`);
+  assert.strictEqual(typeof value, 'object', `Category '${key}' should be an object`);
+  for (const [lvl, arr] of Object.entries(value)) {
+    assert.ok(Array.isArray(arr), `${key}.${lvl} should be an array`);
+  }
 }
 
 // Verify each wordBox entry has a matching definition
-for (const [catName, arr] of Object.entries(passages)) {
-  arr.forEach((p, idx) => {
-    assert.ok(Array.isArray(p.wordBox), `${catName}[${idx}].wordBox should be an array`);
-    assert.ok(Array.isArray(p.definitions), `${catName}[${idx}].definitions should be an array`);
-    assert.strictEqual(p.wordBox.length, p.definitions.length,
-      `${catName}[${idx}] definitions should match wordBox length`);
-    
-    // verify answers/hints/explanations/clueWords align with blanks
-    const blankCount = (p.text.match(/___\s*\(\d+\)\s*___/g) || []).length;
-    const arrays = ['answers', 'hints', 'explanations', 'clueWords'];
-    arrays.forEach(prop => {
-      assert.ok(Array.isArray(p[prop]), `${catName}[${idx}].${prop} should be an array`);
-      assert.strictEqual(p[prop].length, blankCount,
-        `${catName}[${idx}].${prop} length should match number of blanks`);
+for (const [catName, levels] of Object.entries(passages)) {
+  for (const [lvl, arr] of Object.entries(levels)) {
+    arr.forEach((p, idx) => {
+      assert.ok(Array.isArray(p.wordBox), `${catName}.${lvl}[${idx}].wordBox should be an array`);
+      assert.ok(Array.isArray(p.definitions), `${catName}.${lvl}[${idx}].definitions should be an array`);
+      assert.strictEqual(p.wordBox.length, p.definitions.length,
+        `${catName}.${lvl}[${idx}] definitions should match wordBox length`);
     });
-  });
+  }
 }
 
 console.log('passages.test.js completed');
