@@ -77,9 +77,24 @@ function shuffle(arr) {
   return arr;
 }
 
+function getLevelData() {
+  const cat = passages[state.currentCategory];
+  if (!cat) {
+    feedbackDisplay.textContent = 'Category not found.';
+    return [];
+  }
+  if (!cat[state.currentLevel]) {
+    feedbackDisplay.textContent = 'Level not found. Showing p1.';
+    state.currentLevel = 'p1';
+    if (levelSelect) levelSelect.value = 'p1';
+    return cat['p1'];
+  }
+  return cat[state.currentLevel];
+}
+
 // Update status bar
 function updateStatus() {
-  const total = passages[state.currentCategory][state.currentLevel].length;
+  const total = getLevelData().length;
   document.getElementById("progress").textContent = `Passage ${state.currentPassageIndex+1}/${total}`;
   document.getElementById("score").textContent    = `Score: ${state.score}`;
    coinsDisplay.textContent = `Coins: ${state.coins}`;
