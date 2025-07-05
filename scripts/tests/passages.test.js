@@ -14,20 +14,37 @@ const required = [
   'grammaticalRole',
   'connectorClue'
 ];
+const expectedLevels = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6'];
+
 for (const cat of required) {
   assert.ok(cat in passages, `${cat} category should exist`);
-  assert.strictEqual(typeof passages[cat], 'object', `${cat} should be an object of levels`);
-  assert.ok(Array.isArray(passages[cat].p1), `${cat}.p1 should be an array`);
-}
-
-// Any additional categories should also be objects with arrays per level
-for (const [key, value] of Object.entries(passages)) {
-  assert.strictEqual(typeof value, 'object', `Category '${key}' should be an object`);
-  for (const [lvl, arr] of Object.entries(value)) {
-    assert.ok(Array.isArray(arr), `${key}.${lvl} should be an array`);
+  assert.strictEqual(
+    typeof passages[cat],
+    'object',
+    `${cat} should be an object of levels`
+  );
+  for (const lvl of expectedLevels) {
+    assert.ok(
+      Array.isArray(passages[cat][lvl]),
+      `${cat}.${lvl} should be an array`
+    );
   }
 }
 
+// Validate every category has arrays for all expected levels
+for (const [key, value] of Object.entries(passages)) {
+  assert.strictEqual(
+    typeof value,
+    'object',
+    `Category '${key}' should be an object`
+  );
+  for (const lvl of expectedLevels) {
+    assert.ok(
+      Array.isArray(value[lvl]),
+      `${key}.${lvl} should be an array`
+    );
+     }
+}
 // Verify each wordBox entry has a matching definition
 for (const [catName, levels] of Object.entries(passages)) {
   for (const [lvl, arr] of Object.entries(levels)) {
