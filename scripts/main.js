@@ -43,6 +43,8 @@ const dashboardCompleted = document.getElementById("completed-count");
 const dashboardScore = document.getElementById("total-score-summary");
 const dashboardMissed = document.getElementById("missed-clues-summary");
 const exportStatsBtn = document.getElementById("export-stats-btn");
+const coinsDisplay   = document.getElementById('coins');
+const themesInfo     = document.getElementById('themes-info');
 
 function loadStats() {
   const raw = localStorage.getItem('vocabStats');
