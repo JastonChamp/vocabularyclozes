@@ -1013,7 +1013,11 @@ export const morphologicalAffix = [
       "Studies nature."
     ],
     explanations: [
-      "Each is formed by adding '-ist' to a root denoting a field."
+      "'Biologist' is a scientist who studies living organisms.",
+      "'Zoologist' studies animals.",
+      "'Ecologist' studies ecosystems.",
+      "'Conservationist' works to preserve nature.",
+      "'Naturalist' studies nature."
     ],
     clueWords: [["wildlife"],["track"],["habitat"],["group"],["publishing"]]
   },
@@ -1038,7 +1042,11 @@ export const morphologicalAffix = [
       "Helpful and positive."
     ],
     explanations: [
-      "Each is formed from 'instruct' or 'construct' with prefixes/suffixes."
+    "'Instructors' are people who instruct.",
+      "'Instructions' are directions given.",
+      "'Instructional' means related to teaching.",
+      "'Uninstructed' means not taught.",
+      "'Constructive' means helpful in building or improving."
     ],
     clueWords: [["workshop"],["provided"],["materials"],["participants"],["left"]]
   },
@@ -1063,7 +1071,11 @@ export const morphologicalAffix = [
       "Ability to work together."
     ],
     explanations: [
-      "Each word shows how prefixes or suffixes alter the meaning of the root."
+    "'Reconnect' means connect again.",
+      "'Disconnection' is the act of disconnecting.",
+      "'Connections' refers to established links.",
+      "'Interconnect' means connect between multiple things.",
+      "'Interoperability' is the ability to work together."
     ],
     clueWords: [["optimize"],["temporary"],["stable"],["redundant"],["reliability"]]
   }
