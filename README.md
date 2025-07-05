@@ -9,6 +9,20 @@ Vocabulary Cloze Adventure is a browser-based game for practicing vocabulary usi
 
 The game works entirely in the browser, so you can run it locally by simply double-clicking `index.html` or serving the folder with any static file server.
 
+## Prerequisites
+
+* [Node.js](https://nodejs.org/) **20** or higher is required to run the test suite.
+
+## Running Tests
+
+Install dependencies once (`npm install`) and run:
+
+```bash
+npm test
+```
+
+This executes the scripts in `scripts/tests/` using Node's ES module support.
+
 ## Using the Controls
 
 - **Hint (💡)** – Get a hint for the current blank. Click highlighted keywords or the small lightbulb next to a blank for additional clues.
@@ -19,6 +33,10 @@ The game works entirely in the browser, so you can run it locally by simply doub
 - **Prev/Next** – Navigate between passages in the selected vocabulary category.
 - **Sidebar** – Use the sidebar (☰) to switch categories, adjust the timer, pick a voice for text-to-speech, toggle the dyslexia font, change text size, and choose a color theme.
 - **Theme Toggle** – Switch between light and dark mode.
+
+## Level Selection
+
+Use the **Level** dropdown in the sidebar to choose between *Apprentice*, *Scholar*, or *Master* difficulty. Passages are grouped by these levels so that easier sentences appear first. Selecting a higher level loads more advanced passages with trickier vocabulary.
 
 Keyboard and mouse/touch interactions are supported. The app relies on the Web Speech API for text-to-speech, so a browser with that feature (such as recent versions of Chrome or Firefox) is recommended.
 
