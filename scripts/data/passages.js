@@ -254,7 +254,237 @@ export const contextInference = { p1: [
         "'Oppressive' means overwhelming or intense."
       ],
       clueWords: [["ruins"],["sandstorms"],["explorer"],["chamber"],["heat"]]
-    }
+     },
+    {
+      text: "The expedition traced a ___ (1) ___ trail up the volcano, and ___ (2) ___ ash clouds turned midday ___ (3) ___; despite the ___ (4) ___ heat, the climbers ___ (5) ___ to the rim.",
+      answers: ["precarious", "billowing", "dusky", "searing", "persevered"],
+      wordBox: [
+        "precarious", "billowing", "dusky", "searing", "persevered",
+        "secure", "drifting", "radiant", "cool", "retreated"
+      ],
+      hints: [
+        "Unsafe or risky.",
+        "Swelling and rolling outward like smoke.",
+        "Dim and shadowy.",
+        "Extremely hot.",
+        "Kept going despite hardship."
+      ],
+      explanations: [
+        "'Precarious' means uncertain and dangerous.",
+        "'Billowing' describes clouds that puff outward.",
+        "'Dusky' means somewhat dark.",
+        "'Searing' means burning hot.",
+        "'Persevered' means continued firmly."
+      ],
+      clueWords: [["trail","volcano"],["ash"],["midday"],["heat"],["climbers"]]
+    },
+    {
+      text: "The market’s ___ (1) ___ lanterns shimmered, and ___ (2) ___ aromas drifted through the stalls; lively tunes ___ (3) ___ across the plaza, yet the ___ (4) ___ drizzle proved ___ (5) ___ to dampen the excitement.",
+      answers: ["resplendent", "tantalising", "reverberated", "intermittent", "powerless"],
+      wordBox: [
+        "resplendent", "tantalising", "reverberated", "intermittent", "powerless",
+        "dull", "bland", "whispered", "endless", "potent"
+      ],
+      hints: [
+        "Very bright and colourful.",
+        "Extremely tempting.",
+        "Echoed loudly.",
+        "Starting and stopping at intervals.",
+        "Unable to have an effect."
+      ],
+      explanations: [
+        "'Resplendent' means dazzlingly colourful.",
+        "'Tantalising' means appealing and tempting.",
+        "'Reverberated' means rang out and echoed.",
+        "'Intermittent' means occasionally stopping and starting.",
+        "'Powerless' means without strength or influence."
+      ],
+      clueWords: [["lanterns"],["aromas"],["tunes"],["drizzle"],["excitement"]]
+    },
+    {
+      text: "The submarine slipped into the ___ (1) ___ abyss, where ___ (2) ___ currents twisted below; armed with ___ (3) ___ sensors, the crew ___ (4) ___ to chart the ___ (5) ___ depths.",
+      answers: ["unfathomable", "turbulent", "sophisticated", "endeavoured", "abyssal"],
+      wordBox: [
+        "unfathomable", "turbulent", "sophisticated", "endeavoured", "abyssal",
+        "shallow", "placid", "simple", "abandoned", "coastal"
+      ],
+      hints: [
+        "Impossible to measure or understand fully.",
+        "Violently swirling.",
+        "Highly advanced or complex.",
+        "Tried hard to do something.",
+        "Belonging to the deepest parts of the ocean."
+      ],
+      explanations: [
+        "'Unfathomable' means too deep or difficult to grasp.",
+        "'Turbulent' means rough and chaotic.",
+        "'Sophisticated' means extremely advanced.",
+        "'Endeavoured' means made a serious effort.",
+        "'Abyssal' relates to the deepest ocean zone."
+      ],
+      clueWords: [["submarine"],["currents"],["sensors"],["crew"],["depths"]]
+    },
+    {
+      text: "After the rains, ___ (1) ___ farmers worked ___ (2) ___ to clear weeds; although ___ (3) ___ insects nibbled the leaves, the young shoots ___ (4) ___ and eventually ___ (5) ___ into sturdy plants.",
+      answers: ["assiduous", "unremittingly", "voracious", "thrived", "matured"],
+      wordBox: [
+        "assiduous", "unremittingly", "voracious", "thrived", "matured",
+        "idle", "sporadically", "picky", "withered", "shrivelled"
+      ],
+      hints: [
+        "Showing great care and effort.",
+        "Without stopping or losing energy.",
+        "Greedy; eating a lot.",
+        "Grew strongly.",
+        "Reached full growth."
+      ],
+      explanations: [
+        "'Assiduous' means hardworking and persistent.",
+        "'Unremittingly' means without pause.",
+        "'Voracious' means extremely hungry or greedy.",
+        "'Thrived' means flourished.",
+        "'Matured' means became fully grown."
+      ],
+      clueWords: [["farmers"],["worked"],["insects"],["shoots"],["plants"]]
+    },
+    {
+      text: "The ___ (1) ___ nurse carried the ___ (2) ___ medicine tray; with ___ (3) ___ care, she ___ (4) ___ every dose, even under ___ (5) ___ pressure.",
+      answers: ["seasoned", "critical", "meticulous", "dispensed", "tremendous"],
+      wordBox: [
+        "seasoned", "critical", "meticulous", "dispensed", "tremendous",
+        "novice", "ordinary", "hasty", "skipped", "trivial"
+      ],
+      hints: [
+        "Very experienced.",
+        "Extremely important to life.",
+        "Showing great attention to detail.",
+        "Gave out or distributed.",
+        "Extremely great in amount."
+      ],
+      explanations: [
+        "'Seasoned' means having lots of experience.",
+        "'Critical' means vitally important.",
+        "'Meticulous' means very precise.",
+        "'Dispensed' means handed out.",
+        "'Tremendous' means very large or intense."
+      ],
+      clueWords: [["nurse"],["medicine"],["care"],["dose"],["pressure"]]
+    },
+    {
+      text: "Gridlocked traffic screeched while ___ (1) ___ horns ___ (2) ___; impatient drivers ___ (3) ___ their engines, the sun ___ (4) ___ overhead, yet the road crew ___ (5) ___ until dusk.",
+      answers: ["cacophonous", "resonated", "revved", "blazed", "persisted"],
+      wordBox: [
+        "cacophonous", "resonated", "revved", "blazed", "persisted",
+        "silent", "faded", "stalled", "dimmed", "quit"
+      ],
+      hints: [
+        "Extremely loud and harsh-sounding.",
+        "Echoed strongly.",
+        "Increased engine speed loudly.",
+        "Shone fiercely.",
+        "Refused to stop."
+      ],
+      explanations: [
+        "'Cacophonous' means very noisy and unpleasant.",
+        "'Resonated' means rang out clearly.",
+        "'Revved' means suddenly sped up the engine.",
+        "'Blazed' means burned or shone brightly.",
+        "'Persisted' means continued firmly."
+      ],
+      clueWords: [["traffic"],["horns"],["drivers"],["sun"],["crew"]]
+    },
+    {
+      text: "A ___ (1) ___ update added ___ (2) ___ tools, boosting ___ (3) ___ speed and ___ (4) ___ safety; afterward, user complaints rapidly ___ (5) ___.",
+      answers: ["cutting-edge", "ground-breaking", "system-wide", "bolstered", "dwindled"],
+      wordBox: [
+        "cutting-edge", "ground-breaking", "system-wide", "bolstered", "dwindled",
+        "dated", "simple", "partial", "weakened", "increased"
+      ],
+      hints: [
+        "Very latest; state-of-the-art.",
+        "Completely new and original.",
+        "Affecting the entire setup.",
+        "Strengthened or improved.",
+        "Became fewer."
+      ],
+      explanations: [
+        "'Cutting-edge' means the latest and best.",
+        "'Ground-breaking' means highly innovative.",
+        "'System-wide' means across the whole system.",
+        "'Bolstered' means supported or improved.",
+        "'Dwindled' means decreased."
+      ],
+      clueWords: [["update"],["tools"],["speed"],["safety"],["complaints"]]
+    },
+    {
+      text: "At dawn, ___ (1) ___ deer ___ (2) ___ across the meadow; the ___ (3) ___ air filled their lungs as they ___ (4) ___ quietly, until a hunter suddenly ___ (5) ___.",
+      answers: ["skittish", "bounded", "crisp", "foraged", "materialised"],
+      wordBox: [
+        "skittish", "bounded", "crisp", "foraged", "materialised",
+        "bold", "crept", "humid", "rested", "disappeared"
+      ],
+      hints: [
+        "Easily startled.",
+        "Leapt quickly.",
+        "Cool and fresh.",
+        "Searched for food.",
+        "Appeared suddenly."
+      ],
+      explanations: [
+        "'Skittish' means nervous and jumpy.",
+        "'Bounded' means jumped with energy.",
+        "'Crisp' means cool and fresh.",
+        "'Foraged' means searched for food.",
+        "'Materialised' means appeared out of nowhere."
+      ],
+      clueWords: [["deer"],["meadow"],["air"],["quietly"],["hunter"]]
+    },
+    {
+      text: "Her ___ (1) ___ project presented a ___ (2) ___ argument, backed by ___ (3) ___ research and ___ (4) ___ evidence; unsurprisingly, her marks ___ (5) ___.",
+      answers: ["exhaustive", "lucid", "stringent", "compelling", "soared"],
+      wordBox: [
+        "exhaustive", "lucid", "stringent", "compelling", "soared",
+        "brief", "confusing", "weak", "dull", "sank"
+      ],
+      hints: [
+        "Extremely thorough.",
+        "Clear and easy to understand.",
+        "Very strict or careful.",
+        "Powerfully convincing.",
+        "Rose dramatically."
+      ],
+      explanations: [
+        "'Exhaustive' means covering everything.",
+        "'Lucid' means clear-minded.",
+        "'Stringent' means rigorous.",
+        "'Compelling' means persuasive.",
+        "'Soared' means increased sharply."
+      ],
+      clueWords: [["project"],["argument"],["research"],["evidence"],["marks"]]
+    },
+    {
+      text: "The ___ (1) ___ craft achieved ___ (2) ___ orbit; its small ___ (3) ___ fired with ___ (4) ___ accuracy, even in the ___ (5) ___ vacuum of space.",
+      answers: ["interplanetary", "heliocentric", "thrusters", "flawless", "inhospitable"],
+      wordBox: [
+        "interplanetary", "heliocentric", "thrusters", "flawless", "inhospitable",
+        "coastal", "elliptic", "balloons", "faulty", "friendly"
+      ],
+      hints: [
+        "Travelling between planets.",
+        "Circling the Sun directly.",
+        "Tiny steering rockets.",
+        "Without any errors.",
+        "Harsh and unwelcoming."
+      ],
+      explanations: [
+        "'Interplanetary' means between planets.",
+        "'Heliocentric' means Sun-centred.",
+        "'Thrusters' are small rocket engines.",
+        "'Flawless' means perfect.",
+        "'Inhospitable' means not suitable for life."
+      ],
+      clueWords: [["craft"],["orbit"],["fired"],["accuracy"],["vacuum"]]
+         }
   ],
   p3: [
     {
@@ -702,7 +932,237 @@ export const definitionMatch = { p1: [
         "'Practical' means useful in practice."
       ],
       clueWords: [["report"],["results"],["committee"],["decision"],["recommendations"]]
-    }
+    },
+    {
+      text: "The wizard brewed a ___ (1) ___ potion, **or very strong**, that could ___ (2) ___, **meaning heal quickly**. He used a ___ (3) ___ crystal, **a perfectly clear one**, and a ___ (4) ___ herb, **a rare plant**, then waited for the mixture to ___ (5) ___, **that is, bubble gently**.",
+      answers: ["potent", "restore", "pristine", "elusive", "simmer"],
+      wordBox: [
+        "potent", "restore", "pristine", "elusive", "simmer",
+        "weak", "harm", "cloudy", "common", "freeze"
+      ],
+      hints: [
+        "Very powerful.",
+        "Bring back to health.",
+        "Spotlessly clean or clear.",
+        "Hard to find.",
+        "Cook just below boiling."
+      ],
+      explanations: [
+        "'Potent' means very strong.",
+        "'Restore' means heal or bring back.",
+        "'Pristine' means perfectly clean.",
+        "'Elusive' means difficult to catch.",
+        "'Simmer' means cook gently."
+      ],
+      clueWords: [["potion"],["heal"],["crystal"],["herb"],["mixture"]]
+    },
+    {
+      text: "The explorers entered a ___ (1) ___ cavern, **that is, extremely large**, where a ___ (2) ___ silence, **total quiet**, felt ___ (3) ___, **strangely spooky**. Using ___ (4) ___ lamps, **very bright ones**, they walked on a ___ (5) ___ bridge, **one that could wobble easily**.",
+      answers: ["colossal", "complete", "eerie", "intense", "rickety"],
+      wordBox: [
+        "colossal", "complete", "eerie", "intense", "rickety",
+        "tiny", "partial", "cheerful", "dim", "steady"
+      ],
+      hints: [
+        "Very huge.",
+        "Total or whole.",
+        "Strange and scary.",
+        "Very strong or bright.",
+        "Shaky or unstable."
+      ],
+      explanations: [
+        "'Colossal' means enormous.",
+        "'Complete' means whole.",
+        "'Eerie' means spooky.",
+        "'Intense' means very strong.",
+        "'Rickety' means shaky."
+      ],
+      clueWords: [["cavern"],["silence"],["felt"],["lamps"],["bridge"]]
+    },
+    {
+      text: "An ___ (1) ___ child, **or overly curious**, kept asking ___ (2) ___ questions, **meaning very detailed ones**. The teacher gave a ___ (3) ___ answer, **a short but clear reply**, and shared a ___ (4) ___ diagram, **one that shows every part clearly**, so no doubt would ___ (5) ___, **that is, remain**.",
+      answers: ["inquisitive", "specific", "concise", "comprehensive", "linger"],
+      wordBox: [
+        "inquisitive", "specific", "concise", "comprehensive", "linger",
+        "bored", "vague", "lengthy", "limited", "vanish"
+      ],
+      hints: [
+        "Very eager to know.",
+        "Exact; clearly defined.",
+        "Brief and clear.",
+        "Covering everything.",
+        "Stay or remain."
+      ],
+      explanations: [
+        "'Inquisitive' means curious.",
+        "'Specific' means exact.",
+        "'Concise' means brief but complete.",
+        "'Comprehensive' means full and detailed.",
+        "'Linger' means stay on."
+      ],
+      clueWords: [["child"],["questions"],["answer"],["diagram"],["doubt"]]
+    },
+    {
+      text: "The chef served an ___ (1) ___ dessert, **or extremely delicious**, decorated with a ___ (2) ___ pattern, **a fancy design**. Each slice was ___ (3) ___, **exactly the same size**, placed on ___ (4) ___ plates, **sparkling clean ones**, so the guests would ___ (5) ___ every bite, **meaning enjoy fully**.",
+      answers: ["exquisite", "decorative", "uniform", "immaculate", "savour"],
+      wordBox: [
+        "exquisite", "decorative", "uniform", "immaculate", "savour",
+        "bland", "plain", "random", "messy", "waste"
+      ],
+      hints: [
+        "Exceptionally good in taste.",
+        "Fancy or ornamental.",
+        "All the same.",
+        "Spotlessly clean.",
+        "Taste and enjoy slowly."
+      ],
+      explanations: [
+        "'Exquisite' means wonderfully delicious.",
+        "'Decorative' means for show.",
+        "'Uniform' means identical.",
+        "'Immaculate' means perfectly clean.",
+        "'Savour' means enjoy taste."
+      ],
+      clueWords: [["dessert"],["pattern"],["slice"],["plates"],["bite"]]
+    },
+    {
+      text: "The scientist formed a ___ (1) ___ theory, **or well-reasoned idea**, based on ___ (2) ___ data, **information you can count**. She set a ___ (3) ___ goal, **a realistic target**, and used ___ (4) ___ tools, **very exact instruments**, so the results would be ___ (5) ___, **totally trustworthy**.",
+      answers: ["logical", "quantitative", "practical", "precise", "reliable"],
+      wordBox: [
+        "logical", "quantitative", "practical", "precise", "reliable",
+        "random", "vague", "wild", "rough", "unreliable"
+      ],
+      hints: [
+        "Makes sense step by step.",
+        "Shown in numbers.",
+        "Useful and sensible.",
+        "Accurate to the smallest detail.",
+        "Can be trusted."
+      ],
+      explanations: [
+        "'Logical' means following good reasoning.",
+        "'Quantitative' means about numbers.",
+        "'Practical' means useful.",
+        "'Precise' means exact.",
+        "'Reliable' means dependable."
+      ],
+      clueWords: [["theory"],["data"],["goal"],["tools"],["results"]]
+    },
+    {
+      text: "The village elder told a ___ (1) ___ tale, **or very old story**, about a ___ (2) ___ treasure, **meaning long-lost**. He spoke in a ___ (3) ___ voice, **a calm one**, under a ___ (4) ___ moon, **half-hidden by clouds**, hoping the children would ___ (5) ___ the lesson, **remember it**.",
+      answers: ["legendary", "forgotten", "measured", "waning", "retain"],
+      wordBox: [
+        "legendary", "forgotten", "measured", "waning", "retain",
+        "modern", "famous", "loud", "rising", "discard"
+      ],
+      hints: [
+        "Famous from old times.",
+        "No longer remembered.",
+        "Even and steady.",
+        "Getting smaller each night.",
+        "Keep in memory."
+      ],
+      explanations: [
+        "'Legendary' means of legends.",
+        "'Forgotten' means lost from memory.",
+        "'Measured' means controlled.",
+        "'Waning' means shrinking.",
+        "'Retain' means keep."
+      ],
+      clueWords: [["tale"],["treasure"],["voice"],["moon"],["lesson"]]
+    },
+    {
+      text: "The parade moved in ___ (1) ___ order, **or neat line**, led by a ___ (2) ___ drumbeat, **meaning very steady**. Colourful confetti created a ___ (3) ___ scene, **a bright, lively picture**, and the ___ (4) ___ cheers, **extremely loud ones**, seemed to ___ (5) ___, **echo far away**.",
+      answers: ["systematic", "rhythmic", "vibrant", "deafening", "resound"],
+      wordBox: [
+        "systematic", "rhythmic", "vibrant", "deafening", "resound",
+        "random", "uneven", "dull", "soft", "murmur"
+      ],
+      hints: [
+        "Very orderly.",
+        "With a strong beat.",
+        "Full of colour and life.",
+        "So loud it hurts ears.",
+        "Echo loudly."
+      ],
+      explanations: [
+        "'Systematic' means highly organised.",
+        "'Rhythmic' means with steady beat.",
+        "'Vibrant' means colourful & lively.",
+        "'Deafening' means extremely loud.",
+        "'Resound' means echo loudly."
+      ],
+      clueWords: [["order"],["drumbeat"],["scene"],["cheers"],["echo"]]
+    },
+    {
+      text: "The climbers set up ___ (1) ___ tents, **or able to stand strong winds**, on a ___ (2) ___ ridge, **meaning narrow and high**. They packed ___ (3) ___ rations, **exact amounts of food**, wore ___ (4) ___ boots, **water-resistant ones**, and kept a ___ (5) ___ spirit, **hopeful mood**.",
+      answers: ["sturdy", "exposed", "measured", "waterproof", "buoyant"],
+      wordBox: [
+        "sturdy", "exposed", "measured", "waterproof", "buoyant",
+        "fragile", "sheltered", "random", "soaked", "gloomy"
+      ],
+      hints: [
+        "Strongly built.",
+        "Open to wind and weather.",
+        "Exact; counted.",
+        "Doesn’t let water in.",
+        "Cheerful and optimistic."
+      ],
+      explanations: [
+        "'Sturdy' means strong.",
+        "'Exposed' means out in the open.",
+        "'Measured' means carefully counted.",
+        "'Waterproof' means water can’t pass.",
+        "'Buoyant' means light-hearted."
+      ],
+      clueWords: [["tents"],["ridge"],["rations"],["boots"],["spirit"]]
+    },
+    {
+      text: "The orchestra played a ___ (1) ___ melody, **or gentle tune**, followed by a ___ (2) ___ finale, **meaning very grand**. The audience sat in ___ (3) ___ silence, **complete quiet**, until the ___ (4) ___ conductor, **extremely skilled one**, bowed and the applause ___ (5) ___, **started suddenly**.",
+      answers: ["mellow", "majestic", "absolute", "accomplished", "erupted"],
+      wordBox: [
+        "mellow", "majestic", "absolute", "accomplished", "erupted",
+        "harsh", "simple", "partial", "novice", "ceased"
+      ],
+      hints: [
+        "Soft and smooth.",
+        "Very grand.",
+        "Total; entire.",
+        "Highly skilled.",
+        "Burst forth suddenly."
+      ],
+      explanations: [
+        "'Mellow' means gentle.",
+        "'Majestic' means grand.",
+        "'Absolute' means complete.",
+        "'Accomplished' means very skilled.",
+        "'Erupted' means burst out."
+      ],
+      clueWords: [["melody"],["finale"],["silence"],["conductor"],["applause"]]
+    },
+    {
+      text: "A ___ (1) ___ spacecraft, **or one that travels far**, entered ___ (2) ___ orbit, **meaning over the equator**. It fired tiny ___ (3) ___, **small steering rockets**, with ___ (4) ___ accuracy, **perfect aim**, while coping with ___ (5) ___ cold, **extreme**.",
+      answers: ["interstellar", "geosynchronous", "thrusters", "pinpoint", "intense"],
+      wordBox: [
+        "interstellar", "geosynchronous", "thrusters", "pinpoint", "intense",
+        "domestic", "low", "balloons", "rough", "mild"
+      ],
+      hints: [
+        "Between the stars.",
+        "Staying over one spot on Earth.",
+        "Tiny rocket engines.",
+        "Very exact.",
+        "Very great or extreme."
+      ],
+      explanations: [
+        "'Interstellar' means between stars.",
+        "'Geosynchronous' means Earth-fixed orbit.",
+        "'Thrusters' are steering rockets.",
+        "'Pinpoint' means extremely exact.",
+        "'Intense' means very strong."
+      ],
+      clueWords: [["spacecraft"],["orbit"],["tiny"],["accuracy"],["cold"]]
+         }
   ],
   p3: [
     {
@@ -1060,6 +1520,192 @@ export const synonymContrast = { p1: [
         "'Punctually' means at the expected time."
       ],
       clueWords: [["morning"],["noon"],["group"],["trail"],["arriving"]]
+      },
+    {
+      text: "The kitten looked ___ (1) ___ but also ___ (2) ___, batting the yarn with ___ (3) ___ yet ___ (4) ___ paws, until its sleepy eyes closed in ___ (5) ___ peace.",
+      answers: ["playful", "curious", "swift", "gentle", "quiet"],
+      wordBox: [
+        "playful", "curious", "swift", "gentle", "quiet",
+        "lazy", "clumsy", "noisy", "rough", "rude"
+      ],
+      hints: [
+        "Full of fun.",
+        "Wanting to know more.",
+        "Very fast.",
+        "Soft and careful.",
+        "Without sound."
+      ],
+      explanations: [
+        "'Playful' and 'curious' often go together in young animals.",
+        "'Swift' means moving quickly; 'gentle' is the opposite of rough but fits the contrast with swift.",
+        "'Quiet' describes a calm ending."
+      ],
+      clueWords: [["kitten"],["looked"],["paws"],["yet"],["peace"]]
+    },
+    {
+      text: "The captain’s voice was ___ (1) ___ yet ___ (2) ___; his ___ (3) ___ but ___ (4) ___ orders echoed over the ___ (5) ___ deck.",
+      answers: ["calm", "firm", "brief", "clear", "open"],
+      wordBox: [
+        "calm", "firm", "brief", "clear", "open",
+        "shaky", "soft", "long", "vague", "crowded"
+      ],
+      hints: [
+        "Quiet and steady.",
+        "Strong and decided.",
+        "Short in words.",
+        "Easy to understand.",
+        "Not covered."
+      ],
+      explanations: [
+        "Pairs show contrast-in-meaning signals *yet / but*.",
+        "‘Calm’ contrasts with ‘firm’; ‘brief’ with ‘clear’.",
+        "‘Open’ deck = no roof."
+      ],
+      clueWords: [["captain"],["voice"],["orders"],["echoed"],["deck"]]
+    },
+    {
+      text: "The trail was ___ (1) ___ yet ___ (2) ___; hikers moved with ___ (3) ___ but ___ (4) ___ steps, finishing the climb in ___ (5) ___ time.",
+      answers: ["steep", "secure", "steady", "lively", "record"],
+      wordBox: [
+        "steep", "secure", "steady", "lively", "record",
+        "flat", "risky", "uneven", "lazy", "ordinary"
+      ],
+      hints: [
+        "Rising sharply.",
+        "Safe and stable.",
+        "Even and regular.",
+        "Full of energy.",
+        "Best or fastest ever."
+      ],
+      explanations: [
+        "'Steep' vs 'secure' shows contrast.",
+        "'Steady' and 'lively' are mild opposites but can co-exist.",
+        "'Record' signals an outstanding time."
+      ],
+      clueWords: [["trail"],["yet"],["steps"],["but"],["time"]]
+    },
+    {
+      text: "During the feast, the soup smelled ___ (1) ___ and ___ (2) ___, but the dessert tasted ___ (3) ___ although still ___ (4) ___; all guests left the hall feeling ___ (5) ___ and happy.",
+      answers: ["rich", "inviting", "tart", "sweet", "satisfied"],
+      wordBox: [
+        "rich", "inviting", "tart", "sweet", "satisfied",
+        "plain", "repelling", "bitter", "sour", "hungry"
+      ],
+      hints: [
+        "Full of flavour.",
+        "Makes people want to eat.",
+        "Slightly sour.",
+        "Sugary.",
+        "Pleased and full."
+      ],
+      explanations: [
+        "First two blanks are synonyms; third & fourth show contrast.",
+        "‘Satisfied’ sums up the feeling after a good meal."
+      ],
+      clueWords: [["soup"],["smelled"],["dessert"],["tasted"],["guests"]]
+    },
+    {
+      text: "A ___ (1) ___ breeze felt ___ (2) ___ against our faces, but the sand below was ___ (3) ___ and ___ (4) ___; by noon the beach grew ___ (5) ___ with holidaymakers.",
+      answers: ["cool", "refreshing", "hot", "coarse", "crowded"],
+      wordBox: [
+        "cool", "refreshing", "hot", "coarse", "crowded",
+        "freezing", "sticky", "wet", "smooth", "deserted"
+      ],
+      hints: [
+        "Slightly cold in a pleasant way.",
+        "Makes you feel fresh.",
+        "Opposite of cold.",
+        "Rough to the touch.",
+        "Filled with people."
+      ],
+      explanations: [
+        "Contrasts breeze vs sand; synonyms link ‘cool’/‘refreshing’.",
+        "‘Crowded’ contrasts earlier quiet scene."
+      ],
+      clueWords: [["breeze"],["faces"],["sand"],["noon"],["beach"]]
+    },
+    {
+      text: "The scientist gave a ___ (1) ___ yet ___ (2) ___ talk; her slides were ___ (3) ___ but ___ (4) ___, and the students left ___ (5) ___ and informed.",
+      answers: ["brief", "thorough", "simple", "vivid", "inspired"],
+      wordBox: [
+        "brief", "thorough", "simple", "vivid", "inspired",
+        "endless", "shallow", "complex", "dull", "confused"
+      ],
+      hints: [
+        "Short in time.",
+        "Covers everything deeply.",
+        "Easy to follow.",
+        "Bright and lively.",
+        "Filled with new ideas."
+      ],
+      explanations: [
+        "Each pair shows contrast: short BUT detailed, simple BUT vivid.",
+        "The outcome = ‘inspired’."
+      ],
+      clueWords: [["talk"],["slides"],["students"],["left"],["informed"]]
+    },
+    {
+      text: "The museum displayed ___ (1) ___ yet ___ (2) ___ artefacts; some were ___ (3) ___ but ___ (4) ___, and all visitors felt ___ (5) ___ by history.",
+      answers: ["ancient", "pristine", "fragile", "valuable", "humbled"],
+      wordBox: [
+        "ancient", "pristine", "fragile", "valuable", "humbled",
+        "modern", "dirty", "solid", "worthless", "proud"
+      ],
+      hints: [
+        "Very old.",
+        "Perfectly kept.",
+        "Easily broken.",
+        "Worth a lot.",
+        "Made to feel small by greatness."
+      ],
+      explanations: [
+        "Synonym-contrast: old BUT very clean, breakable BUT precious.",
+        "Feelings = humbled."
+      ],
+      clueWords: [["museum"],["artefacts"],["some"],["but"],["visitors"]]
+    },
+    {
+      text: "The coach praised the team’s ___ (1) ___ yet ___ (2) ___ effort; every player was ___ (3) ___ but also ___ (4) ___, and they left the field ___ (5) ___ champions.",
+      answers: ["consistent", "dynamic", "disciplined", "creative", "deserved"],
+      wordBox: [
+        "consistent", "dynamic", "disciplined", "creative", "deserved",
+        "random", "lazy", "wild", "plain", "lucky"
+      ],
+      hints: [
+        "Happening in the same good way.",
+        "Full of energy and change.",
+        "Following rules well.",
+        "Full of new ideas.",
+        "Rightly earned."
+      ],
+      explanations: [
+        "Each blank contrasts or complements with synonym: steady/dynamic, disciplined/creative.",
+        "Outcome = deserved winners."
+      ],
+      clueWords: [["coach"],["effort"],["player"],["also"],["champions"]]
+    },
+    {
+      text: "The inventor built a ___ (1) ___ yet ___ (2) ___ robot; its ___ (3) ___ but ___ (4) ___ wheels rolled across the lab, and the team cheered in ___ (5) ___ joy.",
+      answers: ["compact", "powerful", "smooth", "durable", "pure"],
+      wordBox: [
+        "compact", "powerful", "smooth", "durable", "pure",
+        "bulky", "weak", "bumpy", "fragile", "mixed"
+      ],
+      hints: [
+        "Small but efficient.",
+        "Very strong.",
+        "Moves without bumping.",
+        "Hard to break.",
+        "Not mixed with anything."
+      ],
+      explanations: [
+        "'Compact' contrasts with 'bulky'.",
+        "'Powerful' contrasts with 'weak'.",
+        "'Smooth' contrasts with 'bumpy'.",
+        "'Durable' contrasts with 'fragile'.",
+        "'Pure joy' means unmixed joy."
+      ],
+      clueWords: [["robot"],["yet"],["wheels"],["across"],["joy"]]
     }
   ],
   p3: [
@@ -1479,6 +2125,235 @@ export const morphologicalAffix = { p1: [
         "'Leadership' is formed from 'leader' + -ship."
       ],
       clueWords: [["encouraged"],["fostering"],["boost"],["approach"],["ensured"]]
+      },
+    {
+      text: "The engineer promised to ___ (1) ___ the bridge after the flood; one tiny ___ (2) ___ in his plan almost slowed the work. Yet his ___ (3) ___ crew stayed ___ (4) ___, and the townsfolk watched in ___ (5) ___.",
+      wordBox: [
+        "rebuild", "misstep", "helpful", "fearless", "amazement",
+        "build", "step", "unhelpful", "fearful", "boredom"
+      ],
+      hints: [
+        "Build again (prefix *re-* = again).",
+        "A wrong step or mistake (*mis-* = wrongly).",
+        "Full of help (*-ful* = full of).",
+        "Without fear (*-less* = without).",
+        "State of being amazed (*-ment* forms a noun)."
+      ],
+      explanations: [
+        "'Rebuild' means build again.",
+        "'Misstep' is a small mistake.",
+        "'Helpful' describes someone who assists.",
+        "'Fearless' means brave, without fear.",
+        "'Amazement' is great surprise."
+      ],
+      clueWords: [["bridge"],["plan"],["crew"],["stayed"],["watched"]]
+    },
+    {
+      text: "Before baking, Mum asked us to ___ (1) ___ the oven; we quickly ___ (2) ___ the ingredients from the basket. Everyone awaited Grandpa’s ___ (3) ___, but our ___ (4) ___ handling caused a sudden ___ (5) ___ of flour across the floor.",
+      answers: ["preheat", "unpack", "arrival", "careless", "spillage"],
+      wordBox: [
+        "preheat", "unpack", "arrival", "careless", "spillage",
+        "reheat", "pack", "depart", "careful", "clean-up"
+      ],
+      hints: [
+        "Heat beforehand (*pre-* = before).",
+        "Remove from a package (*un-* = reverse).",
+        "Act of coming (*-al* makes a noun).",
+        "Without care (*-less* = without).",
+        "Act/result of spilling (*-age* forms a noun)."
+      ],
+      explanations: [
+        "'Preheat' means warm up first.",
+        "'Unpack' means take things out.",
+        "'Arrival' is the coming of someone.",
+        "'Careless' means not careful.",
+        "'Spillage' is liquid that has spilled."
+      ],
+      clueWords: [["baking"],["ingredients"],["awaited"],["handling"],["flour"]]
+    },
+    {
+      text: "Coach Lee would ___ (1) ___ of rough play, so every ___ (2) ___ listened closely. Training brought them real ___ (3) ___, and their ___ (4) ___ passes seemed almost ___ (5) ___.",
+      answers: ["disapprove", "player", "enjoyment", "skillful", "unstoppable"],
+      wordBox: [
+        "disapprove", "player", "enjoyment", "skillful", "unstoppable",
+        "approve", "play", "sadness", "clumsy", "breakable"
+      ],
+      hints: [
+        "Refuse to approve (*dis-* = opposite).",
+        "Person who plays (*-er* = person).",
+        "State of enjoying (*-ment* noun).",
+        "Full of skill (*-ful* = full of).",
+        "Cannot be stopped (*un-* + *-able*)."
+      ],
+      explanations: [
+        "'Disapprove' means not approve.",
+        "'Player' is someone who plays.",
+        "'Enjoyment' is pleasure from doing something.",
+        "'Skillful' means very good at something.",
+        "'Unstoppable' means cannot be stopped."
+      ],
+      clueWords: [["rough"],["listened"],["training"],["passes"],["seemed"]]
+    },
+    {
+      text: "The ___ (1) ___ suits kept the divers dry; each new ___ (2) ___ excited the lead ___ (3) ___, who worked with ___ (4) ___ energy in the deep ___ (5) ___.",
+      answers: ["waterproof", "discovery", "investigator", "tireless", "darkness"],
+      wordBox: [
+        "waterproof", "discovery", "investigator", "tireless", "darkness",
+        "watery", "cover", "tourist", "sleepy", "brightness"
+      ],
+      hints: [
+        "Doesn’t let water through (compound).",
+        "Something found (*dis-* + *-covery*).",
+        "Person who investigates (*-or* = person).",
+        "Without tiring (*-less*).",
+        "State of being dark (*-ness* noun)."
+      ],
+      explanations: [
+        "'Waterproof' keeps water out.",
+        "'Discovery' is something found.",
+        "'Investigator' finds out facts.",
+        "'Tireless' means never tired.",
+        "'Darkness' is lack of light."
+      ],
+      clueWords: [["suits"],["new"],["lead"],["energy"],["deep"]]
+    },
+    {
+      text: "Please don’t ___ (1) ___ my words, Sam; our ___ (2) ___ matters to me. Your grin can ___ (3) ___ the room, but one ___ (4) ___ joke may cause ___ (5) ___.",
+      answers: ["misunderstand", "friendship", "brighten", "thoughtless", "disappointment"],
+      wordBox: [
+        "misunderstand", "friendship", "brighten", "thoughtless", "disappointment",
+        "understand", "enemy", "darken", "thoughtful", "delight"
+      ],
+      hints: [
+        "Understand wrongly (*mis-*).",
+        "State of being friends (*-ship*).",
+        "Make brighter (*-en* verb).",
+        "Without thinking (*-less*).",
+        "Feeling let down (*dis-* + *-ment*)."
+      ],
+      explanations: [
+        "'Misunderstand' means get wrong meaning.",
+        "'Friendship' is bond between friends.",
+        "'Brighten' makes something brighter.",
+        "'Thoughtless' means not thinking first.",
+        "'Disappointment' is sadness when things fail."
+      ],
+      clueWords: [["words"],["matters"],["grin"],["joke"],["cause"]]
+    },
+    {
+      text: "To ride the bus you must ___ (1) ___ your card first; Mum packed a ___ (2) ___ bottle that is ___ (3) ___, so it can be used again. Each ___ (4) ___ waited ___ (5) ___ at the crossing.",
+      answers: ["prepay", "refillable", "reusable", "cyclist", "patiently"],
+      wordBox: [
+        "prepay", "refillable", "reusable", "cyclist", "patiently",
+        "repay", "breakable", "single-use", "driver", "quickly"
+      ],
+      hints: [
+        "Pay before (*pre-*).",
+        "Can be filled again (*re-* + *-able*).",
+        "Able to be used again (*re-* + *-able*).",
+        "Person who rides a cycle (*-ist*).",
+        "In a patient way (*-ly* adverb)."
+      ],
+      explanations: [
+        "'Prepay' means pay ahead of time.",
+        "'Refillable' can be filled again.",
+        "'Reusable' can be used repeatedly.",
+        "'Cyclist' rides a bicycle.",
+        "'Patiently' means calmly waiting."
+      ],
+      clueWords: [["bus"],["bottle"],["used"],["each"],["crossing"]]
+    },
+    {
+      text: "The view from the peak was ___ (1) ___; it caused great ___ (2) ___. A weary ___ (3) ___ offered tea on the ___ (4) ___ hillside, adding to our ___ (5) ___.",
+      answers: ["unbelievable", "excitement", "traveller", "snowy", "happiness"],
+      wordBox: [
+        "unbelievable", "excitement", "traveller", "snowy", "happiness",
+        "believable", "boredom", "driver", "rainy", "sadness"
+      ],
+      hints: [
+        "Hard to believe (*un-* + *-able*).",
+        "Strong feeling of joy (*-ment*).",
+        "Person who travels (*-er*).",
+        "Covered with snow (*-y* adjective).",
+        "State of being happy (*-ness*)."
+      ],
+      explanations: [
+        "'Unbelievable' means incredible.",
+        "'Excitement' is lively happiness.",
+        "'Traveller' journeys far.",
+        "'Snowy' means with much snow.",
+        "'Happiness' means joy."
+      ],
+      clueWords: [["view"],["caused"],["weary"],["hillside"],["adding"]]
+    },
+    {
+      text: "Even if we ___ (1) ___, the ___ (2) ___ insisted the ___ (3) ___ must go on. After ___ (4) ___ rehearsals, the players stepped out with ___ (5) ___ smiles.",
+      answers: ["disagree", "conductor", "performance", "countless", "hopeful"],
+      wordBox: [
+        "disagree", "conductor", "performance", "countless", "hopeful",
+        "agree", "builder", "performer", "few", "hopeless"
+      ],
+      hints: [
+        "Have different opinions (*dis-*).",
+        "Person who leads an orchestra (*-or*).",
+        "Act of performing (*-ance* noun).",
+        "Too many to count (*-less* = without number).",
+        "Full of hope (*-ful*)."
+      ],
+      explanations: [
+        "'Disagree' means not agree.",
+        "'Conductor' leads musicians.",
+        "'Performance' is the show.",
+        "'Countless' means many.",
+        "'Hopeful' means optimistic."
+      ],
+      clueWords: [["if"],["insisted"],["must"],["rehearsals"],["smiles"]]
+    },
+    {
+      text: "A single ___ (1) ___ comment can hurt a caring ___ (2) ___, but with rain and care, fresh ___ (3) ___ appears, spreading ___ (4) ___ blooms and making pruning almost ___ (5) ___.",
+      answers: ["disrespectful", "gardener", "regrowth", "colourful", "painless"],
+      wordBox: [
+        "disrespectful", "gardener", "regrowth", "colourful", "painless",
+        "respectful", "visitor", "remove", "white", "painful"
+      ],
+      hints: [
+        "Showing lack of respect (*dis-* + *-ful*).",
+        "Person who gardens (*-er*).",
+        "Growth again (*re-* + noun).",
+        "Full of colour (*-ful*).",
+        "Without pain (*-less*)."
+      ],
+      explanations: [
+        "'Disrespectful' means rude.",
+        "'Gardener' cares for plants.",
+        "'Regrowth' is new growth.",
+        "'Colourful' has many colours.",
+        "'Painless' causes no pain."
+      ],
+      clueWords: [["comment"],["caring"],["fresh"],["blooms"],["pruning"]]
+    },
+    {
+      text: "The new torch is ___ (1) ___ and ___ (2) ___; its bright ___ (3) ___ amazed every early ___ (4) ___, making the old heavy lamp seem ___ (5) ___.",
+      answers: ["rechargeable", "lightweight", "illumination", "tester", "useless"],
+      wordBox: [
+        "rechargeable", "lightweight", "illumination", "tester", "useless",
+        "single-use", "weighty", "darkness", "builder", "useful"
+      ],
+      hints: [
+        "Can be charged again (*re-* + *-able*).",
+        "Not heavy (compound).",
+        "Act or result of lighting (*-tion* noun).",
+        "Person who tests (*-er*).",
+        "Without use (*-less* = without)."
+      ],
+      explanations: [
+        "'Rechargeable' can gain power again.",
+        "'Lightweight' is easy to carry.",
+        "'Illumination' is light produced.",
+        "'Tester' checks things.",
+        "'Useless' has no use."
+      ],
+      clueWords: [["torch"],["and"],["bright"],["early"],["seem"]]
     }
   ],
   p3: [
@@ -1858,6 +2733,235 @@ export const collocationCloze = { p1: [
         "'Polite request' means courteous plea."
       ],
       clueWords: [["agenda"],["presentation"],["objective"],["tone"],["request"]]
+      },
+    {
+      text: "The campers woke to ___ (1) ___ rain and ___ (2) ___ winds, so they had to ___ (3) ___ a quick decision to ___ (4) ___ shelter and ___ (5) ___ their plans.",
+      answers: ["heavy", "strong", "make", "seek", "cancel"],
+      wordBox: [
+        "heavy", "strong", "make", "seek", "cancel",
+        "light", "weak", "take", "ignore", "continue"
+      ],
+      hints: [
+        "Common collocation with *rain*.",
+        "Goes with *winds* (very powerful).",
+        "You _____ a decision (not *take*).",
+        "Standard phrase: _____ shelter.",
+        "Call off / drop plans."
+      ],
+      explanations: [
+        "'Heavy rain' is very intense rain.",
+        "'Strong winds' means powerful winds.",
+        "'Make a decision' is the fixed phrase.",
+        "'Seek shelter' = look for safety.",
+        "'Cancel plans' = stop them happening."
+      ],
+      clueWords: [["campers"],["rain"],["decision"],["shelter"],["plans"]]
+    },
+    {
+      text: "At the station, a ___ (1) ___ train arrived. Tim took a ___ (2) ___ breath, ready to ___ (3) ___ notes on the journey, but he tried to ___ (4) ___ quiet so as not to ___ (5) ___ the silence.",
+      answers: ["fast", "deep", "take", "keep", "break"],
+      wordBox: [
+        "fast", "deep", "take", "keep", "break",
+        "slow", "shallow", "make", "hold", "mend"
+      ],
+      hints: [
+        "Collocates with *train* (speedy).",
+        "Collocates with *breath*.",
+        "Usual verb with *notes*.",
+        "Usual verb with *quiet*.",
+        "Usual verb with *silence*."
+      ],
+      explanations: [
+        "'Fast train' = high-speed train.",
+        "'Deep breath' = fill lungs fully.",
+        "'Take notes' = write notes.",
+        "'Keep quiet' = stay silent.",
+        "'Break the silence' = make noise."
+      ],
+      clueWords: [["train"],["breath"],["notes"],["quiet"],["silence"]]
+    },
+    {
+      text: "Mum brewed ___ (1) ___ coffee so Dad could ___ (2) ___ time before work. She told Ben to wear ___ (3) ___ clothes so he wouldn’t ___ (4) ___ a cold while she went to ___ (5) ___ errands.",
+      answers: ["strong", "save", "warm", "catch", "run"],
+      wordBox: [
+        "strong", "save", "warm", "catch", "run",
+        "weak", "waste", "thin", "lose", "walk"
+      ],
+      hints: [
+        "Intense flavour coffee.",
+        "Opposite of *waste* time.",
+        "Opposite of *light* clothes in winter.",
+        "Common collocation with *a cold*.",
+        "Common verb with *errands*."
+      ],
+      explanations: [
+        "'Strong coffee' = coffee with bold taste.",
+        "'Save time' = do something quicker.",
+        "'Warm clothes' keep you cosy.",
+        "'Catch a cold' = become ill.",
+        "'Run errands' = do small jobs outside."
+      ],
+      clueWords: [["coffee"],["time"],["clothes"],["cold"],["errands"]]
+    },
+    {
+      text: "During winter, ___ (1) ___ snow made it hard to see. We ___ (2) ___ track of time but still managed to ___ (3) ___ progress toward our ___ (4) ___ goals because we carefully ___ (5) ___ every instruction.",
+      answers: ["heavy", "lost", "make", "set", "follow"],
+      wordBox: [
+        "heavy", "lost", "make", "set", "follow",
+        "light", "found", "break", "reach", "ignore"
+      ],
+      hints: [
+        "*Snow* collocation again.",
+        "Usual verb with *track of time*.",
+        "Usual verb with *progress*.",
+        "Usual verb with *goals* (establish).",
+        "Usual verb with *instructions*."
+      ],
+      explanations: [
+        "'Heavy snow' = thick snow.",
+        "'Lose track of time' = forget time.",
+        "'Make progress' = move ahead.",
+        "'Set goals' = define aims.",
+        "'Follow instructions' = obey steps."
+      ],
+      clueWords: [["snow"],["track"],["progress"],["goals"],["instruction"]]
+    },
+    {
+      text: "Jake loved to ___ (1) ___ jokes that made everyone ___ (2) ___ into laughter; his ___ (3) ___ smile showed he enjoyed ___ (4) ___ time with friends as they ___ (5) ___ stories.",
+      answers: ["tell", "burst", "wide", "spending", "shared"],
+      wordBox: [
+        "tell", "burst", "wide", "spending", "shared",
+        "say", "slide", "tiny", "saving", "kept"
+      ],
+      hints: [
+        "Common verb with *jokes*.",
+        "Fixed phrase *___ into laughter*.",
+        "Collocates with *smile* (big grin).",
+        "Collocation with *time* (use time).",
+        "Common verb with *stories* (exchange)."
+      ],
+      explanations: [
+        "'Tell jokes' is standard phrase.",
+        "'Burst into laughter' = laugh suddenly.",
+        "'Wide smile' = big smile.",
+        "'Spending time' = using time doing sth.",
+        "'Shared stories' = told stories to each other."
+      ],
+      clueWords: [["jokes"],["laughter"],["smile"],["time"],["stories"]]
+    },
+    {
+      text: "Alia promised to ___ (1) ___ her promise and never ___ (2) ___ a mistake again; she ___ (3) ___ sincerely, ___ (4) ___ the lesson, and decided to ___ (5) ___ on.",
+      answers: ["keep", "make", "apologise", "learn", "move"],
+      wordBox: [
+        "keep", "make", "apologise", "learn", "move",
+        "break", "fix", "explain", "forget", "stay"
+      ],
+      hints: [
+        "Usual verb with *promise* (not *break*).",
+        "Collocation with *mistake*.",
+        "Say sorry.",
+        "Obvious collocation *___ a lesson*.",
+        "Common phrasal verb *___ on*."
+      ],
+      explanations: [
+        "'Keep a promise' = do what you said.",
+        "'Make a mistake' = do wrong thing.",
+        "'Apologise sincerely' = say sorry truthfully.",
+        "'Learn the lesson' = take the message.",
+        "'Move on' = continue forward."
+      ],
+      clueWords: [["promise"],["mistake"],["sincerely"],["lesson"],["decided"]]
+    },
+    {
+      text: "The class worked hard to ___ (1) ___ money for charity; with each ___ (2) ___ donation they hoped to ___ (3) ___ their target and ___ (4) ___ every supporter to ___ (5) ___ again next year.",
+      answers: ["raise", "generous", "reach", "thank", "contribute"],
+      wordBox: [
+        "raise", "generous", "reach", "thank", "contribute",
+        "lower", "small", "miss", "blame", "withdraw"
+      ],
+      hints: [
+        "Usual verb with *money* for charity.",
+        "Opposite of *small* donation.",
+        "Common verb with *target* (achieve).",
+        "Courtesy verb with *supporter*.",
+        "Verb meaning *give/help again*."
+      ],
+      explanations: [
+        "'Raise money' = collect funds.",
+        "'Generous donation' = big gift.",
+        "'Reach a target' = hit the goal.",
+        "'Thank every supporter' = show gratitude.",
+        "'Contribute again' = give again."
+      ],
+      clueWords: [["money"],["donation"],["target"],["supporter"],["again"]]
+    },
+    {
+      text: "Dad paused to ___ (1) ___ a photo of the ___ (2) ___ view; later we will ___ (3) ___ a postcard, ___ (4) ___ a short caption, and ___ (5) ___ the moment forever.",
+      answers: ["take", "scenic", "send", "write", "remember"],
+      wordBox: [
+        "take", "scenic", "send", "write", "remember",
+        "make", "plain", "keep", "draw", "forget"
+      ],
+      hints: [
+        "Usual verb with *photo*.",
+        "Collocates with *view* (beautiful).",
+        "Verb used with *postcard* (to someone).",
+        "Verb used with *caption*.",
+        "Keep in memory."
+      ],
+      explanations: [
+        "'Take a photo' = photograph.",
+        "'Scenic view' = picturesque view.",
+        "'Send a postcard' = mail it.",
+        "'Write a caption' = add words under photo.",
+        "'Remember the moment' = not forget."
+      ],
+      clueWords: [["photo"],["view"],["postcard"],["caption"],["moment"]]
+    },
+    {
+      text: "To ___ (1) ___ the problem, the team first ___ (2) ___ a solution, then ___ (3) ___ an experiment to ___ (4) ___ the results and finally ___ (5) ___ a conclusion.",
+      answers: ["solve", "offered", "conducted", "record", "drew"],
+      wordBox: [
+        "solve", "offered", "conducted", "record", "drew",
+        "create", "answered", "cancelled", "erase", "pushed"
+      ],
+      hints: [
+        "Verb with *problem* (fix).",
+        "Verb with *solution* (give).",
+        "Usual verb with *experiment* (carry out).",
+        "Verb with *results* (write down).",
+        "Verb with *conclusion* (form)."
+      ],
+      explanations: [
+        "'Solve a problem' = fix it.",
+        "'Offer a solution' = present answer.",
+        "'Conduct an experiment' = do experiment.",
+        "'Record results' = write them.",
+        "'Draw a conclusion' = decide final idea."
+      ],
+      clueWords: [["problem"],["solution"],["experiment"],["results"],["conclusion"]]
+    },
+    {
+      text: "Mum told me to set a ___ (1) ___ password to ___ (2) ___ my account; I must ___ (3) ___ it regularly to ___ (4) ___ risk and keep my data ___ (5) ___.",
+      answers: ["strong", "protect", "update", "avoid", "secure"],
+      wordBox: [
+        "strong", "protect", "update", "avoid", "secure",
+        "weak", "expose", "delete", "invite", "unsafe"
+      ],
+      hints: [
+        "Collocates with *password* (difficult to guess).",
+        "Verb with *account* (guard).",
+        "Usual verb with *password* when changing.",
+        "Verb that pairs with *risk* (stop).",
+        "Adjective collocates with *data* (safe)."
+      ],
+      explanations: [
+        "'Strong password' = hard to guess.",
+        "'Protect an account' = keep safe.",
+        "'Update it' = change to new version.",
+        "'Avoid risk' = stay away from danger.",
+        "'Secure data' = keep data safe."
+      ],
     }
   ],
   p3: [
@@ -2297,6 +3401,236 @@ export const grammaticalRole = { p1: [
         "'Swiftly' modifies 'exited'."
       ],
       clueWords: [["stage"],["twirled"],["landed"],["bowed"],["exited"]]
+      },
+    {
+      text: "The puppy ___ (1) ___ loudly, while the kittens ___ (2) ___ softly. Later, the animals ___ (3) ___ under the tree, and the farmer ___ (4) ___ happy sounds because everyone ___ (5) ___ content.",
+      answers: ["barks", "meow", "rest", "hears", "looks"],
+      wordBox: [
+        "barks", "meow", "rest", "hears", "looks",
+        "bark", "meows", "rests", "hear", "look"
+      ],
+      hints: [
+        "Third-person *singular* verb for puppy.",
+        "Base plural verb for kittens (they).",
+        "Base plural verb for animals (they).",
+        "Third-person singular verb for farmer.",
+        "Third-person singular verb for everyone."
+      ],
+      explanations: [
+        "`Puppy barks` is correct S–V agreement.",
+        "`Kittens meow` (plural).",
+        "`Animals rest` (plural).",
+        "`Farmer hears` (he).",
+        "`Everyone looks` (singular indefinite)."
+      ],
+      clueWords: [["puppy"],["kittens"],["animals"],["farmer"],["everyone"]]
+    },
+    {
+      text: "Maya lost ___ (1) ___ pencil, so Ben lent ___ (2) ___ one. Together ___ (3) ___ fixed the broken tip and returned ___ (4) ___ pencils to the box when ___ (5) ___ finished the work.",
+      answers: ["her", "her", "they", "their", "they"],
+      wordBox: [
+        "her", "her", "they", "their", "they",
+        "hers", "him", "them", "its", "we"
+      ],
+      hints: [
+        "Possessive for Maya.",
+        "Object pronoun referring to Maya.",
+        "Subject pronoun for both children.",
+        "Possessive plural pronoun.",
+        "Subject pronoun again for both."
+      ],
+      explanations: [
+        "`her pencil` shows possession.",
+        "Ben lent *her* one (object).",
+        "`They` = Maya + Ben.",
+        "`Their` pencils (plural possessive).",
+        "`They finished` ends sentence."
+      ],
+      clueWords: [["Maya"],["Ben"],["Together"],["pencils"],["finished"]]
+    },
+    {
+      text: "The ___ (1) ___ rabbit ran ___ (2) ___ across the garden. It stopped for a ___ (3) ___ drink, twitched its ___ (4) ___ nose, and listened ___ (5) ___ for danger.",
+      answers: ["quick", "quickly", "cool", "small", "carefully"],
+      wordBox: [
+        "quick", "quickly", "cool", "small", "carefully",
+        "quickly", "quick", "coolly", "tiny", "careful"
+      ],
+      hints: [
+        "Describing *rabbit* (adjective).",
+        "Describing *ran* (adverb).",
+        "Describing *drink* (adjective).",
+        "Adjective for *nose* size.",
+        "Adverb modifying *listened*."
+      ],
+      explanations: [
+        "`quick rabbit` (adjective).",
+        "`ran quickly` (adverb).",
+        "`cool drink` (temperature).",
+        "`small nose` (size).",
+        "`listened carefully` (manner)."
+      ],
+      clueWords: [["rabbit"],["ran"],["drink"],["nose"],["listened"]]
+    },
+    {
+      text: "We saw ___ (1) ___ eagle and three ___ (2) ___ perched on ___ (3) ___ tallest tree; ___ (4) ___ birds flew off when ___ (5) ___ loud noise echoed.",
+      answers: ["an", "sparrows", "the", "the", "a"],
+      wordBox: [
+        "an", "sparrows", "the", "the", "a",
+        "a", "sparrow", "some", "that", "an"
+      ],
+      hints: [
+        "Article before vowel sound.",
+        "Correct plural noun.",
+        "Definite article for specific tree.",
+        "Definite article for known birds.",
+        "Indefinite article before consonant sound."
+      ],
+      explanations: [
+        "`an eagle` (vowel sound).",
+        "`sparrows` plural form.",
+        "`the tallest tree` (specific).",
+        "`the birds` (already mentioned).",
+        "`a loud noise` (first mention)."
+      ],
+      clueWords: [["eagle"],["three"],["tallest"],["birds"],["noise"]]
+    },
+    {
+      text: "The ball rolled ___ (1) ___ the table, bounced ___ (2) ___ the wall, and landed ___ (3) ___ my chair. I looked ___ (4) ___ the window and saw it resting ___ (5) ___ the grass.",
+      answers: ["off", "against", "under", "through", "on"],
+      wordBox: [
+        "off", "against", "under", "through", "on",
+        "from", "along", "over", "into", "in"
+      ],
+      hints: [
+        "Separated from surface.",
+        "Touches and rebounds.",
+        "Below / beneath.",
+        "Preposition indicating passage across opening.",
+        "Resting atop surface."
+      ],
+      explanations: [
+        "`off the table` (movement away).",
+        "`against the wall` (impact).",
+        "`under my chair` (beneath).",
+        "`through the window` (view across).",
+        "`on the grass` (resting)."
+      ],
+      clueWords: [["rolled"],["bounced"],["landed"],["looked"],["resting"]]
+    },
+    {
+      text: "Yesterday, Ella ___ (1) ___ her lunch early. Today she ___ (2) ___ to the café again and ___ (3) ___ the same meal. She usually ___ (4) ___ fish, but last week she ___ (5) ___ soup instead.",
+      answers: ["ate", "goes", "orders", "chooses", "had"],
+      wordBox: [
+        "ate", "goes", "orders", "chooses", "had",
+        "eat", "went", "ordered", "choose", "has"
+      ],
+      hints: [
+        "Past tense of *eat* (yesterday).",
+        "Present tense (today routine).",
+        "Present tense third-singular.",
+        "Present habitual choice.",
+        "Past simple of *have* (last week)."
+      ],
+      explanations: [
+        "`ate` is past of eat.",
+        "`goes` present simple.",
+        "`orders` present simple.",
+        "`chooses` habitual.",
+        "`had` past of have."
+      ],
+      clueWords: [["Yesterday"],["Today"],["again"],["usually"],["last week"]]
+    },
+    {
+      text: "Be careful, Tom! You might hurt ___ (1) ___ with those scissors. Let ___ (2) ___ help you. Mrs Lee gave ___ (3) ___ class a task and told the children to check ___ (4) ___ answers before she marked ___ (5) ___.",
+      answers: ["yourself", "me", "the", "their", "them"],
+      wordBox: [
+        "yourself", "me", "the", "their", "them",
+        "himself", "I", "its", "they", "us"
+      ],
+      hints: [
+        "Reflexive pronoun for Tom.",
+        "Object pronoun speaker (I→me).",
+        "Article before *class* (whole group).",
+        "Possessive pronoun plural.",
+        "Object pronoun referencing answers."
+      ],
+      explanations: [
+        "`hurt yourself` (reflexive).",
+        "`let me help`.",
+        "`the class` (specific).",
+        "`their answers` (possessive).",
+        "`marked them` refers to answers."
+      ],
+      clueWords: [["hurt"],["help"],["gave"],["check"],["marked"]]
+    },
+    {
+      text: "We need some ___ (1) ___ for the sauce and a few ___ (2) ___ for the salad. Too much ___ (3) ___ spoils the flavour, while too many ___ (4) ___ make the dish salty. Finally, add a little ___ (5) ___ for colour.",
+      answers: ["milk", "tomatoes", "sugar", "olives", "pepper"],
+      wordBox: [
+        "milk", "tomatoes", "sugar", "olives", "pepper",
+        "milks", "tomato", "sugars", "olive", "peppers"
+      ],
+      hints: [
+        "Non-count liquid noun.",
+        "Count plural noun.",
+        "Non-count sweetener.",
+        "Count plural noun.",
+        "Non-count spice here."
+      ],
+      explanations: [
+        "`some milk` (non-count).",
+        "`a few tomatoes` (count plural).",
+        "`too much sugar` (non-count).",
+        "`too many olives` (count plural).",
+        "`a little pepper` (non-count)."
+      ],
+      clueWords: [["sauce"],["salad"],["flavour"],["dish"],["colour"]]
+    },
+    {
+      text: "Mount Faber is ___ (1) ___ than the hill near my house, but Mount Kinabalu is the ___ (2) ___ peak I have seen. Today’s puzzle seems ___ (3) ___ than yesterday’s, yet Liam found the ___ (4) ___ clue and solved it the ___ (5) ___.",
+      answers: ["higher", "highest", "harder", "easiest", "fastest"],
+      wordBox: [
+        "higher", "highest", "harder", "easiest", "fastest",
+        "high", "higher", "hard", "easy", "fast"
+      ],
+      hints: [
+        "Comparative adjective.",
+        "Superlative adjective.",
+        "Comparative adjective.",
+        "Superlative adjective.",
+        "Superlative adverb."
+      ],
+      explanations: [
+        "`higher than` shows comparison.",
+        "`the highest peak` superlative.",
+        "`harder than` puzzle.",
+        "`the easiest clue` superlative.",
+        "`solved it the fastest` adverb form."
+      ],
+      clueWords: [["than"],["peak"],["puzzle"],["clue"],["solved"]]
+    },
+    {
+      text: "Please ___ (1) ___ up your toys before dinner. After we ___ (2) ___ off the lights, we can ___ (3) ___ on a movie. If the baby ___ (4) ___ up, we will ___ (5) ___ her back to sleep.",
+      answers: ["pick", "turn", "put", "wakes", "rock"],
+      wordBox: [
+        "pick", "turn", "put", "wakes", "rock",
+        "pick", "turns", "putted", "wake", "roll"
+      ],
+      hints: [
+        "Phrasal verb *___ up* (tidy).",
+        "Phrasal verb *___ off* lights.",
+        "Phrasal verb *___ on* a movie.",
+        "Simple present third-singular.",
+        "Verb for calming baby."
+      ],
+      explanations: [
+        "`pick up toys` = tidy toys.",
+        "`turn off the lights`.",
+        "`put on a movie`.",
+        "`baby wakes up` (present).",
+        "`rock her back to sleep`."
+      ],
+      clueWords: [["toys"],["lights"],["movie"],["baby"],["sleep"]]
     }
   ],
   p3: [
@@ -2656,6 +3990,121 @@ export const connectorClue = { p1: [
         "'Adequate' means sufficient."
       ],
       clueWords: [["Although"],["was"],["they"],["meanwhile"],["supplies"]]
+      },
+    {
+      text: "Although the ___ (1) ___ sky warned of rain, the children ___ (2) ___ to the playground; they played with ___ (3) ___ joy until the thunder ___ (4) ___, and their teacher ___ (5) ___ them back indoors.",
+      answers: ["gloomy", "ran", "great", "rumbled", "led"],
+      wordBox: [
+        "gloomy", "ran", "great", "rumbled", "led",
+        "sunny", "walked", "tiny", "whistled", "ignored"
+      ],
+      hints: [
+        "Dark and dull.",
+        "Moved quickly on foot.",
+        "A large amount.",
+        "Made a deep sound.",
+        "Guided or brought."
+      ],
+      explanations: [
+        "'Gloomy' means dark or overcast.",
+        "'Ran' fits with children excited to go play.",
+        "'Great joy' means lots of happiness.",
+        "'Rumbled' fits thunder context.",
+        "'Led' means brought them inside."
+      ],
+      clueWords: [["Although"],["playground"],["joy"],["until"],["indoors"]]
+    },
+    {
+      text: "Because the ___ (1) ___ clock was broken, Mr Tan used a ___ (2) ___ watch instead. He ___ (3) ___ the time aloud so the pupils could start their ___ (4) ___ test, even though the hall was slightly ___ (5) ___.",
+      answers: ["classroom", "spare", "announced", "timed", "noisy"],
+      wordBox: [
+        "classroom", "spare", "announced", "timed", "noisy",
+        "canteen", "broken", "ignored", "silent", "missed"
+      ],
+      hints: [
+        "Room for lessons.",
+        "Extra or kept in case needed.",
+        "Said aloud formally.",
+        "Organised by duration.",
+        "Full of sound or chatter."
+      ],
+      explanations: [
+        "'Classroom clock' is typical context.",
+        "'Spare watch' solves the problem.",
+        "'Announced' fits formal action by teacher.",
+        "'Timed test' refers to exam context.",
+        "'Noisy hall' gives contrast to exam focus."
+      ],
+      clueWords: [["Because"],["instead"],["so"],["test"],["even though"]]
+    },
+    {
+      text: "Since the ___ (1) ___ was low, the baker added more ___ (2) ___ to help the dough rise. The loaves ___ (3) ___ quickly in the warm oven. Despite the ___ (4) ___ start, the bakery soon ___ (5) ___ with customers.",
+      answers: ["yeast", "sugar", "rose", "slow", "filled"],
+      wordBox: [
+        "yeast", "sugar", "rose", "slow", "filled",
+        "flour", "salt", "sank", "quiet", "closed"
+      ],
+      hints: [
+        "Ingredient that helps bread rise.",
+        "Sweet substance used in baking.",
+        "Went up in size.",
+        "Not quick.",
+        "Became crowded or full."
+      ],
+      explanations: [
+        "'Yeast was low' = problem.",
+        "'Sugar added' = cause-effect.",
+        "'Rose quickly' = rising dough.",
+        "'Despite slow start' = concession clue.",
+        "'Filled' fits with crowd/response."
+      ],
+      clueWords: [["Since"],["added"],["dough"],["Despite"],["customers"]]
+    },
+    {
+      text: "Although the ___ (1) ___ was steep, the hikers ___ (2) ___ carefully. They spotted ___ (3) ___ animals along the way. One deer ___ (4) ___ near a stream, and the leader ___ (5) ___ the group to pause.",
+      answers: ["slope", "climbed", "wild", "stood", "signalled"],
+      wordBox: [
+        "slope", "climbed", "wild", "stood", "signalled",
+        "path", "ran", "pet", "slept", "ignored"
+      ],
+      hints: [
+        "Side of a hill or incline.",
+        "Went up something.",
+        "Not tamed.",
+        "Was standing.",
+        "Gave a gesture or command."
+      ],
+      explanations: [
+        "'Although steep slope' = contrast with action.",
+        "'Climbed carefully' shows cautious movement.",
+        "'Wild animals' match forest context.",
+        "'Stood near stream' fits realistic imagery.",
+        "'Signalled' implies instruction to pause."
+      ],
+      clueWords: [["Although"],["hikers"],["spotted"],["deer"],["pause"]]
+    },
+    {
+      text: "Because the ___ (1) ___ was loud, Marcus wore ___ (2) ___ to protect his ears. His friends ___ (3) ___ near the drums, but he ___ (4) ___ under a tent. Eventually, the music ___ (5) ___ and they went home.",
+      answers: ["music", "earmuffs", "danced", "waited", "ended"],
+      wordBox: [
+        "music", "earmuffs", "danced", "waited", "ended",
+        "crowd", "glasses", "stood", "played", "started"
+      ],
+      hints: [
+        "Sound made by instruments.",
+        "Warm covers for ears.",
+        "Moved with rhythm.",
+        "Stayed in place calmly.",
+        "Came to a stop."
+      ],
+      explanations: [
+        "'Because music was loud' = cause.",
+        "'Earmuffs' show protection.",
+        "'Danced near drums' = noisy side.",
+        "'Waited under tent' = alternative.",
+        "'Ended' completes the event."
+      ],
+      clueWords: [["Because"],["protect"],["but"],["under"],["Eventually"]]
     }
   ],
   p3: [
