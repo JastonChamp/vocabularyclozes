@@ -1,4 +1,4 @@
- export const contextInference = [
+export const contextInference = { p1: [
   {
     text: "The mountain’s ___ (1) ___ path wound around rocky cliffs, and the ___ (2) ___ winds made every step ___ (3) ___; despite the ___ (4) ___ weather, the team ___ (5) ___ to the summit.",
     answers: ["steep", "biting", "treacherous", "inclement", "persevered"],
@@ -230,9 +230,9 @@
     clueWords: [["spacecraft"],["orbit"],["engines"],["maneuvers"],["conditions"]]
 
   }
-];
+]};
 
-export const definitionMatch = [
+export const definitionMatch = { p1: [
   {
     text: "After hiking for hours, she was ___ (1) ___; her partner’s ___ (2) ___ encouragement kept them going, and at the summit they felt ___ (3) ___, capturing photos with ___ (4) ___ cameras before heading back to their ___ (5) ___ camp.",
     answers: [
@@ -553,9 +553,9 @@ export const definitionMatch = [
       ["efforts"], ["collaborations"]
     ]
   }
-];
+]};
 
-export const synonymContrast = [
+export const synonymContrast = { p1: [
   {
     text: "He was rich, but his brother was ___ (1) ___; whereas his sister lived quite ___ (2) ___, yet their bond remained ___ (3) ___ despite financial ___ (4) ___ and occasional ___ (5) ___.",
     answers: ["poor", "modestly", "unbreakable", "disparities", "tensions"],
@@ -786,9 +786,9 @@ export const synonymContrast = [
     ],
     clueWords: [["profits"],["expenses"],["management"],["strategies"],["growth"]]
   }
-];
+]};
 
-export const morphologicalAffix = [
+export const morphologicalAffix = { p1: [
   {
     text: "Her strict ___ (1) ___ to protocol earned respect; her ___ (2) ___ in front of clients proved invaluable, and she demonstrated true ___ (3) ___ by sharing resources. Her ___ (4) ___ at meetings and her ___ (5) ___ attitude inspired all.",
     answers: [
@@ -1079,9 +1079,9 @@ export const morphologicalAffix = [
     ],
     clueWords: [["optimize"],["temporary"],["stable"],["redundant"],["reliability"]]
   }
-];
+]};
 
-export const collocationCloze = [
+export const collocationCloze = { p1: [
   {
     text: "To stay alert, Mark started his day with a ___ (1) ___ coffee and a ___ (2) ___ breakfast; he then made a ___ (3) ___ decision, set a ___ (4) ___ pace, and tackled the task with ___ (5) ___ energy.",
     answers: ["strong", "hearty", "tough", "steady", "boundless"],
@@ -1332,9 +1332,9 @@ export const collocationCloze = [
       ["report"], ["visuals"], ["eye contact"], ["tone"], ["summary"]
     ]
   }
-];
+]};
 
-export const grammaticalRole = [
+export const grammaticalRole = { p1: [
   {
     text: "The cat moved ___ (1) ___ across the floor, and the dog barked ___ (2) ___; the children watched ___ (3) ___, then laughed ___ (4) ___ when the puppy ___ (5) ___ playfully.",
     answers: ["silently", "loudly", "curiously", "joyfully", "approached"],
@@ -1645,9 +1645,9 @@ export const grammaticalRole = [
     ],
     clueWords: [["collaborated"],["shared"],["resolved"],["delivered"],["celebrated"]]
   }
-];
+]};
 
-export const connectorClue = [
+export const connectorClue = { p1: [
   {
     text: "Although ___ (1) ___ were ___ (2) ___, we ___ (3) ___ on schedule because ___ (4) ___ remained ___ (5) ___.",
     answers: ["delays", "inevitable", "proceeded", "circumstances", "favorable"],
@@ -1878,7 +1878,7 @@ export const connectorClue = [
     ],
     clueWords: [["So"],["was"],["he"],["although"],["were"]]
   }
- ];
+]};
 
 export const passages = {
   contextInference,
@@ -2059,12 +2059,15 @@ function deriveDefinition(word) {
 
 // Build definitions using hints, manual entries, and simple morphology
 for (const category of Object.values(passages)) {
-  for (const passage of category) {
-    passage.definitions = passage.wordBox.map((w, i) => {
-      if (passage.hints && i < passage.hints.length) {
-        return passage.hints[i];
-      }
-      return deriveDefinition(w);
-    });
+ for (const levelArr of Object.values(category)) {
+    for (const passage of levelArr) {
+      passage.definitions = passage.wordBox.map((w, i) => {
+        if (passage.hints && i < passage.hints.length) {
+          return passage.hints[i];
+        }
+        return deriveDefinition(w);
+      });
+    }
   }
 }
+
