@@ -185,7 +185,15 @@ function startTimer() {
 // Render current passage
 function displayPassage() {
   clearInterval(state.timerInterval);
-  const p = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex];
+ const data = getLevelData();
+  if (!data.length) {
+    passageText.innerHTML = "";
+    wordBox.innerHTML = "";
+    feedbackDisplay.textContent = "No passages available.";
+    updateStatus();
+    return;
+  }
+  const p = data[state.currentPassageIndex];
 
   // Highlight clue words before inserting blanks to avoid corrupting attributes
   let html = p.text;
@@ -241,7 +249,8 @@ function bindInteractions() {
   document.querySelectorAll('.hint-for-blank').forEach(btn => {
     btn.onclick = () => {
       const idx = +btn.dataset.blank - 1;
-    const hint = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].hints[idx];
+   const data = getLevelData();
+      const hint = data[state.currentPassageIndex].hints[idx];
       feedbackDisplay.textContent = hint;
       speak(hint);
     };
