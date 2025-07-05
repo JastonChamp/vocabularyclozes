@@ -31,6 +31,15 @@ for (const [catName, arr] of Object.entries(passages)) {
     assert.ok(Array.isArray(p.definitions), `${catName}[${idx}].definitions should be an array`);
     assert.strictEqual(p.wordBox.length, p.definitions.length,
       `${catName}[${idx}] definitions should match wordBox length`);
+    
+    // verify answers/hints/explanations/clueWords align with blanks
+    const blankCount = (p.text.match(/___\s*\(\d+\)\s*___/g) || []).length;
+    const arrays = ['answers', 'hints', 'explanations', 'clueWords'];
+    arrays.forEach(prop => {
+      assert.ok(Array.isArray(p[prop]), `${catName}[${idx}].${prop} should be an array`);
+      assert.strictEqual(p[prop].length, blankCount,
+        `${catName}[${idx}].${prop} length should match number of blanks`);
+    });
   });
 }
 
