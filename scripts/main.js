@@ -98,6 +98,13 @@ const unlockMilestones = [
   { points: 100, theme: 'theme4', label: 'Galaxy Ranger', name: 'Galaxy' },
 ];
 
+const levelMilestones = [
+  { score: 0,   name: 'Apprentice' },
+  { score: 50,  name: 'Adept' },
+  { score: 150, name: 'Expert' },
+  { score: 300, name: 'Master' },
+];
+
 function applyUnlockedThemes() {
   state.unlockedThemes.forEach(t => {
     if (!Array.from(themeSelect.options).some(o => o.value === t)) {
@@ -122,6 +129,15 @@ function checkUnlocks() {
       }
     }
   });
+}
+
+function updateLevel() {
+  for (let i = levelMilestones.length - 1; i >= 0; i--) {
+    if (state.score >= levelMilestones[i].score) {
+      state.level = levelMilestones[i].name;
+      break;
+    }
+  }
 }
 
 // Timer logic
@@ -311,17 +327,17 @@ function checkAnswers() {
       stats.missed[clue] = (stats.missed[clue] || 0) + 1;
     }
   });
-  if (allGood) {
-    state.score += 10;
-    state.stars = Math.min(3, state.stars + 1);
-     state.coins += 10;
-    checkUnlocks();
-    saveProgress();
-    feedbackDisplay.textContent = 'Well done!';
-    speak('Well done');
-    stats.completed++;
-    // handle level/achievements...
-  } else {
+    if (allGood) {
+      state.score += 10;
+      state.stars = Math.min(3, state.stars + 1);
+      state.coins += 10;
+      checkUnlocks();
+      saveProgress();
+      feedbackDisplay.textContent = 'Well done!';
+      speak('Well done');
+      stats.completed++;
+      updateLevel();
+    } else {
     feedbackDisplay.textContent = 'Check your answers!';
     speak('Check your answers');
     stats.score = state.score;
