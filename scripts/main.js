@@ -37,6 +37,32 @@ const textSizeSlider = document.getElementById("text-size-slider");
 const themeSelect    = document.getElementById("theme-select");
 const sidebarToggle  = document.getElementById("sidebar-toggle");
 const sidebar        = document.querySelector(".sidebar");
+const dashboardCompleted = document.getElementById("completed-count");
+const dashboardScore = document.getElementById("total-score-summary");
+const dashboardMissed = document.getElementById("missed-clues-summary");
+const exportStatsBtn = document.getElementById("export-stats-btn");
+
+function loadStats() {
+  const raw = localStorage.getItem('vocabStats');
+  return raw ? JSON.parse(raw) : { completed: 0, score: 0, missed: {} };
+}
+
+let stats = loadStats();
+
+function saveStats() {
+  localStorage.setItem('vocabStats', JSON.stringify(stats));
+}
+
+function renderDashboard() {
+  dashboardCompleted.textContent = `Completed: ${stats.completed}`;
+  dashboardScore.textContent = `Score: ${stats.score}`;
+  const sorted = Object.entries(stats.missed)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([clue, count]) => `${clue} (${count})`)
+    .join(', ') || 'none';
+  dashboardMissed.textContent = `Top Missed Clues: ${sorted}`;
+}
 
 // Utility: shuffle using Fisher–Yates for an even distribution
 function shuffle(arr) {
@@ -278,6 +304,13 @@ function checkAnswers() {
       span.textContent = exp;
     }
   });
+  blanks.forEach((b,i) => {
+    const ans = p.answers[i];
+    if (b.textContent.toLowerCase() !== ans.toLowerCase()) {
+      const clue = p.clueWords && p.clueWords[i] ? p.clueWords[i][0] : `blank${i+1}`;
+      stats.missed[clue] = (stats.missed[clue] || 0) + 1;
+    }
+  });
   if (allGood) {
     state.score += 10;
     state.stars = Math.min(3, state.stars + 1);
@@ -286,10 +319,14 @@ function checkAnswers() {
     saveProgress();
     feedbackDisplay.textContent = 'Well done!';
     speak('Well done');
+    stats.completed++;
     // handle level/achievements...
   } else {
     feedbackDisplay.textContent = 'Check your answers!';
     speak('Check your answers');
+    stats.score = state.score;
+  saveStats();
+  renderDashboard();
   }
   updateStatus();
 }
@@ -312,6 +349,10 @@ resetBtn.onclick        = displayPassage;
 shareBtn.onclick        = () => {
   navigator.clipboard.writeText(`Score: ${state.score}, Level: ${state.level}`);
   feedbackDisplay.textContent = 'Copied!';
+};
+exportStatsBtn.onclick  = () => {
+  navigator.clipboard.writeText(JSON.stringify(stats));
+  feedbackDisplay.textContent = 'Stats copied!';
 };
 readBtn.onclick         = () => {
    speak(passages[state.currentCategory][state.currentPassageIndex].text.replace(/___\s*\(\d\)\s*___/g,'blank'));
@@ -339,6 +380,7 @@ window.addEventListener('DOMContentLoaded', () => {
   loadVoices(document.getElementById('voice-select'));
 applyUnlockedThemes();
   displayPassage();
+  renderDashboard();
   saveProgress();
   updateStatus();
   });
