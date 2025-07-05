@@ -391,12 +391,20 @@ const hint = passages[state.currentCategory][state.currentLevel][state.currentPa
 clearBtn.onclick        = displayPassage;
 resetBtn.onclick        = displayPassage;
 shareBtn.onclick        = () => {
-  navigator.clipboard.writeText(`Score: ${state.score}, Level: ${state.level}`);
-  feedbackDisplay.textContent = 'Copied!';
+ if (navigator.clipboard) {
+    navigator.clipboard.writeText(`Score: ${state.score}, Level: ${state.level}`);
+    feedbackDisplay.textContent = 'Copied!';
+  } else {
+    feedbackDisplay.textContent = 'Clipboard not supported';
+  }
 };
 exportStatsBtn.onclick  = () => {
-  navigator.clipboard.writeText(JSON.stringify(stats));
-  feedbackDisplay.textContent = 'Stats copied!';
+ if (navigator.clipboard) {
+    navigator.clipboard.writeText(JSON.stringify(stats));
+    feedbackDisplay.textContent = 'Stats copied!';
+  } else {
+    feedbackDisplay.textContent = 'Clipboard not supported';
+  }
 };
 readBtn.onclick         = () => {
   speak(passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].text.replace(/___\s*\(\d\)\s*___/g,'blank'));
