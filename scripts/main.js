@@ -3,6 +3,7 @@ import { speak, loadVoices } from './utils/speech.js';
 
 const state = {
   currentCategory: "contextInference",
+  currentLevel: "p1",
   currentPassageIndex: 0,
   score: 0,
   stars: 0,
@@ -30,6 +31,7 @@ const shareBtn       = document.getElementById("share-btn");
 const readBtn        = document.getElementById("read-passage-btn");
 const resetBtn       = document.getElementById("reset-words-btn");
 const categorySelect = document.getElementById("vocab-category");
+const levelSelect    = document.getElementById("level-select");
 const timerSelect    = document.getElementById("timer-setting");
 const toggleThemeBtn = document.getElementById("toggle-theme");
 const toggleDyslexiaBtn = document.getElementById("toggle-dyslexia");
@@ -75,6 +77,7 @@ function shuffle(arr) {
 
 // Update status bar
 function updateStatus() {
+  const total = passages[state.currentCategory][state.currentLevel].length;
   const total = passages[state.currentCategory].length;
   document.getElementById("progress").textContent = `Passage ${state.currentPassageIndex+1}/${total}`;
   document.getElementById("score").textContent    = `Score: ${state.score}`;
@@ -166,7 +169,7 @@ function startTimer() {
 // Render current passage
 function displayPassage() {
   clearInterval(state.timerInterval);
-  const p = passages[state.currentCategory][state.currentPassageIndex];
+  const p = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex];
 
   // Highlight clue words before inserting blanks to avoid corrupting attributes
   let html = p.text;
@@ -214,7 +217,7 @@ function bindInteractions() {
   document.querySelectorAll('.keyword').forEach(el => {
     el.onclick = () => {
       const idx = +el.className.match(/kw-(\d+)/)[1] - 1;
-      const hint = passages[state.currentCategory][state.currentPassageIndex].hints[idx];
+       const hint = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].hints[idx];
       feedbackDisplay.textContent = hint;
       speak(hint);
     };
@@ -222,7 +225,7 @@ function bindInteractions() {
   document.querySelectorAll('.hint-for-blank').forEach(btn => {
     btn.onclick = () => {
       const idx = +btn.dataset.blank - 1;
-      const hint = passages[state.currentCategory][state.currentPassageIndex].hints[idx];
+    const hint = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].hints[idx];
       feedbackDisplay.textContent = hint;
       speak(hint);
     };
@@ -247,7 +250,7 @@ function placeWord(blank, txt) {
 
 function checkSingle(blank) {
   const idx = +blank.dataset.blank - 1;
-  const correct = passages[state.currentCategory][state.currentPassageIndex].answers[idx];
+ const correct = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].answers[idx];
   if (blank.textContent.toLowerCase() === correct.toLowerCase()) {
     blank.classList.add('correct');
     blank.classList.remove('incorrect');
@@ -295,7 +298,7 @@ function checkSingle(blank) {
 }
 
 function checkAnswers() {
- const p = passages[state.currentCategory][state.currentPassageIndex];
+const p = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex];
   const blanks = document.querySelectorAll('.blank');
   let allGood = true;
   blanks.forEach((b,i) => {
@@ -350,13 +353,13 @@ function checkAnswers() {
 // Event listeners
 submitBtn.onclick       = checkAnswers;
 prevBtn.onclick         = () => { if (state.currentPassageIndex>0) { state.currentPassageIndex--; displayPassage(); } };
-nextBtn.onclick         = () => { 
-  if (state.currentPassageIndex<passages[state.currentCategory].length-1) {
+nextBtn.onclick         = () => {
+  if (state.currentPassageIndex<passages[state.currentCategory][state.currentLevel].length-1) {
     state.currentPassageIndex++; displayPassage();
   }
 };
 hintBtn.onclick         = () => {
-  const hint = passages[state.currentCategory][state.currentPassageIndex].hints[0];
+const hint = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].hints[0];
   feedbackDisplay.textContent = hint;
   speak(hint);
 };
@@ -371,9 +374,10 @@ exportStatsBtn.onclick  = () => {
   feedbackDisplay.textContent = 'Stats copied!';
 };
 readBtn.onclick         = () => {
-   speak(passages[state.currentCategory][state.currentPassageIndex].text.replace(/___\s*\(\d\)\s*___/g,'blank'));
+  speak(passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].text.replace(/___\s*\(\d\)\s*___/g,'blank'));
 };
 categorySelect.onchange  = e => { state.currentCategory = e.target.value; state.currentPassageIndex=0; displayPassage(); };
+levelSelect.onchange     = e => { state.currentLevel = e.target.value; state.currentPassageIndex=0; displayPassage(); };
 timerSelect.onchange     = startTimer;
 toggleThemeBtn.onclick   = () => {
   document.body.classList.toggle('light-mode');
