@@ -78,7 +78,6 @@ function shuffle(arr) {
 // Update status bar
 function updateStatus() {
   const total = passages[state.currentCategory][state.currentLevel].length;
-  const total = passages[state.currentCategory].length;
   document.getElementById("progress").textContent = `Passage ${state.currentPassageIndex+1}/${total}`;
   document.getElementById("score").textContent    = `Score: ${state.score}`;
    coinsDisplay.textContent = `Coins: ${state.coins}`;
