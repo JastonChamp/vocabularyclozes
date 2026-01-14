@@ -77,6 +77,11 @@ function shuffle(arr) {
   return arr;
 }
 
+function getCurrentPassage() {
+  const data = getLevelData();
+  return data[state.currentPassageIndex];
+}
+
 function getLevelData() {
   const cat = passages[state.currentCategory];
   if (!cat) {
@@ -185,7 +190,9 @@ function startTimer() {
 // Render current passage
 function displayPassage() {
   clearInterval(state.timerInterval);
- const data = getLevelData();
+  state.stars = 0;
+  state.timeLeft = 0;
+  const data = getLevelData();
   if (!data.length) {
     passageText.innerHTML = "";
     wordBox.innerHTML = "";
@@ -241,7 +248,7 @@ function bindInteractions() {
   document.querySelectorAll('.keyword').forEach(el => {
     el.onclick = () => {
       const idx = +el.className.match(/kw-(\d+)/)[1] - 1;
-       const hint = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].hints[idx];
+      const hint = getCurrentPassage().hints[idx];
       feedbackDisplay.textContent = hint;
       speak(hint);
     };
@@ -249,8 +256,7 @@ function bindInteractions() {
   document.querySelectorAll('.hint-for-blank').forEach(btn => {
     btn.onclick = () => {
       const idx = +btn.dataset.blank - 1;
-   const data = getLevelData();
-      const hint = data[state.currentPassageIndex].hints[idx];
+      const hint = getCurrentPassage().hints[idx];
       feedbackDisplay.textContent = hint;
       speak(hint);
     };
@@ -264,24 +270,31 @@ function selectWord(el) {
 }
 
 function placeWord(blank, txt) {
-  blank.textContent = txt;
-  checkSingle(blank);
+  blank.textContent = txt.trim();
+  const wasCorrect = checkSingle(blank);
+
+  if (wasCorrect) {
+    const match = Array.from(document.querySelectorAll('.word'))
+      .find(w => w.textContent.trim() === txt.trim());
+    if (match) match.remove();
+  }
+
   state.selectedWord = null;
   document.querySelectorAll('.word').forEach(w => w.classList.remove('selected'));
-  // remove the used word from the word box to prevent duplicate placement
-  const match = Array.from(document.querySelectorAll('.word')).find(w => w.textContent === txt);
-  if (match) match.remove();
 }
 
 function checkSingle(blank) {
   const idx = +blank.dataset.blank - 1;
- const correct = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].answers[idx];
-  if (blank.textContent.toLowerCase() === correct.toLowerCase()) {
+  const correct = getCurrentPassage().answers[idx];
+  const isCorrect = blank.textContent.trim().toLowerCase() === correct.toLowerCase();
+
+  if (isCorrect) {
     blank.classList.add('correct');
     blank.classList.remove('incorrect');
     feedbackDisplay.textContent = 'Correct!';
     speak('Correct');
-     // remove any existing explanation when the answer is correct
+
+    // remove any existing explanation when the answer is correct
     const after = blank.nextElementSibling &&
       blank.nextElementSibling.classList.contains('hint-for-blank')
         ? blank.nextElementSibling
@@ -320,10 +333,12 @@ function checkSingle(blank) {
       el.classList.add('highlighted');
     });
   }
+
+  return isCorrect;
 }
 
 function checkAnswers() {
-const p = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex];
+  const p = getCurrentPassage();
   const blanks = document.querySelectorAll('.blank');
   let allGood = true;
   blanks.forEach((b,i) => {
@@ -364,7 +379,10 @@ const p = passages[state.currentCategory][state.currentLevel][state.currentPassa
       feedbackDisplay.textContent = 'Well done!';
       speak('Well done');
       stats.completed++;
+      stats.score = state.score;
       updateLevel();
+      saveStats();
+      renderDashboard();
     } else {
     feedbackDisplay.textContent = 'Check your answers!';
     speak('Check your answers');
@@ -384,7 +402,7 @@ nextBtn.onclick         = () => {
   }
 };
 hintBtn.onclick         = () => {
-const hint = passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].hints[0];
+  const hint = getCurrentPassage().hints[0];
   feedbackDisplay.textContent = hint;
   speak(hint);
 };
@@ -407,7 +425,7 @@ exportStatsBtn.onclick  = () => {
   }
 };
 readBtn.onclick         = () => {
-  speak(passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].text.replace(/___\s*\(\d\)\s*___/g,'blank'));
+  speak(getCurrentPassage().text.replace(/___\s*\(\d\)\s*___/g,'blank'));
 };
 categorySelect.onchange  = e => { state.currentCategory = e.target.value; state.currentPassageIndex=0; displayPassage(); };
 levelSelect.onchange     = e => { state.currentLevel = e.target.value; state.currentPassageIndex=0; displayPassage(); };
@@ -417,12 +435,29 @@ toggleThemeBtn.onclick   = () => {
   toggleThemeBtn.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
 };
 toggleDyslexiaBtn.onclick= () => document.body.classList.toggle('dyslexia');
+let sizeTimeout;
 textSizeSlider.oninput   = e => {
-  passageText.style.fontSize = `${e.target.value}rem`;
-  wordBox.style.fontSize    = `${e.target.value}rem`;
+  clearTimeout(sizeTimeout);
+  sizeTimeout = setTimeout(() => {
+    const size = e.target.value;
+    passageText.style.fontSize = `${size}rem`;
+    wordBox.style.fontSize = `${size}rem`;
+    localStorage.setItem('textSize', size);
+  }, 100);
 };
 themeSelect.onchange      = e => {
-  document.body.className = e.target.value === 'default' ? '' : e.target.value;
+  const themeClasses = ['light-mode', 'theme1', 'theme2', 'theme3', 'theme4'];
+  document.body.classList.remove(...themeClasses);
+
+  if (e.target.value !== 'default') {
+    document.body.classList.add(e.target.value);
+  }
+
+  if (!document.body.classList.contains('sparkle')) {
+    document.body.classList.add('sparkle');
+  }
+
+  localStorage.setItem('selectedTheme', e.target.value);
 };
 sidebarToggle.onclick     = () => sidebar.classList.toggle('open');
 document.getElementById('tutorial-close-btn').onclick = () => {
