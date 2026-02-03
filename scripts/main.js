@@ -7,6 +7,7 @@ const state = {
   currentPassageIndex: 0,
   score: 0,
   stars: 0,
+  streak: Number(localStorage.getItem('streak')) || 0,
   hintUsage: {},
   selectedWord: null,
   timeLeft: 60,
@@ -16,6 +17,17 @@ const state = {
   coins: Number(localStorage.getItem('coins')) || 0,
   badges: JSON.parse(localStorage.getItem('badges') || '[]'),
   unlockedThemes: JSON.parse(localStorage.getItem('unlockedThemes') || '[]'),
+};
+
+// Category descriptions for UI display
+const categoryDescriptions = {
+  contextInference: "Learn words from surrounding context clues.",
+  definitionMatch: "Match words to their exact definitions.",
+  synonymContrast: "Understand synonyms and word contrasts.",
+  morphologicalAffix: "Learn word construction with prefixes/suffixes.",
+  collocationCloze: "Master common word combinations.",
+  grammaticalRole: "Understand parts of speech and grammar.",
+  connectorClue: "Learn connecting words and transitions."
 };
 
 // DOM references
@@ -43,8 +55,13 @@ const dashboardCompleted = document.getElementById("completed-count");
 const dashboardScore = document.getElementById("total-score-summary");
 const dashboardMissed = document.getElementById("missed-clues-summary");
 const exportStatsBtn = document.getElementById("export-stats-btn");
+const resetStatsBtn  = document.getElementById("reset-stats-btn");
 const coinsDisplay   = document.getElementById('coins');
 const themesInfo     = document.getElementById('themes-info');
+const categoryDesc   = document.getElementById('category-description');
+const streakDisplay  = document.getElementById('streak');
+const textSizeValue  = document.getElementById('text-size-value');
+const levelDots      = document.querySelectorAll('.level-dot');
 
 function loadStats() {
   const raw = localStorage.getItem('vocabStats');
@@ -58,14 +75,14 @@ function saveStats() {
 }
 
 function renderDashboard() {
-  dashboardCompleted.textContent = `Completed: ${stats.completed}`;
-  dashboardScore.textContent = `Score: ${stats.score}`;
+  if (dashboardCompleted) dashboardCompleted.textContent = stats.completed;
+  if (dashboardScore) dashboardScore.textContent = stats.score;
   const sorted = Object.entries(stats.missed)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 3)
     .map(([clue, count]) => `${clue} (${count})`)
     .join(', ') || 'none';
-  dashboardMissed.textContent = `Top Missed Clues: ${sorted}`;
+  if (dashboardMissed) dashboardMissed.textContent = `Top Missed: ${sorted}`;
 }
 
 // Utility: shuffle using Fisher–Yates for an even distribution
@@ -97,19 +114,48 @@ function updateStatus() {
   const total = getLevelData().length;
   document.getElementById("progress").textContent = `Passage ${state.currentPassageIndex+1}/${total}`;
   document.getElementById("score").textContent    = `Score: ${state.score}`;
-   coinsDisplay.textContent = `Coins: ${state.coins}`;
-  document.getElementById("stars").textContent    = `Stars: ${"★".repeat(state.stars)}${"☆".repeat(3-state.stars)}`;
-  document.getElementById("timer").textContent    = `Time: ${state.timeLeft}s`;
-  document.getElementById("level").textContent    = `Level: ${state.level}`;
+  coinsDisplay.textContent = state.coins;
+  document.getElementById("stars").textContent    = `${state.stars}/3`;
+  document.getElementById("timer").textContent    = `${state.timeLeft}s`;
+  document.getElementById("level").textContent    = state.level;
   document.getElementById("achievements").textContent = state.achievements.join(", ");
   themesInfo.textContent = `Themes: ${['default','light','theme1','theme2',...state.unlockedThemes].join(', ')}`;
   document.getElementById("progress-bar").style.width = `${((state.currentPassageIndex+1)/total)*100}%`;
+
+  // Update streak display
+  if (streakDisplay) {
+    streakDisplay.textContent = state.streak;
+  }
+
+  // Update category description
+  if (categoryDesc) {
+    categoryDesc.textContent = categoryDescriptions[state.currentCategory] || '';
+  }
+
+  // Update level indicator dots
+  const levelIndex = ['p1','p2','p3','p4','p5','p6'].indexOf(state.currentLevel);
+  levelDots.forEach((dot, i) => {
+    dot.classList.toggle('active', i <= levelIndex);
+  });
+
+  // Update navigation button states
+  if (prevBtn) prevBtn.disabled = state.currentPassageIndex === 0;
+  if (nextBtn) nextBtn.disabled = state.currentPassageIndex >= total - 1;
 }
 
 function saveProgress() {
   localStorage.setItem('coins', state.coins);
   localStorage.setItem('badges', JSON.stringify(state.badges));
   localStorage.setItem('unlockedThemes', JSON.stringify(state.unlockedThemes));
+  localStorage.setItem('streak', state.streak);
+}
+
+// Update feedback display with styling
+function showFeedback(message, type = 'neutral') {
+  feedbackDisplay.textContent = message;
+  feedbackDisplay.classList.remove('success', 'error');
+  if (type === 'success') feedbackDisplay.classList.add('success');
+  if (type === 'error') feedbackDisplay.classList.add('error');
 }
 
 const unlockMilestones = [
@@ -359,19 +405,22 @@ const p = passages[state.currentCategory][state.currentLevel][state.currentPassa
       state.score += 10;
       state.stars = Math.min(3, state.stars + 1);
       state.coins += 10;
+      state.streak++;
       checkUnlocks();
       saveProgress();
-      feedbackDisplay.textContent = 'Well done!';
+      showFeedback('Well done! +10 coins', 'success');
       speak('Well done');
       stats.completed++;
       updateLevel();
     } else {
-    feedbackDisplay.textContent = 'Check your answers!';
-    speak('Check your answers');
-    stats.score = state.score;
+      state.streak = 0;
+      saveProgress();
+      showFeedback('Check your answers!', 'error');
+      speak('Check your answers');
+    }
+  stats.score = state.score;
   saveStats();
   renderDashboard();
-  }
   updateStatus();
 }
 
@@ -409,7 +458,12 @@ exportStatsBtn.onclick  = () => {
 readBtn.onclick         = () => {
   speak(passages[state.currentCategory][state.currentLevel][state.currentPassageIndex].text.replace(/___\s*\(\d\)\s*___/g,'blank'));
 };
-categorySelect.onchange  = e => { state.currentCategory = e.target.value; state.currentPassageIndex=0; displayPassage(); };
+categorySelect.onchange  = e => {
+  state.currentCategory = e.target.value;
+  state.currentPassageIndex=0;
+  if (categoryDesc) categoryDesc.textContent = categoryDescriptions[state.currentCategory] || '';
+  displayPassage();
+};
 levelSelect.onchange     = e => { state.currentLevel = e.target.value; state.currentPassageIndex=0; displayPassage(); };
 timerSelect.onchange     = startTimer;
 toggleThemeBtn.onclick   = () => {
@@ -420,7 +474,27 @@ toggleDyslexiaBtn.onclick= () => document.body.classList.toggle('dyslexia');
 textSizeSlider.oninput   = e => {
   passageText.style.fontSize = `${e.target.value}rem`;
   wordBox.style.fontSize    = `${e.target.value}rem`;
+  if (textSizeValue) textSizeValue.textContent = `${e.target.value}x`;
 };
+if (resetStatsBtn) {
+  resetStatsBtn.onclick = () => {
+    if (confirm('Are you sure you want to reset all progress?')) {
+      stats = { completed: 0, score: 0, missed: {} };
+      state.score = 0;
+      state.coins = 0;
+      state.streak = 0;
+      state.stars = 0;
+      state.badges = [];
+      state.unlockedThemes = [];
+      state.level = 'Apprentice';
+      saveStats();
+      saveProgress();
+      renderDashboard();
+      updateStatus();
+      showFeedback('Progress reset!', 'neutral');
+    }
+  };
+}
 themeSelect.onchange      = e => {
   document.body.className = e.target.value === 'default' ? '' : e.target.value;
 };
