@@ -509,6 +509,75 @@ export const contextInference = { p1: [
         "'Dense' means crowded or thick."
       ],
       clueWords: [["lights"],["aromas"],["visitors"],["music"],["crowds"]]
+    },
+    {
+      text: "The science fair displayed ___ (1) ___ inventions from students; judges examined each project with ___ (2) ___ attention, asking ___ (3) ___ questions that revealed ___ (4) ___ thinking, and awarded prizes to the most ___ (5) ___ entries.",
+      answers: ["innovative", "careful", "probing", "creative", "impressive"],
+      wordBox: [
+        "innovative", "careful", "probing", "creative", "impressive",
+        "ordinary", "careless", "simple", "dull", "mediocre"
+      ],
+      hints: [
+        "New and original.",
+        "Done with attention to detail.",
+        "Seeking deeper information.",
+        "Showing imagination.",
+        "Worthy of admiration."
+      ],
+      explanations: [
+        "'Innovative' means introducing new ideas.",
+        "'Careful' means done with attention.",
+        "'Probing' means investigating deeply.",
+        "'Creative' means using imagination.",
+        "'Impressive' means inspiring admiration."
+      ],
+      clueWords: [["inventions"],["judges"],["questions"],["thinking"],["prizes"]]
+    },
+    {
+      text: "The wildlife documentary captured ___ (1) ___ footage of rare animals; the ___ (2) ___ narrator described their ___ (3) ___ behaviours, showing how they ___ (4) ___ to harsh environments and ___ (5) ___ against predators.",
+      answers: ["stunning", "knowledgeable", "fascinating", "adapted", "defended"],
+      wordBox: [
+        "stunning", "knowledgeable", "fascinating", "adapted", "defended",
+        "blurry", "ignorant", "boring", "struggled", "surrendered"
+      ],
+      hints: [
+        "Extremely impressive.",
+        "Having much information.",
+        "Very interesting.",
+        "Changed to fit conditions.",
+        "Protected against attack."
+      ],
+      explanations: [
+        "'Stunning' means extremely beautiful or impressive.",
+        "'Knowledgeable' means well-informed.",
+        "'Fascinating' means very interesting.",
+        "'Adapted' means adjusted to conditions.",
+        "'Defended' means protected from harm."
+      ],
+      clueWords: [["footage"],["narrator"],["behaviours"],["environments"],["predators"]]
+    },
+    {
+      text: "During the school play, the ___ (1) ___ actors delivered their lines with ___ (2) ___ emotion; the audience sat in ___ (3) ___ silence, completely ___ (4) ___ by the story, and gave a ___ (5) ___ ovation at the end.",
+      answers: ["talented", "genuine", "rapt", "captivated", "standing"],
+      wordBox: [
+        "talented", "genuine", "rapt", "captivated", "standing",
+        "amateur", "fake", "restless", "bored", "polite"
+      ],
+      hints: [
+        "Having natural ability.",
+        "Real and sincere.",
+        "Completely absorbed.",
+        "Held the attention of.",
+        "Rising to one's feet."
+      ],
+      explanations: [
+        "'Talented' means having a natural aptitude.",
+        "'Genuine' means truly felt, not fake.",
+        "'Rapt' means completely absorbed.",
+        "'Captivated' means charmed or fascinated.",
+        "'Standing' ovation means rising to applaud."
+      ],
+      clueWords: [["actors"],["emotion"],["silence"],["story"],["ovation"]]
     }
   ],
   p4: [
@@ -534,6 +603,75 @@ export const contextInference = { p1: [
         "'Long' means of extended duration."
       ],
       clueWords: [["voice"],["slides"],["questions"],["discussion"],["after"]]
+    },
+    {
+      text: "The archaeological dig revealed ___ (1) ___ artefacts buried for millennia; researchers worked with ___ (2) ___ precision, carefully ___ (3) ___ each layer of soil to preserve ___ (4) ___ evidence of ___ (5) ___ civilisations.",
+      answers: ["remarkable", "meticulous", "excavating", "fragile", "ancient"],
+      wordBox: [
+        "remarkable", "meticulous", "excavating", "fragile", "ancient",
+        "common", "sloppy", "burying", "sturdy", "modern"
+      ],
+      hints: [
+        "Worthy of attention.",
+        "Showing great attention to detail.",
+        "Digging out carefully.",
+        "Easily broken.",
+        "From the distant past."
+      ],
+      explanations: [
+        "'Remarkable' means worthy of notice.",
+        "'Meticulous' means very careful and precise.",
+        "'Excavating' means digging out from the ground.",
+        "'Fragile' means delicate and easily damaged.",
+        "'Ancient' means very old."
+      ],
+      clueWords: [["artefacts"],["precision"],["layer"],["evidence"],["civilisations"]]
+    },
+    {
+      text: "The chef's ___ (1) ___ cuisine attracted food critics from around the world; each dish featured ___ (2) ___ ingredients combined in ___ (3) ___ ways, creating ___ (4) ___ flavours that left diners ___ (5) ___.",
+      answers: ["exquisite", "fresh", "unexpected", "complex", "speechless"],
+      wordBox: [
+        "exquisite", "fresh", "unexpected", "complex", "speechless",
+        "ordinary", "stale", "predictable", "simple", "unimpressed"
+      ],
+      hints: [
+        "Extremely beautiful or delicate.",
+        "Recently made or obtained.",
+        "Not anticipated.",
+        "Having many parts.",
+        "Unable to speak from amazement."
+      ],
+      explanations: [
+        "'Exquisite' means extremely beautiful or refined.",
+        "'Fresh' means recently produced.",
+        "'Unexpected' means surprising.",
+        "'Complex' means intricate with many elements.",
+        "'Speechless' means too amazed to speak."
+      ],
+      clueWords: [["cuisine"],["ingredients"],["ways"],["flavours"],["diners"]]
+    },
+    {
+      text: "The mountain rescue team faced ___ (1) ___ conditions; ___ (2) ___ winds battered their equipment, but their ___ (3) ___ training prepared them for the ___ (4) ___ climb, and they ___ (5) ___ reached the stranded hikers.",
+      answers: ["treacherous", "fierce", "rigorous", "perilous", "eventually"],
+      wordBox: [
+        "treacherous", "fierce", "rigorous", "perilous", "eventually",
+        "mild", "gentle", "basic", "safe", "never"
+      ],
+      hints: [
+        "Dangerous and unpredictable.",
+        "Violent and intense.",
+        "Extremely thorough.",
+        "Full of danger.",
+        "In the end, after time."
+      ],
+      explanations: [
+        "'Treacherous' means hazardous and deceptive.",
+        "'Fierce' means intense and powerful.",
+        "'Rigorous' means extremely thorough.",
+        "'Perilous' means very dangerous.",
+        "'Eventually' means in the end."
+      ],
+      clueWords: [["conditions"],["winds"],["training"],["climb"],["reached"]]
     }
   ],
   p5: [
@@ -559,6 +697,75 @@ export const contextInference = { p1: [
         "'Legendary' means celebrated in legend."
       ],
       clueWords: [["rituals"],["night"],["festivities"],["meals"],["tales"]]
+    },
+    {
+      text: "The diplomatic summit addressed ___ (1) ___ issues affecting multiple nations; representatives engaged in ___ (2) ___ negotiations, seeking ___ (3) ___ solutions to ___ (4) ___ problems that had ___ (5) ___ for decades.",
+      answers: ["pressing", "delicate", "sustainable", "persistent", "festered"],
+      wordBox: [
+        "pressing", "delicate", "sustainable", "persistent", "festered",
+        "minor", "casual", "temporary", "trivial", "resolved"
+      ],
+      hints: [
+        "Urgent and demanding attention.",
+        "Requiring careful handling.",
+        "Able to be maintained long-term.",
+        "Continuing stubbornly.",
+        "Worsened over time."
+      ],
+      explanations: [
+        "'Pressing' means urgent.",
+        "'Delicate' means requiring sensitivity.",
+        "'Sustainable' means maintainable.",
+        "'Persistent' means continuing firmly.",
+        "'Festered' means became worse over time."
+      ],
+      clueWords: [["summit"],["negotiations"],["solutions"],["problems"],["decades"]]
+    },
+    {
+      text: "The symphony orchestra delivered a ___ (1) ___ performance; the conductor's ___ (2) ___ gestures guided musicians through ___ (3) ___ passages, building to a ___ (4) ___ crescendo that left the audience in ___ (5) ___ silence.",
+      answers: ["masterful", "precise", "intricate", "thunderous", "awed"],
+      wordBox: [
+        "masterful", "precise", "intricate", "thunderous", "awed",
+        "mediocre", "vague", "simple", "quiet", "bored"
+      ],
+      hints: [
+        "Showing great skill.",
+        "Exact and accurate.",
+        "Very detailed and complex.",
+        "Extremely loud.",
+        "Filled with wonder."
+      ],
+      explanations: [
+        "'Masterful' means demonstrating mastery.",
+        "'Precise' means exact and accurate.",
+        "'Intricate' means very complex.",
+        "'Thunderous' means extremely loud.",
+        "'Awed' means filled with wonder."
+      ],
+      clueWords: [["orchestra"],["gestures"],["passages"],["crescendo"],["audience"]]
+    },
+    {
+      text: "The investigative journalist uncovered ___ (1) ___ corruption within the corporation; her ___ (2) ___ research revealed ___ (3) ___ evidence of fraud, prompting ___ (4) ___ reforms and ___ (5) ___ public outcry.",
+      answers: ["widespread", "thorough", "damning", "sweeping", "immediate"],
+      wordBox: [
+        "widespread", "thorough", "damning", "sweeping", "immediate",
+        "minor", "superficial", "weak", "limited", "delayed"
+      ],
+      hints: [
+        "Existing over a large area.",
+        "Complete and detailed.",
+        "Strongly condemning.",
+        "Wide-ranging and extensive.",
+        "Happening at once."
+      ],
+      explanations: [
+        "'Widespread' means found over a large area.",
+        "'Thorough' means complete in every way.",
+        "'Damning' means strongly critical.",
+        "'Sweeping' means wide in range.",
+        "'Immediate' means instant."
+      ],
+      clueWords: [["corruption"],["research"],["evidence"],["reforms"],["outcry"]]
     }
   ],
   p6: [
@@ -584,6 +791,75 @@ export const contextInference = { p1: [
         "'Motivated' means driven to act."
       ],
       clueWords: [["course"],["hills"],["spectators"],["drinks"],["keep"]]
+    },
+    {
+      text: "The quantum physicist presented ___ (1) ___ theories that challenged ___ (2) ___ understanding; her ___ (3) ___ equations described ___ (4) ___ phenomena, revolutionising our ___ (5) ___ of the universe.",
+      answers: ["groundbreaking", "conventional", "elegant", "paradoxical", "comprehension"],
+      wordBox: [
+        "groundbreaking", "conventional", "elegant", "paradoxical", "comprehension",
+        "outdated", "radical", "clumsy", "straightforward", "ignorance"
+      ],
+      hints: [
+        "Innovative and pioneering.",
+        "Based on traditional beliefs.",
+        "Gracefully simple yet effective.",
+        "Seemingly contradictory.",
+        "The ability to understand."
+      ],
+      explanations: [
+        "'Groundbreaking' means innovative.",
+        "'Conventional' means traditional.",
+        "'Elegant' means gracefully refined.",
+        "'Paradoxical' means seemingly contradictory.",
+        "'Comprehension' means understanding."
+      ],
+      clueWords: [["theories"],["understanding"],["equations"],["phenomena"],["universe"]]
+    },
+    {
+      text: "The humanitarian crisis demanded ___ (1) ___ intervention; aid workers navigated ___ (2) ___ terrain to deliver ___ (3) ___ supplies to ___ (4) ___ communities, demonstrating ___ (5) ___ dedication to their mission.",
+      answers: ["urgent", "hostile", "vital", "isolated", "unwavering"],
+      wordBox: [
+        "urgent", "hostile", "vital", "isolated", "unwavering",
+        "optional", "friendly", "unnecessary", "connected", "hesitant"
+      ],
+      hints: [
+        "Requiring immediate action.",
+        "Unfriendly or harsh.",
+        "Absolutely necessary.",
+        "Cut off from others.",
+        "Steady and determined."
+      ],
+      explanations: [
+        "'Urgent' means requiring immediate action.",
+        "'Hostile' means unfriendly or harsh.",
+        "'Vital' means essential.",
+        "'Isolated' means remote and alone.",
+        "'Unwavering' means firm and constant."
+      ],
+      clueWords: [["crisis"],["terrain"],["supplies"],["communities"],["dedication"]]
+    },
+    {
+      text: "The Renaissance painting exhibited ___ (1) ___ brushwork that revealed the artist's ___ (2) ___ technique; art historians noted the ___ (3) ___ use of light and shadow, creating ___ (4) ___ depth that seemed almost ___ (5) ___.",
+      answers: ["exquisite", "refined", "masterful", "remarkable", "supernatural"],
+      wordBox: [
+        "exquisite", "refined", "masterful", "remarkable", "supernatural",
+        "crude", "primitive", "amateur", "ordinary", "natural"
+      ],
+      hints: [
+        "Extremely beautiful and delicate.",
+        "Developed and improved.",
+        "Showing great skill.",
+        "Worthy of attention.",
+        "Beyond what is natural."
+      ],
+      explanations: [
+        "'Exquisite' means extremely beautiful.",
+        "'Refined' means elegant and cultured.",
+        "'Masterful' means showing great skill.",
+        "'Remarkable' means extraordinary.",
+        "'Supernatural' means beyond natural."
+      ],
+      clueWords: [["brushwork"],["technique"],["light"],["depth"],["seemed"]]
     }
   ]
 };
@@ -1187,6 +1463,75 @@ export const definitionMatch = { p1: [
         "'Lasting' means enduring."
       ],
       clueWords: [["resolution"],["proposals"],["dialogue"],["respect"],["agreement"]]
+    },
+    {
+      text: "The library offered ___ (1) ___ resources for students; the ___ (2) ___ collection included both ___ (3) ___ texts and ___ (4) ___ journals, making research ___ (5) ___ and efficient.",
+      answers: ["extensive", "diverse", "academic", "scholarly", "convenient"],
+      wordBox: [
+        "extensive", "diverse", "academic", "scholarly", "convenient",
+        "limited", "uniform", "casual", "popular", "difficult"
+      ],
+      hints: [
+        "Large in amount or scope.",
+        "Varied and different.",
+        "Related to education.",
+        "Relating to serious study.",
+        "Easy to use."
+      ],
+      explanations: [
+        "'Extensive' means covering a large area.",
+        "'Diverse' means showing variety.",
+        "'Academic' means educational.",
+        "'Scholarly' means relating to serious study.",
+        "'Convenient' means easy to access."
+      ],
+      clueWords: [["resources"],["collection"],["texts"],["journals"],["research"]]
+    },
+    {
+      text: "The charity event attracted ___ (1) ___ donors who made ___ (2) ___ contributions; their ___ (3) ___ support enabled ___ (4) ___ projects that provided ___ (5) ___ assistance to those in need.",
+      answers: ["generous", "substantial", "consistent", "numerous", "vital"],
+      wordBox: [
+        "generous", "substantial", "consistent", "numerous", "vital",
+        "stingy", "minimal", "irregular", "few", "unnecessary"
+      ],
+      hints: [
+        "Giving freely.",
+        "Large in amount.",
+        "Regular and steady.",
+        "Many in number.",
+        "Absolutely necessary."
+      ],
+      explanations: [
+        "'Generous' means willing to give.",
+        "'Substantial' means of considerable size.",
+        "'Consistent' means unchanging.",
+        "'Numerous' means many.",
+        "'Vital' means essential."
+      ],
+      clueWords: [["donors"],["contributions"],["support"],["projects"],["assistance"]]
+    },
+    {
+      text: "The scientist conducted ___ (1) ___ experiments using ___ (2) ___ methods; the ___ (3) ___ results supported ___ (4) ___ theories and led to ___ (5) ___ publications.",
+      answers: ["rigorous", "systematic", "conclusive", "existing", "influential"],
+      wordBox: [
+        "rigorous", "systematic", "conclusive", "existing", "influential",
+        "casual", "random", "inconclusive", "new", "ignored"
+      ],
+      hints: [
+        "Extremely thorough.",
+        "Methodical and organised.",
+        "Settling an issue definitely.",
+        "Already present.",
+        "Having great impact."
+      ],
+      explanations: [
+        "'Rigorous' means careful and thorough.",
+        "'Systematic' means methodical.",
+        "'Conclusive' means decisive.",
+        "'Existing' means already present.",
+        "'Influential' means having influence."
+      ],
+      clueWords: [["experiments"],["methods"],["results"],["theories"],["publications"]]
     }
   ],
   p4: [
@@ -1212,6 +1557,75 @@ export const definitionMatch = { p1: [
         "'Provide' means supply."
       ],
       clueWords: [["presentation"],["strategies"],["analysis"],["projections"],["funding"]]
+    },
+    {
+      text: "The architect designed a ___ (1) ___ building with ___ (2) ___ features; the ___ (3) ___ structure incorporated ___ (4) ___ materials and achieved ___ (5) ___ certification for environmental standards.",
+      answers: ["sustainable", "innovative", "resilient", "recycled", "prestigious"],
+      wordBox: [
+        "sustainable", "innovative", "resilient", "recycled", "prestigious",
+        "wasteful", "traditional", "fragile", "new", "unknown"
+      ],
+      hints: [
+        "Able to be maintained.",
+        "New and original.",
+        "Able to withstand.",
+        "Previously used materials.",
+        "Highly respected."
+      ],
+      explanations: [
+        "'Sustainable' means maintainable.",
+        "'Innovative' means introducing new ideas.",
+        "'Resilient' means able to recover.",
+        "'Recycled' means reprocessed.",
+        "'Prestigious' means having high status."
+      ],
+      clueWords: [["building"],["features"],["structure"],["materials"],["certification"]]
+    },
+    {
+      text: "The documentary explored ___ (1) ___ themes through ___ (2) ___ storytelling; critics praised its ___ (3) ___ perspective and ___ (4) ___ research, calling it a ___ (5) ___ achievement.",
+      answers: ["complex", "compelling", "balanced", "meticulous", "remarkable"],
+      wordBox: [
+        "complex", "compelling", "balanced", "meticulous", "remarkable",
+        "simple", "boring", "biased", "careless", "ordinary"
+      ],
+      hints: [
+        "Having many parts.",
+        "Evoking interest.",
+        "Fair to all sides.",
+        "Very careful and precise.",
+        "Worthy of attention."
+      ],
+      explanations: [
+        "'Complex' means intricate.",
+        "'Compelling' means captivating.",
+        "'Balanced' means even and fair.",
+        "'Meticulous' means very careful.",
+        "'Remarkable' means extraordinary."
+      ],
+      clueWords: [["themes"],["storytelling"],["perspective"],["research"],["achievement"]]
+    },
+    {
+      text: "The hospital implemented ___ (1) ___ protocols to ensure ___ (2) ___ care; staff received ___ (3) ___ training on ___ (4) ___ procedures, resulting in ___ (5) ___ patient outcomes.",
+      answers: ["stringent", "optimal", "comprehensive", "standardised", "improved"],
+      wordBox: [
+        "stringent", "optimal", "comprehensive", "standardised", "improved",
+        "relaxed", "minimal", "basic", "varied", "worsened"
+      ],
+      hints: [
+        "Very strict.",
+        "Best possible.",
+        "Including all aspects.",
+        "Made uniform.",
+        "Made better."
+      ],
+      explanations: [
+        "'Stringent' means strict.",
+        "'Optimal' means best possible.",
+        "'Comprehensive' means thorough.",
+        "'Standardised' means made consistent.",
+        "'Improved' means enhanced."
+      ],
+      clueWords: [["protocols"],["care"],["training"],["procedures"],["outcomes"]]
     }
   ],
   p5: [
@@ -1237,6 +1651,75 @@ export const definitionMatch = { p1: [
         "'Fulfilled' means satisfied."
       ],
       clueWords: [["programs"],["skills"],["knowledge"],["friendships"],["feeling"]]
+    },
+    {
+      text: "The expedition required ___ (1) ___ preparation; members needed ___ (2) ___ fitness and ___ (3) ___ equipment to navigate ___ (4) ___ terrain and survive ___ (5) ___ conditions.",
+      answers: ["extensive", "exceptional", "specialised", "challenging", "extreme"],
+      wordBox: [
+        "extensive", "exceptional", "specialised", "challenging", "extreme",
+        "minimal", "average", "basic", "easy", "mild"
+      ],
+      hints: [
+        "Large in scope.",
+        "Unusually excellent.",
+        "Designed for particular use.",
+        "Testing one's abilities.",
+        "Very severe."
+      ],
+      explanations: [
+        "'Extensive' means comprehensive.",
+        "'Exceptional' means outstanding.",
+        "'Specialised' means for specific purpose.",
+        "'Challenging' means difficult.",
+        "'Extreme' means severe."
+      ],
+      clueWords: [["preparation"],["fitness"],["equipment"],["terrain"],["conditions"]]
+    },
+    {
+      text: "The researcher analysed ___ (1) ___ data to identify ___ (2) ___ patterns; her ___ (3) ___ methodology ensured ___ (4) ___ results that withstood ___ (5) ___ scrutiny.",
+      answers: ["extensive", "significant", "rigorous", "reliable", "intense"],
+      wordBox: [
+        "extensive", "significant", "rigorous", "reliable", "intense",
+        "limited", "minor", "casual", "questionable", "superficial"
+      ],
+      hints: [
+        "Large in amount.",
+        "Important or meaningful.",
+        "Extremely thorough.",
+        "Consistently accurate.",
+        "Very thorough."
+      ],
+      explanations: [
+        "'Extensive' means wide-ranging.",
+        "'Significant' means important.",
+        "'Rigorous' means careful.",
+        "'Reliable' means dependable.",
+        "'Intense' means concentrated."
+      ],
+      clueWords: [["data"],["patterns"],["methodology"],["results"],["scrutiny"]]
+    },
+    {
+      text: "The museum's ___ (1) ___ exhibition featured ___ (2) ___ artefacts from ___ (3) ___ civilisations; visitors experienced ___ (4) ___ presentations and gained ___ (5) ___ appreciation for history.",
+      answers: ["permanent", "authentic", "ancient", "interactive", "profound"],
+      wordBox: [
+        "permanent", "authentic", "ancient", "interactive", "profound",
+        "temporary", "replica", "modern", "static", "superficial"
+      ],
+      hints: [
+        "Lasting indefinitely.",
+        "Genuine and original.",
+        "Very old.",
+        "Involving participation.",
+        "Very deep or intense."
+      ],
+      explanations: [
+        "'Permanent' means lasting.",
+        "'Authentic' means genuine.",
+        "'Ancient' means very old.",
+        "'Interactive' means participatory.",
+        "'Profound' means deeply felt."
+      ],
+      clueWords: [["exhibition"],["artefacts"],["civilisations"],["presentations"],["appreciation"]]
     }
   ],
   p6: [
@@ -1262,6 +1745,75 @@ export const definitionMatch = { p1: [
         "'Heroic' means very brave."
       ],
       clueWords: [["coordination"],["actions"],["gratitude"],["awards"],["service"]]
+    },
+    {
+      text: "The philosopher's ___ (1) ___ arguments challenged ___ (2) ___ assumptions; her ___ (3) ___ logic revealed ___ (4) ___ contradictions in ___ (5) ___ theories.",
+      answers: ["provocative", "fundamental", "impeccable", "inherent", "established"],
+      wordBox: [
+        "provocative", "fundamental", "impeccable", "inherent", "established",
+        "mild", "superficial", "flawed", "external", "new"
+      ],
+      hints: [
+        "Stimulating thought.",
+        "Basic and essential.",
+        "Perfect without flaw.",
+        "Existing as part of something.",
+        "Accepted and traditional."
+      ],
+      explanations: [
+        "'Provocative' means thought-provoking.",
+        "'Fundamental' means basic.",
+        "'Impeccable' means faultless.",
+        "'Inherent' means built-in.",
+        "'Established' means accepted."
+      ],
+      clueWords: [["arguments"],["assumptions"],["logic"],["contradictions"],["theories"]]
+    },
+    {
+      text: "The corporation announced ___ (1) ___ reforms following ___ (2) ___ criticism; executives promised ___ (3) ___ accountability and ___ (4) ___ changes to restore ___ (5) ___ confidence.",
+      answers: ["sweeping", "widespread", "greater", "substantial", "public"],
+      wordBox: [
+        "sweeping", "widespread", "greater", "substantial", "public",
+        "minor", "isolated", "less", "minimal", "private"
+      ],
+      hints: [
+        "Wide-ranging.",
+        "Found everywhere.",
+        "More than before.",
+        "Large and important.",
+        "Of the general population."
+      ],
+      explanations: [
+        "'Sweeping' means comprehensive.",
+        "'Widespread' means extensive.",
+        "'Greater' means more.",
+        "'Substantial' means significant.",
+        "'Public' means of the people."
+      ],
+      clueWords: [["reforms"],["criticism"],["accountability"],["changes"],["confidence"]]
+    },
+    {
+      text: "The novel's ___ (1) ___ narrative explored ___ (2) ___ themes through ___ (3) ___ characters; critics praised its ___ (4) ___ prose and ___ (5) ___ emotional depth.",
+      answers: ["intricate", "universal", "multidimensional", "lyrical", "profound"],
+      wordBox: [
+        "intricate", "universal", "multidimensional", "lyrical", "profound",
+        "simple", "narrow", "flat", "plain", "shallow"
+      ],
+      hints: [
+        "Very detailed and complex.",
+        "Applying to all.",
+        "Having many aspects.",
+        "Beautifully expressive.",
+        "Very deep."
+      ],
+      explanations: [
+        "'Intricate' means complex.",
+        "'Universal' means applying to all.",
+        "'Multidimensional' means having depth.",
+        "'Lyrical' means poetically beautiful.",
+        "'Profound' means very deep."
+      ],
+      clueWords: [["narrative"],["themes"],["characters"],["prose"],["depth"]]
     }
   ]
 };
@@ -1731,6 +2283,75 @@ export const synonymContrast = { p1: [
         "'Detailed' means with many specifics."
       ],
       clueWords: [["felt"],["classmates"],["remained"],["offering"],["notes"]]
+    },
+    {
+      text: "The old building looked ___ (1) ___ from outside, but inside it was ___ (2) ___; despite its ___ (3) ___ exterior, the rooms were ___ (4) ___ and filled with ___ (5) ___ artwork.",
+      answers: ["neglected", "magnificent", "worn", "spacious", "priceless"],
+      wordBox: [
+        "neglected", "magnificent", "worn", "spacious", "priceless",
+        "maintained", "ordinary", "pristine", "cramped", "worthless"
+      ],
+      hints: [
+        "Not cared for.",
+        "Impressively beautiful.",
+        "Damaged by use.",
+        "Having much room.",
+        "Extremely valuable."
+      ],
+      explanations: [
+        "'Neglected' contrasts with 'maintained'.",
+        "'Magnificent' means grand and impressive.",
+        "'Worn' means showing wear.",
+        "'Spacious' means roomy.",
+        "'Priceless' means invaluable."
+      ],
+      clueWords: [["building"],["inside"],["exterior"],["rooms"],["artwork"]]
+    },
+    {
+      text: "The speaker was ___ (1) ___ at first, but gradually became ___ (2) ___; her ___ (3) ___ opening turned into a ___ (4) ___ presentation that earned ___ (5) ___ applause.",
+      answers: ["hesitant", "confident", "nervous", "polished", "thunderous"],
+      wordBox: [
+        "hesitant", "confident", "nervous", "polished", "thunderous",
+        "bold", "uncertain", "calm", "rough", "quiet"
+      ],
+      hints: [
+        "Uncertain and slow.",
+        "Self-assured.",
+        "Anxious and worried.",
+        "Refined and smooth.",
+        "Extremely loud."
+      ],
+      explanations: [
+        "'Hesitant' contrasts with 'bold'.",
+        "'Confident' means self-assured.",
+        "'Nervous' means anxious.",
+        "'Polished' means refined.",
+        "'Thunderous' means very loud."
+      ],
+      clueWords: [["speaker"],["gradually"],["opening"],["presentation"],["applause"]]
+    },
+    {
+      text: "The countryside was ___ (1) ___, whereas the city was ___ (2) ___; still, both offered ___ (3) ___ experiences with ___ (4) ___ attractions and ___ (5) ___ memories.",
+      answers: ["tranquil", "bustling", "unique", "diverse", "unforgettable"],
+      wordBox: [
+        "tranquil", "bustling", "unique", "diverse", "unforgettable",
+        "chaotic", "quiet", "common", "similar", "forgettable"
+      ],
+      hints: [
+        "Calm and peaceful.",
+        "Full of activity.",
+        "One of a kind.",
+        "Varied and different.",
+        "Impossible to forget."
+      ],
+      explanations: [
+        "'Tranquil' contrasts with 'chaotic'.",
+        "'Bustling' means very active.",
+        "'Unique' means special.",
+        "'Diverse' means varied.",
+        "'Unforgettable' means memorable."
+      ],
+      clueWords: [["countryside"],["city"],["experiences"],["attractions"],["memories"]]
     }
   ],
   p4: [
@@ -1756,6 +2377,75 @@ export const synonymContrast = { p1: [
         "'Workable' means capable of working."
       ],
       clueWords: [["policy"],["later"],["employees"],["feedback"],["solutions"]]
+    },
+    {
+      text: "The athlete was ___ (1) ___ in training, but ___ (2) ___ during competition; her ___ (3) ___ preparation yielded ___ (4) ___ results and brought ___ (5) ___ recognition.",
+      answers: ["disciplined", "explosive", "methodical", "outstanding", "widespread"],
+      wordBox: [
+        "disciplined", "explosive", "methodical", "outstanding", "widespread",
+        "casual", "subdued", "chaotic", "mediocre", "limited"
+      ],
+      hints: [
+        "Controlled and orderly.",
+        "Sudden and powerful.",
+        "Systematic and organised.",
+        "Exceptionally good.",
+        "Found everywhere."
+      ],
+      explanations: [
+        "'Disciplined' contrasts with 'casual'.",
+        "'Explosive' means powerful and sudden.",
+        "'Methodical' means systematic.",
+        "'Outstanding' means excellent.",
+        "'Widespread' means extensive."
+      ],
+      clueWords: [["training"],["competition"],["preparation"],["results"],["recognition"]]
+    },
+    {
+      text: "The debate was ___ (1) ___, whereas the discussion was ___ (2) ___; nonetheless, both groups remained ___ (3) ___, presenting ___ (4) ___ arguments and reaching ___ (5) ___ understanding.",
+      answers: ["heated", "civil", "professional", "compelling", "mutual"],
+      wordBox: [
+        "heated", "civil", "professional", "compelling", "mutual",
+        "calm", "hostile", "amateur", "weak", "one-sided"
+      ],
+      hints: [
+        "Intense and passionate.",
+        "Polite and respectful.",
+        "Done with skill.",
+        "Convincing and forceful.",
+        "Shared by both."
+      ],
+      explanations: [
+        "'Heated' contrasts with 'calm'.",
+        "'Civil' means polite.",
+        "'Professional' means skilful.",
+        "'Compelling' means convincing.",
+        "'Mutual' means shared."
+      ],
+      clueWords: [["debate"],["discussion"],["groups"],["arguments"],["understanding"]]
+    },
+    {
+      text: "The ocean was ___ (1) ___ at dawn, but became ___ (2) ___ by afternoon; the waves shifted from ___ (3) ___ to ___ (4) ___, creating ___ (5) ___ conditions for surfers.",
+      answers: ["placid", "turbulent", "gentle", "powerful", "challenging"],
+      wordBox: [
+        "placid", "turbulent", "gentle", "powerful", "challenging",
+        "rough", "calm", "fierce", "weak", "easy"
+      ],
+      hints: [
+        "Calm and peaceful.",
+        "Violently disturbed.",
+        "Soft and mild.",
+        "Having great force.",
+        "Testing one's abilities."
+      ],
+      explanations: [
+        "'Placid' contrasts with 'rough'.",
+        "'Turbulent' means violently disturbed.",
+        "'Gentle' means mild.",
+        "'Powerful' means forceful.",
+        "'Challenging' means demanding."
+      ],
+      clueWords: [["ocean"],["afternoon"],["waves"],["shifted"],["surfers"]]
     }
   ],
   p5: [
@@ -1781,6 +2471,75 @@ export const synonymContrast = { p1: [
         "'Balanced' means fair."
       ],
       clueWords: [["comments"],["hers"],["discussion"],["answers"],["conclusion"]]
+    },
+    {
+      text: "The theory seemed ___ (1) ___ at first, but proved ___ (2) ___ upon examination; its ___ (3) ___ logic contrasted with ___ (4) ___ predictions that yielded ___ (5) ___ results.",
+      answers: ["implausible", "revolutionary", "flawed", "accurate", "remarkable"],
+      wordBox: [
+        "implausible", "revolutionary", "flawed", "accurate", "remarkable",
+        "believable", "conventional", "sound", "inaccurate", "ordinary"
+      ],
+      hints: [
+        "Not seeming reasonable.",
+        "Completely new and different.",
+        "Having errors.",
+        "Correct and precise.",
+        "Worthy of attention."
+      ],
+      explanations: [
+        "'Implausible' contrasts with 'believable'.",
+        "'Revolutionary' means groundbreaking.",
+        "'Flawed' means imperfect.",
+        "'Accurate' means correct.",
+        "'Remarkable' means extraordinary."
+      ],
+      clueWords: [["theory"],["examination"],["logic"],["predictions"],["results"]]
+    },
+    {
+      text: "The market was ___ (1) ___ in the morning, then turned ___ (2) ___ by closing; investors shifted from ___ (3) ___ to ___ (4) ___, making ___ (5) ___ decisions.",
+      answers: ["volatile", "stable", "anxious", "confident", "rational"],
+      wordBox: [
+        "volatile", "stable", "anxious", "confident", "rational",
+        "steady", "unstable", "calm", "uncertain", "impulsive"
+      ],
+      hints: [
+        "Changing rapidly.",
+        "Not changing.",
+        "Worried and nervous.",
+        "Self-assured.",
+        "Based on reason."
+      ],
+      explanations: [
+        "'Volatile' contrasts with 'steady'.",
+        "'Stable' means unchanging.",
+        "'Anxious' means worried.",
+        "'Confident' means assured.",
+        "'Rational' means logical."
+      ],
+      clueWords: [["market"],["closing"],["investors"],["shifted"],["decisions"]]
+    },
+    {
+      text: "The landscape was ___ (1) ___ in summer, but ___ (2) ___ in winter; locals remained ___ (3) ___, adapting with ___ (4) ___ spirit and maintaining ___ (5) ___ traditions.",
+      answers: ["verdant", "barren", "resilient", "indomitable", "cherished"],
+      wordBox: [
+        "verdant", "barren", "resilient", "indomitable", "cherished",
+        "dry", "lush", "fragile", "defeated", "forgotten"
+      ],
+      hints: [
+        "Green with vegetation.",
+        "Empty and lifeless.",
+        "Able to recover.",
+        "Impossible to defeat.",
+        "Held dear."
+      ],
+      explanations: [
+        "'Verdant' contrasts with 'dry'.",
+        "'Barren' means empty.",
+        "'Resilient' means able to recover.",
+        "'Indomitable' means unconquerable.",
+        "'Cherished' means treasured."
+      ],
+      clueWords: [["landscape"],["winter"],["locals"],["spirit"],["traditions"]]
     }
   ],
   p6: [
@@ -1806,6 +2565,75 @@ export const synonymContrast = { p1: [
         "'Cheerful' means happy and bright."
       ],
       clueWords: [["forecast"],["afternoon"],["tourists"],["umbrellas"],["smiles"]]
+    },
+    {
+      text: "The negotiations were ___ (1) ___, yet somehow ___ (2) ___; diplomats remained ___ (3) ___, proposing ___ (4) ___ compromises despite ___ (5) ___ differences.",
+      answers: ["contentious", "productive", "composed", "innovative", "fundamental"],
+      wordBox: [
+        "contentious", "productive", "composed", "innovative", "fundamental",
+        "harmonious", "futile", "agitated", "conventional", "superficial"
+      ],
+      hints: [
+        "Causing disagreement.",
+        "Achieving results.",
+        "Calm and controlled.",
+        "New and creative.",
+        "Basic and essential."
+      ],
+      explanations: [
+        "'Contentious' contrasts with 'harmonious'.",
+        "'Productive' means yielding results.",
+        "'Composed' means calm.",
+        "'Innovative' means creative.",
+        "'Fundamental' means basic."
+      ],
+      clueWords: [["negotiations"],["somehow"],["diplomats"],["compromises"],["differences"]]
+    },
+    {
+      text: "The performance was ___ (1) ___ technically, but ___ (2) ___ emotionally; critics found it ___ (3) ___ yet ___ (4) ___, leaving audiences ___ (5) ___ and thoughtful.",
+      answers: ["flawless", "hollow", "polished", "uninspiring", "divided"],
+      wordBox: [
+        "flawless", "hollow", "polished", "uninspiring", "divided",
+        "imperfect", "moving", "rough", "captivating", "united"
+      ],
+      hints: [
+        "Without errors.",
+        "Empty and lacking.",
+        "Refined and smooth.",
+        "Not exciting.",
+        "Having different opinions."
+      ],
+      explanations: [
+        "'Flawless' contrasts with 'imperfect'.",
+        "'Hollow' means empty.",
+        "'Polished' means refined.",
+        "'Uninspiring' means dull.",
+        "'Divided' means split in opinion."
+      ],
+      clueWords: [["performance"],["emotionally"],["critics"],["yet"],["audiences"]]
+    },
+    {
+      text: "The evidence seemed ___ (1) ___, yet proved ___ (2) ___; investigators remained ___ (3) ___, conducting ___ (4) ___ analysis that revealed ___ (5) ___ truths.",
+      answers: ["circumstantial", "conclusive", "persistent", "exhaustive", "unsettling"],
+      wordBox: [
+        "circumstantial", "conclusive", "persistent", "exhaustive", "unsettling",
+        "direct", "inconclusive", "casual", "superficial", "comforting"
+      ],
+      hints: [
+        "Based on circumstances, not proof.",
+        "Settling the matter definitely.",
+        "Continuing firmly.",
+        "Extremely thorough.",
+        "Causing unease."
+      ],
+      explanations: [
+        "'Circumstantial' contrasts with 'direct'.",
+        "'Conclusive' means decisive.",
+        "'Persistent' means determined.",
+        "'Exhaustive' means comprehensive.",
+        "'Unsettling' means disturbing."
+      ],
+      clueWords: [["evidence"],["proved"],["investigators"],["analysis"],["truths"]]
     }
   ]
 };
@@ -2379,6 +3207,75 @@ export const morphologicalAffix = { p1: [
         "'Progress' means forward movement."
       ],
       clueWords: [["program"],["training"],["procedures"],["reported"],["measurable"]]
+    },
+    {
+      text: "The school's new ___ (1) ___ room allowed ___ (2) ___ learning; teachers provided ___ (3) ___ feedback, enabling students to make ___ (4) ___ choices and develop ___ (5) ___ thinking.",
+      answers: ["multimedia", "interactive", "constructive", "independent", "critical"],
+      wordBox: [
+        "multimedia", "interactive", "constructive", "independent", "critical",
+        "single-media", "passive", "destructive", "dependent", "uncritical"
+      ],
+      hints: [
+        "Using many forms of media (multi- = many).",
+        "Involving two-way communication (inter- = between).",
+        "Building up, helpful (-ive from construct).",
+        "Not relying on others (in- here = not + dependent).",
+        "Involving careful judgement (-ical from critique)."
+      ],
+      explanations: [
+        "'Multimedia' uses 'multi-' meaning many.",
+        "'Interactive' uses 'inter-' meaning between.",
+        "'Constructive' uses '-ive' from 'construct'.",
+        "'Independent' uses 'in-' meaning not.",
+        "'Critical' uses '-ical' from 'critique'."
+      ],
+      clueWords: [["room"],["learning"],["feedback"],["choices"],["thinking"]]
+    },
+    {
+      text: "The author's ___ (1) ___ was evident in her writing; her ___ (2) ___ style attracted ___ (3) ___ readers who appreciated her ___ (4) ___ descriptions and ___ (5) ___ narratives.",
+      answers: ["creativity", "imaginative", "countless", "vivid", "captivating"],
+      wordBox: [
+        "creativity", "imaginative", "countless", "vivid", "captivating",
+        "dullness", "unimaginative", "few", "dull", "boring"
+      ],
+      hints: [
+        "Quality of being creative (-ity from create).",
+        "Full of imagination (-ive from imagine).",
+        "Too many to count (-less = without count).",
+        "Producing strong images.",
+        "Holding attention (-ing from captivate)."
+      ],
+      explanations: [
+        "'Creativity' is 'create' + -ivity.",
+        "'Imaginative' is 'imagine' + -ive.",
+        "'Countless' is 'count' + -less.",
+        "'Vivid' means producing strong images.",
+        "'Captivating' is 'captivate' + -ing."
+      ],
+      clueWords: [["writing"],["style"],["readers"],["descriptions"],["narratives"]]
+    },
+    {
+      text: "The company's ___ (1) ___ policy required ___ (2) ___ compliance; managers held ___ (3) ___ meetings to discuss ___ (4) ___ matters and ensure ___ (5) ___ procedures.",
+      answers: ["environmental", "mandatory", "quarterly", "operational", "standardised"],
+      wordBox: [
+        "environmental", "mandatory", "quarterly", "operational", "standardised",
+        "personal", "optional", "daily", "theoretical", "random"
+      ],
+      hints: [
+        "Related to the environment (-al from environment).",
+        "Required by law or rule (-ory from mandate).",
+        "Every three months (-ly from quarter).",
+        "Related to operations (-al from operate).",
+        "Made standard (-ised from standard)."
+      ],
+      explanations: [
+        "'Environmental' is 'environment' + -al.",
+        "'Mandatory' is 'mandate' + -ory.",
+        "'Quarterly' is 'quarter' + -ly.",
+        "'Operational' is 'operation' + -al.",
+        "'Standardised' is 'standard' + -ised."
+      ],
+      clueWords: [["policy"],["compliance"],["meetings"],["matters"],["procedures"]]
     }
   ],
   p4: [
@@ -2404,6 +3301,75 @@ export const morphologicalAffix = { p1: [
         "'Innovation' uses the suffix -ion."
       ],
       clueWords: [["experiment"],["significant"],["methods"],["results"],["continued"]]
+    },
+    {
+      text: "The museum's ___ (1) ___ exhibits required careful ___ (2) ___; curators ensured ___ (3) ___ conditions for the ___ (4) ___ artefacts and provided ___ (5) ___ information.",
+      answers: ["archaeological", "preservation", "optimal", "priceless", "comprehensive"],
+      wordBox: [
+        "archaeological", "preservation", "optimal", "priceless", "comprehensive",
+        "modern", "destruction", "poor", "worthless", "limited"
+      ],
+      hints: [
+        "Related to archaeology (-ical).",
+        "Act of preserving (-ation).",
+        "Best possible (-al from optimum).",
+        "Beyond price (-less).",
+        "Including everything (-ive)."
+      ],
+      explanations: [
+        "'Archaeological' is 'archaeology' + -ical.",
+        "'Preservation' is 'preserve' + -ation.",
+        "'Optimal' is 'optimum' + -al.",
+        "'Priceless' is 'price' + -less.",
+        "'Comprehensive' is 'comprehend' + -sive."
+      ],
+      clueWords: [["exhibits"],["careful"],["conditions"],["artefacts"],["information"]]
+    },
+    {
+      text: "The scientist's ___ (1) ___ approach led to ___ (2) ___ discoveries; her ___ (3) ___ analysis identified ___ (4) ___ factors and enabled ___ (5) ___ predictions.",
+      answers: ["methodological", "groundbreaking", "quantitative", "influential", "accurate"],
+      wordBox: [
+        "methodological", "groundbreaking", "quantitative", "influential", "accurate",
+        "haphazard", "minor", "qualitative", "negligible", "inaccurate"
+      ],
+      hints: [
+        "Related to methods (-ical).",
+        "Breaking new ground (-ing from break).",
+        "Based on quantities (-ive from quantity).",
+        "Having influence (-ial).",
+        "Correct and precise."
+      ],
+      explanations: [
+        "'Methodological' is 'method' + -ological.",
+        "'Groundbreaking' is 'ground' + 'break' + -ing.",
+        "'Quantitative' is 'quantity' + -ive.",
+        "'Influential' is 'influence' + -ial.",
+        "'Accurate' means correct."
+      ],
+      clueWords: [["approach"],["discoveries"],["analysis"],["factors"],["predictions"]]
+    },
+    {
+      text: "The athlete's ___ (1) ___ was remarkable; her ___ (2) ___ training built ___ (3) ___ strength, while her ___ (4) ___ attitude ensured ___ (5) ___ performance.",
+      answers: ["determination", "intensive", "exceptional", "competitive", "consistent"],
+      wordBox: [
+        "determination", "intensive", "exceptional", "competitive", "consistent",
+        "hesitation", "casual", "average", "passive", "erratic"
+      ],
+      hints: [
+        "Quality of being determined (-ation).",
+        "Very thorough (-ive from intense).",
+        "Beyond exception (-al).",
+        "Wanting to compete (-ive).",
+        "Staying the same (-ent)."
+      ],
+      explanations: [
+        "'Determination' is 'determine' + -ation.",
+        "'Intensive' is 'intense' + -ive.",
+        "'Exceptional' is 'exception' + -al.",
+        "'Competitive' is 'compete' + -ive.",
+        "'Consistent' is 'consist' + -ent."
+      ],
+      clueWords: [["remarkable"],["training"],["strength"],["attitude"],["performance"]]
     }
   ],
   p5: [
@@ -2429,6 +3395,75 @@ export const morphologicalAffix = { p1: [
         "'Adaptation' ends with -ation."
       ],
       clueWords: [["solutions"],["concepts"],["achieve"],["allowed"],["future"]]
+    },
+    {
+      text: "The organisation's ___ (1) ___ goals required ___ (2) ___ planning; teams developed ___ (3) ___ frameworks for ___ (4) ___ implementation and ___ (5) ___ evaluation.",
+      answers: ["organisational", "strategic", "operational", "systematic", "comprehensive"],
+      wordBox: [
+        "organisational", "strategic", "operational", "systematic", "comprehensive",
+        "personal", "random", "chaotic", "haphazard", "partial"
+      ],
+      hints: [
+        "Related to the organisation (-al).",
+        "Related to strategy (-ic).",
+        "Related to operations (-al).",
+        "Following a system (-ic).",
+        "Including all aspects (-ive)."
+      ],
+      explanations: [
+        "'Organisational' is 'organisation' + -al.",
+        "'Strategic' is 'strategy' + -ic.",
+        "'Operational' is 'operation' + -al.",
+        "'Systematic' is 'system' + -atic.",
+        "'Comprehensive' is 'comprehend' + -sive."
+      ],
+      clueWords: [["goals"],["planning"],["frameworks"],["implementation"],["evaluation"]]
+    },
+    {
+      text: "The researcher's ___ (1) ___ led to ___ (2) ___ findings; her ___ (3) ___ investigation revealed ___ (4) ___ correlations and ___ (5) ___ implications.",
+      answers: ["persistence", "revolutionary", "exhaustive", "significant", "far-reaching"],
+      wordBox: [
+        "persistence", "revolutionary", "exhaustive", "significant", "far-reaching",
+        "hesitation", "trivial", "superficial", "minor", "limited"
+      ],
+      hints: [
+        "Quality of persisting (-ence).",
+        "Causing a revolution (-ary).",
+        "Thoroughly complete (-ive).",
+        "Having meaning (-ant).",
+        "Extending far (compound)."
+      ],
+      explanations: [
+        "'Persistence' is 'persist' + -ence.",
+        "'Revolutionary' is 'revolution' + -ary.",
+        "'Exhaustive' is 'exhaust' + -ive.",
+        "'Significant' is 'signify' + -cant.",
+        "'Far-reaching' is compound word."
+      ],
+      clueWords: [["led"],["findings"],["investigation"],["correlations"],["implications"]]
+    },
+    {
+      text: "The government's ___ (1) ___ initiative promoted ___ (2) ___ development; communities gained ___ (3) ___ benefits through ___ (4) ___ projects and ___ (5) ___ partnerships.",
+      answers: ["transformational", "sustainable", "measurable", "collaborative", "long-term"],
+      wordBox: [
+        "transformational", "sustainable", "measurable", "collaborative", "long-term",
+        "minor", "unsustainable", "invisible", "individual", "short-term"
+      ],
+      hints: [
+        "Causing transformation (-al).",
+        "Able to be sustained (-able).",
+        "Able to be measured (-able).",
+        "Involving collaboration (-ive).",
+        "Lasting a long time (compound)."
+      ],
+      explanations: [
+        "'Transformational' is 'transform' + -ational.",
+        "'Sustainable' is 'sustain' + -able.",
+        "'Measurable' is 'measure' + -able.",
+        "'Collaborative' is 'collaborate' + -ive.",
+        "'Long-term' is a compound word."
+      ],
+      clueWords: [["initiative"],["development"],["benefits"],["projects"],["partnerships"]]
     }
   ],
   p6: [
@@ -2454,6 +3489,75 @@ export const morphologicalAffix = { p1: [
         "'Recovery' uses re- + -y."
       ],
       clueWords: [["patient's"],["immediate"],["therapy"],["monitoring"],["full"]]
+    },
+    {
+      text: "The corporation's ___ (1) ___ strategy focused on ___ (2) ___ markets; executives ensured ___ (3) ___ compliance while pursuing ___ (4) ___ expansion and ___ (5) ___ growth.",
+      answers: ["diversification", "international", "regulatory", "aggressive", "exponential"],
+      wordBox: [
+        "diversification", "international", "regulatory", "aggressive", "exponential",
+        "consolidation", "domestic", "voluntary", "passive", "linear"
+      ],
+      hints: [
+        "Process of diversifying (-ation).",
+        "Between nations (inter- + -al).",
+        "Related to regulations (-ory).",
+        "Acting with force (-ive).",
+        "Growing rapidly (exponent + -ial)."
+      ],
+      explanations: [
+        "'Diversification' is 'diversify' + -cation.",
+        "'International' is 'inter-' + 'nation' + -al.",
+        "'Regulatory' is 'regulate' + -ory.",
+        "'Aggressive' is 'aggress' + -ive.",
+        "'Exponential' is 'exponent' + -ial."
+      ],
+      clueWords: [["strategy"],["markets"],["compliance"],["expansion"],["growth"]]
+    },
+    {
+      text: "The philosopher's ___ (1) ___ challenged ___ (2) ___ beliefs; her ___ (3) ___ arguments demonstrated ___ (4) ___ reasoning and revealed ___ (5) ___ truths.",
+      answers: ["unconventional", "fundamental", "irrefutable", "logical", "uncomfortable"],
+      wordBox: [
+        "unconventional", "fundamental", "irrefutable", "logical", "uncomfortable",
+        "traditional", "superficial", "questionable", "emotional", "pleasant"
+      ],
+      hints: [
+        "Not conventional (un- + -al).",
+        "Related to the foundation (-al).",
+        "Cannot be refuted (ir- + -able).",
+        "Following logic (-ical).",
+        "Not comfortable (un- + -able)."
+      ],
+      explanations: [
+        "'Unconventional' is 'un-' + 'convention' + -al.",
+        "'Fundamental' is 'fundament' + -al.",
+        "'Irrefutable' is 'ir-' + 'refute' + -able.",
+        "'Logical' is 'logic' + -ical.",
+        "'Uncomfortable' is 'un-' + 'comfort' + -able."
+      ],
+      clueWords: [["challenged"],["beliefs"],["arguments"],["reasoning"],["truths"]]
+    },
+    {
+      text: "The medical team's ___ (1) ___ approach included ___ (2) ___ testing and ___ (3) ___ analysis; their ___ (4) ___ diagnosis enabled ___ (5) ___ treatment.",
+      answers: ["multidisciplinary", "diagnostic", "comprehensive", "definitive", "personalised"],
+      wordBox: [
+        "multidisciplinary", "diagnostic", "comprehensive", "definitive", "personalised",
+        "single", "random", "partial", "tentative", "generic"
+      ],
+      hints: [
+        "Involving many disciplines (multi- + -ary).",
+        "Related to diagnosis (-ic).",
+        "Including everything (-ive).",
+        "Final and conclusive (-ive).",
+        "Made personal (-ised)."
+      ],
+      explanations: [
+        "'Multidisciplinary' is 'multi-' + 'discipline' + -ary.",
+        "'Diagnostic' is 'diagnose' + -ic.",
+        "'Comprehensive' is 'comprehend' + -sive.",
+        "'Definitive' is 'definite' + -ive.",
+        "'Personalised' is 'personal' + -ised."
+      ],
+      clueWords: [["approach"],["testing"],["analysis"],["diagnosis"],["treatment"]]
     }
   ]
 };
@@ -2987,6 +4091,75 @@ export const collocationCloze = { p1: [
         "'Exciting stories' means thrilling tales."
       ],
       clueWords: [["beach"],["hotel"],["cuisine"],["photos"],["stories"]]
+    },
+    {
+      text: "The athlete showed ___ (1) ___ determination, followed a ___ (2) ___ training regimen, maintained ___ (3) ___ focus, achieved ___ (4) ___ success, and became a ___ (5) ___ champion.",
+      answers: ["unwavering", "rigorous", "laser", "phenomenal", "world"],
+      wordBox: [
+        "unwavering", "rigorous", "laser", "phenomenal", "world",
+        "weak", "easy", "poor", "modest", "local"
+      ],
+      hints: [
+        "Collocates with 'determination'.",
+        "Collocates with 'training regimen'.",
+        "Collocates with 'focus'.",
+        "Collocates with 'success'.",
+        "Collocates with 'champion'."
+      ],
+      explanations: [
+        "'Unwavering determination' means steady resolve.",
+        "'Rigorous training' means strict exercise.",
+        "'Laser focus' means sharp concentration.",
+        "'Phenomenal success' means extraordinary achievement.",
+        "'World champion' means global winner."
+      ],
+      clueWords: [["determination"],["training"],["focus"],["success"],["champion"]]
+    },
+    {
+      text: "The restaurant serves ___ (1) ___ portions of ___ (2) ___ food at ___ (3) ___ prices; diners enjoy ___ (4) ___ service and leave ___ (5) ___ reviews.",
+      answers: ["generous", "authentic", "reasonable", "impeccable", "positive"],
+      wordBox: [
+        "generous", "authentic", "reasonable", "impeccable", "positive",
+        "small", "fake", "outrageous", "poor", "negative"
+      ],
+      hints: [
+        "Collocates with 'portions'.",
+        "Collocates with 'food'.",
+        "Collocates with 'prices'.",
+        "Collocates with 'service'.",
+        "Collocates with 'reviews'."
+      ],
+      explanations: [
+        "'Generous portions' means large servings.",
+        "'Authentic food' means genuine cuisine.",
+        "'Reasonable prices' means fair costs.",
+        "'Impeccable service' means perfect attention.",
+        "'Positive reviews' means good feedback."
+      ],
+      clueWords: [["portions"],["food"],["prices"],["service"],["reviews"]]
+    },
+    {
+      text: "Scientists made a ___ (1) ___ discovery that had ___ (2) ___ implications; their ___ (3) ___ research earned them ___ (4) ___ recognition and led to ___ (5) ___ change.",
+      answers: ["groundbreaking", "far-reaching", "pioneering", "international", "lasting"],
+      wordBox: [
+        "groundbreaking", "far-reaching", "pioneering", "international", "lasting",
+        "minor", "limited", "routine", "local", "temporary"
+      ],
+      hints: [
+        "Collocates with 'discovery'.",
+        "Collocates with 'implications'.",
+        "Collocates with 'research'.",
+        "Collocates with 'recognition'.",
+        "Collocates with 'change'."
+      ],
+      explanations: [
+        "'Groundbreaking discovery' means innovative finding.",
+        "'Far-reaching implications' means wide-ranging effects.",
+        "'Pioneering research' means leading-edge study.",
+        "'International recognition' means global acknowledgment.",
+        "'Lasting change' means permanent transformation."
+      ],
+      clueWords: [["discovery"],["implications"],["research"],["recognition"],["change"]]
     }
   ],
   p4: [
@@ -3012,6 +4185,75 @@ export const collocationCloze = { p1: [
         "'Ambitious goals' means challenging objectives."
       ],
       clueWords: [["speech"],["results"],["growth"],["teamwork"],["goals"]]
+    },
+    {
+      text: "The doctor gave a ___ (1) ___ diagnosis, prescribed ___ (2) ___ treatment, recommended ___ (3) ___ rest, scheduled ___ (4) ___ check-ups, and ensured ___ (5) ___ recovery.",
+      answers: ["accurate", "effective", "complete", "regular", "full"],
+      wordBox: [
+        "accurate", "effective", "complete", "regular", "full",
+        "vague", "ineffective", "partial", "rare", "slow"
+      ],
+      hints: [
+        "Collocates with 'diagnosis'.",
+        "Collocates with 'treatment'.",
+        "Collocates with 'rest'.",
+        "Collocates with 'check-ups'.",
+        "Collocates with 'recovery'."
+      ],
+      explanations: [
+        "'Accurate diagnosis' means correct identification.",
+        "'Effective treatment' means working remedy.",
+        "'Complete rest' means total relaxation.",
+        "'Regular check-ups' means routine examinations.",
+        "'Full recovery' means total healing."
+      ],
+      clueWords: [["diagnosis"],["treatment"],["rest"],["check-ups"],["recovery"]]
+    },
+    {
+      text: "The company faced ___ (1) ___ competition, developed ___ (2) ___ products, built ___ (3) ___ relationships, offered ___ (4) ___ service, and gained ___ (5) ___ market share.",
+      answers: ["fierce", "innovative", "strong", "exceptional", "significant"],
+      wordBox: [
+        "fierce", "innovative", "strong", "exceptional", "significant",
+        "weak", "outdated", "weak", "poor", "minimal"
+      ],
+      hints: [
+        "Collocates with 'competition'.",
+        "Collocates with 'products'.",
+        "Collocates with 'relationships'.",
+        "Collocates with 'service'.",
+        "Collocates with 'market share'."
+      ],
+      explanations: [
+        "'Fierce competition' means intense rivalry.",
+        "'Innovative products' means new creations.",
+        "'Strong relationships' means solid connections.",
+        "'Exceptional service' means outstanding attention.",
+        "'Significant market share' means large portion."
+      ],
+      clueWords: [["competition"],["products"],["relationships"],["service"],["market"]]
+    },
+    {
+      text: "The teacher provided ___ (1) ___ instruction, offered ___ (2) ___ support, gave ___ (3) ___ encouragement, assigned ___ (4) ___ homework, and achieved ___ (5) ___ results.",
+      answers: ["clear", "individual", "constant", "meaningful", "impressive"],
+      wordBox: [
+        "clear", "individual", "constant", "meaningful", "impressive",
+        "vague", "group", "occasional", "pointless", "poor"
+      ],
+      hints: [
+        "Collocates with 'instruction'.",
+        "Collocates with 'support'.",
+        "Collocates with 'encouragement'.",
+        "Collocates with 'homework'.",
+        "Collocates with 'results'."
+      ],
+      explanations: [
+        "'Clear instruction' means understandable teaching.",
+        "'Individual support' means personal help.",
+        "'Constant encouragement' means continuous motivation.",
+        "'Meaningful homework' means purposeful assignments.",
+        "'Impressive results' means remarkable outcomes."
+      ],
+      clueWords: [["instruction"],["support"],["encouragement"],["homework"],["results"]]
     }
   ],
   p5: [
@@ -3037,6 +4279,75 @@ export const collocationCloze = { p1: [
         "'Fresh insight' means new understanding."
       ],
       clueWords: [["discussions"],["feedback"],["connections"],["skills"],["insight"]]
+    },
+    {
+      text: "The negotiations reached a ___ (1) ___ impasse, but ___ (2) ___ dialogue resumed; parties showed ___ (3) ___ commitment and eventually signed a ___ (4) ___ agreement with ___ (5) ___ terms.",
+      answers: ["critical", "productive", "genuine", "binding", "favourable"],
+      wordBox: [
+        "critical", "productive", "genuine", "binding", "favourable",
+        "minor", "futile", "fake", "informal", "unfair"
+      ],
+      hints: [
+        "Collocates with 'impasse'.",
+        "Collocates with 'dialogue'.",
+        "Collocates with 'commitment'.",
+        "Collocates with 'agreement'.",
+        "Collocates with 'terms'."
+      ],
+      explanations: [
+        "'Critical impasse' means serious deadlock.",
+        "'Productive dialogue' means fruitful discussion.",
+        "'Genuine commitment' means real dedication.",
+        "'Binding agreement' means enforceable contract.",
+        "'Favourable terms' means beneficial conditions."
+      ],
+      clueWords: [["impasse"],["dialogue"],["commitment"],["agreement"],["terms"]]
+    },
+    {
+      text: "The investigation uncovered ___ (1) ___ evidence of ___ (2) ___ misconduct; prosecutors built a ___ (3) ___ case that led to ___ (4) ___ charges and ___ (5) ___ sentencing.",
+      answers: ["compelling", "widespread", "strong", "criminal", "harsh"],
+      wordBox: [
+        "compelling", "widespread", "strong", "criminal", "harsh",
+        "weak", "isolated", "flimsy", "civil", "lenient"
+      ],
+      hints: [
+        "Collocates with 'evidence'.",
+        "Collocates with 'misconduct'.",
+        "Collocates with 'case'.",
+        "Collocates with 'charges'.",
+        "Collocates with 'sentencing'."
+      ],
+      explanations: [
+        "'Compelling evidence' means convincing proof.",
+        "'Widespread misconduct' means extensive wrongdoing.",
+        "'Strong case' means solid argument.",
+        "'Criminal charges' means legal accusations.",
+        "'Harsh sentencing' means severe punishment."
+      ],
+      clueWords: [["evidence"],["misconduct"],["case"],["charges"],["sentencing"]]
+    },
+    {
+      text: "The museum displayed ___ (1) ___ artefacts from ___ (2) ___ civilisations; visitors gained ___ (3) ___ appreciation through ___ (4) ___ exhibits and ___ (5) ___ guided tours.",
+      answers: ["rare", "ancient", "deep", "interactive", "informative"],
+      wordBox: [
+        "rare", "ancient", "deep", "interactive", "informative",
+        "common", "modern", "shallow", "static", "boring"
+      ],
+      hints: [
+        "Collocates with 'artefacts'.",
+        "Collocates with 'civilisations'.",
+        "Collocates with 'appreciation'.",
+        "Collocates with 'exhibits'.",
+        "Collocates with 'guided tours'."
+      ],
+      explanations: [
+        "'Rare artefacts' means uncommon objects.",
+        "'Ancient civilisations' means old cultures.",
+        "'Deep appreciation' means profound understanding.",
+        "'Interactive exhibits' means engaging displays.",
+        "'Informative guided tours' means educational walks."
+      ],
+      clueWords: [["artefacts"],["civilisations"],["appreciation"],["exhibits"],["tours"]]
     }
   ],
   p6: [
@@ -3062,6 +4373,75 @@ export const collocationCloze = { p1: [
         "'Glowing praise' means very positive reviews."
       ],
       clueWords: [["planning"],["campaign"],["sales"],["customers"],["praise"]]
+    },
+    {
+      text: "The summit addressed ___ (1) ___ issues affecting ___ (2) ___ security; leaders made ___ (3) ___ commitments, signed ___ (4) ___ treaties, and announced ___ (5) ___ cooperation.",
+      answers: ["pressing", "global", "binding", "historic", "unprecedented"],
+      wordBox: [
+        "pressing", "global", "binding", "historic", "unprecedented",
+        "minor", "local", "voluntary", "routine", "limited"
+      ],
+      hints: [
+        "Collocates with 'issues'.",
+        "Collocates with 'security'.",
+        "Collocates with 'commitments'.",
+        "Collocates with 'treaties'.",
+        "Collocates with 'cooperation'."
+      ],
+      explanations: [
+        "'Pressing issues' means urgent matters.",
+        "'Global security' means worldwide safety.",
+        "'Binding commitments' means obligatory promises.",
+        "'Historic treaties' means momentous agreements.",
+        "'Unprecedented cooperation' means never-before-seen collaboration."
+      ],
+      clueWords: [["issues"],["security"],["commitments"],["treaties"],["cooperation"]]
+    },
+    {
+      text: "The orchestra gave a ___ (1) ___ performance of ___ (2) ___ music; the audience sat in ___ (3) ___ silence, then erupted in ___ (4) ___ applause and gave a ___ (5) ___ ovation.",
+      answers: ["flawless", "classical", "rapt", "thunderous", "standing"],
+      wordBox: [
+        "flawless", "classical", "rapt", "thunderous", "standing",
+        "mediocre", "modern", "restless", "polite", "seated"
+      ],
+      hints: [
+        "Collocates with 'performance'.",
+        "Collocates with 'music'.",
+        "Collocates with 'silence'.",
+        "Collocates with 'applause'.",
+        "Collocates with 'ovation'."
+      ],
+      explanations: [
+        "'Flawless performance' means perfect rendition.",
+        "'Classical music' means traditional compositions.",
+        "'Rapt silence' means completely absorbed quiet.",
+        "'Thunderous applause' means very loud clapping.",
+        "'Standing ovation' means rising to applaud."
+      ],
+      clueWords: [["performance"],["music"],["silence"],["applause"],["ovation"]]
+    },
+    {
+      text: "The report revealed ___ (1) ___ findings about ___ (2) ___ climate change; experts called for ___ (3) ___ action, proposed ___ (4) ___ solutions, and warned of ___ (5) ___ consequences.",
+      answers: ["alarming", "accelerating", "immediate", "bold", "devastating"],
+      wordBox: [
+        "alarming", "accelerating", "immediate", "bold", "devastating",
+        "reassuring", "slowing", "delayed", "timid", "minor"
+      ],
+      hints: [
+        "Collocates with 'findings'.",
+        "Collocates with 'climate change'.",
+        "Collocates with 'action'.",
+        "Collocates with 'solutions'.",
+        "Collocates with 'consequences'."
+      ],
+      explanations: [
+        "'Alarming findings' means worrying discoveries.",
+        "'Accelerating climate change' means speeding up warming.",
+        "'Immediate action' means instant response.",
+        "'Bold solutions' means daring answers.",
+        "'Devastating consequences' means destructive results."
+      ],
+      clueWords: [["findings"],["climate"],["action"],["solutions"],["consequences"]]
     }
   ]
 };

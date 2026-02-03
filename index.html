@@ -11,13 +11,29 @@
   <div id="tutorial-modal" class="modal" role="dialog" aria-modal="true">
     <div class="modal-content">
       <h2>Welcome to Vocabulary Cloze Adventure!</h2>
-      <p>Follow these steps:</p>
-      <ol>
-        <li>Drag or tap a word from the word box to fill a blank.</li>
-        <li>Use the 💡 Hint button or click highlighted keywords for help.</li>
-        <li>Press ✅ Submit to check your answers.</li>
-      </ol>
-      <button id="tutorial-close-btn" class="modal-btn">Let's Begin</button>
+      <div class="tutorial-steps">
+        <div class="tutorial-step">
+          <span class="step-number">1</span>
+          <p>Drag or tap a word from the word box to fill a blank.</p>
+        </div>
+        <div class="tutorial-step">
+          <span class="step-number">2</span>
+          <p>Use the Hint button or click highlighted keywords for help.</p>
+        </div>
+        <div class="tutorial-step">
+          <span class="step-number">3</span>
+          <p>Press Submit to check your answers and earn points!</p>
+        </div>
+      </div>
+      <div class="tutorial-tips">
+        <h3>Quick Tips</h3>
+        <ul>
+          <li>Earn coins by completing passages correctly</li>
+          <li>Unlock new themes as you progress</li>
+          <li>Use the sidebar to change difficulty levels</li>
+        </ul>
+      </div>
+      <button id="tutorial-close-btn" class="modal-btn">Let's Begin!</button>
     </div>
   </div>
 
@@ -40,96 +56,187 @@
 
   <!-- Sidebar for Settings -->
   <aside class="sidebar" aria-label="Settings and controls">
-    <label for="vocab-category">📚 Category:</label>
-    <select id="vocab-category">
-           <option value="contextInference">Context Inference</option>
-      <option value="definitionMatch">Definition Match</option>
-      <option value="synonymContrast">Synonym Contrast</option>
-      <option value="morphologicalAffix">Morphological Affix</option>
-      <option value="collocationCloze">Collocation Cloze</option>
-      <option value="grammaticalRole">Grammatical Role</option>
-      <option value="connectorClue">Connector Clue</option>
-    </select>
- <label for="level-select">🔢 Level:</label>
-    <select id="level-select">
-      <option value="p1" selected>P1</option>
-      <option value="p2">P2</option>
-      <option value="p3">P3</option>
-      <option value="p4">P4</option>
-      <option value="p5">P5</option>
-      <option value="p6">P6</option>
-    </select>
-    <label for="timer-setting">⏳ Timer (sec):</label>
-    <select id="timer-setting">
-      <option value="60" selected>60</option>
-      <option value="30">30</option>
-      <option value="off">Off</option>
-    </select>
+    <div class="sidebar-header">
+      <h2>Settings</h2>
+    </div>
 
-    <label for="voice-select">🔊 Voice:</label>
-    <select id="voice-select"></select>
+    <div class="setting-group">
+      <label for="vocab-category">Category:</label>
+      <select id="vocab-category">
+        <option value="contextInference">Context Inference</option>
+        <option value="definitionMatch">Definition Match</option>
+        <option value="synonymContrast">Synonym Contrast</option>
+        <option value="morphologicalAffix">Morphological Affix</option>
+        <option value="collocationCloze">Collocation Cloze</option>
+        <option value="grammaticalRole">Grammatical Role</option>
+        <option value="connectorClue">Connector Clue</option>
+      </select>
+      <p id="category-description" class="category-desc">Learn words from surrounding context clues.</p>
+    </div>
 
-    <button id="toggle-dyslexia">Toggle Dyslexia Font</button>
+    <div class="setting-group">
+      <label for="level-select">Level:</label>
+      <div class="level-selector">
+        <select id="level-select">
+          <option value="p1" selected>P1 - Beginner</option>
+          <option value="p2">P2 - Elementary</option>
+          <option value="p3">P3 - Intermediate</option>
+          <option value="p4">P4 - Upper Intermediate</option>
+          <option value="p5">P5 - Advanced</option>
+          <option value="p6">P6 - Expert</option>
+        </select>
+        <div class="level-indicator">
+          <span class="level-dot active"></span>
+          <span class="level-dot"></span>
+          <span class="level-dot"></span>
+          <span class="level-dot"></span>
+          <span class="level-dot"></span>
+          <span class="level-dot"></span>
+        </div>
+      </div>
+    </div>
+    <div class="setting-group">
+      <label for="timer-setting">Timer:</label>
+      <select id="timer-setting">
+        <option value="off">No Timer</option>
+        <option value="120">2 Minutes</option>
+        <option value="60" selected>1 Minute</option>
+        <option value="30">30 Seconds</option>
+      </select>
+    </div>
 
-    <label for="text-size-slider">🔤 Text Size:</label>
-    <input type="range" id="text-size-slider" min="1" max="2" step="0.1" value="1.4">
+    <div class="setting-group">
+      <label for="voice-select">Voice:</label>
+      <select id="voice-select"></select>
+    </div>
 
-    <label for="theme-select">🎨 Theme:</label>
-    <select id="theme-select">
-      <option value="default">Default</option>
-      <option value="light">Light</option>
-      <option value="theme1">Pastel</option>
-      <option value="theme2">Forest</option>
-    </select>
-    
-       <div id="dashboard" class="dashboard">
-      <h3>Progress</h3>
-      <p id="completed-count">Completed: 0</p>
-      <p id="total-score-summary">Score: 0</p>
-      <p id="missed-clues-summary">Top Missed Clues: none</p>
-      <button id="export-stats-btn">Export Stats</button>
+    <div class="setting-group accessibility-settings">
+      <label>Accessibility:</label>
+      <button id="toggle-dyslexia" class="toggle-btn">Dyslexia Font</button>
+      <div class="text-size-control">
+        <label for="text-size-slider">Text Size:</label>
+        <input type="range" id="text-size-slider" min="1" max="2" step="0.1" value="1.4">
+        <span id="text-size-value">1.4x</span>
+      </div>
+    </div>
+
+    <div class="setting-group">
+      <label for="theme-select">Theme:</label>
+      <select id="theme-select">
+        <option value="default">Default (Dark)</option>
+        <option value="light">Light</option>
+        <option value="theme1">Pastel</option>
+        <option value="theme2">Forest</option>
+      </select>
+    </div>
+
+    <div id="dashboard" class="dashboard">
+      <h3>Your Progress</h3>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-value" id="completed-count">0</span>
+          <span class="stat-label">Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value" id="total-score-summary">0</span>
+          <span class="stat-label">Score</span>
+        </div>
+      </div>
+      <p id="missed-clues-summary" class="missed-clues">Top Missed Clues: none</p>
+      <button id="export-stats-btn" class="export-btn">Export Stats</button>
+      <button id="reset-stats-btn" class="reset-stats-btn">Reset Progress</button>
     </div>
   </aside>
 
   <!-- Main Game Content -->
   <main>
+    <!-- Quick Stats Bar -->
+    <div class="quick-stats">
+      <div class="stat-badge" id="coins-badge">
+        <span class="badge-icon">🪙</span>
+        <span id="coins">0</span>
+      </div>
+      <div class="stat-badge" id="stars-badge">
+        <span class="badge-icon">⭐</span>
+        <span id="stars">0/3</span>
+      </div>
+      <div class="stat-badge" id="streak-badge">
+        <span class="badge-icon">🔥</span>
+        <span id="streak">0</span>
+      </div>
+      <div class="stat-badge" id="level-badge">
+        <span class="badge-icon">🏆</span>
+        <span id="level">Apprentice</span>
+      </div>
+    </div>
+
     <div class="game-container">
-      <div id="passage-text" tabindex="0"></div>
-      <div id="word-box"></div>
+      <div class="passage-section">
+        <div class="passage-header">
+          <span id="progress" class="passage-progress">Passage 1/4</span>
+          <div id="timer-display" class="timer-display">
+            <span id="timer">60s</span>
+            <div id="timer-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+              <div id="timer-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div id="passage-text" tabindex="0"></div>
+      </div>
+      <div class="word-box-section">
+        <h3 class="word-box-title">Word Bank</h3>
+        <div id="word-box"></div>
+      </div>
     </div>
 
     <div class="control-buttons">
-      <button id="hint-btn">💡 Hint (H)</button>
-      <button id="clear-btn">Clear</button>
-      <button id="share-btn">Share</button>
-      <button id="read-passage-btn">Read Passage</button>
-      <button id="reset-words-btn">Reset</button>
+      <button id="hint-btn" class="control-btn hint-btn" title="Get a hint (H)">
+        <span class="btn-icon">💡</span>
+        <span class="btn-text">Hint</span>
+      </button>
+      <button id="read-passage-btn" class="control-btn read-btn" title="Read passage aloud">
+        <span class="btn-icon">🔊</span>
+        <span class="btn-text">Read</span>
+      </button>
+      <button id="reset-words-btn" class="control-btn reset-btn" title="Reset all blanks">
+        <span class="btn-icon">↺</span>
+        <span class="btn-text">Reset</span>
+      </button>
+      <button id="share-btn" class="control-btn share-btn" title="Share your score">
+        <span class="btn-icon">📤</span>
+        <span class="btn-text">Share</span>
+      </button>
     </div>
+
+    <div id="feedback" class="feedback-area" aria-live="polite"></div>
 
     <div class="navigation-buttons">
-      <button id="prev-btn">⬅️ Prev</button>
-      <button id="submit-btn">✅ Submit</button>
-      <button id="next-btn">Next ➡️</button>
+      <button id="prev-btn" class="nav-btn prev-btn" title="Previous passage">
+        <span class="nav-arrow">←</span>
+        <span class="nav-text">Previous</span>
+      </button>
+      <button id="submit-btn" class="nav-btn submit-btn" title="Check your answers">
+        <span class="submit-icon">✓</span>
+        <span class="nav-text">Submit</span>
+      </button>
+      <button id="next-btn" class="nav-btn next-btn" title="Next passage">
+        <span class="nav-text">Next</span>
+        <span class="nav-arrow">→</span>
+      </button>
     </div>
-
-    <div id="feedback" aria-live="polite"></div>
 
     <div class="status-bar">
-      <span id="progress"></span>
-      <span id="score"></span>
-         <span id="coins"></span>
-      <span id="stars"></span>
-      <span id="timer"></span>
-      <div id="progress-bar-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div id="progress-bar-container" class="progress-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
         <div id="progress-bar"></div>
+        <span class="progress-label">Progress</span>
       </div>
-      <div id="timer-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-        <div id="timer-bar"></div>
-      </div>
-      <span id="level"></span>
-      <span id="themes-info"></span>
-      <span id="achievements"></span>
+      <span id="score" class="score-display">Score: 0</span>
+      <span id="themes-info" class="themes-info"></span>
+      <span id="achievements" class="achievements-display"></span>
     </div>
+
+    <!-- Hidden clear button for legacy compatibility -->
+    <button id="clear-btn" style="display:none;">Clear</button>
   </main>
 
   <!-- Audio Elements -->
