@@ -578,6 +578,144 @@ export const contextInference = { p1: [
         "'Standing' ovation means rising to applaud."
       ],
       clueWords: [["actors"],["emotion"],["silence"],["story"],["ovation"]]
+    },
+    {
+      text: "At the hawker centre, the ___ (1) ___ stall owner served ___ (2) ___ portions of chicken rice; customers formed ___ (3) ___ queues, waiting ___ (4) ___ for their turn while the ___ (5) ___ aroma filled the air.",
+      answers: ["friendly", "generous", "orderly", "patiently", "appetising"],
+      wordBox: [
+        "friendly", "generous", "orderly", "patiently", "appetising",
+        "rude", "small", "messy", "impatiently", "unpleasant"
+      ],
+      hints: [
+        "Kind and welcoming.",
+        "Giving more than expected.",
+        "Well-organised in a line.",
+        "Waiting without complaint.",
+        "Smelling delicious."
+      ],
+      explanations: [
+        "'Friendly' means pleasant and kind.",
+        "'Generous' means giving plenty.",
+        "'Orderly' means neat and organised.",
+        "'Patiently' means waiting calmly.",
+        "'Appetising' means making one hungry."
+      ],
+      clueWords: [["stall owner"],["portions"],["queues"],["waiting"],["aroma"]]
+    },
+    {
+      text: "The ___ (1) ___ librarian helped students find ___ (2) ___ books for their project; she spoke in a ___ (3) ___ voice and gave ___ (4) ___ advice on how to ___ (5) ___ information effectively.",
+      answers: ["helpful", "relevant", "soft", "useful", "research"],
+      wordBox: [
+        "helpful", "relevant", "soft", "useful", "research",
+        "unhelpful", "random", "loud", "useless", "ignore"
+      ],
+      hints: [
+        "Willing to assist others.",
+        "Connected to the topic.",
+        "Quiet and gentle.",
+        "Able to be used well.",
+        "To search for information."
+      ],
+      explanations: [
+        "'Helpful' means giving assistance.",
+        "'Relevant' means related to the matter.",
+        "'Soft' means quiet and gentle.",
+        "'Useful' means having practical value.",
+        "'Research' means to investigate thoroughly."
+      ],
+      clueWords: [["librarian"],["books"],["voice"],["advice"],["information"]]
+    },
+    {
+      text: "During the ___ (1) ___ thunderstorm, lightning ___ (2) ___ across the dark sky; the children stayed ___ (3) ___ indoors, watching the ___ (4) ___ rain pound against the windows while feeling ___ (5) ___ and warm inside.",
+      answers: ["fierce", "flashed", "safely", "heavy", "cosy"],
+      wordBox: [
+        "fierce", "flashed", "safely", "heavy", "cosy",
+        "gentle", "disappeared", "dangerously", "light", "uncomfortable"
+      ],
+      hints: [
+        "Very strong and violent.",
+        "Appeared suddenly and briefly.",
+        "In a secure manner.",
+        "Falling with great force.",
+        "Comfortable and warm."
+      ],
+      explanations: [
+        "'Fierce' means very intense.",
+        "'Flashed' means appeared briefly.",
+        "'Safely' means without danger.",
+        "'Heavy' means falling hard.",
+        "'Cosy' means snug and comfortable."
+      ],
+      clueWords: [["thunderstorm"],["lightning"],["indoors"],["rain"],["warm"]]
+    },
+    {
+      text: "The ___ (1) ___ class worked together on a recycling project; they ___ (2) ___ materials from home, created ___ (3) ___ posters, and felt ___ (4) ___ when their efforts helped keep the school ___ (5) ___.",
+      answers: ["enthusiastic", "collected", "colourful", "proud", "clean"],
+      wordBox: [
+        "enthusiastic", "collected", "colourful", "proud", "clean",
+        "bored", "threw", "dull", "ashamed", "dirty"
+      ],
+      hints: [
+        "Showing great excitement.",
+        "Gathered together.",
+        "Having many bright colours.",
+        "Feeling pleased with oneself.",
+        "Free from dirt."
+      ],
+      explanations: [
+        "'Enthusiastic' means eager and excited.",
+        "'Collected' means gathered items.",
+        "'Colourful' means having many colours.",
+        "'Proud' means satisfied with achievements.",
+        "'Clean' means free from pollution."
+      ],
+      clueWords: [["class"],["materials"],["posters"],["efforts"],["school"]]
+    },
+    {
+      text: "Grandma told us ___ (1) ___ stories about life in old Singapore; we listened with ___ (2) ___ interest as she described the ___ (3) ___ kampong where neighbours were ___ (4) ___ and everyone lived ___ (5) ___.",
+      answers: ["fascinating", "keen", "humble", "friendly", "harmoniously"],
+      wordBox: [
+        "fascinating", "keen", "humble", "friendly", "harmoniously",
+        "boring", "little", "grand", "unfriendly", "separately"
+      ],
+      hints: [
+        "Extremely interesting.",
+        "Strong and eager.",
+        "Simple and modest.",
+        "Kind and pleasant.",
+        "In a peaceful way together."
+      ],
+      explanations: [
+        "'Fascinating' means very interesting.",
+        "'Keen' means eager and interested.",
+        "'Humble' means simple and modest.",
+        "'Friendly' means kind to others.",
+        "'Harmoniously' means peacefully together."
+      ],
+      clueWords: [["stories"],["listened"],["kampong"],["neighbours"],["lived"]]
+    },
+    {
+      text: "The ___ (1) ___ zookeeper explained how animals are cared for; visitors learned about the ___ (2) ___ diet each species needs and the ___ (3) ___ habitats designed to keep them ___ (4) ___ and ___ (5) ___.",
+      answers: ["experienced", "specific", "spacious", "healthy", "active"],
+      wordBox: [
+        "experienced", "specific", "spacious", "healthy", "active",
+        "inexperienced", "general", "cramped", "sick", "lazy"
+      ],
+      hints: [
+        "Having much knowledge from practice.",
+        "Particular and exact.",
+        "Having plenty of room.",
+        "In good physical condition.",
+        "Moving about energetically."
+      ],
+      explanations: [
+        "'Experienced' means skilled through practice.",
+        "'Specific' means particular to each.",
+        "'Spacious' means having ample space.",
+        "'Healthy' means in good condition.",
+        "'Active' means lively and energetic."
+      ],
+      clueWords: [["zookeeper"],["diet"],["habitats"],["keep"],["animals"]]
     }
   ],
   p4: [
@@ -672,6 +810,144 @@ export const contextInference = { p1: [
         "'Eventually' means in the end."
       ],
       clueWords: [["conditions"],["winds"],["training"],["climb"],["reached"]]
+    },
+    {
+      text: "Singapore's ___ (1) ___ water recycling system treats used water with ___ (2) ___ technology; the ___ (3) ___ process ensures every drop is ___ (4) ___, helping the nation become more ___ (5) ___ in water supply.",
+      answers: ["advanced", "sophisticated", "thorough", "purified", "self-sufficient"],
+      wordBox: [
+        "advanced", "sophisticated", "thorough", "purified", "self-sufficient",
+        "outdated", "simple", "careless", "contaminated", "dependent"
+      ],
+      hints: [
+        "Highly developed and modern.",
+        "Complex and refined.",
+        "Complete and careful.",
+        "Made clean and pure.",
+        "Not needing outside help."
+      ],
+      explanations: [
+        "'Advanced' means highly developed.",
+        "'Sophisticated' means highly refined.",
+        "'Thorough' means complete in every way.",
+        "'Purified' means made pure.",
+        "'Self-sufficient' means able to provide for oneself."
+      ],
+      clueWords: [["system"],["technology"],["process"],["drop"],["nation"]]
+    },
+    {
+      text: "The ___ (1) ___ volunteers organised a beach cleanup; they worked ___ (2) ___ under the hot sun, collecting ___ (3) ___ amounts of plastic waste and feeling ___ (4) ___ when they saw the ___ (5) ___ shoreline afterwards.",
+      answers: ["dedicated", "tirelessly", "enormous", "satisfied", "pristine"],
+      wordBox: [
+        "dedicated", "tirelessly", "enormous", "satisfied", "pristine",
+        "reluctant", "lazily", "tiny", "disappointed", "polluted"
+      ],
+      hints: [
+        "Committed to a task.",
+        "Without getting tired.",
+        "Very large in amount.",
+        "Pleased with the outcome.",
+        "Clean and unspoiled."
+      ],
+      explanations: [
+        "'Dedicated' means devoted to a cause.",
+        "'Tirelessly' means without rest.",
+        "'Enormous' means very large.",
+        "'Satisfied' means content with results.",
+        "'Pristine' means perfectly clean."
+      ],
+      clueWords: [["volunteers"],["worked"],["amounts"],["feeling"],["shoreline"]]
+    },
+    {
+      text: "The ___ (1) ___ museum exhibit showcased Singapore's ___ (2) ___ history; visitors gained ___ (3) ___ understanding of how early settlers ___ (4) ___ challenges and ___ (5) ___ a thriving port city.",
+      answers: ["interactive", "multicultural", "deeper", "overcame", "established"],
+      wordBox: [
+        "interactive", "multicultural", "deeper", "overcame", "established",
+        "boring", "single", "shallow", "avoided", "destroyed"
+      ],
+      hints: [
+        "Allowing participation.",
+        "Including many cultures.",
+        "More profound.",
+        "Successfully dealt with.",
+        "Set up or founded."
+      ],
+      explanations: [
+        "'Interactive' means involving participation.",
+        "'Multicultural' means of many cultures.",
+        "'Deeper' means more thorough.",
+        "'Overcame' means conquered difficulties.",
+        "'Established' means set up firmly."
+      ],
+      clueWords: [["exhibit"],["history"],["understanding"],["settlers"],["city"]]
+    },
+    {
+      text: "During the ___ (1) ___ haze season, air quality ___ (2) ___ significantly; residents wore ___ (3) ___ masks and stayed indoors, while authorities issued ___ (4) ___ warnings and ___ (5) ___ outdoor activities.",
+      answers: ["annual", "deteriorated", "protective", "urgent", "suspended"],
+      wordBox: [
+        "annual", "deteriorated", "protective", "urgent", "suspended",
+        "rare", "improved", "decorative", "casual", "continued"
+      ],
+      hints: [
+        "Happening every year.",
+        "Became worse.",
+        "Giving protection.",
+        "Requiring immediate action.",
+        "Temporarily stopped."
+      ],
+      explanations: [
+        "'Annual' means yearly.",
+        "'Deteriorated' means got worse.",
+        "'Protective' means providing protection.",
+        "'Urgent' means requiring quick action.",
+        "'Suspended' means temporarily halted."
+      ],
+      clueWords: [["season"],["quality"],["masks"],["warnings"],["activities"]]
+    },
+    {
+      text: "The school's ___ (1) ___ garden project taught students about ___ (2) ___ farming; they planted ___ (3) ___ vegetables, monitored growth ___ (4) ___, and harvested crops that were ___ (5) ___ fresh and nutritious.",
+      answers: ["innovative", "sustainable", "various", "regularly", "remarkably"],
+      wordBox: [
+        "innovative", "sustainable", "various", "regularly", "remarkably",
+        "traditional", "wasteful", "identical", "rarely", "slightly"
+      ],
+      hints: [
+        "Introducing new ideas.",
+        "Able to continue long-term.",
+        "Of different types.",
+        "At frequent intervals.",
+        "To a notable degree."
+      ],
+      explanations: [
+        "'Innovative' means new and creative.",
+        "'Sustainable' means maintainable.",
+        "'Various' means of different kinds.",
+        "'Regularly' means at fixed times.",
+        "'Remarkably' means noticeably."
+      ],
+      clueWords: [["project"],["farming"],["vegetables"],["growth"],["fresh"]]
+    },
+    {
+      text: "The ___ (1) ___ MRT system transports millions of commuters ___ (2) ___; trains arrive at ___ (3) ___ intervals, and the ___ (4) ___ network connects ___ (5) ___ every corner of the island.",
+      answers: ["efficient", "daily", "regular", "extensive", "virtually"],
+      wordBox: [
+        "efficient", "daily", "regular", "extensive", "virtually",
+        "inefficient", "rarely", "irregular", "limited", "partially"
+      ],
+      hints: [
+        "Working well without waste.",
+        "Every day.",
+        "At consistent times.",
+        "Covering a large area.",
+        "Almost entirely."
+      ],
+      explanations: [
+        "'Efficient' means productive with minimal waste.",
+        "'Daily' means every day.",
+        "'Regular' means at consistent intervals.",
+        "'Extensive' means covering a wide area.",
+        "'Virtually' means nearly or almost."
+      ],
+      clueWords: [["system"],["commuters"],["intervals"],["network"],["island"]]
     }
   ],
   p5: [
@@ -766,6 +1042,144 @@ export const contextInference = { p1: [
         "'Immediate' means instant."
       ],
       clueWords: [["corruption"],["research"],["evidence"],["reforms"],["outcry"]]
+    },
+    {
+      text: "Singapore's ___ (1) ___ transformation from a fishing village to a global hub is ___ (2) ___; the nation ___ (3) ___ limited resources through ___ (4) ___ planning and built a ___ (5) ___ economy admired worldwide.",
+      answers: ["remarkable", "extraordinary", "overcame", "strategic", "thriving"],
+      wordBox: [
+        "remarkable", "extraordinary", "overcame", "strategic", "thriving",
+        "ordinary", "expected", "ignored", "random", "struggling"
+      ],
+      hints: [
+        "Worthy of attention.",
+        "Very unusual or exceptional.",
+        "Successfully dealt with.",
+        "Carefully planned for advantage.",
+        "Growing and prospering."
+      ],
+      explanations: [
+        "'Remarkable' means notably impressive.",
+        "'Extraordinary' means very unusual.",
+        "'Overcame' means conquered challenges.",
+        "'Strategic' means planned for goals.",
+        "'Thriving' means flourishing."
+      ],
+      clueWords: [["transformation"],["village"],["resources"],["planning"],["economy"]]
+    },
+    {
+      text: "The ___ (1) ___ effects of climate change are becoming ___ (2) ___ evident; scientists warn that ___ (3) ___ action is needed to prevent ___ (4) ___ damage to ecosystems and ensure a ___ (5) ___ future for generations.",
+      answers: ["devastating", "increasingly", "urgent", "irreversible", "sustainable"],
+      wordBox: [
+        "devastating", "increasingly", "urgent", "irreversible", "sustainable",
+        "minor", "decreasingly", "optional", "temporary", "unsustainable"
+      ],
+      hints: [
+        "Causing great destruction.",
+        "More and more.",
+        "Requiring immediate attention.",
+        "Cannot be undone.",
+        "Able to be maintained."
+      ],
+      explanations: [
+        "'Devastating' means extremely destructive.",
+        "'Increasingly' means more and more.",
+        "'Urgent' means needing immediate action.",
+        "'Irreversible' means cannot be changed back.",
+        "'Sustainable' means maintainable long-term."
+      ],
+      clueWords: [["effects"],["evident"],["action"],["damage"],["future"]]
+    },
+    {
+      text: "The heritage conservation project ___ (1) ___ restored the shophouse's ___ (2) ___ features; craftsmen used ___ (3) ___ techniques to preserve ___ (4) ___ details while ensuring the building met ___ (5) ___ safety standards.",
+      answers: ["meticulously", "original", "traditional", "intricate", "modern"],
+      wordBox: [
+        "meticulously", "original", "traditional", "intricate", "modern",
+        "carelessly", "new", "modern", "simple", "outdated"
+      ],
+      hints: [
+        "With great attention to detail.",
+        "Present from the beginning.",
+        "Following long-established customs.",
+        "Very detailed and complex.",
+        "Current and up-to-date."
+      ],
+      explanations: [
+        "'Meticulously' means with great care.",
+        "'Original' means first or earliest.",
+        "'Traditional' means following customs.",
+        "'Intricate' means very detailed.",
+        "'Modern' means current."
+      ],
+      clueWords: [["restored"],["features"],["techniques"],["details"],["standards"]]
+    },
+    {
+      text: "The youth volunteers demonstrated ___ (1) ___ compassion during their visit to the elderly home; they listened ___ (2) ___ to residents' stories, showed ___ (3) ___ respect, and formed ___ (4) ___ bonds that proved ___ (5) ___ meaningful.",
+      answers: ["genuine", "attentively", "sincere", "lasting", "deeply"],
+      wordBox: [
+        "genuine", "attentively", "sincere", "lasting", "deeply",
+        "fake", "carelessly", "insincere", "temporary", "slightly"
+      ],
+      hints: [
+        "Real and authentic.",
+        "With careful attention.",
+        "Honest and true.",
+        "Continuing for a long time.",
+        "To a great extent."
+      ],
+      explanations: [
+        "'Genuine' means truly felt.",
+        "'Attentively' means with attention.",
+        "'Sincere' means honest.",
+        "'Lasting' means enduring.",
+        "'Deeply' means profoundly."
+      ],
+      clueWords: [["compassion"],["listened"],["respect"],["bonds"],["meaningful"]]
+    },
+    {
+      text: "The research team made a ___ (1) ___ breakthrough in cancer treatment; their ___ (2) ___ experiments yielded ___ (3) ___ results that could ___ (4) ___ benefit millions and ___ (5) ___ transform medical science.",
+      answers: ["significant", "rigorous", "promising", "potentially", "ultimately"],
+      wordBox: [
+        "significant", "rigorous", "promising", "potentially", "ultimately",
+        "minor", "careless", "disappointing", "unlikely", "never"
+      ],
+      hints: [
+        "Important and meaningful.",
+        "Extremely thorough and careful.",
+        "Showing signs of success.",
+        "Possibly.",
+        "In the end."
+      ],
+      explanations: [
+        "'Significant' means important.",
+        "'Rigorous' means thorough.",
+        "'Promising' means showing potential.",
+        "'Potentially' means possibly.",
+        "'Ultimately' means finally."
+      ],
+      clueWords: [["breakthrough"],["experiments"],["results"],["benefit"],["transform"]]
+    },
+    {
+      text: "The entrepreneurship programme ___ (1) ___ students to develop ___ (2) ___ business ideas; participants received ___ (3) ___ mentorship and gained ___ (4) ___ experience that would prove ___ (5) ___ in their future careers.",
+      answers: ["encouraged", "innovative", "valuable", "practical", "invaluable"],
+      wordBox: [
+        "encouraged", "innovative", "valuable", "practical", "invaluable",
+        "discouraged", "conventional", "worthless", "theoretical", "useless"
+      ],
+      hints: [
+        "Gave support and confidence.",
+        "New and creative.",
+        "Worth much.",
+        "Relating to real situations.",
+        "Extremely useful."
+      ],
+      explanations: [
+        "'Encouraged' means motivated.",
+        "'Innovative' means creative.",
+        "'Valuable' means of great worth.",
+        "'Practical' means hands-on.",
+        "'Invaluable' means extremely useful."
+      ],
+      clueWords: [["programme"],["ideas"],["mentorship"],["experience"],["careers"]]
     }
   ],
   p6: [
@@ -860,6 +1274,144 @@ export const contextInference = { p1: [
         "'Supernatural' means beyond natural."
       ],
       clueWords: [["brushwork"],["technique"],["light"],["depth"],["seemed"]]
+    },
+    {
+      text: "Singapore's founding fathers demonstrated ___ (1) ___ vision in building a nation; through ___ (2) ___ planning and ___ (3) ___ policies, they transformed a ___ (4) ___ island into a ___ (5) ___ metropolis.",
+      answers: ["remarkable", "meticulous", "progressive", "humble", "prosperous"],
+      wordBox: [
+        "remarkable", "meticulous", "progressive", "humble", "prosperous",
+        "ordinary", "careless", "backward", "grand", "struggling"
+      ],
+      hints: [
+        "Worthy of great attention.",
+        "Showing extreme care for detail.",
+        "Forward-thinking and modern.",
+        "Simple and modest.",
+        "Wealthy and successful."
+      ],
+      explanations: [
+        "'Remarkable' means extraordinary.",
+        "'Meticulous' means very careful.",
+        "'Progressive' means forward-looking.",
+        "'Humble' means modest.",
+        "'Prosperous' means flourishing."
+      ],
+      clueWords: [["fathers"],["planning"],["policies"],["island"],["metropolis"]]
+    },
+    {
+      text: "The PSLE examination requires students to demonstrate ___ (1) ___ understanding across subjects; ___ (2) ___ preparation throughout the year ensures students approach the papers with ___ (3) ___ confidence and achieve ___ (4) ___ results through ___ (5) ___ effort.",
+      answers: ["comprehensive", "consistent", "genuine", "commendable", "sustained"],
+      wordBox: [
+        "comprehensive", "consistent", "genuine", "commendable", "sustained",
+        "superficial", "sporadic", "false", "disappointing", "minimal"
+      ],
+      hints: [
+        "Complete and thorough.",
+        "Regular and unchanging.",
+        "Real and authentic.",
+        "Deserving praise.",
+        "Continuing over time."
+      ],
+      explanations: [
+        "'Comprehensive' means covering all aspects.",
+        "'Consistent' means steady.",
+        "'Genuine' means real.",
+        "'Commendable' means praiseworthy.",
+        "'Sustained' means maintained."
+      ],
+      clueWords: [["understanding"],["preparation"],["confidence"],["results"],["effort"]]
+    },
+    {
+      text: "The debate team presented ___ (1) ___ arguments supported by ___ (2) ___ evidence; their ___ (3) ___ delivery impressed the judges, who praised their ___ (4) ___ analysis and ___ (5) ___ rebuttals.",
+      answers: ["compelling", "substantial", "eloquent", "insightful", "effective"],
+      wordBox: [
+        "compelling", "substantial", "eloquent", "insightful", "effective",
+        "weak", "flimsy", "hesitant", "shallow", "ineffective"
+      ],
+      hints: [
+        "Powerfully convincing.",
+        "Considerable in amount.",
+        "Fluent and persuasive.",
+        "Showing deep understanding.",
+        "Producing desired results."
+      ],
+      explanations: [
+        "'Compelling' means powerfully convincing.",
+        "'Substantial' means significant.",
+        "'Eloquent' means fluent in speaking.",
+        "'Insightful' means perceptive.",
+        "'Effective' means successful."
+      ],
+      clueWords: [["arguments"],["evidence"],["delivery"],["analysis"],["rebuttals"]]
+    },
+    {
+      text: "The ___ (1) ___ integration of technology in education has created ___ (2) ___ opportunities for learning; students now access ___ (3) ___ resources, engage in ___ (4) ___ collaboration, and develop ___ (5) ___ digital literacy skills.",
+      answers: ["seamless", "unprecedented", "diverse", "global", "essential"],
+      wordBox: [
+        "seamless", "unprecedented", "diverse", "global", "essential",
+        "disjointed", "limited", "uniform", "local", "optional"
+      ],
+      hints: [
+        "Smooth and without gaps.",
+        "Never done before.",
+        "Of many different kinds.",
+        "Worldwide.",
+        "Absolutely necessary."
+      ],
+      explanations: [
+        "'Seamless' means smooth.",
+        "'Unprecedented' means never before.",
+        "'Diverse' means varied.",
+        "'Global' means worldwide.",
+        "'Essential' means necessary."
+      ],
+      clueWords: [["integration"],["opportunities"],["resources"],["collaboration"],["skills"]]
+    },
+    {
+      text: "The literary analysis examined the author's ___ (1) ___ use of symbolism; readers discovered ___ (2) ___ meanings beneath the ___ (3) ___ narrative, gaining ___ (4) ___ appreciation for the ___ (5) ___ themes explored.",
+      answers: ["masterful", "profound", "surface", "deeper", "universal"],
+      wordBox: [
+        "masterful", "profound", "surface", "deeper", "universal",
+        "clumsy", "shallow", "hidden", "superficial", "narrow"
+      ],
+      hints: [
+        "Showing great skill.",
+        "Very deep and meaningful.",
+        "Outer or visible level.",
+        "More thorough.",
+        "Applicable to all."
+      ],
+      explanations: [
+        "'Masterful' means extremely skilled.",
+        "'Profound' means deeply meaningful.",
+        "'Surface' means outer level.",
+        "'Deeper' means more thorough.",
+        "'Universal' means applying to all."
+      ],
+      clueWords: [["use"],["meanings"],["narrative"],["appreciation"],["themes"]]
+    },
+    {
+      text: "The community service project fostered ___ (1) ___ values among students; participants showed ___ (2) ___ empathy towards the ___ (3) ___, developed ___ (4) ___ leadership skills, and gained ___ (5) ___ understanding of social responsibility.",
+      answers: ["admirable", "genuine", "underprivileged", "valuable", "profound"],
+      wordBox: [
+        "admirable", "genuine", "underprivileged", "valuable", "profound",
+        "questionable", "superficial", "wealthy", "worthless", "shallow"
+      ],
+      hints: [
+        "Deserving respect.",
+        "Truly felt.",
+        "Lacking advantages.",
+        "Of great worth.",
+        "Very deep."
+      ],
+      explanations: [
+        "'Admirable' means worthy of admiration.",
+        "'Genuine' means sincere.",
+        "'Underprivileged' means disadvantaged.",
+        "'Valuable' means of great worth.",
+        "'Profound' means deeply felt."
+      ],
+      clueWords: [["values"],["empathy"],["towards"],["skills"],["understanding"]]
     }
   ]
 };
@@ -1532,6 +2084,144 @@ export const definitionMatch = { p1: [
         "'Influential' means having influence."
       ],
       clueWords: [["experiments"],["methods"],["results"],["theories"],["publications"]]
+    },
+{
+      text: "The ___ (1) ___ hawker centre near our school was always ___ (2) ___ with families enjoying ___ (3) ___ meals together. The ___ (4) ___ stallholders greeted every customer with a smile, making the place feel warm and ___ (5) ___.",
+      answers: ["spacious", "bustling", "delicious", "cheerful", "comfortable"],
+      wordBox: [
+        "spacious", "bustling", "delicious", "cheerful", "comfortable",
+        "narrow", "empty", "bitter", "grumpy", "dangerous"
+      ],
+      hints: [
+        "Having a lot of room or space.",
+        "Full of activity and people.",
+        "Very pleasing to taste.",
+        "Happy and in good spirits.",
+        "Giving a feeling of ease and relaxation."
+      ],
+      explanations: [
+        "'Spacious' means having plenty of space.",
+        "'Bustling' means full of energetic activity.",
+        "'Delicious' means highly pleasant to the taste.",
+        "'Cheerful' means noticeably happy and positive.",
+        "'Comfortable' means providing physical ease and relaxation."
+      ],
+      clueWords: [["hawker centre"],["families"],["meals"],["stallholders","smile"],["warm"]]
+    },
+    {
+      text: "During the school library visit, the ___ (1) ___ librarian showed us the ___ (2) ___ collection of picture books. The shelves were ___ (3) ___ arranged, and the reading corner had ___ (4) ___ cushions where we could sit and enjoy the ___ (5) ___ stories.",
+      answers: ["helpful", "colourful", "neatly", "soft", "fascinating"],
+      wordBox: [
+        "helpful", "colourful", "neatly", "soft", "fascinating",
+        "rude", "plain", "messily", "hard", "boring"
+      ],
+      hints: [
+        "Willing to give assistance to others.",
+        "Having many bright colours.",
+        "In a tidy and orderly way.",
+        "Pleasant to touch and not firm.",
+        "Extremely interesting and captivating."
+      ],
+      explanations: [
+        "'Helpful' means ready and willing to assist.",
+        "'Colourful' means having many different bright colours.",
+        "'Neatly' means in an orderly and tidy manner.",
+        "'Soft' means easy to press and gentle to touch.",
+        "'Fascinating' means extremely interesting."
+      ],
+      clueWords: [["librarian"],["collection","books"],["shelves","arranged"],["cushions","sit"],["stories"]]
+    },
+    {
+      text: "Our class went on a ___ (1) ___ outing to the Botanic Gardens. The ___ (2) ___ flowers along the pathway were truly beautiful. We felt ___ (3) ___ under the shade of the ___ (4) ___ trees, and our teacher reminded us to be ___ (5) ___ with the plants and animals.",
+      answers: ["memorable", "fragrant", "refreshed", "towering", "gentle"],
+      wordBox: [
+        "memorable", "fragrant", "refreshed", "towering", "gentle",
+        "forgettable", "odourless", "exhausted", "tiny", "rough"
+      ],
+      hints: [
+        "Worth remembering because it is special.",
+        "Having a sweet or pleasant smell.",
+        "Feeling new energy after resting.",
+        "Extremely tall and impressive.",
+        "Mild, kind, and not rough."
+      ],
+      explanations: [
+        "'Memorable' means worth remembering or easily remembered.",
+        "'Fragrant' means having a sweet or pleasant smell.",
+        "'Refreshed' means having regained strength or energy.",
+        "'Towering' means extremely tall.",
+        "'Gentle' means mild and careful, not harsh."
+      ],
+      clueWords: [["outing","Gardens"],["flowers"],["shade"],["trees"],["plants","animals"]]
+    },
+    {
+      text: "The ___ (1) ___ policeman visited our school to teach us about road safety. He gave a ___ (2) ___ talk and showed us ___ (3) ___ videos. The students were ___ (4) ___ to learn the rules, and they promised to be ___ (5) ___ when crossing the road.",
+      answers: ["friendly", "lively", "educational", "eager", "cautious"],
+      wordBox: [
+        "friendly", "lively", "educational", "eager", "cautious",
+        "unfriendly", "dull", "confusing", "reluctant", "careless"
+      ],
+      hints: [
+        "Kind and pleasant to others.",
+        "Full of energy and enthusiasm.",
+        "Providing useful knowledge or instruction.",
+        "Wanting very much to do something.",
+        "Being very careful to avoid danger."
+      ],
+      explanations: [
+        "'Friendly' means kind and pleasant.",
+        "'Lively' means full of energy and excitement.",
+        "'Educational' means intended to teach or give knowledge.",
+        "'Eager' means keen and enthusiastic about doing something.",
+        "'Cautious' means careful to avoid problems or danger."
+      ],
+      clueWords: [["policeman"],["talk"],["videos"],["students","learn"],["crossing","road"]]
+    },
+    {
+      text: "At the neighbourhood park, the ___ (1) ___ playground equipment was ___ (2) ___ among the children. The ___ (3) ___ grass provided a safe surface, and the ___ (4) ___ benches nearby were perfect for parents. Everyone enjoyed the ___ (5) ___ breeze on that sunny afternoon.",
+      answers: ["sturdy", "popular", "thick", "shaded", "pleasant"],
+      wordBox: [
+        "sturdy", "popular", "thick", "shaded", "pleasant",
+        "flimsy", "unpopular", "thin", "exposed", "harsh"
+      ],
+      hints: [
+        "Strong and well-built.",
+        "Liked or enjoyed by many people.",
+        "Growing closely together in a dense layer.",
+        "Protected from direct sunlight.",
+        "Giving a sense of happy enjoyment."
+      ],
+      explanations: [
+        "'Sturdy' means strong and solidly built.",
+        "'Popular' means liked and enjoyed by many people.",
+        "'Thick' means dense and closely packed together.",
+        "'Shaded' means sheltered from direct sunlight.",
+        "'Pleasant' means giving a sense of satisfaction and enjoyment."
+      ],
+      clueWords: [["playground","equipment"],["children"],["grass","safe"],["benches","parents"],["breeze","sunny"]]
+    },
+    {
+      text: "Grandmother prepared a ___ (1) ___ meal for our family gathering. The ___ (2) ___ aroma filled the whole flat, and every dish was beautifully ___ (3) ___. We were ___ (4) ___ for her effort, and the evening was truly ___ (5) ___.",
+      answers: ["nutritious", "wonderful", "arranged", "grateful", "enjoyable"],
+      wordBox: [
+        "nutritious", "wonderful", "arranged", "grateful", "enjoyable",
+        "unhealthy", "terrible", "scattered", "ungrateful", "miserable"
+      ],
+      hints: [
+        "Full of goodness that the body needs to stay healthy.",
+        "Extremely good or marvellous.",
+        "Put in a neat or attractive order.",
+        "Feeling thankful and appreciative.",
+        "Giving delight and pleasure."
+      ],
+      explanations: [
+        "'Nutritious' means containing substances the body needs for good health.",
+        "'Wonderful' means inspiring delight or admiration.",
+        "'Arranged' means put in a neat, attractive, or required order.",
+        "'Grateful' means feeling or showing thanks.",
+        "'Enjoyable' means giving pleasure and satisfaction."
+      ],
+      clueWords: [["meal"],["aroma"],["dish","beautifully"],["effort"],["evening"]]
     }
   ],
   p4: [
@@ -1626,6 +2316,144 @@ export const definitionMatch = { p1: [
         "'Improved' means enhanced."
       ],
       clueWords: [["protocols"],["care"],["training"],["procedures"],["outcomes"]]
+    },
+{
+      text: "During Chinese New Year, the ___ (1) ___ decorations transformed our HDB estate into a ___ (2) ___ display of red and gold. Neighbours exchanged ___ (3) ___ greetings, and the ___ (4) ___ lion dance performance drew an ___ (5) ___ crowd.",
+      answers: ["festive", "magnificent", "warm", "traditional", "enthusiastic"],
+      wordBox: [
+        "festive", "magnificent", "warm", "traditional", "enthusiastic",
+        "dull", "ordinary", "cold", "modern", "bored"
+      ],
+      hints: [
+        "Relating to a celebration or holiday.",
+        "Extremely beautiful or impressive.",
+        "Friendly, kind, and welcoming.",
+        "Following customs passed down over time.",
+        "Having or showing great excitement and interest."
+      ],
+      explanations: [
+        "'Festive' means relating to a festival or celebration.",
+        "'Magnificent' means extremely beautiful or impressive.",
+        "'Warm' means friendly and showing kindness.",
+        "'Traditional' means following customs handed down through generations.",
+        "'Enthusiastic' means having or showing intense enjoyment and interest."
+      ],
+      clueWords: [["Chinese New Year","decorations"],["display","red","gold"],["neighbours","greetings"],["lion dance"],["crowd"]]
+    },
+    {
+      text: "Our class worked on a ___ (1) ___ recycling project. The ___ (2) ___ students sorted waste into the correct bins with ___ (3) ___ care. Their ___ (4) ___ attitude impressed the teachers, and the project made a ___ (5) ___ difference to our school environment.",
+      answers: ["cooperative", "responsible", "considerable", "determined", "noticeable"],
+      wordBox: [
+        "cooperative", "responsible", "considerable", "determined", "noticeable",
+        "selfish", "careless", "little", "lazy", "invisible"
+      ],
+      hints: [
+        "Involving people working together willingly.",
+        "Having a duty to deal with something carefully.",
+        "Notably large in size, amount, or importance.",
+        "Having a firm purpose and not giving up.",
+        "Easily seen or clearly evident."
+      ],
+      explanations: [
+        "'Cooperative' means involving mutual assistance in working towards a common goal.",
+        "'Responsible' means having an obligation to do something carefully.",
+        "'Considerable' means notably large in size or amount.",
+        "'Determined' means having made a firm decision and not changing it.",
+        "'Noticeable' means easily seen or detected."
+      ],
+      clueWords: [["class","project"],["students","sorted"],["care"],["attitude"],["difference","environment"]]
+    },
+    {
+      text: "The ___ (1) ___ nature reserve at Sungei Buloh was home to ___ (2) ___ wildlife. Our guide was ___ (3) ___ about the mangrove ecosystem and gave ___ (4) ___ explanations. We felt ___ (5) ___ to have such a special place in Singapore.",
+      answers: ["vast", "diverse", "knowledgeable", "detailed", "fortunate"],
+      wordBox: [
+        "vast", "diverse", "knowledgeable", "detailed", "fortunate",
+        "tiny", "similar", "ignorant", "brief", "unlucky"
+      ],
+      hints: [
+        "Very great in size or extent.",
+        "Showing a great deal of variety.",
+        "Having much information or understanding.",
+        "Including many facts or pieces of information.",
+        "Lucky or favoured by chance."
+      ],
+      explanations: [
+        "'Vast' means of very great extent or size.",
+        "'Diverse' means showing a great deal of variety.",
+        "'Knowledgeable' means intelligent and well informed.",
+        "'Detailed' means having many details or facts.",
+        "'Fortunate' means favoured by or involving good luck."
+      ],
+      clueWords: [["nature reserve"],["wildlife"],["guide","ecosystem"],["explanations"],["special","Singapore"]]
+    },
+    {
+      text: "For Deepavali, Priya's family created ___ (1) ___ rangoli patterns at their doorstep. The ___ (2) ___ colours were truly eye-catching, and the ___ (3) ___ oil lamps added a magical glow. Priya was ___ (4) ___ to share her culture with her ___ (5) ___ schoolmates.",
+      answers: ["elaborate", "vibrant", "flickering", "proud", "curious"],
+      wordBox: [
+        "elaborate", "vibrant", "flickering", "proud", "curious",
+        "simple", "faded", "steady", "ashamed", "indifferent"
+      ],
+      hints: [
+        "Involving many carefully arranged parts or details.",
+        "Full of energy and brightness.",
+        "Shining with an unsteady light that goes on and off.",
+        "Feeling deep pleasure from one's own achievements.",
+        "Eager to know or learn something."
+      ],
+      explanations: [
+        "'Elaborate' means involving many carefully arranged details.",
+        "'Vibrant' means full of energy and life.",
+        "'Flickering' means shining with a wavering, unsteady light.",
+        "'Proud' means feeling deep satisfaction from one's achievements.",
+        "'Curious' means eager to know or learn about something."
+      ],
+      clueWords: [["rangoli","patterns"],["colours"],["oil lamps","glow"],["share","culture"],["schoolmates"]]
+    },
+    {
+      text: "The school's ___ (1) ___ Earth Day campaign encouraged students to be more ___ (2) ___ of the environment. The ___ (3) ___ posters reminded everyone to conserve water and electricity. Teachers praised the ___ (4) ___ effort put in by the student council, calling it ___ (5) ___.",
+      answers: ["annual", "mindful", "creative", "tremendous", "commendable"],
+      wordBox: [
+        "annual", "mindful", "creative", "tremendous", "commendable",
+        "rare", "careless", "dull", "tiny", "shameful"
+      ],
+      hints: [
+        "Happening once every year.",
+        "Aware of and attentive to something.",
+        "Showing imagination and original ideas.",
+        "Very great in amount, scale, or intensity.",
+        "Deserving praise and approval."
+      ],
+      explanations: [
+        "'Annual' means occurring once every year.",
+        "'Mindful' means conscious or aware of something.",
+        "'Creative' means involving the use of imagination or original ideas.",
+        "'Tremendous' means very great in amount or intensity.",
+        "'Commendable' means deserving praise."
+      ],
+      clueWords: [["Earth Day","campaign"],["environment"],["posters"],["effort","student council"],["praised"]]
+    },
+    {
+      text: "During Hari Raya, the ___ (1) ___ smell of ketupat and rendang filled the corridor of our HDB block. Ahmad's family was ___ (2) ___ in welcoming visitors of all races. The ___ (3) ___ spread of food was ___ (4) ___, and every guest left feeling ___ (5) ___.",
+      answers: ["appetising", "generous", "impressive", "scrumptious", "satisfied"],
+      wordBox: [
+        "appetising", "generous", "impressive", "scrumptious", "satisfied",
+        "unpleasant", "stingy", "ordinary", "tasteless", "hungry"
+      ],
+      hints: [
+        "Stimulating the desire to eat.",
+        "Willing to give more than is expected.",
+        "Evoking admiration through size, quality, or skill.",
+        "Extremely tasty and enjoyable to eat.",
+        "Feeling that one's wishes have been met."
+      ],
+      explanations: [
+        "'Appetising' means making one feel hungry or eager to eat.",
+        "'Generous' means showing a readiness to give more than necessary.",
+        "'Impressive' means evoking admiration.",
+        "'Scrumptious' means extremely delicious.",
+        "'Satisfied' means contented because desires have been fulfilled."
+      ],
+      clueWords: [["smell","ketupat","rendang"],["welcoming","visitors"],["spread","food"],["food"],["guest"]]
     }
   ],
   p5: [
@@ -1720,6 +2548,144 @@ export const definitionMatch = { p1: [
         "'Profound' means deeply felt."
       ],
       clueWords: [["exhibition"],["artefacts"],["civilisations"],["presentations"],["appreciation"]]
+    },
+{
+      text: "Singapore's ___ (1) ___ journey from a fishing village to a global city is a ___ (2) ___ story of progress. The nation's founding leaders showed great ___ (3) ___ in overcoming challenges, and their ___ (4) ___ efforts laid the foundation for a ___ (5) ___ society.",
+      answers: ["remarkable", "inspiring", "perseverance", "dedicated", "prosperous"],
+      wordBox: [
+        "remarkable", "inspiring", "perseverance", "dedicated", "prosperous",
+        "ordinary", "discouraging", "laziness", "halfhearted", "struggling"
+      ],
+      hints: [
+        "Worthy of attention because it is unusual or outstanding.",
+        "Filling someone with the desire to do something great.",
+        "Continued effort and determination despite difficulties.",
+        "Devoted to a task or purpose with loyalty.",
+        "Successful and thriving, especially financially."
+      ],
+      explanations: [
+        "'Remarkable' means worthy of attention; striking or extraordinary.",
+        "'Inspiring' means having the effect of motivating someone.",
+        "'Perseverance' means persistence in doing something despite difficulty.",
+        "'Dedicated' means devoted to a task or purpose.",
+        "'Prosperous' means successful in material terms; flourishing."
+      ],
+      clueWords: [["journey","village","city"],["story","progress"],["overcoming","challenges"],["efforts","foundation"],["society"]]
+    },
+    {
+      text: "The NEWater visitor centre demonstrated Singapore's ___ (1) ___ approach to water ___ (2) ___. Students learnt about ___ (3) ___ technology used to purify water, and the guide explained how being ___ (4) ___ with resources ensures a ___ (5) ___ water supply for future generations.",
+      answers: ["innovative", "conservation", "advanced", "prudent", "sustainable"],
+      wordBox: [
+        "innovative", "conservation", "advanced", "prudent", "sustainable",
+        "outdated", "wastage", "basic", "wasteful", "temporary"
+      ],
+      hints: [
+        "Introducing new ideas or methods.",
+        "The careful use and protection of a natural resource.",
+        "Far on in development or progress.",
+        "Acting with care and thought for the future.",
+        "Able to be maintained at a certain level over the long term."
+      ],
+      explanations: [
+        "'Innovative' means featuring new methods or ideas.",
+        "'Conservation' means the prevention of wasteful use of a resource.",
+        "'Advanced' means far ahead in development or progress.",
+        "'Prudent' means acting with care and thought for the future.",
+        "'Sustainable' means able to be maintained at a steady level without exhausting resources."
+      ],
+      clueWords: [["NEWater","approach"],["water"],["technology","purify"],["resources"],["supply","future","generations"]]
+    },
+    {
+      text: "Racial Harmony Day celebrates the ___ (1) ___ bonds among Singapore's different ethnic groups. Schools organise ___ (2) ___ activities where students learn about each other's ___ (3) ___. This annual event is ___ (4) ___ in reminding us that mutual respect is the ___ (5) ___ of a united nation.",
+      answers: ["harmonious", "meaningful", "heritage", "significant", "cornerstone"],
+      wordBox: [
+        "harmonious", "meaningful", "heritage", "significant", "cornerstone",
+        "hostile", "pointless", "fashion", "minor", "obstacle"
+      ],
+      hints: [
+        "Free from disagreement; living together peacefully.",
+        "Having a serious, important, or useful purpose.",
+        "Valued traditions and customs passed from generation to generation.",
+        "Important and worthy of attention.",
+        "A vital and fundamental part of something."
+      ],
+      explanations: [
+        "'Harmonious' means forming a pleasing and peaceful whole.",
+        "'Meaningful' means having a serious or worthwhile purpose.",
+        "'Heritage' means traditions, achievements, and beliefs from the past.",
+        "'Significant' means sufficiently great or important to be worthy of attention.",
+        "'Cornerstone' means an important foundation on which something is built."
+      ],
+      clueWords: [["bonds","ethnic groups"],["activities","learn"],["culture"],["reminding","respect"],["united","nation"]]
+    },
+    {
+      text: "During our Community Involvement Programme, our class visited a ___ (1) ___ home for the elderly. The ___ (2) ___ volunteers taught us to be ___ (3) ___ towards the seniors. It was a ___ (4) ___ experience that taught us the importance of ___ (5) ___ service.",
+      answers: ["residential", "experienced", "compassionate", "transformative", "voluntary"],
+      wordBox: [
+        "residential", "experienced", "compassionate", "transformative", "voluntary",
+        "commercial", "inexperienced", "indifferent", "forgettable", "compulsory"
+      ],
+      hints: [
+        "Designed for people to live in.",
+        "Having knowledge or skill gained over time.",
+        "Feeling or showing sympathy and concern for others.",
+        "Causing a major change in someone's outlook or character.",
+        "Done by choice, without being forced."
+      ],
+      explanations: [
+        "'Residential' means designed for people to live in.",
+        "'Experienced' means having gained knowledge or skill over time.",
+        "'Compassionate' means feeling concern for the sufferings of others.",
+        "'Transformative' means causing a thorough or dramatic change.",
+        "'Voluntary' means done, given, or acting of one's own free will."
+      ],
+      clueWords: [["home","elderly"],["volunteers"],["seniors"],["experience","taught"],["service"]]
+    },
+    {
+      text: "The ___ (1) ___ Peranakan shophouses along Joo Chiat Road are ___ (2) ___ examples of Singapore's rich cultural past. ___ (3) ___ craftsmen painstakingly restored the ornate tiles, and ___ (4) ___ efforts by the community ensured these buildings remain ___ (5) ___ landmarks.",
+      answers: ["heritage", "splendid", "resourceful", "collaborative", "treasured"],
+      wordBox: [
+        "heritage", "splendid", "resourceful", "collaborative", "treasured",
+        "modern", "ugly", "clumsy", "individual", "neglected"
+      ],
+      hints: [
+        "Relating to things of historical or cultural value worth preserving.",
+        "Magnificent and very impressive.",
+        "Able to find quick and clever ways to overcome difficulties.",
+        "Involving two or more people working together.",
+        "Regarded as precious and valued highly."
+      ],
+      explanations: [
+        "'Heritage' means relating to things inherited from the past.",
+        "'Splendid' means magnificent; very impressive.",
+        "'Resourceful' means having the ability to find quick and clever solutions.",
+        "'Collaborative' means produced by or involving two or more parties working together.",
+        "'Treasured' means valued very highly; cherished."
+      ],
+      clueWords: [["Peranakan","shophouses"],["examples","cultural"],["craftsmen","restored"],["efforts","community"],["landmarks"]]
+    },
+    {
+      text: "Singapore's ___ (1) ___ education system is recognised worldwide. Teachers use ___ (2) ___ methods to help every student reach their potential. Through ___ (3) ___ programmes, students develop both academic knowledge and ___ (4) ___ skills, preparing them for an ___ (5) ___ future.",
+      answers: ["distinguished", "progressive", "holistic", "practical", "uncertain"],
+      wordBox: [
+        "distinguished", "progressive", "holistic", "practical", "uncertain",
+        "unknown", "outdated", "narrow", "theoretical", "predictable"
+      ],
+      hints: [
+        "Successful, authoritative, and commanding great respect.",
+        "Favouring new ideas and social reform.",
+        "Considering the whole person or thing, not just parts.",
+        "Concerned with actual use rather than theory.",
+        "Not able to be predicted or known in advance."
+      ],
+      explanations: [
+        "'Distinguished' means very successful and admired by others.",
+        "'Progressive' means favouring innovation and forward-looking reform.",
+        "'Holistic' means characterised by considering the whole rather than just parts.",
+        "'Practical' means relating to real situations rather than ideas or theories.",
+        "'Uncertain' means not able to be relied on; not known or definite."
+      ],
+      clueWords: [["education system","recognised"],["methods","student"],["programmes","develop"],["skills"],["future"]]
     }
   ],
   p6: [
@@ -1814,6 +2780,144 @@ export const definitionMatch = { p1: [
         "'Profound' means very deep."
       ],
       clueWords: [["narrative"],["themes"],["characters"],["prose"],["depth"]]
+    },
+{
+      text: "Singapore's founding fathers demonstrated ___ (1) ___ leadership during the nation's early years. Their ___ (2) ___ vision for a meritocratic society was ___ (3) ___ at the time, yet their ___ (4) ___ commitment to building a just nation earned them ___ (5) ___ respect from citizens of all backgrounds.",
+      answers: ["exemplary", "ambitious", "unprecedented", "unwavering", "profound"],
+      wordBox: [
+        "exemplary", "ambitious", "unprecedented", "unwavering", "profound",
+        "mediocre", "modest", "common", "faltering", "shallow"
+      ],
+      hints: [
+        "Serving as a desirable model; representing the best of its kind.",
+        "Having a strong desire to achieve something great.",
+        "Never done or known before.",
+        "Steady and resolute; not changing.",
+        "Very great or intense; having deep meaning."
+      ],
+      explanations: [
+        "'Exemplary' means serving as a desirable model; very good.",
+        "'Ambitious' means having a strong desire and determination to succeed.",
+        "'Unprecedented' means never done or known before.",
+        "'Unwavering' means steady, fixed, and not changing.",
+        "'Profound' means very great or intense."
+      ],
+      clueWords: [["founding fathers","leadership"],["vision","meritocratic"],["at the time"],["commitment","building"],["respect","citizens"]]
+    },
+    {
+      text: "Climate change poses ___ (1) ___ challenges for a low-lying island nation like Singapore. Scientists have been ___ (2) ___ in their research on rising sea levels, and the government's ___ (3) ___ planning has led to ___ (4) ___ coastal protection measures. Every citizen must be ___ (5) ___ about reducing carbon emissions.",
+      answers: ["formidable", "meticulous", "comprehensive", "robust", "conscientious"],
+      wordBox: [
+        "formidable", "meticulous", "comprehensive", "robust", "conscientious",
+        "trivial", "careless", "incomplete", "fragile", "indifferent"
+      ],
+      hints: [
+        "Inspiring fear or respect through being impressively powerful or difficult.",
+        "Showing great attention to detail; very careful and precise.",
+        "Including all or nearly all elements or aspects of something.",
+        "Strong and effective in all conditions.",
+        "Wishing to do what is right, especially to do one's work thoroughly."
+      ],
+      explanations: [
+        "'Formidable' means inspiring fear or respect through being impressively large or powerful.",
+        "'Meticulous' means showing great attention to detail; very careful.",
+        "'Comprehensive' means complete and including everything that is necessary.",
+        "'Robust' means strong and healthy; vigorous.",
+        "'Conscientious' means wishing to do what is right, especially to do one's work well."
+      ],
+      clueWords: [["challenges","island nation"],["research","sea levels"],["planning"],["coastal","protection","measures"],["citizen","reducing","emissions"]]
+    },
+    {
+      text: "In an increasingly ___ (1) ___ world, Singapore's ability to remain ___ (2) ___ in the face of economic shifts is ___ (3) ___. The nation has built a ___ (4) ___ workforce that can adapt to changing industries, and its leaders continue to ___ (5) ___ policies that attract global talent.",
+      answers: ["globalised", "resilient", "commendable", "versatile", "articulate"],
+      wordBox: [
+        "globalised", "resilient", "commendable", "versatile", "articulate",
+        "isolated", "fragile", "shameful", "rigid", "mumble"
+      ],
+      hints: [
+        "Operating or applying across the whole world.",
+        "Able to recover quickly from difficulties.",
+        "Deserving praise and recognition.",
+        "Able to adapt to many different functions or activities.",
+        "To express ideas clearly and effectively."
+      ],
+      explanations: [
+        "'Globalised' means developed to operate on an international scale.",
+        "'Resilient' means able to withstand or recover quickly from difficult conditions.",
+        "'Commendable' means deserving praise.",
+        "'Versatile' means able to adapt or be adapted to many different uses or activities.",
+        "'Articulate' means to express an idea or feeling fluently and clearly."
+      ],
+      clueWords: [["world"],["economic","shifts"],["ability"],["workforce","adapt"],["policies","talent"]]
+    },
+    {
+      text: "The ___ (1) ___ students at the science fair presented their research with ___ (2) ___ precision. Their ___ (3) ___ experiments on water filtration showcased ___ (4) ___ thinking, and the judges praised their ___ (5) ___ approach to solving real-world problems.",
+      answers: ["diligent", "remarkable", "ingenious", "critical", "methodical"],
+      wordBox: [
+        "diligent", "remarkable", "ingenious", "critical", "methodical",
+        "lazy", "ordinary", "foolish", "shallow", "haphazard"
+      ],
+      hints: [
+        "Having or showing careful and persistent effort.",
+        "Worthy of attention because it is extraordinary.",
+        "Clever, original, and inventive.",
+        "Involving careful judgement and analysis.",
+        "Done in a systematic and orderly way."
+      ],
+      explanations: [
+        "'Diligent' means having or showing care and effort in one's work.",
+        "'Remarkable' means worthy of attention; striking.",
+        "'Ingenious' means clever, original, and inventive.",
+        "'Critical' means involving careful judgement or analysis.",
+        "'Methodical' means done in a systematic way."
+      ],
+      clueWords: [["students","science fair"],["precision"],["experiments","filtration"],["thinking"],["approach","solving"]]
+    },
+    {
+      text: "When faced with a moral dilemma during the school camp, Wei Ling chose the ___ (1) ___ path rather than the easy one. Her ___ (2) ___ decision to report the cheating was ___ (3) ___, and her teacher called her actions ___ (4) ___. This ___ (5) ___ act of honesty inspired her entire class.",
+      answers: ["principled", "courageous", "admirable", "praiseworthy", "selfless"],
+      wordBox: [
+        "principled", "courageous", "admirable", "praiseworthy", "selfless",
+        "dishonest", "cowardly", "shameful", "blameworthy", "selfish"
+      ],
+      hints: [
+        "Acting in accordance with morality and strong beliefs.",
+        "Not held back by danger or pain; brave.",
+        "Arousing respect and approval.",
+        "Deserving approval and commendation.",
+        "Concerned more with the needs of others than with one's own."
+      ],
+      explanations: [
+        "'Principled' means acting in accordance with morality and recognised rules.",
+        "'Courageous' means not deterred by danger or pain; brave.",
+        "'Admirable' means arousing or deserving respect and approval.",
+        "'Praiseworthy' means deserving approval and admiration.",
+        "'Selfless' means concerned more with the needs of others than with one's own."
+      ],
+      clueWords: [["moral dilemma","path"],["decision","report"],["cheating"],["teacher","actions"],["act","honesty","inspired"]]
+    },
+    {
+      text: "The ___ (1) ___ ceremony at the National Gallery honoured artists whose ___ (2) ___ contributions to Singapore's cultural landscape were truly ___ (3) ___. Each recipient's ___ (4) ___ body of work reflected years of ___ (5) ___ effort and creative excellence.",
+      answers: ["prestigious", "outstanding", "unparalleled", "extensive", "sustained"],
+      wordBox: [
+        "prestigious", "outstanding", "unparalleled", "extensive", "sustained",
+        "insignificant", "mediocre", "common", "limited", "brief"
+      ],
+      hints: [
+        "Inspiring respect and admiration; having high status.",
+        "Exceptionally good; clearly noticeable above others.",
+        "Having no equal; better than any other.",
+        "Covering a large area in scope or content.",
+        "Continuing for an extended period without interruption."
+      ],
+      explanations: [
+        "'Prestigious' means inspiring respect and admiration.",
+        "'Outstanding' means exceptionally good.",
+        "'Unparalleled' means having no equal; unprecedented.",
+        "'Extensive' means large in amount or scope.",
+        "'Sustained' means continuing for an extended period without interruption."
+      ],
+      clueWords: [["ceremony","National Gallery"],["contributions","cultural"],["truly"],["body of work"],["effort","excellence"]]
     }
   ]
 };
@@ -2352,6 +3456,144 @@ export const synonymContrast = { p1: [
         "'Unforgettable' means memorable."
       ],
       clueWords: [["countryside"],["city"],["experiences"],["attractions"],["memories"]]
+    },
+{
+      text: "Although the playground at Mei Ling's school was ___ (1) ___ during recess, with children shouting and laughing, it became very ___ (2) ___ after everyone went home. While the older children were ___ (3) ___ enough to climb the tallest monkey bars, some younger ones felt ___ (4) ___ and stayed near the ground instead. However, all of them were ___ (5) ___ when the teacher praised them for taking turns on the slides.",
+      answers: ["noisy", "quiet", "brave", "scared", "happy"],
+      wordBox: [
+        "noisy", "quiet", "brave", "scared", "happy",
+        "loud", "fast", "angry", "tiny", "sad"
+      ],
+      hints: [
+        "This word means full of loud sounds. It is the opposite of 'quiet'.",
+        "This word means having very little sound. It is the opposite of 'noisy'.",
+        "This word means not afraid to face danger or try hard things.",
+        "This word means feeling fear. It is the opposite of 'brave'.",
+        "This word means feeling joy. It is the opposite of 'sad'."
+      ],
+      explanations: [
+        "'Noisy' means full of sound. The clue 'shouting and laughing' tells us the playground was loud. 'Although' shows a contrast with the quiet that came later.",
+        "'Quiet' is the antonym of 'noisy'. The phrase 'after everyone went home' tells us the playground became silent.",
+        "'Brave' means willing to face danger. The word 'while' contrasts the bold older children with the younger ones who felt fear.",
+        "'Scared' is the antonym of 'brave'. The word 'instead' shows these children made a different, safer choice because they were afraid.",
+        "'Happy' means feeling joy or pleasure. 'However' signals a positive change, and 'praised' is a clue that they felt good."
+      ],
+      clueWords: [["shouting", "laughing"], ["after", "went home"], ["climb", "tallest"], ["instead", "ground"], ["praised", "however"]]
+    },
+    {
+      text: "Wei Jie's classroom was usually ___ (1) ___ and tidy, but on Art Day it became very ___ (2) ___ with paint and paper everywhere. While some pupils found the maths test ___ (3) ___ and finished early, others thought it was quite ___ (4) ___ and needed more time. Although the morning had been ___ (5) ___ with boring lessons, the afternoon was exciting when a magician visited the school.",
+      answers: ["clean", "messy", "easy", "hard", "dull"],
+      wordBox: [
+        "clean", "messy", "easy", "hard", "dull",
+        "neat", "fast", "bright", "simple", "dark"
+      ],
+      hints: [
+        "This word means free from dirt and disorder. It is the opposite of 'messy'.",
+        "This word means untidy and in a state of disorder. It is the opposite of 'clean'.",
+        "This word means not difficult. It is a synonym of 'simple'.",
+        "This word means difficult or not easy. It is the opposite of 'easy'.",
+        "This word means boring and not interesting. It is the opposite of 'exciting'."
+      ],
+      explanations: [
+        "'Clean' means free from dirt. The synonym 'tidy' helps confirm this meaning. 'But' signals a contrast with what came after on Art Day.",
+        "'Messy' is the antonym of 'clean' and 'tidy'. The clue 'paint and paper everywhere' describes an untidy state.",
+        "'Easy' means not difficult. 'Finished early' is the clue that the test was simple for these pupils. 'While' contrasts them with others who struggled.",
+        "'Hard' is the antonym of 'easy'. 'Needed more time' tells us the test was difficult for these pupils.",
+        "'Dull' means boring and uninteresting. 'Boring lessons' is a synonym clue. 'Although' contrasts the dull morning with the exciting afternoon."
+      ],
+      clueWords: [["tidy", "usually"], ["paint", "paper", "everywhere"], ["finished", "early"], ["needed", "more time"], ["boring", "although"]]
+    },
+    {
+      text: "At the school's pet corner, Ravi's hamster was ___ (1) ___ and loved to run on its wheel, but Siti's tortoise was very ___ (2) ___ and barely moved at all. Although the parrot was ___ (3) ___ and never stopped squawking, the goldfish was ___ (4) ___ and just swam around without making a sound. Unlike the fierce-looking guard dog, the little kitten was ___ (5) ___ and let everyone stroke its soft fur.",
+      answers: ["fast", "slow", "loud", "silent", "gentle"],
+      wordBox: [
+        "fast", "slow", "loud", "silent", "gentle",
+        "quick", "brave", "small", "noisy", "kind"
+      ],
+      hints: [
+        "This word means moving at great speed. It is the opposite of 'slow'.",
+        "This word means not moving quickly. It is the opposite of 'fast'.",
+        "This word means making a lot of noise. It is a synonym of 'noisy'.",
+        "This word means making no sound at all. It is the opposite of 'loud'.",
+        "This word means soft and calm, not rough or fierce."
+      ],
+      explanations: [
+        "'Fast' means moving at great speed. The clue 'loved to run on its wheel' tells us the hamster moved quickly. 'But' contrasts it with the slow tortoise.",
+        "'Slow' is the antonym of 'fast'. 'Barely moved at all' tells us the tortoise was not quick.",
+        "'Loud' means making a lot of noise. 'Never stopped squawking' tells us the parrot was very noisy. 'Although' contrasts it with the silent goldfish.",
+        "'Silent' means making no sound. 'Without making a sound' is the key clue. It is the antonym of 'loud'.",
+        "'Gentle' means soft and kind. 'Unlike' contrasts the fierce dog with the calm kitten. 'Let everyone stroke its soft fur' shows it was not aggressive."
+      ],
+      clueWords: [["run", "wheel"], ["barely", "moved"], ["squawking", "never stopped"], ["without", "sound"], ["unlike", "fierce", "stroke"]]
+    },
+    {
+      text: "Grandma was always ___ (1) ___ and shared her kueh with the neighbours, but Ah Boy was quite ___ (2) ___ and wanted to keep all the snacks for himself. While Father was ___ (3) ___ about winning the cooking contest, Mother was ___ (4) ___ that she had burnt the curry. Although baby Mei was ___ (5) ___ and small, she had the loudest cry in the whole flat.",
+      answers: ["kind", "greedy", "happy", "sad", "little"],
+      wordBox: [
+        "kind", "greedy", "happy", "sad", "little",
+        "nice", "selfish", "glad", "big", "angry"
+      ],
+      hints: [
+        "This word means caring and helpful to others.",
+        "This word means wanting too much for yourself. It is the opposite of 'kind'.",
+        "This word means feeling joy. It is the opposite of 'sad'.",
+        "This word means feeling unhappy. It is the opposite of 'happy'.",
+        "This word means small in size. It is a synonym of 'small'."
+      ],
+      explanations: [
+        "'Kind' means caring and willing to share. The clue 'shared her kueh with the neighbours' shows Grandma was generous. 'But' contrasts her with greedy Ah Boy.",
+        "'Greedy' means wanting more than your fair share. 'Wanted to keep all the snacks for himself' is the key clue that describes someone who does not share.",
+        "'Happy' means feeling joy. 'Winning the cooking contest' would make Father feel good. 'While' contrasts his feelings with Mother's sadness.",
+        "'Sad' is the antonym of 'happy'. 'Burnt the curry' tells us Mother felt unhappy about her mistake.",
+        "'Little' is a synonym of 'small'. 'Although' contrasts her tiny size with her loud cry, which is surprising."
+      ],
+      clueWords: [["shared", "neighbours"], ["keep", "all", "himself"], ["winning", "contest"], ["burnt", "curry"], ["small", "although"]]
+    },
+    {
+      text: "The laksa at the hawker centre was ___ (1) ___ and made Ah Kow's tongue burn, whereas the tau huay was ___ (2) ___ and soothing to eat. Although the bowl of bak chor mee looked ___ (3) ___ at first, it turned out to be quite ___ (4) ___ after the uncle added extra noodles and toppings. While the queue for chicken rice was ___ (5) ___, with people stretching all the way to the entrance, the stall selling porridge had only a short line.",
+      answers: ["hot", "cold", "small", "big", "long"],
+      wordBox: [
+        "hot", "cold", "small", "big", "long",
+        "warm", "tiny", "short", "spicy", "large"
+      ],
+      hints: [
+        "This word means having a high temperature or being spicy.",
+        "This word means having a low temperature. It is the opposite of 'hot'.",
+        "This word means not large in size. It is the opposite of 'big'.",
+        "This word means large in size. It is the opposite of 'small'.",
+        "This word means covering a great distance. It is the opposite of 'short'."
+      ],
+      explanations: [
+        "'Hot' can mean spicy or high in temperature. 'Made Ah Kow's tongue burn' tells us the laksa was fiery. 'Whereas' contrasts it with the cold tau huay.",
+        "'Cold' is the antonym of 'hot'. 'Soothing to eat' suggests the tau huay was cool and refreshing, unlike the burning laksa.",
+        "'Small' means not large. 'At first' and 'although' suggest the bowl appeared little before more was added, setting up the contrast.",
+        "'Big' is the antonym of 'small'. 'Added extra noodles and toppings' made the bowl much larger than it first appeared.",
+        "'Long' means covering a great distance. 'Stretching all the way to the entrance' describes a very lengthy queue. 'While' contrasts it with the short line."
+      ],
+      clueWords: [["tongue", "burn", "whereas"], ["soothing", "eat"], ["at first", "although"], ["added", "extra"], ["stretching", "entrance", "while"]]
+    },
+    {
+      text: "Uncle Tan was always ___ (1) ___ and cheerful, greeting everyone with a warm smile, but his neighbour Mr Lim was often ___ (2) ___ and frowned at people who walked past. While Auntie Fatimah was ___ (3) ___ and spoke in a booming voice at the void deck, Mrs Chen was ___ (4) ___ and whispered so softly that no one could hear her. Although the old kampong looked ___ (5) ___ and plain, the people who lived there had the biggest hearts.",
+      answers: ["friendly", "grumpy", "loud", "quiet", "simple"],
+      wordBox: [
+        "friendly", "grumpy", "loud", "quiet", "simple",
+        "nice", "noisy", "angry", "easy", "fancy"
+      ],
+      hints: [
+        "This word means warm and pleasant to others.",
+        "This word means bad-tempered and unfriendly. It is the opposite of 'friendly'.",
+        "This word means making a lot of noise. It is the opposite of 'quiet'.",
+        "This word means making little noise. It is the opposite of 'loud'.",
+        "This word means plain and not fancy. It is a synonym of 'plain'."
+      ],
+      explanations: [
+        "'Friendly' means warm and kind. The synonym 'cheerful' and the clue 'greeting everyone with a warm smile' describe friendly behaviour. 'But' contrasts him with grumpy Mr Lim.",
+        "'Grumpy' means bad-tempered. 'Frowned at people who walked past' tells us Mr Lim was unfriendly and cross.",
+        "'Loud' means making a lot of noise. 'Booming voice' is the clue that Auntie Fatimah spoke very noisily. 'While' contrasts her with quiet Mrs Chen.",
+        "'Quiet' is the antonym of 'loud'. 'Whispered so softly' tells us Mrs Chen barely made any sound at all.",
+        "'Simple' means plain and basic. 'Plain' is a synonym clue. 'Although' contrasts the humble appearance of the kampong with the big hearts of its people."
+      ],
+      clueWords: [["cheerful", "warm smile"], ["frowned", "but"], ["booming voice", "while"], ["whispered", "softly"], ["plain", "although"]]
     }
   ],
   p4: [
@@ -2446,6 +3688,144 @@ export const synonymContrast = { p1: [
         "'Challenging' means demanding."
       ],
       clueWords: [["ocean"],["afternoon"],["waves"],["shifted"],["surfers"]]
+    },
+{
+      text: "During Deepavali, the ___ (1) ___ decorations lit up Little India with dazzling colours, whereas the quiet streets the day before had been rather ___ (2) ___. While some families were ___ (3) ___ and shared their festive treats with the entire block, others were ___ (4) ___ and kept everything to themselves. Although Priya had been ___ (5) ___ about performing on stage, she gathered her courage and danced beautifully in front of the crowd.",
+      answers: ["brilliant", "dull", "generous", "selfish", "anxious"],
+      wordBox: [
+        "brilliant", "dull", "generous", "selfish", "anxious",
+        "bright", "stingy", "boring", "worried", "calm"
+      ],
+      hints: [
+        "This word means very bright and eye-catching. It is the opposite of 'dull'.",
+        "This word means not bright or interesting. It is the opposite of 'brilliant'.",
+        "This word means willing to give and share freely. It is the opposite of 'selfish'.",
+        "This word means thinking only of yourself. It is the opposite of 'generous'.",
+        "This word means feeling worried or nervous about something."
+      ],
+      explanations: [
+        "'Brilliant' means extremely bright and colourful. 'Dazzling colours' is a synonym clue. 'Whereas' contrasts the festive brightness with the dull streets before the celebration.",
+        "'Dull' means lacking brightness or interest. It is the antonym of 'brilliant'. The 'quiet streets the day before' suggest a lack of colour and excitement.",
+        "'Generous' means willing to share freely. 'Shared their festive treats with the entire block' is the key clue. 'While' contrasts them with the selfish families.",
+        "'Selfish' is the antonym of 'generous'. 'Kept everything to themselves' describes people who do not share with others.",
+        "'Anxious' means feeling worried or nervous. 'Although' signals a contrast with her brave performance. 'Gathered her courage' confirms she had to overcome her worry."
+      ],
+      clueWords: [["dazzling", "lit up", "whereas"], ["quiet", "day before"], ["shared", "entire block", "while"], ["kept", "themselves"], ["although", "courage"]]
+    },
+    {
+      text: "At the school camp on Pulau Ubin, the ___ (1) ___ pupils eagerly volunteered for the jungle trek, whereas the more ___ (2) ___ ones preferred to stay at the campsite. While some campers were ___ (3) ___ and worked hard to set up their tents before dark, a few ___ (4) ___ ones sat around doing nothing until the teacher scolded them. Although the weather was ___ (5) ___ at first and the rain poured down heavily, it soon cleared up and the sky became bright.",
+      answers: ["courageous", "timid", "diligent", "lazy", "gloomy"],
+      wordBox: [
+        "courageous", "timid", "diligent", "lazy", "gloomy",
+        "brave", "idle", "dark", "careful", "cheerful"
+      ],
+      hints: [
+        "This word means brave and not afraid. It is a synonym of 'brave'.",
+        "This word means shy and lacking courage. It is the opposite of 'courageous'.",
+        "This word means hardworking and putting in great effort. It is the opposite of 'lazy'.",
+        "This word means not willing to work or make an effort. It is the opposite of 'diligent'.",
+        "This word means dark and depressing, like heavy rain clouds."
+      ],
+      explanations: [
+        "'Courageous' means brave and willing to face danger. 'Eagerly volunteered for the jungle trek' shows they were bold. 'Whereas' contrasts them with the timid ones.",
+        "'Timid' is the antonym of 'courageous'. 'Preferred to stay at the campsite' shows they lacked the courage to explore the jungle.",
+        "'Diligent' means hardworking and industrious. 'Worked hard to set up their tents before dark' is the key clue. 'While' contrasts them with the lazy campers.",
+        "'Lazy' is the antonym of 'diligent'. 'Sat around doing nothing' clearly describes people who are unwilling to work.",
+        "'Gloomy' means dark and dreary. 'Rain poured down heavily' is the clue. 'Although' contrasts the dark weather with the bright sky that followed."
+      ],
+      clueWords: [["eagerly", "volunteered", "whereas"], ["preferred", "stay"], ["worked hard", "while"], ["sat around", "doing nothing"], ["rain", "poured", "although"]]
+    },
+    {
+      text: "The ___ (1) ___ market in Tiong Bahru was packed with shoppers every weekend, but the side streets were ___ (2) ___ and almost empty. While the new condominium looked ___ (3) ___ with its glass walls and swimming pool, the old HDB flats across the road appeared rather ___ (4) ___. However, the HDB residents were ___ (5) ___ and always made visitors feel welcome, unlike the unfriendly security guards at the condominium.",
+      answers: ["bustling", "deserted", "grand", "plain", "warm"],
+      wordBox: [
+        "bustling", "deserted", "grand", "plain", "warm",
+        "busy", "empty", "fancy", "cold", "simple"
+      ],
+      hints: [
+        "This word means full of busy activity and people. It is a synonym of 'busy'.",
+        "This word means empty with no people around. It is the opposite of 'bustling'.",
+        "This word means large and impressive in appearance. It is a synonym of 'impressive'.",
+        "This word means simple and not decorated. It is the opposite of 'grand'.",
+        "This word means friendly and welcoming. It is the opposite of 'cold'."
+      ],
+      explanations: [
+        "'Bustling' means full of busy activity. 'Packed with shoppers' confirms the market was crowded and lively. 'But' contrasts it with the quiet side streets.",
+        "'Deserted' means empty of people. 'Almost empty' is a synonym clue, contrasting with the busy market.",
+        "'Grand' means impressive and magnificent. 'Glass walls and swimming pool' describe a fancy building. 'While' contrasts it with the plain HDB flats.",
+        "'Plain' means simple and without decoration. It is the antonym of 'grand'. The old HDB flats were not as impressive as the condominium.",
+        "'Warm' here means friendly and welcoming. 'Made visitors feel welcome' is the key clue. 'Unlike' contrasts the kind residents with the unfriendly guards."
+      ],
+      clueWords: [["packed", "shoppers", "but"], ["almost empty"], ["glass walls", "swimming pool", "while"], ["old", "across"], ["welcome", "unlike", "unfriendly"]]
+    },
+    {
+      text: "The ___ (1) ___ forest at Bukit Timah was thick with ancient trees, but the nearby park connector was ___ (2) ___ with only a few short bushes. While the long-tailed macaques were ___ (3) ___ and snatched food from hikers' bags, the mouse deer at the reservoir were ___ (4) ___ and ran away at the slightest sound. Although it seemed ___ (5) ___ to reach the summit, the tired hikers agreed it was worthwhile when they finally saw the stunning view.",
+      answers: ["dense", "sparse", "bold", "timid", "difficult"],
+      wordBox: [
+        "dense", "sparse", "bold", "timid", "difficult",
+        "thick", "shy", "easy", "thin", "daring"
+      ],
+      hints: [
+        "This word means thickly packed together. It is a synonym of 'thick'.",
+        "This word means thinly spread with few things. It is the opposite of 'dense'.",
+        "This word means daring and not afraid. It is a synonym of 'daring'.",
+        "This word means easily frightened and shy. It is the opposite of 'bold'.",
+        "This word means hard to do or achieve. It is the opposite of 'easy'."
+      ],
+      explanations: [
+        "'Dense' means closely packed. 'Thick with ancient trees' is a synonym clue. 'But' contrasts the dense forest with the sparse park connector.",
+        "'Sparse' means thinly scattered. 'Only a few short bushes' tells us vegetation was thin and spread out, unlike the dense forest.",
+        "'Bold' means daring and fearless. 'Snatched food from hikers' bags' shows the macaques were not afraid of people. 'While' contrasts them with the timid mouse deer.",
+        "'Timid' is the antonym of 'bold'. 'Ran away at the slightest sound' shows the mouse deer were easily frightened.",
+        "'Difficult' means hard to do. 'Although' contrasts the hard climb with the worthwhile reward. 'Tired hikers' suggests the journey was not easy."
+      ],
+      clueWords: [["thick", "ancient trees", "but"], ["only", "few", "short bushes"], ["snatched", "bags", "while"], ["ran away", "slightest sound"], ["although", "tired", "worthwhile"]]
+    },
+    {
+      text: "Mrs Tan's community garden plot was ___ (1) ___ and full of healthy vegetables, whereas Mr Ong's patch was ___ (2) ___ with weeds choking every plant. While some gardeners were ___ (3) ___ and happily lent their tools to newcomers, others were ___ (4) ___ and refused to share even a bag of soil. Although the morning had been ___ (5) ___ and scorching, a cool breeze arrived in the evening and made the gardening pleasant.",
+      answers: ["flourishing", "neglected", "helpful", "stingy", "sweltering"],
+      wordBox: [
+        "flourishing", "neglected", "helpful", "stingy", "sweltering",
+        "thriving", "generous", "messy", "cool", "unwilling"
+      ],
+      hints: [
+        "This word means growing well and thriving. It is a synonym of 'thriving'.",
+        "This word means not cared for properly. It is the opposite of 'flourishing'.",
+        "This word means willing to give assistance to others.",
+        "This word means unwilling to give or share things. It is the opposite of 'helpful'.",
+        "This word means extremely hot and uncomfortable."
+      ],
+      explanations: [
+        "'Flourishing' means growing strongly and doing well. 'Full of healthy vegetables' confirms the garden was thriving. 'Whereas' contrasts it with the neglected patch.",
+        "'Neglected' means not properly looked after. 'Weeds choking every plant' tells us the garden was not cared for, unlike the flourishing one.",
+        "'Helpful' means willing to assist others. 'Happily lent their tools to newcomers' is the key clue. 'While' contrasts them with the stingy gardeners.",
+        "'Stingy' means unwilling to share. 'Refused to share even a bag of soil' clearly shows a lack of generosity.",
+        "'Sweltering' means extremely hot. 'Scorching' is a synonym clue. 'Although' contrasts the hot morning with the cool evening breeze."
+      ],
+      clueWords: [["healthy vegetables", "whereas"], ["weeds", "choking"], ["lent", "tools", "while"], ["refused", "share"], ["scorching", "although", "cool"]]
+    },
+    {
+      text: "The ___ (1) ___ lion dance performance drew a huge crowd to Chinatown, but the quiet tea ceremony in the temple attracted only a ___ (2) ___ audience. Whereas the older generation preferred ___ (3) ___ customs like giving ang baos in person, the younger ones chose ___ (4) ___ methods such as sending e-ang baos by phone. Although Grandpa appeared ___ (5) ___ on the outside and rarely smiled, he was actually very loving and always saved the biggest ang bao for his grandchildren.",
+      answers: ["spectacular", "tiny", "traditional", "modern", "stern"],
+      wordBox: [
+        "spectacular", "tiny", "traditional", "modern", "stern",
+        "impressive", "new", "small", "old", "strict"
+      ],
+      hints: [
+        "This word means extremely impressive and exciting to watch.",
+        "This word means very small in size or number. It is the opposite of 'huge'.",
+        "This word means following old customs and ways. It is the opposite of 'modern'.",
+        "This word means using new or current ideas and methods. It is the opposite of 'traditional'.",
+        "This word means serious and strict in manner."
+      ],
+      explanations: [
+        "'Spectacular' means extremely impressive. 'Drew a huge crowd' tells us the performance was exciting. 'But' contrasts the grand show with the quiet ceremony.",
+        "'Tiny' means very small. 'Only' emphasises the small number. The contrast with the 'huge crowd' drawn by the spectacular performance makes this clear.",
+        "'Traditional' means following old customs. 'Giving ang baos in person' is an established custom. 'Whereas' contrasts old ways with modern methods.",
+        "'Modern' is the antonym of 'traditional'. 'Sending e-ang baos by phone' is a new, current way of doing things that the younger generation prefers.",
+        "'Stern' means serious and strict-looking. 'Rarely smiled' is the clue. 'Although' contrasts his serious appearance with his loving nature on the inside."
+      ],
+      clueWords: [["huge crowd", "but"], ["only", "quiet"], ["customs", "in person", "whereas"], ["e-ang baos", "phone"], ["rarely smiled", "although", "loving"]]
     }
   ],
   p5: [
@@ -2540,6 +3920,144 @@ export const synonymContrast = { p1: [
         "'Cherished' means treasured."
       ],
       clueWords: [["landscape"],["winter"],["locals"],["spirit"],["traditions"]]
+    },
+{
+      text: "Singapore's transformation from a fishing village to a thriving city-state was a story of ___ (1) ___ through hard work, yet the nation never forgot the ___ (2) ___ it faced during the Japanese Occupation. While the founding leaders promoted ___ (3) ___ among all races and religions, they firmly rejected any form of ___ (4) ___ that might tear the young nation apart. Although some critics dismissed Singapore's ambitions as ___ (5) ___, the country's remarkable achievements proved them entirely wrong.",
+      answers: ["prosperity", "adversity", "unity", "division", "unrealistic"],
+      wordBox: [
+        "prosperity", "adversity", "unity", "division", "unrealistic",
+        "success", "hardship", "harmony", "conflict", "impossible"
+      ],
+      hints: [
+        "This word means wealth and success. It is a synonym of 'success'.",
+        "This word means difficulty and hardship. It is the opposite of 'prosperity'.",
+        "This word means being joined together as one. It is the opposite of 'division'.",
+        "This word means the act of separating into opposing groups. It is the opposite of 'unity'.",
+        "This word means not practical or achievable."
+      ],
+      explanations: [
+        "'Prosperity' means wealth and success. 'Thriving city-state' and 'hard work' are clues. 'Yet' contrasts this success with the hardship that came before.",
+        "'Adversity' means great difficulty or hardship. The 'Japanese Occupation' was a period of suffering. It is the antonym of 'prosperity'.",
+        "'Unity' means togetherness. 'Among all races and religions' shows the leaders wanted everyone to come together. 'While' contrasts this with the division they rejected.",
+        "'Division' is the antonym of 'unity'. 'Tear the young nation apart' describes the destructive splitting effect of division.",
+        "'Unrealistic' means not practical or achievable. 'Although' contrasts the critics' negative view with Singapore's remarkable achievements. 'Dismissed' is a key clue."
+      ],
+      clueWords: [["thriving", "hard work", "yet"], ["Japanese Occupation", "faced"], ["races", "religions", "while"], ["tear", "apart", "rejected"], ["dismissed", "although", "achievements"]]
+    },
+    {
+      text: "At the Racial Harmony Day celebration, students learnt that ___ (1) ___ respect for one another's cultures is far more meaningful than ___ (2) ___ gestures done just for show. While ___ (3) ___ efforts to build bridges between communities create lasting bonds, ___ (4) ___ attempts that lack real commitment often fade quickly. Although some may view cultural differences as a source of ___ (5) ___, Singaporeans have shown that diversity can be a great strength.",
+      answers: ["sincere", "superficial", "genuine", "half-hearted", "tension"],
+      wordBox: [
+        "sincere", "superficial", "genuine", "half-hearted", "tension",
+        "honest", "fake", "real", "stress", "wholehearted"
+      ],
+      hints: [
+        "This word means truly felt and honest. It is a synonym of 'genuine'.",
+        "This word means not deep or meaningful. It is the opposite of 'sincere'.",
+        "This word means real and authentic. It is a synonym of 'sincere'.",
+        "This word means lacking enthusiasm or effort. It is the opposite of 'genuine'.",
+        "This word means a feeling of stress or unease between people or groups."
+      ],
+      explanations: [
+        "'Sincere' means genuinely and truly felt. 'Far more meaningful' suggests real, honest feeling. The contrast word 'than' compares it with superficial gestures.",
+        "'Superficial' means shallow and not genuine. 'Done just for show' tells us these gestures lack real meaning. It is the antonym of 'sincere'.",
+        "'Genuine' means real and authentic, a synonym of 'sincere'. 'Lasting bonds' is the clue. 'While' contrasts genuine efforts with half-hearted ones.",
+        "'Half-hearted' means lacking full commitment. 'Lack real commitment' and 'fade quickly' are the key clues. It is the antonym of 'genuine'.",
+        "'Tension' means stress or unease. 'Although' contrasts the negative view of differences with the positive reality that diversity is a strength."
+      ],
+      clueWords: [["meaningful", "than"], ["just for show"], ["lasting bonds", "while"], ["lack", "commitment", "fade"], ["although", "differences", "strength"]]
+    },
+    {
+      text: "While ___ (1) ___ approaches to waste management, such as AI-powered recycling systems, have helped Singapore reduce pollution, some communities still rely on ___ (2) ___ methods like open burning. Although the government has been ___ (3) ___ in its efforts to protect green spaces, a few developers remain ___ (4) ___ about environmental concerns and continue to prioritise profits. The ___ (5) ___ waters of the Singapore Strait, once crystal clear, now reveal the impact of decades of industrial development.",
+      answers: ["innovative", "outdated", "proactive", "indifferent", "murky"],
+      wordBox: [
+        "innovative", "outdated", "proactive", "indifferent", "murky",
+        "creative", "old", "concerned", "clear", "active"
+      ],
+      hints: [
+        "This word means introducing new and creative ideas or methods.",
+        "This word means old-fashioned and no longer useful. It is the opposite of 'innovative'.",
+        "This word means taking action before problems arise.",
+        "This word means showing no interest or concern. It is the opposite of 'proactive'.",
+        "This word means dark and cloudy, not clear. It is the opposite of 'clear'."
+      ],
+      explanations: [
+        "'Innovative' means using new, creative methods. 'AI-powered recycling systems' is an example of a new approach. 'While' contrasts modern methods with outdated ones.",
+        "'Outdated' means old and no longer effective. 'Open burning' is an old-fashioned, harmful method. It is the antonym of 'innovative'.",
+        "'Proactive' means taking early action to prevent problems. 'Efforts to protect green spaces' shows the government acted decisively. 'Although' contrasts this with indifferent developers.",
+        "'Indifferent' means not caring. 'Continue to prioritise profits' over the environment shows a lack of concern. It is the antonym of 'proactive' in this context.",
+        "'Murky' means dark and unclear. 'Once crystal clear' contrasts with the current cloudy state, showing how the waters have changed over time."
+      ],
+      clueWords: [["AI-powered", "while"], ["open burning", "still"], ["efforts", "protect", "although"], ["continue", "prioritise profits"], ["once crystal clear"]]
+    },
+    {
+      text: "The ___ (1) ___ volunteers at the old folks' home showed true compassion, unlike the ___ (2) ___ visitors who only came to take photographs for social media. While ___ (3) ___ youths organised weekly befriending sessions with the elderly, ___ (4) ___ ones had to be forced to join even a single visit. Although the work was often ___ (5) ___ and went unnoticed by the public, the smiles on the elderly residents' faces made it all worthwhile.",
+      answers: ["dedicated", "insincere", "enthusiastic", "reluctant", "thankless"],
+      wordBox: [
+        "dedicated", "insincere", "enthusiastic", "reluctant", "thankless",
+        "committed", "unwilling", "fake", "grateful", "eager"
+      ],
+      hints: [
+        "This word means fully committed and devoted to a cause. It is a synonym of 'committed'.",
+        "This word means not honest or genuine in one's actions. It is the opposite of 'dedicated'.",
+        "This word means showing great eagerness and excitement. It is the opposite of 'reluctant'.",
+        "This word means unwilling and hesitant. It is the opposite of 'enthusiastic'.",
+        "This word means not appreciated or recognised by others."
+      ],
+      explanations: [
+        "'Dedicated' means fully devoted and committed. 'True compassion' is the key clue. 'Unlike' contrasts the sincere volunteers with the insincere visitors.",
+        "'Insincere' means not genuine. 'Only came to take photographs for social media' shows they were not truly caring but merely pretending.",
+        "'Enthusiastic' means eager and excited. 'Organised weekly befriending sessions' shows these youths actively wanted to help. 'While' contrasts them with reluctant ones.",
+        "'Reluctant' means unwilling. 'Had to be forced' tells us these youths did not want to participate. It is the antonym of 'enthusiastic'.",
+        "'Thankless' means not appreciated. 'Went unnoticed by the public' is the clue. 'Although' contrasts the lack of recognition with the personal reward of making the elderly smile."
+      ],
+      clueWords: [["compassion", "unlike"], ["only", "photographs", "social media"], ["organised", "weekly", "while"], ["forced", "even a single"], ["unnoticed", "although", "worthwhile"]]
+    },
+    {
+      text: "Singapore's ___ (1) ___ rise as a global financial hub amazed the world, but the journey was far from ___ (2) ___ and involved many painful sacrifices. Whereas the nation's leaders were ___ (3) ___ in their planning and left nothing to chance, their opponents were ___ (4) ___ and failed to offer any real alternatives. Although some older Singaporeans felt ___ (5) ___ about rapid change and longed for the past, most accepted that progress was necessary for the nation's survival.",
+      answers: ["remarkable", "effortless", "meticulous", "careless", "nostalgic"],
+      wordBox: [
+        "remarkable", "effortless", "meticulous", "careless", "nostalgic",
+        "extraordinary", "easy", "careful", "sentimental", "sloppy"
+      ],
+      hints: [
+        "This word means worthy of attention and very impressive. It is a synonym of 'extraordinary'.",
+        "This word means achieved without difficulty. It is a synonym of 'easy'.",
+        "This word means showing great attention to detail. It is the opposite of 'careless'.",
+        "This word means not paying enough attention or thought. It is the opposite of 'meticulous'.",
+        "This word means feeling a wistful longing for the past."
+      ],
+      explanations: [
+        "'Remarkable' means extraordinary and impressive. 'Amazed the world' tells us Singapore's rise was outstanding. 'But' contrasts the impressive result with the difficult journey.",
+        "'Effortless' means without difficulty. 'Far from effortless' actually means it was very hard. 'Painful sacrifices' confirms the journey was anything but easy.",
+        "'Meticulous' means extremely careful and precise. 'Left nothing to chance' shows thorough and detailed planning. 'Whereas' contrasts this with the careless opponents.",
+        "'Careless' is the antonym of 'meticulous'. 'Failed to offer any real alternatives' suggests a lack of careful thought and preparation.",
+        "'Nostalgic' means longing for the past. 'Longed for the past' is a synonym clue. 'Although' contrasts those who missed the old days with those who accepted progress."
+      ],
+      clueWords: [["amazed", "world", "but"], ["far from", "painful sacrifices"], ["left nothing to chance", "whereas"], ["failed", "no real alternatives"], ["longed", "past", "although"]]
+    },
+    {
+      text: "The ___ (1) ___ volunteers worked tirelessly to clean up East Coast Beach after the oil spill, while ___ (2) ___ bystanders simply watched from the sidelines and did nothing to help. Although the damage to marine life was ___ (3) ___ and heartbreaking, scientists remained ___ (4) ___ that the ecosystem could recover in time. Unlike the ___ (5) ___ response from some companies who denied responsibility, the government acted swiftly to hold polluters accountable.",
+      answers: ["selfless", "apathetic", "devastating", "hopeful", "evasive"],
+      wordBox: [
+        "selfless", "apathetic", "devastating", "hopeful", "evasive",
+        "generous", "uncaring", "terrible", "dishonest", "confident"
+      ],
+      hints: [
+        "This word means putting others' needs before your own.",
+        "This word means showing no interest or concern. It is the opposite of 'selfless'.",
+        "This word means causing great damage or destruction. It is a synonym of 'terrible'.",
+        "This word means feeling positive about the future. It is the opposite of 'hopeless'.",
+        "This word means deliberately avoiding or escaping from something."
+      ],
+      explanations: [
+        "'Selfless' means caring about others before yourself. 'Worked tirelessly' shows their devotion. 'While' contrasts them with the apathetic bystanders.",
+        "'Apathetic' means not caring at all. 'Simply watched from the sidelines and did nothing' shows complete indifference. It is the antonym of 'selfless'.",
+        "'Devastating' means extremely destructive. 'Heartbreaking' is a near-synonym clue. 'Although' contrasts the terrible damage with the hopeful outlook.",
+        "'Hopeful' means optimistic about the future. 'Could recover in time' suggests a positive outlook despite the damage.",
+        "'Evasive' means avoiding responsibility or questions. 'Denied responsibility' is the key clue. 'Unlike' contrasts the companies' dishonest response with the government's swift action."
+      ],
+      clueWords: [["tirelessly", "while"], ["watched", "sidelines", "did nothing"], ["heartbreaking", "although"], ["recover", "in time"], ["denied responsibility", "unlike", "swiftly"]]
     }
   ],
   p6: [
@@ -2634,6 +4152,144 @@ export const synonymContrast = { p1: [
         "'Unsettling' means disturbing."
       ],
       clueWords: [["evidence"],["proved"],["investigators"],["analysis"],["truths"]]
+    },
+{
+      text: "While globalisation has brought ___ (1) ___ opportunities for trade and cultural exchange, it has also created ___ (2) ___ challenges such as income inequality and job displacement. Although Singapore's leaders have been ___ (3) ___ in articulating the nation's vision on the world stage, critics argue that ___ (4) ___ citizens who struggle to express their views are being left behind. The debate between those who favour ___ (5) ___ free-market policies and those who advocate for greater regulation continues to shape the nation's future.",
+      answers: ["abundant", "formidable", "eloquent", "inarticulate", "unrestricted"],
+      wordBox: [
+        "abundant", "formidable", "eloquent", "inarticulate", "unrestricted",
+        "plentiful", "powerful", "speechless", "unlimited", "challenging"
+      ],
+      hints: [
+        "This word means existing in large quantities. It is a synonym of 'plentiful'.",
+        "This word means inspiring fear or respect through being impressively large or powerful.",
+        "This word means fluent and persuasive in speaking or writing.",
+        "This word means unable to express ideas clearly. It is the opposite of 'eloquent'.",
+        "This word means not limited or controlled in any way."
+      ],
+      explanations: [
+        "'Abundant' means plentiful and in large supply. 'Trade and cultural exchange' represent the many opportunities. 'While' contrasts these benefits with the challenges that also arose.",
+        "'Formidable' means extremely challenging and daunting. 'Income inequality and job displacement' are serious, intimidating problems that contrast with the positive abundant opportunities.",
+        "'Eloquent' means speaking fluently and persuasively. 'Articulating the nation's vision on the world stage' shows strong communication skills. 'Although' contrasts this with inarticulate citizens.",
+        "'Inarticulate' is the antonym of 'eloquent'. 'Struggle to express their views' directly describes people who find it hard to communicate clearly.",
+        "'Unrestricted' means without limits or controls. The contrast between free-market policies and greater regulation highlights the tension between freedom and control."
+      ],
+      clueWords: [["trade", "cultural exchange", "while"], ["income inequality", "job displacement"], ["articulating", "vision", "although"], ["struggle", "express", "views"], ["free-market", "regulation"]]
+    },
+    {
+      text: "The ___ (1) ___ charity worker devoted her life to helping the underprivileged in Singapore, whereas her ___ (2) ___ colleague was only interested in personal gain and recognition. While ___ (3) ___ leaders inspire trust by practising what they preach, ___ (4) ___ ones lose credibility by saying one thing and doing another. Although making ethical choices can sometimes seem ___ (5) ___ when profits are at stake, organisations that act with integrity ultimately earn greater respect.",
+      answers: ["altruistic", "self-centred", "authentic", "hypocritical", "disadvantageous"],
+      wordBox: [
+        "altruistic", "self-centred", "authentic", "hypocritical", "disadvantageous",
+        "selfless", "genuine", "selfish", "unfavourable", "dishonest"
+      ],
+      hints: [
+        "This word means showing unselfish concern for the welfare of others.",
+        "This word means concerned only with one's own interests. It is the opposite of 'altruistic'.",
+        "This word means genuine and true to one's own character. It is a synonym of 'genuine'.",
+        "This word means behaving in a way that contradicts what one claims to believe.",
+        "This word means unfavourable or harmful to one's interests."
+      ],
+      explanations: [
+        "'Altruistic' means selflessly caring about others' welfare. 'Devoted her life to helping the underprivileged' is the key clue. 'Whereas' contrasts her with her self-centred colleague.",
+        "'Self-centred' is the antonym of 'altruistic'. 'Only interested in personal gain and recognition' describes someone focused entirely on themselves.",
+        "'Authentic' means genuine and real. 'Practising what they preach' shows they act according to their stated beliefs. 'While' contrasts them with hypocritical leaders.",
+        "'Hypocritical' is the antonym of 'authentic'. 'Saying one thing and doing another' is the very definition of hypocrisy and contradicts genuine behaviour.",
+        "'Disadvantageous' means unfavourable or harmful. 'When profits are at stake' suggests acting ethically might seem costly. 'Although' contrasts this apparent disadvantage with the greater respect earned."
+      ],
+      clueWords: [["devoted", "underprivileged", "whereas"], ["personal gain", "recognition"], ["practising", "preach", "while"], ["saying one thing", "doing another"], ["profits", "although", "integrity"]]
+    },
+    {
+      text: "A ___ (1) ___ leader perseveres through setbacks and never gives up on the nation's goals, unlike a ___ (2) ___ one who settles for mediocrity and avoids challenges. While ___ (3) ___ decision-making considers the long-term consequences for all citizens, ___ (4) ___ choices focus only on short-term popularity and ignore lasting damage. Although the prime minister's ___ (5) ___ manner of speaking sometimes seemed too direct, Singaporeans grew to appreciate his honesty over the years.",
+      answers: ["tenacious", "complacent", "prudent", "reckless", "blunt"],
+      wordBox: [
+        "tenacious", "complacent", "prudent", "reckless", "blunt",
+        "persistent", "careless", "wise", "satisfied", "frank"
+      ],
+      hints: [
+        "This word means holding firmly to a purpose and not giving up easily. It is a synonym of 'persistent'.",
+        "This word means smugly satisfied and unwilling to try harder. It is the opposite of 'tenacious'.",
+        "This word means acting with care and thought for the future. It is a synonym of 'wise'.",
+        "This word means acting without thinking about consequences. It is the opposite of 'prudent'.",
+        "This word means direct and straightforward, sometimes to the point of seeming rude."
+      ],
+      explanations: [
+        "'Tenacious' means persistent and determined. 'Perseveres through setbacks and never gives up' defines this quality. 'Unlike' contrasts it with complacency.",
+        "'Complacent' is the antonym of 'tenacious'. 'Settles for mediocrity and avoids challenges' describes someone who has stopped striving to improve.",
+        "'Prudent' means wise and careful in planning. 'Long-term consequences for all citizens' suggests thoughtful decision-making. 'While' contrasts this with reckless choices.",
+        "'Reckless' is the antonym of 'prudent'. 'Short-term popularity' and 'ignore lasting damage' show a lack of careful, far-sighted thinking.",
+        "'Blunt' means direct and straightforward. 'Too direct' is a synonym clue. 'Although' contrasts his blunt manner with the appreciation Singaporeans later felt for his honesty."
+      ],
+      clueWords: [["perseveres", "never gives up", "unlike"], ["settles", "mediocrity", "avoids"], ["long-term", "consequences", "while"], ["short-term", "popularity", "ignore"], ["direct", "although", "honesty"]]
+    },
+    {
+      text: "The ___ (1) ___ efforts of Singapore's pioneers transformed a vulnerable island into a sovereign nation, but their sacrifices are sometimes ___ (2) ___ by a younger generation that takes stability for granted. Whereas ___ (3) ___ citizens actively participate in shaping national policies, ___ (4) ___ ones remain disengaged and complain without offering constructive solutions. Although the path to independence was ___ (5) ___ and fraught with uncertainty, the determination of the founding fathers never wavered.",
+      answers: ["monumental", "overlooked", "civic-minded", "apathetic", "arduous"],
+      wordBox: [
+        "monumental", "overlooked", "civic-minded", "apathetic", "arduous",
+        "tremendous", "forgotten", "responsible", "indifferent", "easy"
+      ],
+      hints: [
+        "This word means extremely large, important, or impressive. It is a synonym of 'tremendous'.",
+        "This word means not noticed or given proper recognition. It is a synonym of 'forgotten'.",
+        "This word means actively concerned with the duties and responsibilities of citizenship.",
+        "This word means showing no interest or concern. It is the opposite of 'civic-minded'.",
+        "This word means involving great effort and difficulty. It is the opposite of 'easy'."
+      ],
+      explanations: [
+        "'Monumental' means of great importance and scale. 'Transformed a vulnerable island into a sovereign nation' shows the enormous achievement. 'But' contrasts this with how their sacrifices are sometimes forgotten.",
+        "'Overlooked' means not recognised or noticed. 'Takes stability for granted' suggests the younger generation does not fully appreciate the pioneers' sacrifices.",
+        "'Civic-minded' means responsibly and actively engaged in society. 'Actively participate in shaping national policies' defines this quality. 'Whereas' contrasts them with apathetic citizens.",
+        "'Apathetic' is the antonym of 'civic-minded'. 'Remain disengaged and complain without offering constructive solutions' describes people who do not care enough to act.",
+        "'Arduous' means extremely difficult and demanding. 'Fraught with uncertainty' is a key clue. 'Although' contrasts the difficult journey with the unwavering determination of the founders."
+      ],
+      clueWords: [["transformed", "sovereign nation", "but"], ["takes", "for granted"], ["participate", "policies", "whereas"], ["disengaged", "complain"], ["fraught", "uncertainty", "although"]]
+    },
+    {
+      text: "While ___ (1) ___ cultural traditions passed down through generations enrich Singapore's identity, ___ (2) ___ imitations of foreign trends can erode local heritage over time. The ___ (3) ___ preservation of Peranakan shophouses stands in stark contrast to the ___ (4) ___ demolition of other historic buildings that were torn down without a second thought. Although some argue that heritage conservation is ___ (5) ___ in a rapidly modernising city, many Singaporeans believe that remembering the past is essential for building the future.",
+      answers: ["authentic", "superficial", "deliberate", "hasty", "irrelevant"],
+      wordBox: [
+        "authentic", "superficial", "deliberate", "hasty", "irrelevant",
+        "genuine", "shallow", "rushed", "careful", "unnecessary"
+      ],
+      hints: [
+        "This word means genuine, original, and true to its origins. It is a synonym of 'genuine'.",
+        "This word means lacking depth or real substance. It is the opposite of 'authentic'.",
+        "This word means done on purpose with careful thought. It is the opposite of 'hasty'.",
+        "This word means done too quickly without proper thought. It is the opposite of 'deliberate'.",
+        "This word means not connected or important to the matter at hand."
+      ],
+      explanations: [
+        "'Authentic' means genuine and original. 'Passed down through generations' shows these traditions are real and deeply rooted. 'While' contrasts them with superficial imitations.",
+        "'Superficial' means shallow and lacking depth. 'Imitations of foreign trends' are not genuine cultural expressions. It is the antonym of 'authentic'.",
+        "'Deliberate' means carefully and intentionally planned. The Peranakan shophouses were preserved with clear purpose and forethought. 'In stark contrast' directly signals the antonym relationship with 'hasty'.",
+        "'Hasty' is the antonym of 'deliberate'. 'Torn down without a second thought' describes rushed, thoughtless action without proper consideration.",
+        "'Irrelevant' means not important or applicable. 'Although' contrasts this dismissive view with the belief that remembering the past is essential for the future."
+      ],
+      clueWords: [["passed down", "generations", "while"], ["imitations", "foreign trends"], ["preservation", "in stark contrast"], ["torn down", "without a second thought"], ["although", "essential"]]
+    },
+    {
+      text: "The ___ (1) ___ minister won the public's trust by acknowledging his mistakes openly, whereas his ___ (2) ___ rival attempted to hide his failures behind polished speeches. While ___ (3) ___ governance requires transparency and accountability from all officials, ___ (4) ___ administration breeds corruption and erodes public trust over time. Although the road to building an ___ (5) ___ society where all citizens are treated fairly remains long, Singapore continues to make steady progress toward this ideal.",
+      answers: ["humble", "arrogant", "principled", "corrupt", "equitable"],
+      wordBox: [
+        "humble", "arrogant", "principled", "corrupt", "equitable",
+        "modest", "dishonest", "proud", "fair", "moral"
+      ],
+      hints: [
+        "This word means having a modest view of one's own importance. It is the opposite of 'arrogant'.",
+        "This word means having an exaggerated sense of one's own importance. It is the opposite of 'humble'.",
+        "This word means acting in accordance with strong moral values. It is the opposite of 'corrupt'.",
+        "This word means dishonest and willing to abuse power for personal gain. It is the opposite of 'principled'.",
+        "This word means fair and just, treating everyone equally. It is a synonym of 'fair'."
+      ],
+      explanations: [
+        "'Humble' means modest and not too proud. 'Acknowledging his mistakes openly' shows humility and self-awareness. 'Whereas' contrasts him with his arrogant rival.",
+        "'Arrogant' is the antonym of 'humble'. 'Attempted to hide his failures behind polished speeches' shows pride and an unwillingness to admit fault.",
+        "'Principled' means guided by strong moral values. 'Transparency and accountability' are qualities of ethical governance. 'While' contrasts this with corrupt administration.",
+        "'Corrupt' is the antonym of 'principled'. 'Breeds corruption and erodes public trust' describes dishonest governance that abuses power.",
+        "'Equitable' means fair and just for everyone. 'All citizens are treated fairly' defines an equitable society. 'Although' contrasts the long journey with the steady progress being made."
+      ],
+      clueWords: [["acknowledging", "mistakes", "whereas"], ["hide", "failures", "polished speeches"], ["transparency", "accountability", "while"], ["breeds", "erodes", "trust"], ["treated fairly", "although", "progress"]]
     }
   ]
 };
@@ -3276,6 +4932,144 @@ export const morphologicalAffix = { p1: [
         "'Standardised' is 'standard' + -ised."
       ],
       clueWords: [["policy"],["compliance"],["meetings"],["matters"],["procedures"]]
+    },
+{
+      text: "The ___ (1) ___ girl helped the new student feel ___ (2) ___; her ___ (3) ___ nature made the classroom a ___ (4) ___ place where everyone felt ___ (5) ___.",
+      answers: ["thoughtful", "comfortable", "caring", "wonderful", "happiness"],
+      wordBox: [
+        "thoughtful", "comfortable", "caring", "wonderful", "happiness",
+        "thoughtless", "uncomfortable", "careless", "horrible", "sadness"
+      ],
+      hints: [
+        "Full of thought for others (-ful = full of).",
+        "Able to be at ease (comfort + -able).",
+        "Showing care for others (-ing from care).",
+        "Full of wonder (-ful = full of).",
+        "State of being happy (-ness = state of)."
+      ],
+      explanations: [
+        "'Thoughtful' is 'thought' + -ful meaning full of thought.",
+        "'Comfortable' is 'comfort' + -able meaning able to be comfortable.",
+        "'Caring' is 'care' + -ing meaning showing care.",
+        "'Wonderful' is 'wonder' + -ful meaning full of wonder.",
+        "'Happiness' is 'happy' + -ness meaning the state of being happy."
+      ],
+      clueWords: [["girl","helped"],["feel"],["nature"],["place"],["felt"]]
+    },
+    {
+      text: "During the ___ (1) ___ day at the hawker centre, Father made a ___ (2) ___ decision to try the ___ (3) ___ noodles; we were ___ (4) ___ of the ___ (5) ___ flavours.",
+      answers: ["enjoyable", "fearless", "spiciest", "mindful", "powerful"],
+      wordBox: [
+        "enjoyable", "fearless", "spiciest", "mindful", "powerful",
+        "miserable", "fearful", "mildest", "careless", "powerless"
+      ],
+      hints: [
+        "Able to be enjoyed (-able = able to be).",
+        "Without fear (-less = without).",
+        "Most spicy (-iest = most).",
+        "Full of awareness (mind + -ful).",
+        "Full of power (-ful = full of)."
+      ],
+      explanations: [
+        "'Enjoyable' is 'enjoy' + -able meaning able to be enjoyed.",
+        "'Fearless' is 'fear' + -less meaning without fear.",
+        "'Spiciest' is 'spicy' + -est meaning the most spicy.",
+        "'Mindful' is 'mind' + -ful meaning full of awareness.",
+        "'Powerful' is 'power' + -ful meaning full of power."
+      ],
+      clueWords: [["day","hawker centre"],["decision"],["noodles"],["we were"],["flavours"]]
+    },
+    {
+      text: "The ___ (1) ___ kitten was ___ (2) ___ at climbing trees; it showed great ___ (3) ___ in chasing butterflies, and its ___ (4) ___ behaviour was truly ___ (5) ___.",
+      answers: ["playful", "skilful", "eagerness", "amusing", "remarkable"],
+      wordBox: [
+        "playful", "skilful", "eagerness", "amusing", "remarkable",
+        "playless", "unskilful", "laziness", "boring", "unremarkable"
+      ],
+      hints: [
+        "Full of play (-ful = full of).",
+        "Full of skill (-ful = full of).",
+        "The state of being eager (-ness = state of).",
+        "Causing amusement (-ing from amuse).",
+        "Worthy of remark (re- + mark + -able)."
+      ],
+      explanations: [
+        "'Playful' is 'play' + -ful meaning full of play.",
+        "'Skilful' is 'skill' + -ful meaning full of skill.",
+        "'Eagerness' is 'eager' + -ness meaning the state of being eager.",
+        "'Amusing' is 'amuse' + -ing meaning causing amusement.",
+        "'Remarkable' is 'remark' + -able meaning worthy of notice."
+      ],
+      clueWords: [["kitten"],["climbing"],["chasing"],["behaviour"],["truly"]]
+    },
+    {
+      text: "The ___ (1) ___ librarian kept the shelves in ___ (2) ___ order; students felt a sense of ___ (3) ___ when they found their favourite books ___ (4) ___ and in ___ (5) ___ condition.",
+      answers: ["helpful", "tidy", "excitement", "easily", "excellent"],
+      wordBox: [
+        "helpful", "tidy", "excitement", "easily", "excellent",
+        "unhelpful", "untidy", "boredom", "hardly", "terrible"
+      ],
+      hints: [
+        "Full of help (-ful = full of).",
+        "Neat and organised.",
+        "State of being excited (-ment = state of).",
+        "In an easy manner (-ly = in a manner).",
+        "Of the highest quality."
+      ],
+      explanations: [
+        "'Helpful' is 'help' + -ful meaning full of helpfulness.",
+        "'Tidy' means neat and well-arranged.",
+        "'Excitement' is 'excite' + -ment meaning the state of being excited.",
+        "'Easily' is 'easy' + -ly meaning in an easy way.",
+        "'Excellent' means extremely good."
+      ],
+      clueWords: [["librarian"],["shelves","order"],["found","books"],["found"],["condition"]]
+    },
+    {
+      text: "At the ___ (1) ___ party, the children were ___ (2) ___ about the games; the ___ (3) ___ decorations added to the ___ (4) ___, and everyone left with great ___ (5) ___.",
+      answers: ["colourful", "joyful", "creative", "merriment", "thankfulness"],
+      wordBox: [
+        "colourful", "joyful", "creative", "merriment", "thankfulness",
+        "colourless", "joyless", "dull", "sadness", "ungratefulness"
+      ],
+      hints: [
+        "Full of colour (-ful = full of).",
+        "Full of joy (-ful = full of).",
+        "Having the ability to create (-ive from create).",
+        "State of being merry (-ment = state of).",
+        "State of being thankful (-ness = state of)."
+      ],
+      explanations: [
+        "'Colourful' is 'colour' + -ful meaning full of colour.",
+        "'Joyful' is 'joy' + -ful meaning full of joy.",
+        "'Creative' is 'create' + -ive meaning having the ability to create.",
+        "'Merriment' is 'merry' + -ment meaning the state of fun and laughter.",
+        "'Thankfulness' is 'thankful' + -ness meaning gratitude."
+      ],
+      clueWords: [["party"],["children","games"],["decorations"],["added"],["left"]]
+    },
+    {
+      text: "The ___ (1) ___ pupils worked ___ (2) ___ on their project about Singapore's ___ (3) ___; their ___ (4) ___ impressed the teacher, who praised their ___ (5) ___.",
+      answers: ["hardworking", "cheerfully", "cleanliness", "neatness", "kindness"],
+      wordBox: [
+        "hardworking", "cheerfully", "cleanliness", "neatness", "kindness",
+        "lazy", "sadly", "dirtiness", "messiness", "meanness"
+      ],
+      hints: [
+        "Working hard (compound: hard + working).",
+        "In a cheerful manner (-ly = in a manner).",
+        "State of being clean (-liness from clean).",
+        "State of being neat (-ness = state of).",
+        "State of being kind (-ness = state of)."
+      ],
+      explanations: [
+        "'Hardworking' is a compound word meaning working hard.",
+        "'Cheerfully' is 'cheerful' + -ly meaning in a cheerful way.",
+        "'Cleanliness' is 'clean' + -liness meaning the state of being clean.",
+        "'Neatness' is 'neat' + -ness meaning the state of being neat.",
+        "'Kindness' is 'kind' + -ness meaning the quality of being kind."
+      ],
+      clueWords: [["pupils","worked"],["worked"],["Singapore's"],["impressed"],["praised"]]
     }
   ],
   p4: [
@@ -3370,6 +5164,144 @@ export const morphologicalAffix = { p1: [
         "'Consistent' is 'consist' + -ent."
       ],
       clueWords: [["remarkable"],["training"],["strength"],["attitude"],["performance"]]
+    },
+{
+      text: "The ___ (1) ___ centre at Gardens by the Bay featured ___ (2) ___ displays; the ___ (3) ___ guide gave ___ (4) ___ explanations about plant ___ (5) ___.",
+      answers: ["educational", "interactive", "knowledgeable", "informative", "conservation"],
+      wordBox: [
+        "educational", "interactive", "knowledgeable", "informative", "conservation",
+        "boring", "passive", "ignorant", "misleading", "destruction"
+      ],
+      hints: [
+        "Related to education (-al from educate).",
+        "Involving action between users (inter- = between + -ive).",
+        "Having much knowledge (-able from knowledge).",
+        "Giving useful information (-ive from inform).",
+        "Act of conserving (-tion from conserve)."
+      ],
+      explanations: [
+        "'Educational' is 'educate' + -ional meaning related to teaching.",
+        "'Interactive' uses 'inter-' meaning between and '-ive' meaning having the quality of.",
+        "'Knowledgeable' is 'knowledge' + -able meaning having knowledge.",
+        "'Informative' is 'inform' + -ive meaning giving useful information.",
+        "'Conservation' is 'conserve' + -ation meaning the act of preserving."
+      ],
+      clueWords: [["centre"],["displays"],["guide"],["explanations"],["plant"]]
+    },
+    {
+      text: "During the ___ (1) ___ campaign, students showed ___ (2) ___ in reducing waste; they ___ (3) ___ separated materials and their ___ (4) ___ efforts led to ___ (5) ___ results.",
+      answers: ["environmental", "responsibility", "carefully", "collaborative", "measurable"],
+      wordBox: [
+        "environmental", "responsibility", "carefully", "collaborative", "measurable",
+        "personal", "irresponsibility", "carelessly", "individual", "immeasurable"
+      ],
+      hints: [
+        "Related to the environment (-al from environment).",
+        "State of being responsible (-ity from responsible).",
+        "In a careful manner (-ly from careful).",
+        "Working together (collaborate + -ive).",
+        "Able to be measured (-able from measure)."
+      ],
+      explanations: [
+        "'Environmental' is 'environment' + -al meaning relating to surroundings.",
+        "'Responsibility' is 'responsible' + -ity meaning the state of being responsible.",
+        "'Carefully' is 'careful' + -ly meaning in a careful manner.",
+        "'Collaborative' is 'collaborate' + -ive meaning involving working together.",
+        "'Measurable' is 'measure' + -able meaning able to be measured."
+      ],
+      clueWords: [["campaign"],["reducing"],["separated"],["efforts"],["results"]]
+    },
+    {
+      text: "The ___ (1) ___ storyteller ___ (2) ___ described the adventures of Sang Nila Utama; the ___ (3) ___ audience was filled with ___ (4) ___ and showed their ___ (5) ___ with loud applause.",
+      answers: ["talented", "dramatically", "captivated", "amazement", "appreciation"],
+      wordBox: [
+        "talented", "dramatically", "captivated", "amazement", "appreciation",
+        "untalented", "boringly", "bored", "disappointment", "displeasure"
+      ],
+      hints: [
+        "Having talent (-ed from talent).",
+        "In a dramatic manner (-ally from dramatic).",
+        "Held the attention of (-ed from captivate).",
+        "State of being amazed (-ment from amaze).",
+        "Act of appreciating (-tion from appreciate)."
+      ],
+      explanations: [
+        "'Talented' is 'talent' + -ed meaning having natural ability.",
+        "'Dramatically' is 'dramatic' + -ally meaning in an exciting manner.",
+        "'Captivated' is 'captivate' + -ed meaning held spellbound.",
+        "'Amazement' is 'amaze' + -ment meaning great surprise.",
+        "'Appreciation' is 'appreciate' + -tion meaning recognition and enjoyment."
+      ],
+      clueWords: [["storyteller"],["described"],["audience"],["filled"],["applause"]]
+    },
+    {
+      text: "The school's ___ (1) ___ programme helped students develop ___ (2) ___; through ___ (3) ___ activities, they learnt to make ___ (4) ___ decisions and showed ___ (5) ___ growth.",
+      answers: ["leadership", "confidence", "meaningful", "independent", "personal"],
+      wordBox: [
+        "leadership", "confidence", "meaningful", "independent", "personal",
+        "followership", "diffidence", "meaningless", "dependent", "impersonal"
+      ],
+      hints: [
+        "Quality of being a leader (-ship from leader).",
+        "State of being confident (-ence from confident).",
+        "Full of meaning (-ful from meaning).",
+        "Not dependent (in- = not + dependent).",
+        "Related to a person (-al from person)."
+      ],
+      explanations: [
+        "'Leadership' is 'leader' + -ship meaning the quality of leading.",
+        "'Confidence' is 'confident' + -ence meaning belief in oneself.",
+        "'Meaningful' is 'meaning' + -ful meaning full of purpose.",
+        "'Independent' uses 'in-' meaning not, so not dependent on others.",
+        "'Personal' is 'person' + -al meaning relating to an individual."
+      ],
+      clueWords: [["programme"],["develop"],["activities"],["decisions"],["growth"]]
+    },
+    {
+      text: "At the ___ (1) ___ fair, students presented their ___ (2) ___ inventions; the judges found their ___ (3) ___ thinking ___ (4) ___, and the event was a ___ (5) ___ celebration of young minds.",
+      answers: ["scientific", "innovative", "analytical", "impressive", "joyous"],
+      wordBox: [
+        "scientific", "innovative", "analytical", "impressive", "joyous",
+        "unscientific", "uninventive", "superficial", "unimpressive", "joyless"
+      ],
+      hints: [
+        "Related to science (-ific from science).",
+        "Having new ideas (innovate + -ive).",
+        "Involving analysis (-ical from analyse).",
+        "Making a strong impression (-ive from impress).",
+        "Full of joy (-ous from joy)."
+      ],
+      explanations: [
+        "'Scientific' is 'science' + -ific meaning relating to science.",
+        "'Innovative' is 'innovate' + -ive meaning introducing new ideas.",
+        "'Analytical' is 'analyse' + -ical meaning using careful examination.",
+        "'Impressive' is 'impress' + -ive meaning making a strong impact.",
+        "'Joyous' is 'joy' + -ous meaning full of happiness."
+      ],
+      clueWords: [["fair"],["inventions"],["thinking"],["judges"],["celebration"]]
+    },
+    {
+      text: "The ___ (1) ___ of Singapore's racial groups was ___ (2) ___ during the Harmony Day ___ (3) ___; students gained ___ (4) ___ of different customs and showed ___ (5) ___ towards all cultures.",
+      answers: ["diversity", "visible", "celebration", "awareness", "respectfulness"],
+      wordBox: [
+        "diversity", "visible", "celebration", "awareness", "respectfulness",
+        "uniformity", "invisible", "mourning", "ignorance", "disrespect"
+      ],
+      hints: [
+        "State of being diverse (-ity from diverse).",
+        "Able to be seen (-ible from visible).",
+        "Act of celebrating (-tion from celebrate).",
+        "State of being aware (-ness from aware).",
+        "Quality of being respectful (-ness from respectful)."
+      ],
+      explanations: [
+        "'Diversity' is 'diverse' + -ity meaning variety.",
+        "'Visible' uses '-ible' meaning able to be seen.",
+        "'Celebration' is 'celebrate' + -tion meaning a joyful event.",
+        "'Awareness' is 'aware' + -ness meaning knowledge of something.",
+        "'Respectfulness' is 'respectful' + -ness meaning showing respect."
+      ],
+      clueWords: [["racial groups"],["during"],["Harmony Day"],["customs"],["cultures"]]
     }
   ],
   p5: [
@@ -3464,6 +5396,144 @@ export const morphologicalAffix = { p1: [
         "'Long-term' is a compound word."
       ],
       clueWords: [["initiative"],["development"],["benefits"],["projects"],["partnerships"]]
+    },
+{
+      text: "Singapore's ___ (1) ___ in water technology has led to international ___ (2) ___; the ___ (3) ___ of NEWater showcases the nation's ___ (4) ___ approach to ___ (5) ___ challenges.",
+      answers: ["specialisation", "recognition", "development", "innovative", "environmental"],
+      wordBox: [
+        "specialisation", "recognition", "development", "innovative", "environmental",
+        "generalisation", "ignorance", "abandonment", "traditional", "personal"
+      ],
+      hints: [
+        "Act of specialising (-tion from specialise).",
+        "Act of recognising (-tion from recognise).",
+        "Process of developing (-ment from develop).",
+        "Having new ideas (innovate + -ive).",
+        "Related to the environment (-al from environment)."
+      ],
+      explanations: [
+        "'Specialisation' is 'specialise' + -tion meaning focusing on a particular area.",
+        "'Recognition' is 'recognise' + -tion meaning acknowledgement.",
+        "'Development' is 'develop' + -ment meaning the process of growth.",
+        "'Innovative' is 'innovate' + -ive meaning introducing new methods.",
+        "'Environmental' is 'environment' + -al meaning relating to nature."
+      ],
+      clueWords: [["water technology"],["international"],["NEWater"],["approach"],["challenges"]]
+    },
+    {
+      text: "The ___ (1) ___ of heritage buildings requires ___ (2) ___ planning; ___ (3) ___ craftsmen use ___ (4) ___ techniques to ensure ___ (5) ___ restoration of historical structures.",
+      answers: ["preservation", "meticulous", "experienced", "traditional", "successful"],
+      wordBox: [
+        "preservation", "meticulous", "experienced", "traditional", "successful",
+        "demolition", "careless", "inexperienced", "modern", "unsuccessful"
+      ],
+      hints: [
+        "Act of preserving (-tion from preserve).",
+        "Showing great attention to detail.",
+        "Having experience (-ed from experience).",
+        "Relating to tradition (-al from tradition).",
+        "Having success (-ful from success)."
+      ],
+      explanations: [
+        "'Preservation' is 'preserve' + -ation meaning the act of keeping safe.",
+        "'Meticulous' means extremely careful and precise.",
+        "'Experienced' is 'experience' + -ed meaning having knowledge from practice.",
+        "'Traditional' is 'tradition' + -al meaning following customs.",
+        "'Successful' is 'success' + -ful meaning achieving the desired result."
+      ],
+      clueWords: [["heritage buildings"],["planning"],["craftsmen"],["techniques"],["restoration"]]
+    },
+    {
+      text: "The ___ (1) ___ of young volunteers demonstrated remarkable ___ (2) ___; their ___ (3) ___ commitment to community service was ___ (4) ___, earning widespread ___ (5) ___.",
+      answers: ["selflessness", "dedication", "unwavering", "commendable", "admiration"],
+      wordBox: [
+        "selflessness", "dedication", "unwavering", "commendable", "admiration",
+        "selfishness", "neglect", "wavering", "shameful", "criticism"
+      ],
+      hints: [
+        "Quality of being selfless (-ness from selfless).",
+        "Act of dedicating (-tion from dedicate).",
+        "Not wavering (un- = not + wavering).",
+        "Able to be commended (-able from commend).",
+        "Act of admiring (-tion from admire)."
+      ],
+      explanations: [
+        "'Selflessness' is 'selfless' + -ness meaning putting others first.",
+        "'Dedication' is 'dedicate' + -tion meaning strong commitment.",
+        "'Unwavering' uses 'un-' meaning not, so not changing or unsteady.",
+        "'Commendable' is 'commend' + -able meaning worthy of praise.",
+        "'Admiration' is 'admire' + -tion meaning great respect."
+      ],
+      clueWords: [["volunteers"],["commitment"],["community service"],["earning"],["widespread"]]
+    },
+    {
+      text: "The ___ (1) ___ transformation of Jurong from swampland to industrial hub was ___ (2) ___; engineers showed ___ (3) ___ in solving problems, and the ___ (4) ___ of new factories boosted ___ (5) ___.",
+      answers: ["remarkable", "unprecedented", "resourcefulness", "establishment", "employment"],
+      wordBox: [
+        "remarkable", "unprecedented", "resourcefulness", "establishment", "employment",
+        "unremarkable", "common", "helplessness", "closure", "unemployment"
+      ],
+      hints: [
+        "Worthy of remark (-able from remark).",
+        "Not preceded by anything similar (un- + precedent + -ed).",
+        "Quality of being resourceful (-ness from resourceful).",
+        "Act of establishing (-ment from establish).",
+        "State of being employed (-ment from employ)."
+      ],
+      explanations: [
+        "'Remarkable' is 'remark' + -able meaning noteworthy.",
+        "'Unprecedented' uses 'un-' meaning not and 'precedent' meaning previous example.",
+        "'Resourcefulness' is 'resourceful' + -ness meaning ability to find solutions.",
+        "'Establishment' is 'establish' + -ment meaning the act of setting up.",
+        "'Employment' is 'employ' + -ment meaning the state of having a job."
+      ],
+      clueWords: [["transformation","Jurong"],["swampland","hub"],["solving problems"],["factories"],["boosted"]]
+    },
+    {
+      text: "The ___ (1) ___ competition challenged students to think ___ (2) ___; participants showed ___ (3) ___ in their problem-solving and received ___ (4) ___ for their ___ (5) ___ solutions.",
+      answers: ["mathematical", "creatively", "persistence", "encouragement", "inventive"],
+      wordBox: [
+        "mathematical", "creatively", "persistence", "encouragement", "inventive",
+        "physical", "lazily", "impatience", "discouragement", "unoriginal"
+      ],
+      hints: [
+        "Related to mathematics (-ical from mathematics).",
+        "In a creative manner (-ly from creative).",
+        "Quality of persisting (-ence from persist).",
+        "Act of encouraging (-ment from encourage).",
+        "Having the ability to invent (-ive from invent)."
+      ],
+      explanations: [
+        "'Mathematical' is 'mathematics' + -ical meaning relating to maths.",
+        "'Creatively' is 'creative' + -ly meaning in an imaginative way.",
+        "'Persistence' is 'persist' + -ence meaning continued effort.",
+        "'Encouragement' is 'encourage' + -ment meaning support and motivation.",
+        "'Inventive' is 'invent' + -ive meaning able to create new things."
+      ],
+      clueWords: [["competition"],["think"],["problem-solving"],["received"],["solutions"]]
+    },
+    {
+      text: "The ___ (1) ___ nature of Singapore's workforce contributes to ___ (2) ___ growth; workers display ___ (3) ___ and ___ (4) ___, which leads to greater ___ (5) ___ in all industries.",
+      answers: ["multicultural", "economic", "professionalism", "adaptability", "productivity"],
+      wordBox: [
+        "multicultural", "economic", "professionalism", "adaptability", "productivity",
+        "monocultural", "political", "amateurism", "rigidity", "laziness"
+      ],
+      hints: [
+        "Having many cultures (multi- = many + cultural).",
+        "Related to the economy (-ic from economy).",
+        "Quality of being professional (-ism from professional).",
+        "Ability to adapt (-ity from adaptable).",
+        "Quality of being productive (-ity from productive)."
+      ],
+      explanations: [
+        "'Multicultural' uses 'multi-' meaning many and 'cultural' meaning of culture.",
+        "'Economic' is 'economy' + -ic meaning relating to trade and money.",
+        "'Professionalism' is 'professional' + -ism meaning the quality of being professional.",
+        "'Adaptability' is 'adaptable' + -ity meaning the ability to adjust.",
+        "'Productivity' is 'productive' + -ity meaning the rate of producing work."
+      ],
+      clueWords: [["workforce"],["growth"],["workers","display"],["display"],["industries"]]
     }
   ],
   p6: [
@@ -3558,6 +5628,144 @@ export const morphologicalAffix = { p1: [
         "'Personalised' is 'personal' + -ised."
       ],
       clueWords: [["approach"],["testing"],["analysis"],["diagnosis"],["treatment"]]
+    },
+{
+      text: "The ___ (1) ___ of Singapore's diplomatic relations reflects decades of ___ (2) ___ engagement; through ___ (3) ___ partnerships, the nation has achieved ___ (4) ___ in ___ (5) ___ trade agreements.",
+      answers: ["strengthening", "multilateral", "collaborative", "breakthroughs", "international"],
+      wordBox: [
+        "strengthening", "multilateral", "collaborative", "breakthroughs", "international",
+        "weakening", "unilateral", "competitive", "setbacks", "domestic"
+      ],
+      hints: [
+        "Process of making stronger (-ening from strengthen).",
+        "Involving many sides (multi- + lateral).",
+        "Working together (collaborate + -ive).",
+        "Major achievements (break + through + -s).",
+        "Between nations (inter- + national)."
+      ],
+      explanations: [
+        "'Strengthening' is 'strengthen' + -ing meaning the process of becoming stronger.",
+        "'Multilateral' uses 'multi-' meaning many and 'lateral' meaning sides.",
+        "'Collaborative' is 'collaborate' + -ive meaning working jointly.",
+        "'Breakthroughs' is 'break' + 'through' meaning significant advances.",
+        "'International' uses 'inter-' meaning between and 'national' meaning of nations."
+      ],
+      clueWords: [["diplomatic relations"],["engagement"],["partnerships"],["achieved"],["trade"]]
+    },
+    {
+      text: "The ___ (1) ___ of Singapore's bilingual policy is ___ (2) ___; its ___ (3) ___ implementation has created a ___ (4) ___ advantage in ___ (5) ___ communication.",
+      answers: ["effectiveness", "undeniable", "systematic", "competitive", "cross-cultural"],
+      wordBox: [
+        "effectiveness", "undeniable", "systematic", "competitive", "cross-cultural",
+        "ineffectiveness", "questionable", "haphazard", "disadvantageous", "monocultural"
+      ],
+      hints: [
+        "Quality of being effective (-ness from effective).",
+        "Cannot be denied (un- + deny + -able).",
+        "Following a system (-atic from system).",
+        "Relating to competition (-ive from compete).",
+        "Across cultures (cross- + cultural)."
+      ],
+      explanations: [
+        "'Effectiveness' is 'effective' + -ness meaning the degree of success.",
+        "'Undeniable' uses 'un-' meaning not and '-able' meaning able to be denied.",
+        "'Systematic' is 'system' + -atic meaning done methodically.",
+        "'Competitive' is 'compete' + -ive meaning giving an advantage.",
+        "'Cross-cultural' uses 'cross-' meaning across different cultures."
+      ],
+      clueWords: [["bilingual policy"],["is"],["implementation"],["advantage"],["communication"]]
+    },
+    {
+      text: "The ___ (1) ___ of urban planning in Singapore demonstrates ___ (2) ___ foresight; ___ (3) ___ green buildings and ___ (4) ___ transport systems reflect a commitment to ___ (5) ___.",
+      answers: ["sophistication", "extraordinary", "energy-efficient", "interconnected", "sustainability"],
+      wordBox: [
+        "sophistication", "extraordinary", "energy-efficient", "interconnected", "sustainability",
+        "simplicity", "ordinary", "energy-wasteful", "disconnected", "wastefulness"
+      ],
+      hints: [
+        "Quality of being sophisticated (-tion from sophisticate).",
+        "Beyond ordinary (extra- = beyond + ordinary).",
+        "Using energy well (energy + efficient as compound).",
+        "Connected between parts (inter- + connected).",
+        "Ability to sustain (-ity from sustainable)."
+      ],
+      explanations: [
+        "'Sophistication' is 'sophisticate' + -tion meaning advanced complexity.",
+        "'Extraordinary' uses 'extra-' meaning beyond what is ordinary.",
+        "'Energy-efficient' is a compound meaning using energy wisely.",
+        "'Interconnected' uses 'inter-' meaning between, so connected together.",
+        "'Sustainability' is 'sustainable' + -ity meaning ability to maintain."
+      ],
+      clueWords: [["urban planning"],["foresight"],["buildings"],["transport"],["commitment"]]
+    },
+    {
+      text: "The ___ (1) ___ research programme produced ___ (2) ___ findings; scientists demonstrated ___ (3) ___ in their methodology, and the ___ (4) ___ of their work earned global ___ (5) ___.",
+      answers: ["groundbreaking", "transformative", "thoroughness", "significance", "acknowledgement"],
+      wordBox: [
+        "groundbreaking", "transformative", "thoroughness", "significance", "acknowledgement",
+        "conventional", "insignificant", "carelessness", "triviality", "dismissal"
+      ],
+      hints: [
+        "Breaking new ground (compound: ground + breaking).",
+        "Causing major change (transform + -ive).",
+        "Quality of being thorough (-ness from thorough).",
+        "State of being significant (-ance from significant).",
+        "Act of acknowledging (-ment from acknowledge)."
+      ],
+      explanations: [
+        "'Groundbreaking' is a compound meaning pioneering or innovative.",
+        "'Transformative' is 'transform' + -ive meaning causing major change.",
+        "'Thoroughness' is 'thorough' + -ness meaning completeness.",
+        "'Significance' is 'significant' + -ance meaning importance.",
+        "'Acknowledgement' is 'acknowledge' + -ment meaning recognition."
+      ],
+      clueWords: [["research"],["findings"],["methodology"],["work"],["global"]]
+    },
+    {
+      text: "The ___ (1) ___ of racial harmony requires ___ (2) ___ effort from all citizens; through ___ (3) ___ dialogue and ___ (4) ___ understanding, Singaporeans can overcome ___ (5) ___ and build unity.",
+      answers: ["maintenance", "continuous", "constructive", "mutual", "divisiveness"],
+      wordBox: [
+        "maintenance", "continuous", "constructive", "mutual", "divisiveness",
+        "abandonment", "occasional", "destructive", "one-sided", "togetherness"
+      ],
+      hints: [
+        "Act of maintaining (-ance from maintain).",
+        "Going on without stopping (continue + -ous).",
+        "Building up, helpful (construct + -ive).",
+        "Shared between parties.",
+        "Quality of causing division (-ness from divisive)."
+      ],
+      explanations: [
+        "'Maintenance' is 'maintain' + -ance meaning the act of keeping something going.",
+        "'Continuous' is 'continue' + -ous meaning without interruption.",
+        "'Constructive' is 'construct' + -ive meaning helpful and positive.",
+        "'Mutual' means felt or done by both sides.",
+        "'Divisiveness' is 'divisive' + -ness meaning the tendency to cause disagreement."
+      ],
+      clueWords: [["racial harmony"],["effort"],["dialogue"],["understanding"],["build unity"]]
+    },
+    {
+      text: "The ___ (1) ___ of Singapore's founding generation is ___ (2) ___; their ___ (3) ___ vision and ___ (4) ___ leadership transformed an ___ (5) ___ nation into a thriving metropolis.",
+      answers: ["contribution", "immeasurable", "visionary", "transformational", "underdeveloped"],
+      wordBox: [
+        "contribution", "immeasurable", "visionary", "transformational", "underdeveloped",
+        "destruction", "measurable", "short-sighted", "conventional", "overdeveloped"
+      ],
+      hints: [
+        "Act of contributing (-tion from contribute).",
+        "Cannot be measured (im- = not + measurable).",
+        "Having great vision (-ary from vision).",
+        "Causing transformation (-al from transformation).",
+        "Not sufficiently developed (under- + developed)."
+      ],
+      explanations: [
+        "'Contribution' is 'contribute' + -tion meaning something given.",
+        "'Immeasurable' uses 'im-' meaning not, so too great to measure.",
+        "'Visionary' is 'vision' + -ary meaning having foresight.",
+        "'Transformational' is 'transformation' + -al meaning causing great change.",
+        "'Underdeveloped' uses 'under-' meaning below the needed level."
+      ],
+      clueWords: [["founding generation"],["is"],["vision"],["leadership"],["nation","metropolis"]]
     }
   ]
 };
@@ -4160,6 +6368,144 @@ export const collocationCloze = { p1: [
         "'Lasting change' means permanent transformation."
       ],
       clueWords: [["discovery"],["implications"],["research"],["recognition"],["change"]]
+    },
+{
+      text: "During recess at the school canteen, Wei Lin wanted to ___ (1) ___ friends with the new student from China. Her teacher always told the class to ___ (2) ___ attention when others were speaking. Wei Lin showed ___ (3) ___ manners by saying 'please' and 'thank you' to the canteen auntie. After school, she planned to ___ (4) ___ her homework before watching television. When ___ (5) ___ rain started to pour outside, everyone stayed in the canteen a little longer.",
+      answers: ["make", "pay", "good", "do", "heavy"],
+      wordBox: [
+        "make", "pay", "good", "do", "heavy",
+        "get", "give", "nice", "finish", "big"
+      ],
+      hints: [
+        "'___ friends' is a common collocation meaning to become friends with someone.",
+        "'___ attention' means to focus and listen carefully.",
+        "'___ manners' describes polite and respectful behaviour.",
+        "'___ homework' is the correct way to say completing school work.",
+        "'___ rain' describes rain that falls hard and heavily."
+      ],
+      explanations: [
+        "We say 'make friends', not 'get friends'. 'Make' is the correct verb that goes with 'friends'.",
+        "We say 'pay attention', not 'give attention'. 'Pay' is the correct verb for this collocation.",
+        "We say 'good manners', not 'nice manners'. 'Good' is the adjective that naturally pairs with 'manners'.",
+        "We say 'do homework', not 'finish homework'. 'Do' is the correct verb that goes with 'homework'.",
+        "We say 'heavy rain', not 'big rain'. 'Heavy' is the adjective that naturally describes intense rain."
+      ],
+      clueWords: [["friends"],["attention"],["manners"],["homework"],["rain"]]
+    },
+    {
+      text: "Under the ___ (1) ___ sunshine at the school playground, the children decided to ___ (2) ___ turns on the slide. Their teacher reminded them to ___ (3) ___ quiet while waiting in line. After playing, Ravi and his ___ (4) ___ friends walked back to class together. Everyone agreed they had ___ (5) ___ fun during the break.",
+      answers: ["bright", "take", "keep", "close", "great"],
+      wordBox: [
+        "bright", "take", "keep", "close", "great",
+        "strong", "have", "stay", "near", "big"
+      ],
+      hints: [
+        "'___ sunshine' describes sunshine that is clear and strong.",
+        "'___ turns' means to share by doing something one after another.",
+        "'___ quiet' means to remain silent and not make noise.",
+        "'___ friends' describes friends who are very dear to you.",
+        "'___ fun' describes a very enjoyable time."
+      ],
+      explanations: [
+        "We say 'bright sunshine', not 'strong sunshine'. 'Bright' naturally pairs with 'sunshine'.",
+        "We say 'take turns', not 'have turns'. 'Take' is the correct verb for sharing equally.",
+        "We say 'keep quiet', not 'stay quiet'. 'Keep' is the verb that pairs with 'quiet'.",
+        "We say 'close friends', not 'near friends'. 'Close' means having a strong emotional bond.",
+        "We say 'great fun', not 'big fun'. 'Great' naturally pairs with 'fun'."
+      ],
+      clueWords: [["sunshine"],["turns"],["quiet"],["friends"],["fun"]]
+    },
+    {
+      text: "When ___ (1) ___ rain poured down one afternoon, Mrs Tan told the class to ___ (2) ___ attention to the weather report on television. She warned them not to play in the rain or they might ___ (3) ___ a cold. Instead, the children decided to ___ (4) ___ their homework in the classroom. By the time they finished, some of them had ___ (5) ___ asleep at their desks.",
+      answers: ["heavy", "pay", "catch", "do", "fallen"],
+      wordBox: [
+        "heavy", "pay", "catch", "do", "fallen",
+        "strong", "give", "get", "make", "gone"
+      ],
+      hints: [
+        "'___ rain' describes rain that falls with great force.",
+        "'___ attention' means to listen and focus carefully.",
+        "'___ a cold' means to become sick with a cold.",
+        "'___ homework' is the correct way to say completing school work.",
+        "'___ asleep' means to go to sleep, often without meaning to."
+      ],
+      explanations: [
+        "We say 'heavy rain', not 'strong rain'. 'Heavy' is the adjective that naturally describes intense rain.",
+        "We say 'pay attention', not 'give attention'. 'Pay' is the correct verb for this collocation.",
+        "We say 'catch a cold', not 'get a cold'. 'Catch' is the verb that pairs with 'a cold'.",
+        "We say 'do homework', not 'make homework'. 'Do' is the correct verb for this collocation.",
+        "We say 'fallen asleep', not 'gone asleep'. 'Fall' is the verb that naturally pairs with 'asleep'."
+      ],
+      clueWords: [["rain"],["attention"],["cold"],["homework"],["asleep"]]
+    },
+    {
+      text: "At Priya's birthday party in the HDB void deck, her mother reminded everyone to show ___ (1) ___ manners and say 'thank you' for the party favours. The children had to ___ (2) ___ turns playing the games that Priya's father had planned. Priya was happy to ___ (3) ___ friends with her new neighbour, Xiao Ming. All the ___ (4) ___ work her parents had put in made the party a success. Everyone agreed they had ___ (5) ___ fun that afternoon.",
+      answers: ["good", "take", "make", "hard", "great"],
+      wordBox: [
+        "good", "take", "make", "hard", "great",
+        "nice", "have", "get", "tough", "big"
+      ],
+      hints: [
+        "'___ manners' describes polite and respectful behaviour.",
+        "'___ turns' means to do something one after another fairly.",
+        "'___ friends' means to become friendly with someone new.",
+        "'___ work' describes effort that requires a lot of energy.",
+        "'___ fun' describes a very enjoyable experience."
+      ],
+      explanations: [
+        "We say 'good manners', not 'nice manners'. 'Good' naturally pairs with 'manners'.",
+        "We say 'take turns', not 'have turns'. 'Take' is the correct verb for sharing fairly.",
+        "We say 'make friends', not 'get friends'. 'Make' is the verb that pairs with 'friends'.",
+        "We say 'hard work', not 'tough work'. 'Hard' is the correct adjective for this collocation.",
+        "We say 'great fun', not 'big fun'. 'Great' naturally describes a wonderful time."
+      ],
+      clueWords: [["manners"],["turns"],["friends"],["work"],["fun"]]
+    },
+    {
+      text: "When taking care of the class hamster, the students had to ___ (1) ___ turns feeding it every morning. Their teacher told them to ___ (2) ___ attention to how much food the hamster needed. Looking after a pet was ___ (3) ___ work, but the children enjoyed it. They became ___ (4) ___ friends through their shared responsibility. The hamster would often ___ (5) ___ asleep in their hands after being fed.",
+      answers: ["take", "pay", "hard", "close", "fall"],
+      wordBox: [
+        "take", "pay", "hard", "close", "fall",
+        "have", "give", "tough", "near", "go"
+      ],
+      hints: [
+        "'___ turns' means to share a duty by doing it one at a time.",
+        "'___ attention' means to watch and listen carefully.",
+        "'___ work' describes something that requires much effort.",
+        "'___ friends' describes people who share a strong bond.",
+        "'___ asleep' means to begin sleeping."
+      ],
+      explanations: [
+        "We say 'take turns', not 'have turns'. 'Take' is the verb that goes with 'turns'.",
+        "We say 'pay attention', not 'give attention'. 'Pay' naturally pairs with 'attention'.",
+        "We say 'hard work', not 'tough work'. 'Hard' is the correct adjective for this collocation.",
+        "We say 'close friends', not 'near friends'. 'Close' means emotionally connected.",
+        "We say 'fall asleep', not 'go asleep'. 'Fall' is the verb that pairs with 'asleep'."
+      ],
+      clueWords: [["turns"],["attention"],["work"],["friends"],["asleep"]]
+    },
+    {
+      text: "Every morning, Amir would ___ (1) ___ ready for school while the ___ (2) ___ sunshine streamed through his window. His mother always reminded him to ___ (3) ___ the truth if anything went wrong at school. During lessons, his teacher expected the class to ___ (4) ___ quiet and listen. After school, Amir would ___ (5) ___ his homework before going out to play.",
+      answers: ["get", "bright", "tell", "keep", "do"],
+      wordBox: [
+        "get", "bright", "tell", "keep", "do",
+        "make", "strong", "say", "stay", "finish"
+      ],
+      hints: [
+        "'___ ready' means to prepare yourself for something.",
+        "'___ sunshine' describes clear, strong light from the sun.",
+        "'___ the truth' means to be honest about what happened.",
+        "'___ quiet' means to remain silent.",
+        "'___ homework' is the correct way to say completing school assignments."
+      ],
+      explanations: [
+        "We say 'get ready', not 'make ready'. 'Get' is the verb that goes with 'ready'.",
+        "We say 'bright sunshine', not 'strong sunshine'. 'Bright' naturally describes sunshine.",
+        "We say 'tell the truth', not 'say the truth'. 'Tell' is the verb for this collocation.",
+        "We say 'keep quiet', not 'stay quiet'. 'Keep' is the verb that pairs with 'quiet'.",
+        "We say 'do homework', not 'finish homework'. 'Do' is the correct verb for homework."
+      ],
+      clueWords: [["ready"],["sunshine"],["truth"],["quiet"],["homework"]]
     }
   ],
   p4: [
@@ -4254,6 +6600,144 @@ export const collocationCloze = { p1: [
         "'Impressive results' means remarkable outcomes."
       ],
       clueWords: [["instruction"],["support"],["encouragement"],["homework"],["results"]]
+    },
+{
+      text: "During the school camp at Pulau Ubin, the students formed a ___ (1) ___ bond with their teammates. Each group had to ___ (2) ___ responsibility for setting up their own tents. Their teachers encouraged them to ___ (3) ___ goals for the activities ahead. By the end of the first day, every group had ___ (4) ___ great progress in completing the obstacle course. Many students also showed a ___ (5) ___ interest in the wildlife around the campsite.",
+      answers: ["strong", "take", "set", "made", "keen"],
+      wordBox: [
+        "strong", "take", "set", "made", "keen",
+        "big", "hold", "put", "did", "sharp"
+      ],
+      hints: [
+        "'___ bond' describes a close and powerful connection.",
+        "'___ responsibility' means to accept a duty or obligation.",
+        "'___ goals' means to decide what you want to achieve.",
+        "'___ progress' means to move forward or improve.",
+        "'___ interest' describes a strong desire to learn about something."
+      ],
+      explanations: [
+        "We say 'strong bond', not 'big bond'. 'Strong' naturally pairs with 'bond'.",
+        "We say 'take responsibility', not 'hold responsibility'. 'Take' is the correct verb.",
+        "We say 'set goals', not 'put goals'. 'Set' is the verb for establishing goals.",
+        "We say 'made progress', not 'did progress'. 'Make' is the verb that goes with 'progress'.",
+        "We say 'keen interest', not 'sharp interest'. 'Keen' means eager or enthusiastic."
+      ],
+      clueWords: [["bond"],["responsibility"],["goals"],["progress"],["interest"]]
+    },
+    {
+      text: "On Racial Harmony Day, our school organised events to ___ (1) ___ awareness about Singapore's multicultural heritage. Students from different backgrounds received a ___ (2) ___ welcome as they shared their traditional food and costumes. Many showed ___ (3) ___ interest in learning about one another's customs. Through the activities, classmates formed a ___ (4) ___ bond that went beyond racial differences. Everyone gained a ___ (5) ___ respect for the diversity in Singapore.",
+      answers: ["raise", "warm", "keen", "strong", "deep"],
+      wordBox: [
+        "raise", "warm", "keen", "strong", "deep",
+        "lift", "hot", "big", "hard", "high"
+      ],
+      hints: [
+        "'___ awareness' means to make people more conscious of an issue.",
+        "'___ welcome' describes a friendly and heartfelt greeting.",
+        "'___ interest' describes an eager desire to know more.",
+        "'___ bond' describes a close and lasting connection.",
+        "'___ respect' describes a sincere and heartfelt admiration."
+      ],
+      explanations: [
+        "We say 'raise awareness', not 'lift awareness'. 'Raise' is the correct verb.",
+        "We say 'warm welcome', not 'hot welcome'. 'Warm' describes a friendly reception.",
+        "We say 'keen interest', not 'big interest'. 'Keen' means eager and enthusiastic.",
+        "We say 'strong bond', not 'hard bond'. 'Strong' naturally pairs with 'bond'.",
+        "We say 'deep respect', not 'high respect'. 'Deep' describes sincere feeling."
+      ],
+      clueWords: [["awareness"],["welcome"],["interest"],["bond"],["respect"]]
+    },
+    {
+      text: "Our school's Green Club launched a project to ___ (1) ___ awareness about reducing plastic waste. Every student was encouraged to ___ (2) ___ responsibility for keeping the school clean. Within a month, the club had ___ (3) ___ great progress in cutting down on plastic use. The principal said it was a ___ (4) ___ opportunity for students to learn about protecting the environment. The Green Club played a ___ (5) ___ role in making the school more eco-friendly.",
+      answers: ["raise", "take", "made", "golden", "vital"],
+      wordBox: [
+        "raise", "take", "made", "golden", "vital",
+        "lift", "hold", "did", "silver", "big"
+      ],
+      hints: [
+        "'___ awareness' means to bring attention to an important issue.",
+        "'___ responsibility' means to accept a duty willingly.",
+        "'___ progress' means to advance or improve over time.",
+        "'___ opportunity' describes a perfect or ideal chance.",
+        "'___ role' describes a part that is extremely important."
+      ],
+      explanations: [
+        "We say 'raise awareness', not 'lift awareness'. 'Raise' is the correct verb for this collocation.",
+        "We say 'take responsibility', not 'hold responsibility'. 'Take' naturally pairs with 'responsibility'.",
+        "We say 'made progress', not 'did progress'. 'Make' is the verb for this collocation.",
+        "We say 'golden opportunity', not 'silver opportunity'. 'Golden' means ideal or precious.",
+        "We say 'vital role', not 'big role'. 'Vital' means critically important."
+      ],
+      clueWords: [["awareness"],["responsibility"],["progress"],["opportunity"],["role"]]
+    },
+    {
+      text: "Before Sports Day, Coach Lim told the athletes to ___ (1) ___ goals for their individual events. During the weeks of training, every team ___ (2) ___ steady progress in improving their timing. The runners had a ___ (3) ___ interest in learning new techniques from their seniors. Sports Day was a ___ (4) ___ opportunity to show the results of their hard work. The relay team shared a ___ (5) ___ bond that helped them win the final race.",
+      answers: ["set", "made", "keen", "golden", "strong"],
+      wordBox: [
+        "set", "made", "keen", "golden", "strong",
+        "put", "did", "big", "silver", "hard"
+      ],
+      hints: [
+        "'___ goals' means to decide on targets to work towards.",
+        "'___ progress' means to move forward and improve.",
+        "'___ interest' describes an eager enthusiasm to learn.",
+        "'___ opportunity' describes a very special and perfect chance.",
+        "'___ bond' describes a powerful and close connection."
+      ],
+      explanations: [
+        "We say 'set goals', not 'put goals'. 'Set' is the correct verb for goals.",
+        "We say 'made progress', not 'did progress'. 'Make' naturally pairs with 'progress'.",
+        "We say 'keen interest', not 'big interest'. 'Keen' means strongly enthusiastic.",
+        "We say 'golden opportunity', not 'silver opportunity'. 'Golden' describes an ideal chance.",
+        "We say 'strong bond', not 'hard bond'. 'Strong' naturally describes a powerful connection."
+      ],
+      clueWords: [["goals"],["progress"],["interest"],["opportunity"],["bond"]]
+    },
+    {
+      text: "During the school's Community Service Week, students visited an old folks' home to ___ (1) ___ a hand with the daily activities. The elderly residents gave the children a ___ (2) ___ welcome and shared stories about old Singapore. The students were eager to ___ (3) ___ responsibility for organising the games. Their visit helped to ___ (4) ___ awareness about the needs of the elderly in our community. Many students developed a ___ (5) ___ interest in volunteering after the experience.",
+      answers: ["lend", "warm", "take", "raise", "keen"],
+      wordBox: [
+        "lend", "warm", "take", "raise", "keen",
+        "give", "hot", "hold", "lift", "sharp"
+      ],
+      hints: [
+        "'___ a hand' means to help someone with a task.",
+        "'___ welcome' describes a kind and friendly greeting.",
+        "'___ responsibility' means to accept a duty or obligation.",
+        "'___ awareness' means to bring attention to an issue.",
+        "'___ interest' means an enthusiastic desire to learn more."
+      ],
+      explanations: [
+        "We say 'lend a hand', not 'give a hand'. 'Lend' naturally pairs with 'a hand'.",
+        "We say 'warm welcome', not 'hot welcome'. 'Warm' describes a heartfelt greeting.",
+        "We say 'take responsibility', not 'hold responsibility'. 'Take' is the correct verb.",
+        "We say 'raise awareness', not 'lift awareness'. 'Raise' is the verb for this collocation.",
+        "We say 'keen interest', not 'sharp interest'. 'Keen' means eager and enthusiastic."
+      ],
+      clueWords: [["hand"],["welcome"],["responsibility"],["awareness"],["interest"]]
+    },
+    {
+      text: "For their group project on Singapore's history, the students had to ___ (1) ___ goals and plan their research carefully. They ___ (2) ___ good progress by visiting the National Museum and interviewing their grandparents. The project was a ___ (3) ___ opportunity to learn about the nation's past. Each member had to ___ (4) ___ responsibility for completing a different section of the presentation. Working together helped the group build a ___ (5) ___ bond with one another.",
+      answers: ["set", "made", "golden", "take", "strong"],
+      wordBox: [
+        "set", "made", "golden", "take", "strong",
+        "put", "did", "silver", "hold", "hard"
+      ],
+      hints: [
+        "'___ goals' means to establish targets or objectives.",
+        "'___ progress' means to advance and improve.",
+        "'___ opportunity' describes an ideal and precious chance.",
+        "'___ responsibility' means to accept a duty.",
+        "'___ bond' describes a powerful, close relationship."
+      ],
+      explanations: [
+        "We say 'set goals', not 'put goals'. 'Set' is the correct verb for establishing objectives.",
+        "We say 'made progress', not 'did progress'. 'Make' is the verb for this collocation.",
+        "We say 'golden opportunity', not 'silver opportunity'. 'Golden' means precious and ideal.",
+        "We say 'take responsibility', not 'hold responsibility'. 'Take' naturally pairs with 'responsibility'.",
+        "We say 'strong bond', not 'hard bond'. 'Strong' describes a powerful connection."
+      ],
+      clueWords: [["goals"],["progress"],["opportunity"],["responsibility"],["bond"]]
     }
   ],
   p5: [
@@ -4348,6 +6832,144 @@ export const collocationCloze = { p1: [
         "'Informative guided tours' means educational walks."
       ],
       clueWords: [["artefacts"],["civilisations"],["appreciation"],["exhibits"],["tours"]]
+    },
+{
+      text: "The National Heritage Board organised a programme to ___ (1) ___ attention to Singapore's Peranakan culture. Volunteers with ___ (2) ___ knowledge of traditional crafts taught students how to make beaded slippers. The workshops ___ (3) ___ new ground by combining digital technology with traditional art forms. The organisers hoped their efforts would ___ (4) ___ fruit and inspire a new generation to preserve their heritage. The event left a ___ (5) ___ impression on everyone who attended.",
+      answers: ["draw", "vast", "broke", "bear", "lasting"],
+      wordBox: [
+        "draw", "vast", "broke", "bear", "lasting",
+        "pull", "big", "cut", "give", "long"
+      ],
+      hints: [
+        "'___ attention' means to attract people's notice or focus.",
+        "'___ knowledge' describes an extremely wide range of understanding.",
+        "'___ new ground' means to do something innovative or original.",
+        "'___ fruit' means to produce positive results over time.",
+        "'___ impression' describes a memory or impact that stays with you."
+      ],
+      explanations: [
+        "We say 'draw attention', not 'pull attention'. 'Draw' naturally pairs with 'attention'.",
+        "We say 'vast knowledge', not 'big knowledge'. 'Vast' means extremely extensive.",
+        "We say 'broke new ground', not 'cut new ground'. 'Break' is the verb for this collocation.",
+        "We say 'bear fruit', not 'give fruit'. 'Bear' means to produce or yield results.",
+        "We say 'lasting impression', not 'long impression'. 'Lasting' means enduring over time."
+      ],
+      clueWords: [["attention"],["knowledge"],["ground"],["fruit"],["impression"]]
+    },
+    {
+      text: "Singapore's water conservation campaign aimed to ___ (1) ___ attention to the importance of saving water. The nation had to ___ (2) ___ challenges such as limited land for reservoirs and a growing population. Years of research finally ___ (3) ___ fruit when the NEWater plant was opened. There was ___ (4) ___ competition among agencies to develop the best water-saving methods. The campaign left a ___ (5) ___ impression on students, who started saving water at home.",
+      answers: ["draw", "face", "bore", "fierce", "lasting"],
+      wordBox: [
+        "draw", "face", "bore", "fierce", "lasting",
+        "pull", "meet", "grew", "strong", "long"
+      ],
+      hints: [
+        "'___ attention' means to attract focus to an issue.",
+        "'___ challenges' means to confront difficulties directly.",
+        "'___ fruit' means to produce successful results after much effort.",
+        "'___ competition' describes very intense and determined rivalry.",
+        "'___ impression' describes an effect that remains in memory for a long time."
+      ],
+      explanations: [
+        "We say 'draw attention', not 'pull attention'. 'Draw' is the correct verb for this collocation.",
+        "We say 'face challenges', not 'meet challenges'. 'Face' means to confront directly.",
+        "We say 'bore fruit', not 'grew fruit'. 'Bear' (past tense: bore) is the verb for producing results.",
+        "We say 'fierce competition', not 'strong competition'. 'Fierce' describes intense rivalry.",
+        "We say 'lasting impression', not 'long impression'. 'Lasting' means enduring and memorable."
+      ],
+      clueWords: [["attention"],["challenges"],["fruit"],["competition"],["impression"]]
+    },
+    {
+      text: "The community centre in Toa Payoh organised a talent show that left a ___ (1) ___ impression on the residents. Participants had to ___ (2) ___ challenges such as stage fright and limited rehearsal time. There was ___ (3) ___ competition among the groups to win the top prize. The judges, who had ___ (4) ___ knowledge of the performing arts, chose the winners fairly. Everyone agreed that the months of hard work had ___ (5) ___ fruit in a memorable evening.",
+      answers: ["lasting", "face", "fierce", "vast", "borne"],
+      wordBox: [
+        "lasting", "face", "fierce", "vast", "borne",
+        "long", "meet", "strong", "wide", "given"
+      ],
+      hints: [
+        "'___ impression' describes an effect that remains in memory for a long time.",
+        "'___ challenges' means to confront difficulties bravely.",
+        "'___ competition' describes very intense rivalry.",
+        "'___ knowledge' describes an extremely wide understanding of a subject.",
+        "'___ fruit' means to finally produce good results."
+      ],
+      explanations: [
+        "We say 'lasting impression', not 'long impression'. 'Lasting' means enduring over time.",
+        "We say 'face challenges', not 'meet challenges'. 'Face' is the correct verb for this collocation.",
+        "We say 'fierce competition', not 'strong competition'. 'Fierce' describes intense rivalry.",
+        "We say 'vast knowledge', not 'wide knowledge'. 'Vast' means extremely extensive.",
+        "We say 'borne fruit', not 'given fruit'. 'Bear' (past participle: borne) means to produce results."
+      ],
+      clueWords: [["impression"],["challenges"],["competition"],["knowledge"],["fruit"]]
+    },
+    {
+      text: "The National Youth Council launched a programme to help students ___ (1) ___ experience in community leadership. Participants had to ___ (2) ___ challenges such as planning events and managing budgets. There was ___ (3) ___ competition for places in the programme, as many students applied. The initiative ___ (4) ___ new ground by pairing young people with experienced mentors. Graduates of the programme said it left a ___ (5) ___ impression that shaped their future goals.",
+      answers: ["gain", "face", "fierce", "broke", "lasting"],
+      wordBox: [
+        "gain", "face", "fierce", "broke", "lasting",
+        "get", "meet", "strong", "cut", "long"
+      ],
+      hints: [
+        "'___ experience' means to acquire skills and knowledge through practice.",
+        "'___ challenges' means to deal with difficulties directly.",
+        "'___ competition' describes very intense and determined rivalry.",
+        "'___ new ground' means to do something that has never been done before.",
+        "'___ impression' describes an effect that stays with you for a long time."
+      ],
+      explanations: [
+        "We say 'gain experience', not 'get experience'. 'Gain' is the formal verb for acquiring experience.",
+        "We say 'face challenges', not 'meet challenges'. 'Face' means to confront directly.",
+        "We say 'fierce competition', not 'strong competition'. 'Fierce' describes intense rivalry.",
+        "We say 'broke new ground', not 'cut new ground'. 'Break' is the correct verb for innovation.",
+        "We say 'lasting impression', not 'long impression'. 'Lasting' means enduring and memorable."
+      ],
+      clueWords: [["experience"],["challenges"],["competition"],["ground"],["impression"]]
+    },
+    {
+      text: "The restoration of Chinatown's shophouses helped to ___ (1) ___ attention to Singapore's architectural heritage. Local historians with ___ (2) ___ knowledge of the area's past guided visitors through the narrow streets. The conservation project ___ (3) ___ new ground by using advanced 3D scanning to document each building. Despite having to ___ (4) ___ challenges such as high costs, the team pressed on. Their dedication to preserving history made a ___ (5) ___ impression on the community.",
+      answers: ["draw", "vast", "broke", "face", "lasting"],
+      wordBox: [
+        "draw", "vast", "broke", "face", "lasting",
+        "pull", "wide", "cut", "meet", "long"
+      ],
+      hints: [
+        "'___ attention' means to attract people's focus and interest.",
+        "'___ knowledge' describes a very wide and deep understanding.",
+        "'___ new ground' means to pioneer something original.",
+        "'___ challenges' means to confront and deal with difficulties.",
+        "'___ impression' describes an impact that stays in people's minds."
+      ],
+      explanations: [
+        "We say 'draw attention', not 'pull attention'. 'Draw' is the correct verb for this collocation.",
+        "We say 'vast knowledge', not 'wide knowledge'. 'Vast' means extremely extensive.",
+        "We say 'broke new ground', not 'cut new ground'. 'Break' is the verb for pioneering work.",
+        "We say 'face challenges', not 'meet challenges'. 'Face' means to confront directly.",
+        "We say 'lasting impression', not 'long impression'. 'Lasting' means memorable and enduring."
+      ],
+      clueWords: [["attention"],["knowledge"],["ground"],["challenges"],["impression"]]
+    },
+    {
+      text: "The school's tree-planting initiative finally ___ (1) ___ fruit when the garden won a national award. Students had to ___ (2) ___ challenges such as poor soil quality and hot weather. The garden ___ (3) ___ new ground by growing vegetables that were served in the school canteen. It ___ (4) ___ attention from educators across Singapore, who visited to learn from the project. The school maintained ___ (5) ___ standards in caring for every plant in the garden.",
+      answers: ["bore", "face", "broke", "drew", "high"],
+      wordBox: [
+        "bore", "face", "broke", "drew", "high",
+        "gave", "meet", "cut", "pulled", "tall"
+      ],
+      hints: [
+        "'___ fruit' means to produce successful results after effort.",
+        "'___ challenges' means to confront problems bravely.",
+        "'___ new ground' means to try something innovative.",
+        "'___ attention' means to attract interest and notice.",
+        "'___ standards' describes expectations that are set at a superior level."
+      ],
+      explanations: [
+        "We say 'bore fruit', not 'gave fruit'. 'Bear' (past tense: bore) means to yield results.",
+        "We say 'face challenges', not 'meet challenges'. 'Face' is the correct verb.",
+        "We say 'broke new ground', not 'cut new ground'. 'Break' is the verb for this collocation.",
+        "We say 'drew attention', not 'pulled attention'. 'Draw' (past tense: drew) is the correct verb.",
+        "We say 'high standards', not 'tall standards'. 'High' naturally pairs with 'standards'."
+      ],
+      clueWords: [["fruit"],["challenges"],["ground"],["attention"],["standards"]]
     }
   ],
   p6: [
@@ -4442,6 +7064,144 @@ export const collocationCloze = { p1: [
         "'Devastating consequences' means destructive results."
       ],
       clueWords: [["findings"],["climate"],["action"],["solutions"],["consequences"]]
+    },
+{
+      text: "Singapore's founding leaders played a ___ (1) ___ role in shaping the nation's future. When the country faced economic hardships in the 1960s, its people ___ (2) ___ the storm with courage and resilience. The government decided to ___ (3) ___ ahead with bold industrialisation plans despite the risks. Their ___ (4) ___ commitment to education and housing transformed the young nation. Decades of careful planning finally ___ (5) ___ results, making Singapore a thriving global city.",
+      answers: ["pivotal", "weathered", "forge", "unwavering", "yielded"],
+      wordBox: [
+        "pivotal", "weathered", "forge", "unwavering", "yielded",
+        "important", "survived", "push", "strong", "gave"
+      ],
+      hints: [
+        "'___ role' describes a part that is centrally important and decisive.",
+        "'___ the storm' means to survive a difficult period successfully.",
+        "'___ ahead' means to move forward with determination.",
+        "'___ commitment' describes dedication that never wavers or falters.",
+        "'___ results' means to produce outcomes or returns."
+      ],
+      explanations: [
+        "We say 'pivotal role', not 'important role'. 'Pivotal' means critically decisive.",
+        "We say 'weathered the storm', not 'survived the storm'. 'Weather' means to endure hardship.",
+        "We say 'forge ahead', not 'push ahead'. 'Forge' means to move forward with determination.",
+        "We say 'unwavering commitment', not 'strong commitment'. 'Unwavering' means completely steady.",
+        "We say 'yielded results', not 'gave results'. 'Yield' means to produce or generate outcomes."
+      ],
+      clueWords: [["role"],["storm"],["ahead"],["commitment"],["results"]]
+    },
+    {
+      text: "The school's values education programme stood in ___ (1) ___ contrast to the purely academic approach of the past. Teachers who ___ (2) ___ a positive influence on their students were recognised at the annual awards ceremony. Mentors played a ___ (3) ___ role in guiding students through difficult times. The school's ___ (4) ___ commitment to character development earned it national praise. The programme had a ___ (5) ___ impact on graduates, many of whom became community leaders.",
+      answers: ["stark", "exerted", "pivotal", "unwavering", "profound"],
+      wordBox: [
+        "stark", "exerted", "pivotal", "unwavering", "profound",
+        "sharp", "placed", "important", "strong", "deep"
+      ],
+      hints: [
+        "'___ contrast' describes a very obvious and striking difference.",
+        "'___ influence' means to apply pressure or have an effect on others.",
+        "'___ role' describes a position of central importance.",
+        "'___ commitment' describes dedication that does not waver.",
+        "'___ impact' describes a very deep and significant effect."
+      ],
+      explanations: [
+        "We say 'stark contrast', not 'sharp contrast'. 'Stark' means strikingly obvious.",
+        "We say 'exerted influence', not 'placed influence'. 'Exert' means to apply force or pressure.",
+        "We say 'pivotal role', not 'important role'. 'Pivotal' means decisively important.",
+        "We say 'unwavering commitment', not 'strong commitment'. 'Unwavering' means absolutely steady.",
+        "We say 'profound impact', not 'deep impact'. 'Profound' describes something deeply significant."
+      ],
+      clueWords: [["contrast"],["influence"],["role"],["commitment"],["impact"]]
+    },
+    {
+      text: "The school's intensive revision programme ___ (1) ___ results when students achieved record-breaking scores in the PSLE. Preparing for the national examination was a ___ (2) ___ task, but the students remained focused. Fuelled by a ___ (3) ___ ambition to succeed, they studied late into the night. Their teachers encouraged them to ___ (4) ___ ahead even when the workload seemed overwhelming. The school celebrated its ___ (5) ___ success at the year-end ceremony.",
+      answers: ["yielded", "daunting", "burning", "forge", "resounding"],
+      wordBox: [
+        "yielded", "daunting", "burning", "forge", "resounding",
+        "gave", "difficult", "strong", "push", "loud"
+      ],
+      hints: [
+        "'___ results' means to produce or generate outcomes.",
+        "'___ task' describes something that seems intimidating and challenging.",
+        "'___ ambition' describes an intensely powerful desire to achieve something.",
+        "'___ ahead' means to press forward with determination.",
+        "'___ success' describes an overwhelmingly impressive achievement."
+      ],
+      explanations: [
+        "We say 'yielded results', not 'gave results'. 'Yield' is the formal verb for producing outcomes.",
+        "We say 'daunting task', not 'difficult task'. 'Daunting' means intimidatingly challenging.",
+        "We say 'burning ambition', not 'strong ambition'. 'Burning' describes a fierce, passionate desire.",
+        "We say 'forge ahead', not 'push ahead'. 'Forge' implies determined, unstoppable progress.",
+        "We say 'resounding success', not 'loud success'. 'Resounding' means unmistakably impressive."
+      ],
+      clueWords: [["results"],["task"],["ambition"],["ahead"],["success"]]
+    },
+    {
+      text: "As a small nation, Singapore has managed to ___ (1) ___ considerable influence on the global stage. The country plays a ___ (2) ___ role in international trade and diplomacy. Its leaders have had to ___ (3) ___ a balance between embracing globalisation and preserving local culture. The ___ (4) ___ contrast between Singapore's past as a fishing village and its present as a modern metropolis amazes visitors. The government has introduced ___ (5) ___ changes to keep the economy competitive in a rapidly evolving world.",
+      answers: ["exert", "pivotal", "strike", "stark", "sweeping"],
+      wordBox: [
+        "exert", "pivotal", "strike", "stark", "sweeping",
+        "place", "important", "find", "sharp", "broad"
+      ],
+      hints: [
+        "'___ influence' means to apply one's power or impact on something.",
+        "'___ role' describes a centrally important and decisive position.",
+        "'___ a balance' means to find a middle ground between competing demands.",
+        "'___ contrast' describes a dramatically obvious difference.",
+        "'___ changes' describes wide-ranging and far-reaching reforms."
+      ],
+      explanations: [
+        "We say 'exert influence', not 'place influence'. 'Exert' means to bring power to bear.",
+        "We say 'pivotal role', not 'important role'. 'Pivotal' means critically central.",
+        "We say 'strike a balance', not 'find a balance'. 'Strike' is the verb for this collocation.",
+        "We say 'stark contrast', not 'sharp contrast'. 'Stark' means strikingly clear.",
+        "We say 'sweeping changes', not 'broad changes'. 'Sweeping' means wide-ranging and significant."
+      ],
+      clueWords: [["influence"],["role"],["balance"],["contrast"],["changes"]]
+    },
+    {
+      text: "Singapore's leaders chose to ___ (1) ___ ahead with ambitious plans for urban renewal in the 1980s. The nation had to ___ (2) ___ the storm of regional economic crises that threatened its stability. The government's ___ (3) ___ commitment to public housing ensured that every citizen had a home. These policies played a ___ (4) ___ role in building social cohesion among diverse communities. Years of disciplined governance ___ (5) ___ results that other developing nations sought to emulate.",
+      answers: ["forge", "weather", "unwavering", "pivotal", "yielded"],
+      wordBox: [
+        "forge", "weather", "unwavering", "pivotal", "yielded",
+        "push", "survive", "strong", "important", "gave"
+      ],
+      hints: [
+        "'___ ahead' means to advance with determination and purpose.",
+        "'___ the storm' means to endure and survive difficult circumstances.",
+        "'___ commitment' describes dedication that remains absolutely constant.",
+        "'___ role' describes a position of critical and decisive importance.",
+        "'___ results' means to produce tangible outcomes."
+      ],
+      explanations: [
+        "We say 'forge ahead', not 'push ahead'. 'Forge' implies powerful, purposeful progress.",
+        "We say 'weather the storm', not 'survive the storm'. 'Weather' means to endure hardship intact.",
+        "We say 'unwavering commitment', not 'strong commitment'. 'Unwavering' means never faltering.",
+        "We say 'pivotal role', not 'important role'. 'Pivotal' means decisively central.",
+        "We say 'yielded results', not 'gave results'. 'Yield' means to produce or generate."
+      ],
+      clueWords: [["ahead"],["storm"],["commitment"],["role"],["results"]]
+    },
+    {
+      text: "Volunteers from all walks of life ___ (1) ___ a positive influence on the youths at the community centre. Their ___ (2) ___ commitment to mentoring at-risk teenagers drew praise from government officials. The centre's approach stood in ___ (3) ___ contrast to punitive methods used in the past. The mentoring programme had a ___ (4) ___ impact on reducing youth crime in the neighbourhood. Community leaders played a ___ (5) ___ role in securing funding and support for the initiative.",
+      answers: ["exerted", "unwavering", "stark", "profound", "pivotal"],
+      wordBox: [
+        "exerted", "unwavering", "stark", "profound", "pivotal",
+        "placed", "strong", "sharp", "deep", "important"
+      ],
+      hints: [
+        "'___ influence' means to apply one's positive effect on others.",
+        "'___ commitment' describes a dedication that never falters.",
+        "'___ contrast' describes a dramatically clear difference.",
+        "'___ impact' describes a deeply significant effect.",
+        "'___ role' describes a position of decisive importance."
+      ],
+      explanations: [
+        "We say 'exerted influence', not 'placed influence'. 'Exert' means to bring one's power to bear.",
+        "We say 'unwavering commitment', not 'strong commitment'. 'Unwavering' means absolutely constant.",
+        "We say 'stark contrast', not 'sharp contrast'. 'Stark' means strikingly obvious.",
+        "We say 'profound impact', not 'deep impact'. 'Profound' means deeply meaningful and significant.",
+        "We say 'pivotal role', not 'important role'. 'Pivotal' means critically decisive."
+      ],
+      clueWords: [["influence"],["commitment"],["contrast"],["impact"],["role"]]
     }
   ]
 };
@@ -5036,6 +7796,213 @@ export const grammaticalRole = { p1: [
         "'Satisfied' describes their feeling when departing."
       ],
       clueWords: [["spoke"],["walked"],["listened"],["reacted"],["departed"]]
+    },
+{
+      text: "At the hawker centre, Grandma ordered ___ (1) ___ while we waited ___ (2) ___; the food arrived ___ (3) ___, and we ate ___ (4) ___ before heading home ___ (5) ___.",
+      answers: ["politely", "patiently", "quickly", "hungrily", "happily"],
+      wordBox: [
+        "politely", "patiently", "quickly", "hungrily", "happily",
+        "rudely", "impatiently", "slowly", "fully", "sadly"
+      ],
+      hints: [
+        "How Grandma ordered (adverb).",
+        "How we waited (adverb).",
+        "How the food arrived (adverb).",
+        "How we ate (adverb).",
+        "How we headed home (adverb)."
+      ],
+      explanations: [
+        "'Politely' modifies 'ordered' - how she placed the order.",
+        "'Patiently' modifies 'waited' - how we waited.",
+        "'Quickly' modifies 'arrived' - how fast the food came.",
+        "'Hungrily' modifies 'ate' - how we consumed the food.",
+        "'Happily' modifies 'heading' - our mood going home."
+      ],
+      clueWords: [["ordered"],["waited"],["arrived"],["ate"],["heading"]]
+    },
+    {
+      text: "The ___ (1) ___ librarian spoke ___ (2) ___, arranged the books ___ (3) ___, and smiled ___ (4) ___ at every student who entered the ___ (5) ___ library.",
+      answers: ["friendly", "softly", "neatly", "warmly", "quiet"],
+      wordBox: [
+        "friendly", "softly", "neatly", "warmly", "quiet",
+        "unfriendly", "loudly", "messily", "coldly", "noisy"
+      ],
+      hints: [
+        "Describes the librarian (adjective).",
+        "How she spoke (adverb).",
+        "How she arranged books (adverb).",
+        "How she smiled (adverb).",
+        "Describes the library (adjective)."
+      ],
+      explanations: [
+        "'Friendly' is an adjective describing the librarian.",
+        "'Softly' is an adverb modifying 'spoke'.",
+        "'Neatly' is an adverb modifying 'arranged'.",
+        "'Warmly' is an adverb modifying 'smiled'.",
+        "'Quiet' is an adjective describing the library."
+      ],
+      clueWords: [["librarian"],["spoke"],["arranged"],["smiled"],["library"]]
+    },
+    {
+      text: "During the school concert, the choir sang ___ (1) ___, the dancers moved ___ (2) ___, and the audience clapped ___ (3) ___; everyone felt ___ (4) ___ and left feeling ___ (5) ___.",
+      answers: ["beautifully", "gracefully", "enthusiastically", "proud", "satisfied"],
+      wordBox: [
+        "beautifully", "gracefully", "enthusiastically", "proud", "satisfied",
+        "badly", "clumsily", "quietly", "ashamed", "disappointed"
+      ],
+      hints: [
+        "How the choir sang (adverb).",
+        "How the dancers moved (adverb).",
+        "How the audience clapped (adverb).",
+        "How everyone felt (adjective).",
+        "How they left feeling (adjective)."
+      ],
+      explanations: [
+        "'Beautifully' modifies 'sang' - how the choir performed.",
+        "'Gracefully' modifies 'moved' - how the dancers performed.",
+        "'Enthusiastically' modifies 'clapped' - how the audience responded.",
+        "'Proud' describes the feeling of everyone.",
+        "'Satisfied' describes how they felt leaving."
+      ],
+      clueWords: [["sang"],["moved"],["clapped"],["felt"],["feeling"]]
+    },
+    {
+      text: "The ___ (1) ___ puppy played ___ (2) ___ in the park, ran ___ (3) ___ after the ball, barked ___ (4) ___, and returned home ___ (5) ___ after a fun day.",
+      answers: ["energetic", "excitedly", "quickly", "loudly", "tiredly"],
+      wordBox: [
+        "energetic", "excitedly", "quickly", "loudly", "tiredly",
+        "lazy", "calmly", "slowly", "quietly", "energetically"
+      ],
+      hints: [
+        "Describes the puppy (adjective).",
+        "How it played (adverb).",
+        "How it ran (adverb).",
+        "How it barked (adverb).",
+        "How it returned home (adverb)."
+      ],
+      explanations: [
+        "'Energetic' is an adjective describing the puppy.",
+        "'Excitedly' is an adverb modifying 'played'.",
+        "'Quickly' is an adverb modifying 'ran'.",
+        "'Loudly' is an adverb modifying 'barked'.",
+        "'Tiredly' is an adverb modifying 'returned'."
+      ],
+      clueWords: [["puppy"],["played"],["ran"],["barked"],["returned"]]
+    },
+    {
+      text: "Mother cooked ___ (1) ___ in the kitchen, stirred the curry ___ (2) ___, tasted it ___ (3) ___, and served the ___ (4) ___ meal to our ___ (5) ___ family.",
+      answers: ["busily", "gently", "carefully", "delicious", "hungry"],
+      wordBox: [
+        "busily", "gently", "carefully", "delicious", "hungry",
+        "lazily", "roughly", "carelessly", "tasteless", "full"
+      ],
+      hints: [
+        "How Mother cooked (adverb).",
+        "How she stirred (adverb).",
+        "How she tasted (adverb).",
+        "Describes the meal (adjective).",
+        "Describes the family (adjective)."
+      ],
+      explanations: [
+        "'Busily' is an adverb modifying 'cooked'.",
+        "'Gently' is an adverb modifying 'stirred'.",
+        "'Carefully' is an adverb modifying 'tasted'.",
+        "'Delicious' is an adjective describing the meal.",
+        "'Hungry' is an adjective describing the family."
+      ],
+      clueWords: [["cooked"],["stirred"],["tasted"],["meal"],["family"]]
+    },
+    {
+      text: "The ___ (1) ___ teacher explained the lesson ___ (2) ___, wrote on the board ___ (3) ___, and answered questions ___ (4) ___; the students listened ___ (5) ___.",
+      answers: ["patient", "clearly", "neatly", "kindly", "attentively"],
+      wordBox: [
+        "patient", "clearly", "neatly", "kindly", "attentively",
+        "impatient", "unclearly", "messily", "rudely", "carelessly"
+      ],
+      hints: [
+        "Describes the teacher (adjective).",
+        "How she explained (adverb).",
+        "How she wrote (adverb).",
+        "How she answered (adverb).",
+        "How students listened (adverb)."
+      ],
+      explanations: [
+        "'Patient' is an adjective describing the teacher.",
+        "'Clearly' is an adverb modifying 'explained'.",
+        "'Neatly' is an adverb modifying 'wrote'.",
+        "'Kindly' is an adverb modifying 'answered'.",
+        "'Attentively' is an adverb modifying 'listened'."
+      ],
+      clueWords: [["teacher"],["explained"],["wrote"],["answered"],["listened"]]
+    },
+    {
+      text: "At the ___ (1) ___ playground, children played ___ (2) ___, climbed ___ (3) ___ on the monkey bars, swung ___ (4) ___ on the swings, and laughed ___ (5) ___.",
+      answers: ["crowded", "happily", "carefully", "high", "joyfully"],
+      wordBox: [
+        "crowded", "happily", "carefully", "high", "joyfully",
+        "empty", "sadly", "recklessly", "low", "quietly"
+      ],
+      hints: [
+        "Describes the playground (adjective).",
+        "How children played (adverb).",
+        "How they climbed (adverb).",
+        "How they swung (adverb).",
+        "How they laughed (adverb)."
+      ],
+      explanations: [
+        "'Crowded' is an adjective describing the playground.",
+        "'Happily' is an adverb modifying 'played'.",
+        "'Carefully' is an adverb modifying 'climbed'.",
+        "'High' is an adverb modifying 'swung'.",
+        "'Joyfully' is an adverb modifying 'laughed'."
+      ],
+      clueWords: [["playground"],["played"],["climbed"],["swung"],["laughed"]]
+    },
+    {
+      text: "The MRT train arrived ___ (1) ___, passengers boarded ___ (2) ___, stood ___ (3) ___ in the cabin, and the train departed ___ (4) ___ towards the ___ (5) ___ station.",
+      answers: ["punctually", "orderly", "quietly", "smoothly", "next"],
+      wordBox: [
+        "punctually", "orderly", "quietly", "smoothly", "next",
+        "late", "chaotically", "loudly", "roughly", "previous"
+      ],
+      hints: [
+        "How the train arrived (adverb).",
+        "How passengers boarded (adverb).",
+        "How they stood (adverb).",
+        "How the train departed (adverb).",
+        "Describes which station (adjective)."
+      ],
+      explanations: [
+        "'Punctually' is an adverb meaning on time.",
+        "'Orderly' is an adverb modifying 'boarded'.",
+        "'Quietly' is an adverb modifying 'stood'.",
+        "'Smoothly' is an adverb modifying 'departed'.",
+        "'Next' is an adjective describing the station."
+      ],
+      clueWords: [["arrived"],["boarded"],["stood"],["departed"],["station"]]
+    },
+    {
+      text: "During recess, Wei Ming ate his food ___ (1) ___, drank water ___ (2) ___, packed his bag ___ (3) ___, and returned to the ___ (4) ___ classroom feeling ___ (5) ___.",
+      answers: ["slowly", "thirstily", "tidily", "quiet", "refreshed"],
+      wordBox: [
+        "slowly", "thirstily", "tidily", "quiet", "refreshed",
+        "quickly", "unwillingly", "messily", "noisy", "tired"
+      ],
+      hints: [
+        "How he ate (adverb).",
+        "How he drank (adverb).",
+        "How he packed (adverb).",
+        "Describes the classroom (adjective).",
+        "How he felt (adjective)."
+      ],
+      explanations: [
+        "'Slowly' is an adverb modifying 'ate'.",
+        "'Thirstily' is an adverb modifying 'drank'.",
+        "'Tidily' is an adverb modifying 'packed'.",
+        "'Quiet' is an adjective describing the classroom.",
+        "'Refreshed' is an adjective describing how he felt."
+      ],
+      clueWords: [["ate"],["drank"],["packed"],["classroom"],["feeling"]]
     }
   ],
   p4: [
@@ -5061,6 +8028,213 @@ export const grammaticalRole = { p1: [
         "'Promptly' modifies 'cleaned up'."
       ],
       clueWords: [["puzzle"],["pieced"],["shouted"],["displayed"],["cleaned"]]
+    },
+{
+      text: "The ___ (1) ___ chef prepared the dishes ___ (2) ___, arranged them ___ (3) ___ on the plates, and served the ___ (4) ___ customers ___ (5) ___.",
+      answers: ["skilled", "expertly", "artistically", "waiting", "promptly"],
+      wordBox: [
+        "skilled", "expertly", "artistically", "waiting", "promptly",
+        "clumsy", "clumsily", "carelessly", "served", "slowly"
+      ],
+      hints: [
+        "Describes the chef (adjective).",
+        "How he prepared (adverb).",
+        "How he arranged (adverb).",
+        "Describes the customers (adjective/participle).",
+        "How he served (adverb)."
+      ],
+      explanations: [
+        "'Skilled' is an adjective describing the chef's ability.",
+        "'Expertly' is an adverb modifying 'prepared'.",
+        "'Artistically' is an adverb modifying 'arranged'.",
+        "'Waiting' is a present participle describing the customers.",
+        "'Promptly' is an adverb modifying 'served'."
+      ],
+      clueWords: [["chef"],["prepared"],["arranged"],["customers"],["served"]]
+    },
+    {
+      text: "The debate team argued ___ (1) ___, presented evidence ___ (2) ___, responded to challenges ___ (3) ___, and celebrated their ___ (4) ___ victory ___ (5) ___.",
+      answers: ["convincingly", "logically", "confidently", "hard-earned", "joyously"],
+      wordBox: [
+        "convincingly", "logically", "confidently", "hard-earned", "joyously",
+        "weakly", "illogically", "nervously", "easy", "sadly"
+      ],
+      hints: [
+        "How they argued (adverb).",
+        "How they presented evidence (adverb).",
+        "How they responded (adverb).",
+        "Describes the victory (adjective).",
+        "How they celebrated (adverb)."
+      ],
+      explanations: [
+        "'Convincingly' is an adverb modifying 'argued'.",
+        "'Logically' is an adverb modifying 'presented'.",
+        "'Confidently' is an adverb modifying 'responded'.",
+        "'Hard-earned' is a compound adjective describing the victory.",
+        "'Joyously' is an adverb modifying 'celebrated'."
+      ],
+      clueWords: [["argued"],["presented"],["responded"],["victory"],["celebrated"]]
+    },
+    {
+      text: "During the science experiment, students measured ___ (1) ___, recorded data ___ (2) ___, observed changes ___ (3) ___, and presented their ___ (4) ___ findings ___ (5) ___.",
+      answers: ["precisely", "accurately", "closely", "interesting", "enthusiastically"],
+      wordBox: [
+        "precisely", "accurately", "closely", "interesting", "enthusiastically",
+        "roughly", "inaccurately", "carelessly", "boring", "reluctantly"
+      ],
+      hints: [
+        "How they measured (adverb).",
+        "How they recorded (adverb).",
+        "How they observed (adverb).",
+        "Describes the findings (adjective).",
+        "How they presented (adverb)."
+      ],
+      explanations: [
+        "'Precisely' is an adverb modifying 'measured'.",
+        "'Accurately' is an adverb modifying 'recorded'.",
+        "'Closely' is an adverb modifying 'observed'.",
+        "'Interesting' is an adjective describing findings.",
+        "'Enthusiastically' is an adverb modifying 'presented'."
+      ],
+      clueWords: [["measured"],["recorded"],["observed"],["findings"],["presented"]]
+    },
+    {
+      text: "The ___ (1) ___ athletes trained ___ (2) ___ every morning, stretched ___ (3) ___ before practice, ran ___ (4) ___ around the track, and improved ___ (5) ___.",
+      answers: ["dedicated", "diligently", "thoroughly", "swiftly", "steadily"],
+      wordBox: [
+        "dedicated", "diligently", "thoroughly", "swiftly", "steadily",
+        "lazy", "occasionally", "briefly", "slowly", "erratically"
+      ],
+      hints: [
+        "Describes the athletes (adjective).",
+        "How they trained (adverb).",
+        "How they stretched (adverb).",
+        "How they ran (adverb).",
+        "How they improved (adverb)."
+      ],
+      explanations: [
+        "'Dedicated' is an adjective describing the athletes.",
+        "'Diligently' is an adverb modifying 'trained'.",
+        "'Thoroughly' is an adverb modifying 'stretched'.",
+        "'Swiftly' is an adverb modifying 'ran'.",
+        "'Steadily' is an adverb modifying 'improved'."
+      ],
+      clueWords: [["athletes"],["trained"],["stretched"],["ran"],["improved"]]
+    },
+    {
+      text: "At the museum, visitors walked ___ (1) ___ through the exhibits, studied the artefacts ___ (2) ___, whispered ___ (3) ___ to each other, and left feeling ___ (4) ___ and ___ (5) ___.",
+      answers: ["slowly", "intently", "quietly", "educated", "inspired"],
+      wordBox: [
+        "slowly", "intently", "quietly", "educated", "inspired",
+        "quickly", "carelessly", "loudly", "confused", "bored"
+      ],
+      hints: [
+        "How they walked (adverb).",
+        "How they studied (adverb).",
+        "How they whispered (adverb).",
+        "How they felt (adjective).",
+        "How they also felt (adjective)."
+      ],
+      explanations: [
+        "'Slowly' is an adverb modifying 'walked'.",
+        "'Intently' is an adverb modifying 'studied'.",
+        "'Quietly' is an adverb modifying 'whispered'.",
+        "'Educated' is an adjective describing their feeling.",
+        "'Inspired' is an adjective describing their feeling."
+      ],
+      clueWords: [["walked"],["studied"],["whispered"],["feeling"],["and"]]
+    },
+    {
+      text: "The volunteers worked ___ (1) ___ at the community centre, greeted visitors ___ (2) ___, distributed food ___ (3) ___, and felt ___ (4) ___ about their ___ (5) ___ contribution.",
+      answers: ["tirelessly", "cheerfully", "fairly", "proud", "meaningful"],
+      wordBox: [
+        "tirelessly", "cheerfully", "fairly", "proud", "meaningful",
+        "lazily", "grumpily", "unfairly", "ashamed", "meaningless"
+      ],
+      hints: [
+        "How they worked (adverb).",
+        "How they greeted (adverb).",
+        "How they distributed (adverb).",
+        "How they felt (adjective).",
+        "Describes the contribution (adjective)."
+      ],
+      explanations: [
+        "'Tirelessly' is an adverb modifying 'worked'.",
+        "'Cheerfully' is an adverb modifying 'greeted'.",
+        "'Fairly' is an adverb modifying 'distributed'.",
+        "'Proud' is an adjective describing their feeling.",
+        "'Meaningful' is an adjective describing the contribution."
+      ],
+      clueWords: [["worked"],["greeted"],["distributed"],["felt"],["contribution"]]
+    },
+    {
+      text: "The ___ (1) ___ conductor led the orchestra ___ (2) ___, directed the musicians ___ (3) ___, and brought the ___ (4) ___ symphony to a ___ (5) ___ conclusion.",
+      answers: ["talented", "masterfully", "precisely", "magnificent", "dramatic"],
+      wordBox: [
+        "talented", "masterfully", "precisely", "magnificent", "dramatic",
+        "inexperienced", "poorly", "vaguely", "boring", "quiet"
+      ],
+      hints: [
+        "Describes the conductor (adjective).",
+        "How he led (adverb).",
+        "How he directed (adverb).",
+        "Describes the symphony (adjective).",
+        "Describes the conclusion (adjective)."
+      ],
+      explanations: [
+        "'Talented' is an adjective describing the conductor.",
+        "'Masterfully' is an adverb modifying 'led'.",
+        "'Precisely' is an adverb modifying 'directed'.",
+        "'Magnificent' is an adjective describing the symphony.",
+        "'Dramatic' is an adjective describing the conclusion."
+      ],
+      clueWords: [["conductor"],["led"],["directed"],["symphony"],["conclusion"]]
+    },
+    {
+      text: "During Chinese New Year, the family gathered ___ (1) ___, exchanged greetings ___ (2) ___, shared the ___ (3) ___ reunion dinner ___ (4) ___, and remembered their ___ (5) ___ ancestors.",
+      answers: ["joyfully", "warmly", "sumptuous", "gratefully", "beloved"],
+      wordBox: [
+        "joyfully", "warmly", "sumptuous", "gratefully", "beloved",
+        "reluctantly", "coldly", "simple", "ungratefully", "forgotten"
+      ],
+      hints: [
+        "How they gathered (adverb).",
+        "How they exchanged greetings (adverb).",
+        "Describes the dinner (adjective).",
+        "How they shared (adverb).",
+        "Describes the ancestors (adjective)."
+      ],
+      explanations: [
+        "'Joyfully' is an adverb modifying 'gathered'.",
+        "'Warmly' is an adverb modifying 'exchanged'.",
+        "'Sumptuous' is an adjective describing the dinner.",
+        "'Gratefully' is an adverb modifying 'shared'.",
+        "'Beloved' is an adjective describing the ancestors."
+      ],
+      clueWords: [["gathered"],["exchanged"],["dinner"],["shared"],["ancestors"]]
+    },
+    {
+      text: "The prefects monitored the canteen ___ (1) ___, spoke to younger students ___ (2) ___, resolved conflicts ___ (3) ___, and reported ___ (4) ___ to their ___ (5) ___ teacher.",
+      answers: ["responsibly", "respectfully", "peacefully", "regularly", "supervising"],
+      wordBox: [
+        "responsibly", "respectfully", "peacefully", "regularly", "supervising",
+        "carelessly", "rudely", "aggressively", "rarely", "absent"
+      ],
+      hints: [
+        "How they monitored (adverb).",
+        "How they spoke (adverb).",
+        "How they resolved conflicts (adverb).",
+        "How they reported (adverb).",
+        "Describes the teacher (adjective/participle)."
+      ],
+      explanations: [
+        "'Responsibly' is an adverb modifying 'monitored'.",
+        "'Respectfully' is an adverb modifying 'spoke'.",
+        "'Peacefully' is an adverb modifying 'resolved'.",
+        "'Regularly' is an adverb modifying 'reported'.",
+        "'Supervising' is a present participle describing the teacher."
+      ],
+      clueWords: [["monitored"],["spoke"],["resolved"],["reported"],["teacher"]]
     }
   ],
   p5: [
@@ -5086,6 +8260,213 @@ export const grammaticalRole = { p1: [
         "'Briefly' modifies 'rested'."
       ],
       clueWords: [["worked"],["documented"],["presented"],["celebrated"],["rested"]]
+    },
+{
+      text: "The researchers analysed the data ___ (1) ___, documented their findings ___ (2) ___, presented conclusions ___ (3) ___, and contributed ___ (4) ___ to the ___ (5) ___ scientific community.",
+      answers: ["systematically", "meticulously", "objectively", "significantly", "global"],
+      wordBox: [
+        "systematically", "meticulously", "objectively", "significantly", "global",
+        "randomly", "carelessly", "subjectively", "minimally", "local"
+      ],
+      hints: [
+        "How they analysed (adverb).",
+        "How they documented (adverb).",
+        "How they presented (adverb).",
+        "How they contributed (adverb).",
+        "Describes the community (adjective)."
+      ],
+      explanations: [
+        "'Systematically' is an adverb modifying 'analysed'.",
+        "'Meticulously' is an adverb modifying 'documented'.",
+        "'Objectively' is an adverb modifying 'presented'.",
+        "'Significantly' is an adverb modifying 'contributed'.",
+        "'Global' is an adjective describing the community."
+      ],
+      clueWords: [["analysed"],["documented"],["presented"],["contributed"],["community"]]
+    },
+    {
+      text: "The environmental campaign was launched ___ (1) ___, promoted ___ (2) ___ across social media, received ___ (3) ___ support, and achieved ___ (4) ___ ___ (5) ___ results.",
+      answers: ["officially", "extensively", "overwhelming", "remarkably", "positive"],
+      wordBox: [
+        "officially", "extensively", "overwhelming", "remarkably", "positive",
+        "unofficially", "narrowly", "minimal", "barely", "negative"
+      ],
+      hints: [
+        "How it was launched (adverb).",
+        "How it was promoted (adverb).",
+        "Describes the support (adjective).",
+        "How it achieved (adverb).",
+        "Describes the results (adjective)."
+      ],
+      explanations: [
+        "'Officially' is an adverb modifying 'launched'.",
+        "'Extensively' is an adverb modifying 'promoted'.",
+        "'Overwhelming' is an adjective describing support.",
+        "'Remarkably' is an adverb modifying 'achieved'.",
+        "'Positive' is an adjective describing results."
+      ],
+      clueWords: [["launched"],["promoted"],["support"],["achieved"],["results"]]
+    },
+    {
+      text: "The heritage tour was conducted ___ (1) ___, featured ___ (2) ___ preserved buildings, explained history ___ (3) ___, and left participants feeling ___ (4) ___ and ___ (5) ___.",
+      answers: ["professionally", "beautifully", "comprehensively", "enlightened", "appreciative"],
+      wordBox: [
+        "professionally", "beautifully", "comprehensively", "enlightened", "appreciative",
+        "amateurishly", "poorly", "superficially", "confused", "indifferent"
+      ],
+      hints: [
+        "How it was conducted (adverb).",
+        "Describes how buildings were preserved (adverb).",
+        "How history was explained (adverb).",
+        "How participants felt (adjective).",
+        "How else they felt (adjective)."
+      ],
+      explanations: [
+        "'Professionally' is an adverb modifying 'conducted'.",
+        "'Beautifully' is an adverb modifying 'preserved'.",
+        "'Comprehensively' is an adverb modifying 'explained'.",
+        "'Enlightened' is an adjective describing how they felt.",
+        "'Appreciative' is an adjective describing their attitude."
+      ],
+      clueWords: [["conducted"],["preserved"],["explained"],["feeling"],["and"]]
+    },
+    {
+      text: "The diplomats negotiated ___ (1) ___, listened to concerns ___ (2) ___, proposed solutions ___ (3) ___, and reached a ___ (4) ___ agreement ___ (5) ___.",
+      answers: ["tactfully", "attentively", "thoughtfully", "mutually-beneficial", "eventually"],
+      wordBox: [
+        "tactfully", "attentively", "thoughtfully", "mutually-beneficial", "eventually",
+        "rudely", "dismissively", "hastily", "one-sided", "immediately"
+      ],
+      hints: [
+        "How they negotiated (adverb).",
+        "How they listened (adverb).",
+        "How they proposed (adverb).",
+        "Describes the agreement (adjective).",
+        "How they reached it (adverb)."
+      ],
+      explanations: [
+        "'Tactfully' is an adverb modifying 'negotiated'.",
+        "'Attentively' is an adverb modifying 'listened'.",
+        "'Thoughtfully' is an adverb modifying 'proposed'.",
+        "'Mutually-beneficial' is a compound adjective describing the agreement.",
+        "'Eventually' is an adverb modifying 'reached'."
+      ],
+      clueWords: [["negotiated"],["listened"],["proposed"],["agreement"],["reached"]]
+    },
+    {
+      text: "The essay was written ___ (1) ___, structured ___ (2) ___, argued ___ (3) ___, and demonstrated the student's ___ (4) ___ understanding of the ___ (5) ___ topic.",
+      answers: ["eloquently", "logically", "persuasively", "profound", "complex"],
+      wordBox: [
+        "eloquently", "logically", "persuasively", "profound", "complex",
+        "poorly", "chaotically", "weakly", "superficial", "simple"
+      ],
+      hints: [
+        "How it was written (adverb).",
+        "How it was structured (adverb).",
+        "How it argued (adverb).",
+        "Describes the understanding (adjective).",
+        "Describes the topic (adjective)."
+      ],
+      explanations: [
+        "'Eloquently' is an adverb modifying 'written'.",
+        "'Logically' is an adverb modifying 'structured'.",
+        "'Persuasively' is an adverb modifying 'argued'.",
+        "'Profound' is an adjective describing understanding.",
+        "'Complex' is an adjective describing the topic."
+      ],
+      clueWords: [["written"],["structured"],["argued"],["understanding"],["topic"]]
+    },
+    {
+      text: "Singapore's economy has grown ___ (1) ___, diversified ___ (2) ___, adapted ___ (3) ___ to global changes, and positioned itself ___ (4) ___ in the ___ (5) ___ market.",
+      answers: ["steadily", "successfully", "flexibly", "strategically", "international"],
+      wordBox: [
+        "steadily", "successfully", "flexibly", "strategically", "international",
+        "erratically", "unsuccessfully", "rigidly", "randomly", "domestic"
+      ],
+      hints: [
+        "How it has grown (adverb).",
+        "How it diversified (adverb).",
+        "How it adapted (adverb).",
+        "How it positioned itself (adverb).",
+        "Describes the market (adjective)."
+      ],
+      explanations: [
+        "'Steadily' is an adverb modifying 'grown'.",
+        "'Successfully' is an adverb modifying 'diversified'.",
+        "'Flexibly' is an adverb modifying 'adapted'.",
+        "'Strategically' is an adverb modifying 'positioned'.",
+        "'International' is an adjective describing the market."
+      ],
+      clueWords: [["grown"],["diversified"],["adapted"],["positioned"],["market"]]
+    },
+    {
+      text: "The social workers responded ___ (1) ___ to the crisis, assessed needs ___ (2) ___, allocated resources ___ (3) ___, and supported the ___ (4) ___ families ___ (5) ___.",
+      answers: ["immediately", "thoroughly", "efficiently", "affected", "compassionately"],
+      wordBox: [
+        "immediately", "thoroughly", "efficiently", "affected", "compassionately",
+        "slowly", "superficially", "wastefully", "wealthy", "indifferently"
+      ],
+      hints: [
+        "How they responded (adverb).",
+        "How they assessed (adverb).",
+        "How they allocated (adverb).",
+        "Describes the families (adjective).",
+        "How they supported (adverb)."
+      ],
+      explanations: [
+        "'Immediately' is an adverb modifying 'responded'.",
+        "'Thoroughly' is an adverb modifying 'assessed'.",
+        "'Efficiently' is an adverb modifying 'allocated'.",
+        "'Affected' is a past participle describing the families.",
+        "'Compassionately' is an adverb modifying 'supported'."
+      ],
+      clueWords: [["responded"],["assessed"],["allocated"],["families"],["supported"]]
+    },
+    {
+      text: "The documentary was filmed ___ (1) ___, narrated ___ (2) ___, edited ___ (3) ___, and received ___ (4) ___ acclaim from ___ (5) ___ critics.",
+      answers: ["cinematically", "engagingly", "seamlessly", "widespread", "distinguished"],
+      wordBox: [
+        "cinematically", "engagingly", "seamlessly", "widespread", "distinguished",
+        "amateurishly", "boringly", "choppily", "limited", "unknown"
+      ],
+      hints: [
+        "How it was filmed (adverb).",
+        "How it was narrated (adverb).",
+        "How it was edited (adverb).",
+        "Describes the acclaim (adjective).",
+        "Describes the critics (adjective)."
+      ],
+      explanations: [
+        "'Cinematically' is an adverb modifying 'filmed'.",
+        "'Engagingly' is an adverb modifying 'narrated'.",
+        "'Seamlessly' is an adverb modifying 'edited'.",
+        "'Widespread' is an adjective describing acclaim.",
+        "'Distinguished' is an adjective describing critics."
+      ],
+      clueWords: [["filmed"],["narrated"],["edited"],["acclaim"],["critics"]]
+    },
+    {
+      text: "The multicultural festival was organised ___ (1) ___, celebrated ___ (2) ___ by all communities, promoted harmony ___ (3) ___, and strengthened the nation's ___ (4) ___ social ___ (5) ___.",
+      answers: ["collaboratively", "enthusiastically", "effectively", "precious", "fabric"],
+      wordBox: [
+        "collaboratively", "enthusiastically", "effectively", "precious", "fabric",
+        "individually", "reluctantly", "ineffectively", "worthless", "division"
+      ],
+      hints: [
+        "How it was organised (adverb).",
+        "How it was celebrated (adverb).",
+        "How it promoted harmony (adverb).",
+        "Describes the social fabric (adjective).",
+        "What was strengthened (noun)."
+      ],
+      explanations: [
+        "'Collaboratively' is an adverb modifying 'organised'.",
+        "'Enthusiastically' is an adverb modifying 'celebrated'.",
+        "'Effectively' is an adverb modifying 'promoted'.",
+        "'Precious' is an adjective describing the value.",
+        "'Fabric' is a noun meaning the basic structure of society."
+      ],
+      clueWords: [["organised"],["celebrated"],["promoted"],["nation's"],["social"]]
     }
   ],
   p6: [
@@ -5111,6 +8492,213 @@ export const grammaticalRole = { p1: [
         "'Professionally' modifies 'behave'."
       ],
       clueWords: [["tasks"],["progress"],["assist"],["deadlines"],["behave"]]
+    },
+{
+      text: "The policy was implemented ___ (1) ___, monitored ___ (2) ___, evaluated ___ (3) ___, and adjusted ___ (4) ___ to ensure ___ (5) ___ outcomes.",
+      answers: ["systematically", "continuously", "rigorously", "accordingly", "optimal"],
+      wordBox: [
+        "systematically", "continuously", "rigorously", "accordingly", "optimal",
+        "haphazardly", "sporadically", "loosely", "randomly", "suboptimal"
+      ],
+      hints: [
+        "How it was implemented (adverb).",
+        "How it was monitored (adverb).",
+        "How it was evaluated (adverb).",
+        "How it was adjusted (adverb).",
+        "Describes the outcomes (adjective)."
+      ],
+      explanations: [
+        "'Systematically' is an adverb modifying 'implemented'.",
+        "'Continuously' is an adverb modifying 'monitored'.",
+        "'Rigorously' is an adverb modifying 'evaluated'.",
+        "'Accordingly' is an adverb modifying 'adjusted'.",
+        "'Optimal' is an adjective describing the best outcomes."
+      ],
+      clueWords: [["implemented"],["monitored"],["evaluated"],["adjusted"],["outcomes"]]
+    },
+    {
+      text: "The legal proceedings were conducted ___ (1) ___, evidence was examined ___ (2) ___, witnesses testified ___ (3) ___, and justice was served ___ (4) ___ and ___ (5) ___.",
+      answers: ["formally", "scrupulously", "truthfully", "fairly", "impartially"],
+      wordBox: [
+        "formally", "scrupulously", "truthfully", "fairly", "impartially",
+        "informally", "carelessly", "falsely", "unfairly", "partially"
+      ],
+      hints: [
+        "How proceedings were conducted (adverb).",
+        "How evidence was examined (adverb).",
+        "How witnesses testified (adverb).",
+        "How justice was served (adverb).",
+        "How else justice was served (adverb)."
+      ],
+      explanations: [
+        "'Formally' is an adverb modifying 'conducted'.",
+        "'Scrupulously' is an adverb modifying 'examined'.",
+        "'Truthfully' is an adverb modifying 'testified'.",
+        "'Fairly' is an adverb modifying 'served'.",
+        "'Impartially' is an adverb meaning without bias."
+      ],
+      clueWords: [["conducted"],["examined"],["testified"],["served"],["and"]]
+    },
+    {
+      text: "The philosophical argument was presented ___ (1) ___, challenged ___ (2) ___ by scholars, defended ___ (3) ___, and ultimately considered ___ (4) ___ to the ___ (5) ___ discourse.",
+      answers: ["eloquently", "vigorously", "persuasively", "invaluable", "ongoing"],
+      wordBox: [
+        "eloquently", "vigorously", "persuasively", "invaluable", "ongoing",
+        "incoherently", "weakly", "unconvincingly", "worthless", "concluded"
+      ],
+      hints: [
+        "How it was presented (adverb).",
+        "How it was challenged (adverb).",
+        "How it was defended (adverb).",
+        "Describes its value (adjective).",
+        "Describes the discourse (adjective)."
+      ],
+      explanations: [
+        "'Eloquently' is an adverb modifying 'presented'.",
+        "'Vigorously' is an adverb modifying 'challenged'.",
+        "'Persuasively' is an adverb modifying 'defended'.",
+        "'Invaluable' is an adjective meaning extremely valuable.",
+        "'Ongoing' is an adjective describing continuing discourse."
+      ],
+      clueWords: [["presented"],["challenged"],["defended"],["considered"],["discourse"]]
+    },
+    {
+      text: "The economic forecast was calculated ___ (1) ___, communicated ___ (2) ___ to stakeholders, interpreted ___ (3) ___ by analysts, and proved ___ (4) ___ ___ (5) ___.",
+      answers: ["mathematically", "transparently", "differently", "remarkably", "accurate"],
+      wordBox: [
+        "mathematically", "transparently", "differently", "remarkably", "accurate",
+        "randomly", "secretly", "identically", "barely", "inaccurate"
+      ],
+      hints: [
+        "How it was calculated (adverb).",
+        "How it was communicated (adverb).",
+        "How it was interpreted (adverb).",
+        "How it proved to be (adverb).",
+        "Describes the forecast (adjective)."
+      ],
+      explanations: [
+        "'Mathematically' is an adverb modifying 'calculated'.",
+        "'Transparently' is an adverb modifying 'communicated'.",
+        "'Differently' is an adverb modifying 'interpreted'.",
+        "'Remarkably' is an adverb modifying 'proved'.",
+        "'Accurate' is an adjective describing the forecast."
+      ],
+      clueWords: [["calculated"],["communicated"],["interpreted"],["proved"],["accurate"]]
+    },
+    {
+      text: "The humanitarian mission was organised ___ (1) ___, funded ___ (2) ___, executed ___ (3) ___, and left a ___ (4) ___ ___ (5) ___ impact on the community.",
+      answers: ["swiftly", "generously", "flawlessly", "profoundly", "positive"],
+      wordBox: [
+        "swiftly", "generously", "flawlessly", "profoundly", "positive",
+        "slowly", "reluctantly", "poorly", "barely", "negative"
+      ],
+      hints: [
+        "How it was organised (adverb).",
+        "How it was funded (adverb).",
+        "How it was executed (adverb).",
+        "How it impacted (adverb).",
+        "Describes the impact (adjective)."
+      ],
+      explanations: [
+        "'Swiftly' is an adverb modifying 'organised'.",
+        "'Generously' is an adverb modifying 'funded'.",
+        "'Flawlessly' is an adverb modifying 'executed'.",
+        "'Profoundly' is an adverb modifying the depth of impact.",
+        "'Positive' is an adjective describing the impact."
+      ],
+      clueWords: [["organised"],["funded"],["executed"],["impact"],["impact"]]
+    },
+    {
+      text: "The treaty was negotiated ___ (1) ___, drafted ___ (2) ___, ratified ___ (3) ___ by all parties, and marked a ___ (4) ___ milestone in ___ (5) ___ relations.",
+      answers: ["diplomatically", "carefully", "unanimously", "historic", "bilateral"],
+      wordBox: [
+        "diplomatically", "carefully", "unanimously", "historic", "bilateral",
+        "aggressively", "hastily", "partially", "minor", "domestic"
+      ],
+      hints: [
+        "How it was negotiated (adverb).",
+        "How it was drafted (adverb).",
+        "How it was ratified (adverb).",
+        "Describes the milestone (adjective).",
+        "Describes the relations (adjective)."
+      ],
+      explanations: [
+        "'Diplomatically' is an adverb modifying 'negotiated'.",
+        "'Carefully' is an adverb modifying 'drafted'.",
+        "'Unanimously' is an adverb meaning with full agreement.",
+        "'Historic' is an adjective describing an important milestone.",
+        "'Bilateral' is an adjective meaning involving two parties."
+      ],
+      clueWords: [["negotiated"],["drafted"],["ratified"],["milestone"],["relations"]]
+    },
+    {
+      text: "The architectural design was conceived ___ (1) ___, developed ___ (2) ___, reviewed ___ (3) ___, and ultimately created a ___ (4) ___ ___ (5) ___ landmark.",
+      answers: ["creatively", "collaboratively", "critically", "visually", "stunning"],
+      wordBox: [
+        "creatively", "collaboratively", "critically", "visually", "stunning",
+        "conventionally", "individually", "superficially", "barely", "ordinary"
+      ],
+      hints: [
+        "How it was conceived (adverb).",
+        "How it was developed (adverb).",
+        "How it was reviewed (adverb).",
+        "How stunning (adverb).",
+        "Describes the landmark (adjective)."
+      ],
+      explanations: [
+        "'Creatively' is an adverb modifying 'conceived'.",
+        "'Collaboratively' is an adverb modifying 'developed'.",
+        "'Critically' is an adverb modifying 'reviewed'.",
+        "'Visually' is an adverb modifying 'stunning'.",
+        "'Stunning' is an adjective describing the landmark."
+      ],
+      clueWords: [["conceived"],["developed"],["reviewed"],["created"],["landmark"]]
+    },
+    {
+      text: "The scientific breakthrough was achieved ___ (1) ___, verified ___ (2) ___, published ___ (3) ___, and will ___ (4) ___ transform the ___ (5) ___ field.",
+      answers: ["unexpectedly", "independently", "internationally", "undoubtedly", "entire"],
+      wordBox: [
+        "unexpectedly", "independently", "internationally", "undoubtedly", "entire",
+        "predictably", "collaboratively", "locally", "possibly", "small"
+      ],
+      hints: [
+        "How it was achieved (adverb).",
+        "How it was verified (adverb).",
+        "How it was published (adverb).",
+        "How certain the transformation is (adverb).",
+        "Describes which part of the field (adjective)."
+      ],
+      explanations: [
+        "'Unexpectedly' is an adverb modifying 'achieved'.",
+        "'Independently' is an adverb modifying 'verified'.",
+        "'Internationally' is an adverb modifying 'published'.",
+        "'Undoubtedly' is an adverb meaning certainly.",
+        "'Entire' is an adjective meaning the whole field."
+      ],
+      clueWords: [["achieved"],["verified"],["published"],["transform"],["field"]]
+    },
+    {
+      text: "The parliamentary debate proceeded ___ (1) ___, arguments were made ___ (2) ___, counterpoints raised ___ (3) ___, and the motion passed ___ (4) ___ with ___ (5) ___ support.",
+      answers: ["orderly", "forcefully", "respectfully", "decisively", "bipartisan"],
+      wordBox: [
+        "orderly", "forcefully", "respectfully", "decisively", "bipartisan",
+        "chaotically", "weakly", "rudely", "narrowly", "partisan"
+      ],
+      hints: [
+        "How it proceeded (adverb).",
+        "How arguments were made (adverb).",
+        "How counterpoints were raised (adverb).",
+        "How it passed (adverb).",
+        "Describes the support (adjective)."
+      ],
+      explanations: [
+        "'Orderly' is an adverb modifying 'proceeded'.",
+        "'Forcefully' is an adverb modifying 'made'.",
+        "'Respectfully' is an adverb modifying 'raised'.",
+        "'Decisively' is an adverb modifying 'passed'.",
+        "'Bipartisan' is an adjective meaning supported by both parties."
+      ],
+      clueWords: [["proceeded"],["made"],["raised"],["passed"],["support"]]
     }
   ]
 };
@@ -5510,6 +9098,213 @@ export const connectorClue = { p1: [
         "'Resumed' means started again."
       ],
       clueWords: [["Since"],["had"],["engineers"],["consequently"],["operations"]]
+    },
+{
+      text: "Because the ___ (1) ___ was heavy, the children ___ (2) ___ indoors during recess; but they still ___ (3) ___ themselves by playing ___ (4) ___ games in the ___ (5) ___.",
+      answers: ["rain", "stayed", "enjoyed", "board", "classroom"],
+      wordBox: [
+        "rain", "stayed", "enjoyed", "board", "classroom",
+        "wind", "left", "disliked", "outdoor", "canteen"
+      ],
+      hints: [
+        "Water falling from the sky.",
+        "Remained in one place.",
+        "Had a good time.",
+        "A type of tabletop game.",
+        "Room where lessons are held."
+      ],
+      explanations: [
+        "'Rain' is the cause introduced by 'Because'.",
+        "'Stayed' is the action caused by the heavy rain.",
+        "'Enjoyed' contrasts with being stuck indoors, linked by 'but'.",
+        "'Board' describes the type of indoor game.",
+        "'Classroom' is where they played instead."
+      ],
+      clueWords: [["Because"],["indoors"],["but"],["playing"],["the"]]
+    },
+    {
+      text: "When the ___ (1) ___ rang, the pupils ___ (2) ___ their books and ___ (3) ___ to the canteen; so they could ___ (4) ___ their ___ (5) ___ before the next lesson.",
+      answers: ["bell", "closed", "walked", "eat", "lunch"],
+      wordBox: [
+        "bell", "closed", "walked", "eat", "lunch",
+        "alarm", "opened", "ran", "pack", "snack"
+      ],
+      hints: [
+        "Sound that signals a change.",
+        "Shut something.",
+        "Moved on foot.",
+        "Consume food.",
+        "Midday meal."
+      ],
+      explanations: [
+        "'Bell' is the signal that starts the action after 'When'.",
+        "'Closed' is what pupils did to their books.",
+        "'Walked' describes orderly movement linked by 'and'.",
+        "'Eat' is the purpose introduced by 'so'.",
+        "'Lunch' is the midday meal they needed to have."
+      ],
+      clueWords: [["When"],["books"],["and"],["so"],["their"]]
+    },
+    {
+      text: "After the ___ (1) ___ ended, Mei Ling ___ (2) ___ her pet hamster; because it was ___ (3) ___, she ___ (4) ___ it fresh water and ___ (5) ___ food.",
+      answers: ["lesson", "checked", "thirsty", "gave", "nutritious"],
+      wordBox: [
+        "lesson", "checked", "thirsty", "gave", "nutritious",
+        "movie", "ignored", "sleepy", "took", "stale"
+      ],
+      hints: [
+        "A period of teaching.",
+        "Looked at carefully.",
+        "Needing a drink.",
+        "Handed over.",
+        "Good for health."
+      ],
+      explanations: [
+        "'Lesson' is what ended, introduced by 'After'.",
+        "'Checked' is the first action after the lesson.",
+        "'Thirsty' is the reason introduced by 'because'.",
+        "'Gave' is the caring action she took.",
+        "'Nutritious' describes the healthy food."
+      ],
+      clueWords: [["After"],["pet"],["because"],["she"],["and"]]
+    },
+    {
+      text: "Before the ___ (1) ___ outing, Father ___ (2) ___ the car and Mother ___ (3) ___ sandwiches; so the family was ___ (4) ___ and ___ (5) ___ for the trip to East Coast Park.",
+      answers: ["family", "washed", "prepared", "ready", "excited"],
+      wordBox: [
+        "family", "washed", "prepared", "ready", "excited",
+        "school", "painted", "bought", "tired", "worried"
+      ],
+      hints: [
+        "A group of relatives.",
+        "Cleaned with water.",
+        "Made food in advance.",
+        "Fully set to go.",
+        "Feeling eager and happy."
+      ],
+      explanations: [
+        "'Family' is the group going on the outing after 'Before'.",
+        "'Washed' is Father's preparation action.",
+        "'Prepared' is Mother's action linked by 'and'.",
+        "'Ready' is the result introduced by 'so'.",
+        "'Excited' describes the family's mood for the trip."
+      ],
+      clueWords: [["Before"],["car"],["and"],["so"],["and"]]
+    },
+    {
+      text: "Because the ___ (1) ___ was slippery, Ahmad ___ (2) ___ carefully; but his friend ___ (3) ___ and scraped his knee, so the teacher ___ (4) ___ a ___ (5) ___ on the wound.",
+      answers: ["playground", "walked", "slipped", "placed", "plaster"],
+      wordBox: [
+        "playground", "walked", "slipped", "placed", "plaster",
+        "corridor", "jumped", "tripped", "removed", "bandage"
+      ],
+      hints: [
+        "Area for children to play.",
+        "Moved on foot slowly.",
+        "Lost footing suddenly.",
+        "Put something somewhere.",
+        "A sticky strip to cover a cut."
+      ],
+      explanations: [
+        "'Playground' is the slippery place introduced by 'Because'.",
+        "'Walked' shows careful movement due to the condition.",
+        "'Slipped' is the contrast introduced by 'but'.",
+        "'Placed' is what the teacher did as a result ('so').",
+        "'Plaster' is the first-aid item used on the wound."
+      ],
+      clueWords: [["Because"],["carefully"],["but"],["so"],["the"]]
+    },
+    {
+      text: "When the ___ (1) ___ stopped, the children ___ (2) ___ outside and ___ (3) ___ in the puddles; because they were ___ (4) ___, their shoes became ___ (5) ___.",
+      answers: ["downpour", "rushed", "splashed", "careless", "muddy"],
+      wordBox: [
+        "downpour", "rushed", "splashed", "careless", "muddy",
+        "thunder", "crept", "swam", "careful", "clean"
+      ],
+      hints: [
+        "Very heavy rain.",
+        "Moved quickly.",
+        "Played in water noisily.",
+        "Not paying attention.",
+        "Covered in dirt and water."
+      ],
+      explanations: [
+        "'Downpour' is what stopped, introduced by 'When'.",
+        "'Rushed' describes the eager movement outside.",
+        "'Splashed' is the playful action linked by 'and'.",
+        "'Careless' is the reason introduced by 'because'.",
+        "'Muddy' is the consequence of their carelessness."
+      ],
+      clueWords: [["When"],["outside"],["and"],["because"],["became"]]
+    },
+    {
+      text: "After Siti ___ (1) ___ her hamster's cage, she ___ (2) ___ fresh bedding inside; and because she was ___ (3) ___, the hamster looked ___ (4) ___ and ___ (5) ___.",
+      answers: ["cleaned", "placed", "gentle", "comfortable", "calm"],
+      wordBox: [
+        "cleaned", "placed", "gentle", "comfortable", "calm",
+        "broke", "threw", "rough", "restless", "scared"
+      ],
+      hints: [
+        "Made something tidy.",
+        "Put something down carefully.",
+        "Soft and kind in manner.",
+        "Feeling at ease.",
+        "Peaceful and still."
+      ],
+      explanations: [
+        "'Cleaned' is the first action introduced by 'After'.",
+        "'Placed' is what Siti did next with the bedding.",
+        "'Gentle' is the quality introduced by 'because'.",
+        "'Comfortable' describes the hamster's state as a result.",
+        "'Calm' is linked by 'and' to show the hamster's mood."
+      ],
+      clueWords: [["After"],["she"],["because"],["looked"],["and"]]
+    },
+    {
+      text: "The children ___ (1) ___ to play catching, but the ___ (2) ___ was too hot; so they ___ (3) ___ under the ___ (4) ___ tree and drank ___ (5) ___ water instead.",
+      answers: ["wanted", "weather", "rested", "shady", "cold"],
+      wordBox: [
+        "wanted", "weather", "rested", "shady", "cold",
+        "refused", "ground", "played", "sunny", "warm"
+      ],
+      hints: [
+        "Wished to do something.",
+        "The outdoor conditions.",
+        "Took a break.",
+        "Protected from the sun.",
+        "Low in temperature."
+      ],
+      explanations: [
+        "'Wanted' shows the children's wish before the contrast.",
+        "'Weather' is the condition that stopped them, after 'but'.",
+        "'Rested' is what they did instead, introduced by 'so'.",
+        "'Shady' describes the tree that gave them shelter.",
+        "'Cold' describes the refreshing water they drank."
+      ],
+      clueWords: [["but"],["too"],["so"],["under"],["and"]]
+    },
+    {
+      text: "Because the ___ (1) ___ was crowded, Wei Ming ___ (2) ___ for a seat; but after he ___ (3) ___ politely, an uncle ___ (4) ___ and ___ (5) ___ him to sit down.",
+      answers: ["bus", "searched", "asked", "stood", "invited"],
+      wordBox: [
+        "bus", "searched", "asked", "stood", "invited",
+        "train", "pushed", "shouted", "sat", "refused"
+      ],
+      hints: [
+        "A large vehicle for passengers.",
+        "Looked around carefully.",
+        "Made a polite request.",
+        "Rose to his feet.",
+        "Offered kindly."
+      ],
+      explanations: [
+        "'Bus' is the crowded place introduced by 'Because'.",
+        "'Searched' is Wei Ming's action due to the crowd.",
+        "'Asked' is what he did politely, introduced by 'after'.",
+        "'Stood' is the uncle's kind response linked by 'but'.",
+        "'Invited' shows the uncle's gracious gesture linked by 'and'."
+      ],
+      clueWords: [["Because"],["for"],["but"],["after"],["and"]]
     }
   ],
   p4: [
@@ -5535,6 +9330,213 @@ export const connectorClue = { p1: [
         "'Opinions' are personal beliefs."
       ],
       clueWords: [["Because"],["was"],["committee"],["and"],["their"]]
+    },
+{
+      text: "Although the ___ (1) ___ at school camp was basic, the pupils ___ (2) ___ it thoroughly; since they had ___ (3) ___ together, their ___ (4) ___ grew even ___ (5) ___.",
+      answers: ["accommodation", "enjoyed", "cooperated", "friendship", "stronger"],
+      wordBox: [
+        "accommodation", "enjoyed", "cooperated", "friendship", "stronger",
+        "equipment", "disliked", "competed", "rivalry", "weaker"
+      ],
+      hints: [
+        "Place to stay or sleep.",
+        "Had a good time with.",
+        "Worked jointly with others.",
+        "Bond between friends.",
+        "More powerful or solid."
+      ],
+      explanations: [
+        "'Accommodation' is contrasted with enjoyment by 'Although'.",
+        "'Enjoyed' shows they had fun despite basic lodging.",
+        "'Cooperated' is the reason introduced by 'since'.",
+        "'Friendship' is what grew as a result.",
+        "'Stronger' describes how the bond deepened."
+      ],
+      clueWords: [["Although"],["thoroughly"],["since"],["their"],["even"]]
+    },
+    {
+      text: "Since the ___ (1) ___ project needed more volunteers, the teacher ___ (2) ___ an announcement; as a result, many pupils ___ (3) ___ and the collection of ___ (4) ___ items ___ (5) ___.",
+      answers: ["recycling", "made", "signed up", "recyclable", "increased"],
+      wordBox: [
+        "recycling", "made", "signed up", "recyclable", "increased",
+        "gardening", "cancelled", "dropped out", "damaged", "decreased"
+      ],
+      hints: [
+        "Reusing waste materials.",
+        "Created or delivered.",
+        "Registered to participate.",
+        "Able to be processed again.",
+        "Went up in number."
+      ],
+      explanations: [
+        "'Recycling' is the project type introduced by 'Since'.",
+        "'Made' is the teacher's action responding to the need.",
+        "'Signed up' is the pupils' response after 'as a result'.",
+        "'Recyclable' describes the items being collected.",
+        "'Increased' shows the positive outcome."
+      ],
+      clueWords: [["Since"],["announcement"],["as a result"],["collection"],["the"]]
+    },
+    {
+      text: "Even though the ___ (1) ___ were tiring, the family ___ (2) ___ the house for Chinese New Year; therefore, every room looked ___ (3) ___ and ___ (4) ___, which made Grandmother ___ (5) ___.",
+      answers: ["preparations", "decorated", "spotless", "festive", "delighted"],
+      wordBox: [
+        "preparations", "decorated", "spotless", "festive", "delighted",
+        "celebrations", "abandoned", "dusty", "gloomy", "upset"
+      ],
+      hints: [
+        "Getting things ready.",
+        "Added ornaments or colours.",
+        "Perfectly clean.",
+        "Cheerful and celebratory.",
+        "Very pleased and happy."
+      ],
+      explanations: [
+        "'Preparations' are tiring but done anyway, after 'Even though'.",
+        "'Decorated' is the family's effort despite tiredness.",
+        "'Spotless' is the result introduced by 'therefore'.",
+        "'Festive' is linked by 'and' to describe the rooms.",
+        "'Delighted' shows Grandmother's happy reaction."
+      ],
+      clueWords: [["Even though"],["house"],["therefore"],["and"],["which"]]
+    },
+    {
+      text: "While the ___ (1) ___ were sweeping the void deck, Ravi ___ (2) ___ the drains nearby; although the work was ___ (3) ___, everyone felt ___ (4) ___ because the neighbourhood looked ___ (5) ___.",
+      answers: ["volunteers", "cleared", "exhausting", "satisfied", "cleaner"],
+      wordBox: [
+        "volunteers", "cleared", "exhausting", "satisfied", "cleaner",
+        "teachers", "blocked", "relaxing", "annoyed", "messier"
+      ],
+      hints: [
+        "People who help without pay.",
+        "Removed rubbish or blockages.",
+        "Very tiring physically.",
+        "Feeling pleased with the result.",
+        "More tidy than before."
+      ],
+      explanations: [
+        "'Volunteers' are helping, introduced by 'While'.",
+        "'Cleared' is what Ravi did at the same time.",
+        "'Exhausting' is conceded by 'although'.",
+        "'Satisfied' is how everyone felt, linked by 'because'.",
+        "'Cleaner' is the visible result of their work."
+      ],
+      clueWords: [["While"],["nearby"],["although"],["because"],["looked"]]
+    },
+    {
+      text: "Unless the ___ (1) ___ submit their forms by Friday, they cannot ___ (2) ___ the school camp; therefore, Mrs Lee ___ (3) ___ them to ___ (4) ___ their parents to sign the ___ (5) ___ promptly.",
+      answers: ["pupils", "attend", "reminded", "ask", "consent"],
+      wordBox: [
+        "pupils", "attend", "reminded", "ask", "consent",
+        "teachers", "organise", "forgot", "tell", "report"
+      ],
+      hints: [
+        "Students in a school.",
+        "Be present at an event.",
+        "Told again so they remember.",
+        "Make a request.",
+        "Permission or agreement."
+      ],
+      explanations: [
+        "'Pupils' must act before the deadline, after 'Unless'.",
+        "'Attend' is what they risk missing without the forms.",
+        "'Reminded' is the teacher's action introduced by 'therefore'.",
+        "'Ask' is what pupils need to do with their parents.",
+        "'Consent' is the permission form that must be signed."
+      ],
+      clueWords: [["Unless"],["cannot"],["therefore"],["to"],["the"]]
+    },
+    {
+      text: "Although the ___ (1) ___ was scorching, the pupils ___ (2) ___ litter along Changi Beach; since they wore ___ (3) ___ and carried water bottles, they ___ (4) ___ the heat and ___ (5) ___ their task.",
+      answers: ["sun", "collected", "caps", "endured", "completed"],
+      wordBox: [
+        "sun", "collected", "caps", "endured", "completed",
+        "rain", "scattered", "boots", "avoided", "abandoned"
+      ],
+      hints: [
+        "The star that gives us light.",
+        "Gathered items together.",
+        "Hats that shade the head.",
+        "Withstood something difficult.",
+        "Finished doing something."
+      ],
+      explanations: [
+        "'Sun' is the harsh condition conceded by 'Although'.",
+        "'Collected' is the action they still performed.",
+        "'Caps' are the protection introduced by 'since'.",
+        "'Endured' shows they withstood the difficulty.",
+        "'Completed' is the successful outcome linked by 'and'."
+      ],
+      clueWords: [["Although"],["along"],["since"],["and"],["their"]]
+    },
+    {
+      text: "Since the ___ (1) ___ needed fresh paint, the residents ___ (2) ___ a weekend gotong royong; even though some were ___ (3) ___, as a result the corridor walls became ___ (4) ___ and ___ (5) ___.",
+      answers: ["block", "organised", "reluctant", "bright", "attractive"],
+      wordBox: [
+        "block", "organised", "reluctant", "bright", "attractive",
+        "school", "cancelled", "eager", "dull", "ugly"
+      ],
+      hints: [
+        "An HDB building.",
+        "Arranged and planned.",
+        "Unwilling at first.",
+        "Full of vivid colour.",
+        "Pleasing to look at."
+      ],
+      explanations: [
+        "'Block' is the building needing work, introduced by 'Since'.",
+        "'Organised' is the community's response to the need.",
+        "'Reluctant' is conceded by 'even though'.",
+        "'Bright' describes the improved walls after 'as a result'.",
+        "'Attractive' is linked by 'and' to show the final look."
+      ],
+      clueWords: [["Since"],["residents"],["even though"],["as a result"],["and"]]
+    },
+    {
+      text: "While the ___ (1) ___ dumplings were steaming, Aunty Chen ___ (2) ___ the pineapple tarts; therefore, everything was ___ (3) ___ by the time the ___ (4) ___ arrived for the reunion ___ (5) ___.",
+      answers: ["glutinous", "baked", "ready", "relatives", "dinner"],
+      wordBox: [
+        "glutinous", "baked", "ready", "relatives", "dinner",
+        "frozen", "fried", "late", "neighbours", "breakfast"
+      ],
+      hints: [
+        "Sticky, like rice flour.",
+        "Cooked in an oven.",
+        "Fully prepared.",
+        "Members of the extended family.",
+        "Evening meal."
+      ],
+      explanations: [
+        "'Glutinous' describes the sticky dumplings, during 'While'.",
+        "'Baked' is what Aunty Chen did at the same time.",
+        "'Ready' is the outcome introduced by 'therefore'.",
+        "'Relatives' are the family members who came.",
+        "'Dinner' is the reunion meal they gathered for."
+      ],
+      clueWords: [["While"],["steaming"],["therefore"],["the"],["reunion"]]
+    },
+    {
+      text: "Although the ___ (1) ___ project seemed difficult, the team ___ (2) ___ a clever plan; as a result, they ___ (3) ___ enough plastic bottles to build a ___ (4) ___ garden ___ (5) ___.",
+      answers: ["recycling", "devised", "collected", "vertical", "display"],
+      wordBox: [
+        "recycling", "devised", "collected", "vertical", "display",
+        "cooking", "copied", "discarded", "horizontal", "cupboard"
+      ],
+      hints: [
+        "Reprocessing waste materials.",
+        "Thought up or invented.",
+        "Gathered items together.",
+        "Going straight up and down.",
+        "An arrangement shown publicly."
+      ],
+      explanations: [
+        "'Recycling' is the project conceded as difficult by 'Although'.",
+        "'Devised' is the team's clever response to the challenge.",
+        "'Collected' is the action that followed after 'as a result'.",
+        "'Vertical' describes the upright garden structure.",
+        "'Display' is the final showcase of their work."
+      ],
+      clueWords: [["Although"],["plan"],["as a result"],["build"],["garden"]]
     }
   ],
   p5: [
@@ -5560,6 +9562,213 @@ export const connectorClue = { p1: [
         "'Extras' means additional items."
       ],
       clueWords: [["However"],["were"],["director"],["and"],["all"]]
+    },
+{
+      text: "Consequently, the early ___ (1) ___ of Singapore worked hard to build a ___ (2) ___ port; furthermore, they ___ (3) ___ trade routes that ___ (4) ___ the nation's ___ (5) ___ growth.",
+      answers: ["settlers", "thriving", "established", "fuelled", "economic"],
+      wordBox: [
+        "settlers", "thriving", "established", "fuelled", "economic",
+        "tourists", "declining", "abandoned", "hindered", "artistic"
+      ],
+      hints: [
+        "People who move to a new place.",
+        "Growing and prospering.",
+        "Set up or founded.",
+        "Powered or drove forward.",
+        "Related to money and trade."
+      ],
+      explanations: [
+        "'Settlers' are the early people, linked to cause by 'Consequently'.",
+        "'Thriving' describes the successful port they built.",
+        "'Established' is an additional action introduced by 'furthermore'.",
+        "'Fuelled' shows how the routes powered growth.",
+        "'Economic' describes the type of growth that resulted."
+      ],
+      clueWords: [["Consequently"],["port"],["furthermore"],["that"],["nation's"]]
+    },
+    {
+      text: "Nevertheless, Singapore's ___ (1) ___ continue to face ___ (2) ___ from rising sea levels; moreover, ___ (3) ___ weather patterns have ___ (4) ___ the risk of ___ (5) ___ flooding in low-lying areas.",
+      answers: ["coastlines", "threats", "unpredictable", "heightened", "severe"],
+      wordBox: [
+        "coastlines", "threats", "unpredictable", "heightened", "severe",
+        "mountains", "benefits", "stable", "reduced", "mild"
+      ],
+      hints: [
+        "Edges where land meets the sea.",
+        "Dangers or possible harms.",
+        "Cannot be foreseen easily.",
+        "Made greater or more intense.",
+        "Very serious or extreme."
+      ],
+      explanations: [
+        "'Coastlines' face danger despite efforts, after 'Nevertheless'.",
+        "'Threats' are the dangers from rising waters.",
+        "'Unpredictable' adds concern, introduced by 'moreover'.",
+        "'Heightened' means the risk has increased.",
+        "'Severe' describes the intensity of possible flooding."
+      ],
+      clueWords: [["Nevertheless"],["from"],["moreover"],["have"],["of"]]
+    },
+    {
+      text: "In spite of their ___ (1) ___ schedules, many Singaporeans ___ (2) ___ at community centres; consequently, the number of ___ (3) ___ programmes has ___ (4) ___, benefiting ___ (5) ___ residents across the island.",
+      answers: ["demanding", "volunteer", "welfare", "expanded", "elderly"],
+      wordBox: [
+        "demanding", "volunteer", "welfare", "expanded", "elderly",
+        "relaxing", "complain", "sporting", "shrunk", "young"
+      ],
+      hints: [
+        "Requiring a lot of effort.",
+        "Offer help without being paid.",
+        "Well-being and support services.",
+        "Grown larger in scope.",
+        "Old or aged people."
+      ],
+      explanations: [
+        "'Demanding' describes the busy schedules conceded by 'In spite of'.",
+        "'Volunteer' is what people do despite being busy.",
+        "'Welfare' describes the support programmes after 'consequently'.",
+        "'Expanded' shows the positive growth in services.",
+        "'Elderly' identifies who benefits from the programmes."
+      ],
+      clueWords: [["In spite of"],["centres"],["consequently"],["has"],["benefiting"]]
+    },
+    {
+      text: "Whereas some communities ___ (1) ___ only one cultural festival, Singapore ___ (2) ___ many; furthermore, citizens of different ___ (3) ___ often ___ (4) ___ each other's celebrations, which ___ (5) ___ social harmony.",
+      answers: ["observe", "celebrates", "ethnicities", "attend", "strengthens"],
+      wordBox: [
+        "observe", "celebrates", "ethnicities", "attend", "strengthens",
+        "ignore", "rejects", "ages", "avoid", "weakens"
+      ],
+      hints: [
+        "Mark or keep a tradition.",
+        "Honours with festivities.",
+        "Racial or cultural groups.",
+        "Go to or be present at.",
+        "Makes something firmer."
+      ],
+      explanations: [
+        "'Observe' is contrasted with Singapore's practice by 'Whereas'.",
+        "'Celebrates' shows Singapore's wider approach.",
+        "'Ethnicities' are the groups added by 'furthermore'.",
+        "'Attend' is the inclusive action people take.",
+        "'Strengthens' is the positive outcome for harmony."
+      ],
+      clueWords: [["Whereas"],["Singapore"],["furthermore"],["often"],["which"]]
+    },
+    {
+      text: "On the other hand, the ___ (1) ___ of plastic bags has ___ (2) ___ in recent years; nevertheless, environmentalists ___ (3) ___ that more ___ (4) ___ action is needed to protect Singapore's ___ (5) ___ ecosystems.",
+      answers: ["usage", "declined", "argue", "decisive", "marine"],
+      wordBox: [
+        "usage", "declined", "argue", "decisive", "marine",
+        "production", "risen", "deny", "hesitant", "forest"
+      ],
+      hints: [
+        "The act of using something.",
+        "Gone down or decreased.",
+        "Present reasons or evidence.",
+        "Firm and determined.",
+        "Related to the sea."
+      ],
+      explanations: [
+        "'Usage' is the contrasting trend introduced by 'On the other hand'.",
+        "'Declined' shows the positive change in plastic bag use.",
+        "'Argue' is what environmentalists do after 'nevertheless'.",
+        "'Decisive' describes the stronger action needed.",
+        "'Marine' identifies the sea ecosystems at risk."
+      ],
+      clueWords: [["On the other hand"],["has"],["nevertheless"],["more"],["Singapore's"]]
+    },
+    {
+      text: "Moreover, the ___ (1) ___ of Bukit Timah Nature Reserve must be ___ (2) ___; consequently, park rangers ___ (3) ___ visitors about ___ (4) ___ behaviour to prevent ___ (5) ___ to the wildlife.",
+      answers: ["biodiversity", "preserved", "educate", "responsible", "harm"],
+      wordBox: [
+        "biodiversity", "preserved", "educate", "responsible", "harm",
+        "scenery", "destroyed", "discourage", "reckless", "benefit"
+      ],
+      hints: [
+        "Variety of plant and animal life.",
+        "Kept safe from damage.",
+        "Teach or inform.",
+        "Showing care and good judgement.",
+        "Damage or injury."
+      ],
+      explanations: [
+        "'Biodiversity' is the additional concern introduced by 'Moreover'.",
+        "'Preserved' is what must happen to protect it.",
+        "'Educate' is the rangers' action after 'consequently'.",
+        "'Responsible' describes the behaviour visitors should show.",
+        "'Harm' is what they aim to prevent."
+      ],
+      clueWords: [["Moreover"],["must"],["consequently"],["about"],["prevent"]]
+    },
+    {
+      text: "Nevertheless, the ___ (1) ___ volunteers ___ (2) ___ food parcels every weekend; furthermore, they ___ (3) ___ free health ___ (4) ___ for the ___ (5) ___ in rental flats across Toa Payoh.",
+      answers: ["dedicated", "distribute", "organise", "screenings", "needy"],
+      wordBox: [
+        "dedicated", "distribute", "organise", "screenings", "needy",
+        "reluctant", "hoard", "cancel", "concerts", "wealthy"
+      ],
+      hints: [
+        "Committed and hardworking.",
+        "Hand out to many people.",
+        "Plan and arrange events.",
+        "Medical checks or examinations.",
+        "People who lack basic necessities."
+      ],
+      explanations: [
+        "'Dedicated' describes the committed volunteers after 'Nevertheless'.",
+        "'Distribute' is their regular action with food parcels.",
+        "'Organise' is the additional effort introduced by 'furthermore'.",
+        "'Screenings' are the health checks they arrange.",
+        "'Needy' identifies the people they help in rental flats."
+      ],
+      clueWords: [["Nevertheless"],["every"],["furthermore"],["free"],["the"]]
+    },
+    {
+      text: "In spite of the ___ (1) ___ challenges, the Racial Harmony Day committee ___ (2) ___ a successful event; moreover, students ___ (3) ___ traditional ___ (4) ___ from various cultures, which ___ (5) ___ mutual understanding.",
+      answers: ["logistical", "organised", "wore", "costumes", "promoted"],
+      wordBox: [
+        "logistical", "organised", "wore", "costumes", "promoted",
+        "financial", "cancelled", "removed", "uniforms", "hindered"
+      ],
+      hints: [
+        "Related to planning and coordination.",
+        "Planned and arranged an event.",
+        "Had clothing on one's body.",
+        "Special outfits for occasions.",
+        "Encouraged or furthered."
+      ],
+      explanations: [
+        "'Logistical' describes the planning challenges after 'In spite of'.",
+        "'Organised' shows the committee succeeded anyway.",
+        "'Wore' is the students' action introduced by 'moreover'.",
+        "'Costumes' are the cultural outfits they dressed in.",
+        "'Promoted' is the positive effect on understanding."
+      ],
+      clueWords: [["In spite of"],["committee"],["moreover"],["from"],["which"]]
+    },
+    {
+      text: "Whereas older ___ (1) ___ relied on handwritten letters, modern Singaporeans ___ (2) ___ digitally; consequently, the postal service has ___ (3) ___ its operations and now ___ (4) ___ more on parcel ___ (5) ___ instead.",
+      answers: ["generations", "communicate", "transformed", "focuses", "delivery"],
+      wordBox: [
+        "generations", "communicate", "transformed", "focuses", "delivery",
+        "students", "whisper", "maintained", "ignores", "storage"
+      ],
+      hints: [
+        "Groups of people born around the same time.",
+        "Exchange information with others.",
+        "Changed completely in form.",
+        "Pays attention mainly to.",
+        "Bringing goods to a destination."
+      ],
+      explanations: [
+        "'Generations' are contrasted in communication styles by 'Whereas'.",
+        "'Communicate' is the modern method being compared.",
+        "'Transformed' is the postal change after 'consequently'.",
+        "'Focuses' shows the new priority of the service.",
+        "'Delivery' is the area the postal service now emphasises."
+      ],
+      clueWords: [["Whereas"],["Singaporeans"],["consequently"],["now"],["more"]]
     }
   ],
   p6: [
@@ -5585,6 +9794,213 @@ export const connectorClue = { p1: [
         "'Complete' means finish."
       ],
       clueWords: [["Therefore"],["is"],["must"],["so"],["project"]]
+    },
+{
+      text: "Notwithstanding the ___ (1) ___ of globalisation, Singapore has ___ (2) ___ its cultural identity; thereby, the nation ___ (3) ___ that economic progress and ___ (4) ___ heritage can ___ (5) ___ harmoniously.",
+      answers: ["pressures", "preserved", "demonstrates", "traditional", "coexist"],
+      wordBox: [
+        "pressures", "preserved", "demonstrates", "traditional", "coexist",
+        "benefits", "abandoned", "conceals", "modern", "clash"
+      ],
+      hints: [
+        "Forces that push for change.",
+        "Kept safe and intact.",
+        "Shows or proves clearly.",
+        "Relating to long-standing customs.",
+        "Exist together peacefully."
+      ],
+      explanations: [
+        "'Pressures' are conceded but overcome after 'Notwithstanding'.",
+        "'Preserved' shows the nation kept its identity intact.",
+        "'Demonstrates' is the proof introduced by 'thereby'.",
+        "'Traditional' describes the cultural heritage being maintained.",
+        "'Coexist' means progress and heritage live side by side."
+      ],
+      clueWords: [["Notwithstanding"],["has"],["thereby"],["and"],["can"]]
+    },
+    {
+      text: "Conversely, while meritocracy ___ (1) ___ equal opportunity, critics ___ (2) ___ that it may ___ (3) ___ those from disadvantaged backgrounds; albeit such concerns are ___ (4) ___, the system remains ___ (5) ___ in Singapore's governance.",
+      answers: ["promotes", "contend", "overlook", "valid", "fundamental"],
+      wordBox: [
+        "promotes", "contend", "overlook", "valid", "fundamental",
+        "prevents", "agree", "favour", "baseless", "optional"
+      ],
+      hints: [
+        "Supports or encourages actively.",
+        "Argue or assert a position.",
+        "Fail to notice or consider.",
+        "Well-founded and reasonable.",
+        "Forming a necessary base."
+      ],
+      explanations: [
+        "'Promotes' is what meritocracy does, contrasted by 'Conversely'.",
+        "'Contend' is how critics respond to the system.",
+        "'Overlook' is the risk they warn about.",
+        "'Valid' concedes the concerns are reasonable after 'albeit'.",
+        "'Fundamental' shows the system's deep importance nonetheless."
+      ],
+      clueWords: [["Conversely"],["while"],["that"],["albeit"],["remains"]]
+    },
+    {
+      text: "In lieu of ___ (1) ___ punishment, the school ___ (2) ___ restorative practices; thereby, students learned to ___ (3) ___ conflicts through ___ (4) ___ and ___ (5) ___, which proved more effective.",
+      answers: ["harsh", "adopted", "resolve", "dialogue", "empathy"],
+      wordBox: [
+        "harsh", "adopted", "resolve", "dialogue", "empathy",
+        "mild", "rejected", "escalate", "silence", "apathy"
+      ],
+      hints: [
+        "Severe or strict in nature.",
+        "Took up and put into practice.",
+        "Settle or find a solution.",
+        "Conversation between parties.",
+        "Ability to understand others' feelings."
+      ],
+      explanations: [
+        "'Harsh' describes what is being replaced after 'In lieu of'.",
+        "'Adopted' is the school's new approach.",
+        "'Resolve' is the skill students gained after 'thereby'.",
+        "'Dialogue' is one method of conflict resolution.",
+        "'Empathy' is the other method, linked by 'and'."
+      ],
+      clueWords: [["In lieu of"],["school"],["thereby"],["through"],["and"]]
+    },
+    {
+      text: "Insofar as ___ (1) ___ leadership requires integrity, Singapore's public servants are ___ (2) ___ to high standards; conversely, any ___ (3) ___ of trust is dealt with ___ (4) ___ to maintain public ___ (5) ___.",
+      answers: ["effective", "held", "breach", "severely", "confidence"],
+      wordBox: [
+        "effective", "held", "breach", "severely", "confidence",
+        "casual", "excused", "display", "leniently", "suspicion"
+      ],
+      hints: [
+        "Producing the desired result.",
+        "Kept to or bound by.",
+        "A violation or breaking of rules.",
+        "In a strict and serious manner.",
+        "Trust and belief in someone."
+      ],
+      explanations: [
+        "'Effective' qualifies leadership, scoped by 'Insofar as'.",
+        "'Held' shows public servants are bound to standards.",
+        "'Breach' is the violation contrasted by 'conversely'.",
+        "'Severely' describes the strict consequence.",
+        "'Confidence' is the public trust being protected."
+      ],
+      clueWords: [["Insofar as"],["are"],["conversely"],["with"],["maintain"]]
+    },
+    {
+      text: "Hitherto, Singapore's education system had ___ (1) ___ academic excellence above all; albeit ___ (2) ___ in intent, this approach sometimes ___ (3) ___ students' ___ (4) ___ well-being, thereby prompting recent ___ (5) ___.",
+      answers: ["prioritised", "well-meaning", "neglected", "emotional", "reforms"],
+      wordBox: [
+        "prioritised", "well-meaning", "neglected", "emotional", "reforms",
+        "ignored", "misguided", "boosted", "physical", "setbacks"
+      ],
+      hints: [
+        "Treated as most important.",
+        "Having good intentions.",
+        "Failed to give proper care to.",
+        "Related to feelings and mental state.",
+        "Changes made to improve a system."
+      ],
+      explanations: [
+        "'Prioritised' is the past focus introduced by 'Hitherto'.",
+        "'Well-meaning' concedes good intent after 'albeit'.",
+        "'Neglected' is the unintended consequence.",
+        "'Emotional' identifies the type of well-being affected.",
+        "'Reforms' are the changes prompted, linked by 'thereby'."
+      ],
+      clueWords: [["Hitherto"],["had"],["albeit"],["thereby"],["prompting"]]
+    },
+    {
+      text: "Notwithstanding the ___ (1) ___ of digital communication, face-to-face ___ (2) ___ remains vital in diplomacy; conversely, an over-reliance on technology may ___ (3) ___ genuine ___ (4) ___ and ___ (5) ___ misunderstandings.",
+      answers: ["convenience", "interaction", "erode", "rapport", "amplify"],
+      wordBox: [
+        "convenience", "interaction", "erode", "rapport", "amplify",
+        "difficulty", "isolation", "strengthen", "tension", "reduce"
+      ],
+      hints: [
+        "Ease of use or access.",
+        "Communication between people.",
+        "Gradually wear away or diminish.",
+        "A close and harmonious relationship.",
+        "Make something greater or louder."
+      ],
+      explanations: [
+        "'Convenience' is conceded but set aside by 'Notwithstanding'.",
+        "'Interaction' is what remains vital despite digital tools.",
+        "'Erode' is the risk introduced by 'conversely'.",
+        "'Rapport' is the relationship that could be damaged.",
+        "'Amplify' means misunderstandings could grow larger."
+      ],
+      clueWords: [["Notwithstanding"],["remains"],["conversely"],["genuine"],["and"]]
+    },
+    {
+      text: "Thereby, ethical ___ (1) ___ in business must be ___ (2) ___ strictly; albeit profit is ___ (3) ___, companies should not ___ (4) ___ their social ___ (5) ___ to the communities they serve.",
+      answers: ["standards", "enforced", "important", "neglect", "responsibilities"],
+      wordBox: [
+        "standards", "enforced", "important", "neglect", "responsibilities",
+        "profits", "relaxed", "irrelevant", "embrace", "privileges"
+      ],
+      hints: [
+        "Levels of quality or conduct.",
+        "Made sure rules are followed.",
+        "Having great significance.",
+        "Fail to care for properly.",
+        "Duties or obligations."
+      ],
+      explanations: [
+        "'Standards' are what must be upheld, introduced by 'Thereby'.",
+        "'Enforced' means the standards must be strictly applied.",
+        "'Important' concedes profit matters after 'albeit'.",
+        "'Neglect' is what companies must avoid doing.",
+        "'Responsibilities' are the social duties owed to communities."
+      ],
+      clueWords: [["Thereby"],["must"],["albeit"],["not"],["their"]]
+    },
+    {
+      text: "In lieu of ___ (1) ___ competition, schools now ___ (2) ___ collaborative learning; conversely, students who were hitherto ___ (3) ___ have become more ___ (4) ___, thereby ___ (5) ___ a healthier classroom culture.",
+      answers: ["excessive", "encourage", "withdrawn", "participative", "fostering"],
+      wordBox: [
+        "excessive", "encourage", "withdrawn", "participative", "fostering",
+        "healthy", "discourage", "outgoing", "passive", "destroying"
+      ],
+      hints: [
+        "More than what is necessary.",
+        "Support or promote actively.",
+        "Quiet and keeping to oneself.",
+        "Actively taking part.",
+        "Nurturing or developing."
+      ],
+      explanations: [
+        "'Excessive' describes what is being replaced after 'In lieu of'.",
+        "'Encourage' is the school's new approach.",
+        "'Withdrawn' describes previous behaviour, linked by 'hitherto'.",
+        "'Participative' is the positive change after 'conversely'.",
+        "'Fostering' is the result introduced by 'thereby'."
+      ],
+      clueWords: [["In lieu of"],["now"],["conversely","hitherto"],["become"],["thereby"]]
+    },
+    {
+      text: "Insofar as ___ (1) ___ shapes national policy, Singapore's leaders ___ (2) ___ diverse perspectives; notwithstanding ___ (3) ___ disagreements, the parliament ___ (4) ___ to reach ___ (5) ___ on critical issues for the common good.",
+      answers: ["pragmatism", "consider", "occasional", "strives", "consensus"],
+      wordBox: [
+        "pragmatism", "consider", "occasional", "strives", "consensus",
+        "ideology", "dismiss", "frequent", "refuses", "conflict"
+      ],
+      hints: [
+        "A practical approach to problems.",
+        "Think carefully about.",
+        "Happening from time to time.",
+        "Makes great effort.",
+        "General agreement among a group."
+      ],
+      explanations: [
+        "'Pragmatism' defines the scope of leadership after 'Insofar as'.",
+        "'Consider' is how leaders handle different viewpoints.",
+        "'Occasional' describes disagreements conceded by 'notwithstanding'.",
+        "'Strives' shows the parliament's determined effort.",
+        "'Consensus' is the agreement they aim to achieve."
+      ],
+      clueWords: [["Insofar as"],["leaders"],["notwithstanding"],["to"],["on"]]
     }
   ]
 };
