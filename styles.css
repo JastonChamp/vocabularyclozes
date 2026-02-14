@@ -410,12 +410,14 @@ body::before {
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(8px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   z-index: 1000;
-  padding: var(--space-4);
+  padding: var(--space-8) var(--space-4);
   opacity: 1;
   transition: opacity 0.3s;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-overlay.hidden {
@@ -430,6 +432,8 @@ body::before {
   padding: var(--space-8);
   max-width: 480px;
   width: 100%;
+  margin: auto;
+  flex-shrink: 0;
   box-shadow: var(--shadow-xl), var(--shadow-glow);
   animation: modal-enter 0.4s ease-out;
 }
