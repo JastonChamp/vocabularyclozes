@@ -136,6 +136,11 @@ function shuffle(arr) {
   return copy;
 }
 
+function getCurrentPassage() {
+  const data = getLevelData();
+  return data[state.currentPassageIndex];
+}
+
 function getLevelData() {
   const cat = passages[state.currentCategory];
   if (!cat) return [];
@@ -428,8 +433,9 @@ function startTimer() {
 // ============================================
 function displayPassage() {
   clearInterval(state.timerInterval);
+  state.stars = 0;
+  state.timeLeft = 0;
   const data = getLevelData();
-
   if (!data.length) {
     passageText.innerHTML = "<p>No passages available for this selection.</p>";
     wordBox.innerHTML = "";
@@ -512,15 +518,10 @@ function bindInteractions() {
   // Keyword hints
   $$('.keyword').forEach(el => {
     el.onclick = () => {
-      const match = el.className.match(/kw-(\d+)/);
-      if (match) {
-        const idx = +match[1] - 1;
-        const data = getLevelData()[state.currentPassageIndex];
-        if (data.hints && data.hints[idx]) {
-          showFeedback(data.hints[idx]);
-          if (state.soundEnabled) speak(data.hints[idx]);
-        }
-      }
+      const idx = +el.className.match(/kw-(\d+)/)[1] - 1;
+      const hint = getCurrentPassage().hints[idx];
+      feedbackDisplay.textContent = hint;
+      speak(hint);
     };
   });
 
@@ -529,11 +530,9 @@ function bindInteractions() {
     btn.onclick = (e) => {
       e.stopPropagation();
       const idx = +btn.dataset.blank - 1;
-      const data = getLevelData()[state.currentPassageIndex];
-      if (data.hints && data.hints[idx]) {
-        showFeedback(data.hints[idx]);
-        if (state.soundEnabled) speak(data.hints[idx]);
-      }
+      const hint = getCurrentPassage().hints[idx];
+      feedbackDisplay.textContent = hint;
+      speak(hint);
     };
   });
 }
@@ -545,30 +544,35 @@ function selectWord(el) {
 }
 
 function placeWord(blank, txt) {
-  blank.textContent = txt;
-  checkSingle(blank);
-  state.selectedWord = null;
-  $$('.word').forEach(w => w.classList.remove('selected'));
+  blank.textContent = txt.trim();
+  const wasCorrect = checkSingle(blank);
 
-  // Remove used word from word box
-  const match = Array.from($$('.word')).find(w => w.textContent === txt);
-  if (match) match.remove();
+  if (wasCorrect) {
+    const match = Array.from(document.querySelectorAll('.word'))
+      .find(w => w.textContent.trim() === txt.trim());
+    if (match) match.remove();
+  }
+
+  state.selectedWord = null;
+  document.querySelectorAll('.word').forEach(w => w.classList.remove('selected'));
 }
 
 function checkSingle(blank) {
   const idx = +blank.dataset.blank - 1;
-  const p = getLevelData()[state.currentPassageIndex];
-  const correct = p.answers[idx];
+  const correct = getCurrentPassage().answers[idx];
+  const isCorrect = blank.textContent.trim().toLowerCase() === correct.toLowerCase();
 
-  if (blank.textContent.toLowerCase() === correct.toLowerCase()) {
+  if (isCorrect) {
     blank.classList.add('correct');
     blank.classList.remove('incorrect');
-    showFeedback('Correct! ✓', 'success');
-    if (state.soundEnabled) speak('Correct');
+    feedbackDisplay.textContent = 'Correct!';
+    speak('Correct');
 
-    // Remove existing explanation
-    const after = blank.nextElementSibling?.classList.contains('hint-for-blank')
-      ? blank.nextElementSibling : blank;
+    // remove any existing explanation when the answer is correct
+    const after = blank.nextElementSibling &&
+      blank.nextElementSibling.classList.contains('hint-for-blank')
+        ? blank.nextElementSibling
+        : blank;
     const span = after.nextElementSibling;
     if (span?.classList.contains('explanation')) span.remove();
 
@@ -597,18 +601,18 @@ function checkSingle(blank) {
     // Highlight keywords
     $$('.kw-' + (idx + 1)).forEach(el => el.classList.add('highlighted'));
   }
+
+  return isCorrect;
 }
 
 // ============================================
 // ANSWER CHECKING
 // ============================================
 function checkAnswers() {
-  clearInterval(state.timerInterval);
-  const p = getLevelData()[state.currentPassageIndex];
-  const blanks = $$('.blank');
-  let correctCount = 0;
-
-  blanks.forEach((b, i) => {
+  const p = getCurrentPassage();
+  const blanks = document.querySelectorAll('.blank');
+  let allGood = true;
+  blanks.forEach((b,i) => {
     const ans = p.answers[i];
     if (b.textContent.toLowerCase() === ans.toLowerCase()) {
       b.classList.add('correct');
@@ -637,42 +641,32 @@ function checkAnswers() {
       span.textContent = exp;
     }
   });
-
-  const totalBlanks = blanks.length;
-  const accuracy = Math.round((correctCount / totalBlanks) * 100);
-  const isPerfect = correctCount === totalBlanks;
-
-  // Calculate stars
-  if (accuracy >= 100) state.stars = 3;
-  else if (accuracy >= 80) state.stars = 2;
-  else if (accuracy >= 60) state.stars = 1;
-  else state.stars = 0;
-
-  // Calculate XP earned
-  let xpEarned = correctCount * 10;
-  if (isPerfect) xpEarned += 20; // Perfect bonus
-  if (state.streak > 0) xpEarned += state.streak * 2; // Streak bonus
-
-  if (isPerfect) {
-    state.score += 10;
-    state.gems += 10;
-    state.totalStars += state.stars;
-    state.passagesCompleted++;
-
-    updateStreak();
-    createConfetti();
-    showFeedback(`Perfect! +${xpEarned} XP 🎉`, 'success');
-    if (state.soundEnabled) speak('Excellent work!');
-
-    stats.completed++;
-  } else if (accuracy >= 60) {
-    state.gems += 5;
-    state.totalStars += state.stars;
-    showFeedback(`Good job! ${accuracy}% correct. +${xpEarned} XP`, 'success');
-    if (state.soundEnabled) speak('Good job!');
-  } else {
-    showFeedback(`Keep practicing! ${accuracy}% correct.`, 'error');
-    if (state.soundEnabled) speak('Keep practicing!');
+  blanks.forEach((b,i) => {
+    const ans = p.answers[i];
+    if (b.textContent.toLowerCase() !== ans.toLowerCase()) {
+      const clue = p.clueWords && p.clueWords[i] ? p.clueWords[i][0] : `blank${i+1}`;
+      stats.missed[clue] = (stats.missed[clue] || 0) + 1;
+    }
+  });
+    if (allGood) {
+      state.score += 10;
+      state.stars = Math.min(3, state.stars + 1);
+      state.coins += 10;
+      checkUnlocks();
+      saveProgress();
+      feedbackDisplay.textContent = 'Well done!';
+      speak('Well done');
+      stats.completed++;
+      stats.score = state.score;
+      updateLevel();
+      saveStats();
+      renderDashboard();
+    } else {
+    feedbackDisplay.textContent = 'Check your answers!';
+    speak('Check your answers');
+    stats.score = state.score;
+  saveStats();
+  renderDashboard();
   }
 
   addXp(xpEarned);
@@ -709,15 +703,20 @@ function initEventListeners() {
       }
     };
   }
-
-  if (hintBtn) {
-    hintBtn.onclick = () => {
-      const data = getLevelData()[state.currentPassageIndex];
-      if (data.hints?.[0]) {
-        showFeedback(data.hints[0]);
-        if (state.soundEnabled) speak(data.hints[0]);
-      }
-    };
+};
+hintBtn.onclick         = () => {
+  const hint = getCurrentPassage().hints[0];
+  feedbackDisplay.textContent = hint;
+  speak(hint);
+};
+clearBtn.onclick        = displayPassage;
+resetBtn.onclick        = displayPassage;
+shareBtn.onclick        = () => {
+ if (navigator.clipboard) {
+    navigator.clipboard.writeText(`Score: ${state.score}, Level: ${state.level}`);
+    feedbackDisplay.textContent = 'Copied!';
+  } else {
+    feedbackDisplay.textContent = 'Clipboard not supported';
   }
 
   if (readBtn) {
@@ -740,6 +739,46 @@ function initEventListeners() {
       displayPassage();
     };
   }
+};
+readBtn.onclick         = () => {
+  speak(getCurrentPassage().text.replace(/___\s*\(\d\)\s*___/g,'blank'));
+};
+categorySelect.onchange  = e => { state.currentCategory = e.target.value; state.currentPassageIndex=0; displayPassage(); };
+levelSelect.onchange     = e => { state.currentLevel = e.target.value; state.currentPassageIndex=0; displayPassage(); };
+timerSelect.onchange     = startTimer;
+toggleThemeBtn.onclick   = () => {
+  document.body.classList.toggle('light-mode');
+  toggleThemeBtn.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
+};
+toggleDyslexiaBtn.onclick= () => document.body.classList.toggle('dyslexia');
+let sizeTimeout;
+textSizeSlider.oninput   = e => {
+  clearTimeout(sizeTimeout);
+  sizeTimeout = setTimeout(() => {
+    const size = e.target.value;
+    passageText.style.fontSize = `${size}rem`;
+    wordBox.style.fontSize = `${size}rem`;
+    localStorage.setItem('textSize', size);
+  }, 100);
+};
+themeSelect.onchange      = e => {
+  const themeClasses = ['light-mode', 'theme1', 'theme2', 'theme3', 'theme4'];
+  document.body.classList.remove(...themeClasses);
+
+  if (e.target.value !== 'default') {
+    document.body.classList.add(e.target.value);
+  }
+
+  if (!document.body.classList.contains('sparkle')) {
+    document.body.classList.add('sparkle');
+  }
+
+  localStorage.setItem('selectedTheme', e.target.value);
+};
+sidebarToggle.onclick     = () => sidebar.classList.toggle('open');
+document.getElementById('tutorial-close-btn').onclick = () => {
+  document.getElementById('tutorial-modal').style.display = 'none';
+};
 
   // Level pills
   if (levelPills) {
