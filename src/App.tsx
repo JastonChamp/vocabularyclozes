@@ -1,87 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { initVocabularyApp } from './legacy/app';
 import { useAppStore } from './store/appStore';
-import { ReviewMode } from './components/ReviewMode';
-import { Dashboard } from './components/Dashboard';
-import { OnboardingTest } from './components/OnboardingTest';
-import { EnhancedClozeRenderer } from './components/EnhancedClozeRenderer';
-import type { ClozeExercise, VocabularyMeta } from './types/exercise';
 
 export default function App() {
   const language = useAppStore((s) => s.language);
-  const [tab, setTab] = useState<'home' | 'learn' | 'review'>('home');
-  const [placementDone, setPlacementDone] = useState(localStorage.getItem('vf_placement_done') === 'true');
-  const [weakWords, setWeakWords] = useState<string[]>(JSON.parse(localStorage.getItem('vf_weak_words') || '[]'));
-  const hasInitializedLearnMode = useRef(false);
-
-
-  const demoExercise: ClozeExercise = {
-    type: 'cloze',
-    format: 'multi_blank_paragraph',
-    language: 'en',
-    level: 'p3',
-    title: 'Starter Cloze Mission',
-    theme: 'science',
-    content: {
-      passage: 'The young inventor stayed [BLANK_1] while testing her design. After many tries, she felt [BLANK_2] and wrote her results in a notebook.',
-      blanks: [
-        { id: '1', answer: 'focused', difficulty: 'easy', hint: 'paying attention', distractors: ['noisy', 'lazy'] },
-        { id: '2', answer: 'proud', difficulty: 'medium', hint: 'happy with success', distractors: ['afraid', 'bored'] }
-      ],
-      wordbank: ['focused', 'proud', 'noisy', 'lazy', 'afraid', 'bored'],
-      progressiveContext: { enabled: true, revealOrder: ['1', '2'] }
-    }
-  };
-
-  const demoMeta: VocabularyMeta[] = [
-    {
-      word: 'focused',
-      psle_level: 'P4-P5',
-      rich_json: {
-        contextExplanation: 'Focused means paying close attention to a task.',
-        exampleSentences: ['We stayed focused during revision.', 'She remained focused in class.', 'Focused reading improves understanding.'],
-        mnemonic: 'FOCUSED = Follow One Clear Useful Study Every Day.',
-        etymology: 'From Latin focus, central point.',
-        commonMistakes: [{ wrongWord: 'noisy', whyWrong: 'Noisy is about sound, not concentration.', correctTip: 'Choose focused when attention matters.' }],
-        relatedWords: { synonyms: ['attentive'], antonyms: ['distracted'], wordFamily: ['focus', 'focusing'] }
-      }
-    },
-    {
-      word: 'proud',
-      psle_level: 'P3-P5',
-      rich_json: {
-        contextExplanation: 'Proud is the feeling after doing something well.',
-        exampleSentences: ['He felt proud after helping.', 'I am proud of my effort.', 'Our team was proud of the result.'],
-        mnemonic: 'PROUD = Positive Result, Own your progress.',
-        etymology: 'Old French root linked to worthy.',
-        commonMistakes: [{ wrongWord: 'afraid', whyWrong: 'Afraid means fear, opposite feeling.', correctTip: 'Success context points to proud.' }],
-        relatedWords: { synonyms: ['pleased'], antonyms: ['ashamed'], wordFamily: ['pride', 'proudly'] }
-      }
-    }
-  ];
 
   useEffect(() => {
-    if (tab !== 'learn' || hasInitializedLearnMode.current) return;
-
     initVocabularyApp();
-    hasInitializedLearnMode.current = true;
-  }, [tab]);
+  }, []);
 
   return (
     <div className="min-h-screen" data-language={language}>
-      {/* Review tab */}
-      <div className="mx-auto flex max-w-5xl gap-2 px-4 pt-4">
-        <button onClick={() => setTab('home')} className={`rounded-full px-4 py-2 text-sm font-semibold ${tab === 'home' ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-200'}`}>
-          Home
-        </button>
-        <button onClick={() => setTab('learn')} className={`rounded-full px-4 py-2 text-sm font-semibold ${tab === 'learn' ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-200'}`}>
-          Learn Mode
-        </button>
-        <button onClick={() => setTab('review')} className={`rounded-full px-4 py-2 text-sm font-semibold ${tab === 'review' ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-200'}`}>
-          Review Mode
-        </button>
-      </div>
       <div id="loading-screen" className="loading-screen"><div className="loader"><div className="loader-ring"></div><div className="loader-text">VocabMaster Pro</div></div></div>
       <div id="confetti-container" className="confetti-container"></div>
       <div id="achievement-popup" className="achievement-popup"><div className="achievement-content"><div className="achievement-icon">🏆</div><div className="achievement-text"><span className="achievement-title">Achievement Unlocked!</span><span className="achievement-name" id="achievement-name"></span></div></div></div>
@@ -98,27 +28,7 @@ export default function App() {
 
       <div id="daily-challenge-modal" className="modal-overlay hidden"><div className="modal-card daily-modal"><button className="modal-close" id="close-daily-modal">×</button><div className="daily-header"><div className="daily-icon">🎯</div><h2>Daily Challenge</h2><p className="daily-date" id="daily-date"></p></div><div className="daily-content"><div className="daily-challenge-card" id="daily-challenge-info"><div className="challenge-type">Today's Focus</div><div className="challenge-category" id="daily-category">Context Inference</div><div className="challenge-goal">Complete 3 passages perfectly</div></div></div><button className="btn btn-primary" id="start-daily-btn">Accept Challenge</button></div></div>
 
-      {tab === 'home' ? (
-        <div className="mx-auto mt-4 max-w-5xl px-4">
-          {!placementDone ? (
-            <OnboardingTest
-              onComplete={(result) => {
-                localStorage.setItem('vf_placement_done', 'true');
-                localStorage.setItem('vf_weak_words', JSON.stringify(result.weakWords));
-                setWeakWords(result.weakWords);
-                setPlacementDone(true);
-              }}
-            />
-          ) : (
-            <div className="space-y-4">
-              <Dashboard streak={7} xp={1240} hearts={5} mastery={76} dueToday={12} weakWords={weakWords.length ? weakWords : ['focused', 'collocation', 'proud']} />
-              <EnhancedClozeRenderer exercise={demoExercise} vocabularyMeta={demoMeta} />
-            </div>
-          )}
-        </div>
-      ) : null}
-
-      <div className="app-container" style={{ display: tab === 'learn' ? undefined : 'none' }}>
+      <div className="app-container">
         <aside className="sidebar" id="sidebar">{/* legacy sidebar preserved */}
           <div className="sidebar-header"><div className="brand"><span className="brand-icon">📚</span><span className="brand-text">VocabMaster</span><span className="brand-pro">PRO</span></div><button className="sidebar-close" id="sidebar-close">×</button></div>
           <div className="stats-cards"><div className="stat-card stat-streak"><span className="stat-icon">🔥</span><span className="stat-value" id="streak-count">0</span><span className="stat-label">Day Streak</span></div><div className="stat-card stat-gems"><span className="stat-icon">💎</span><span className="stat-value" id="gems-count">0</span><span className="stat-label">Gems</span></div><div className="stat-card stat-stars"><span className="stat-icon">⭐</span><span className="stat-value" id="total-stars">0</span><span className="stat-label">Stars</span></div><div className="stat-card stat-mastery"><span className="stat-icon">🎯</span><span className="stat-value" id="mastery-percent">0%</span><span className="stat-label">Mastery</span></div></div>
@@ -131,8 +41,6 @@ export default function App() {
           <div className="game-area"><div className="timer-section" id="timer-section"><div className="timer-bar"><div className="timer-fill" id="timer-fill"></div></div><span className="timer-text" id="timer-text">60s</span></div><div className="passage-card"><div className="passage-header"><span className="passage-badge" id="category-badge">Context Inference</span><span className="passage-level" id="level-badge">Level P1</span></div><div className="passage-content" id="passage-text"></div></div><div className="word-bank-card"><div className="word-bank-header"><span className="word-bank-title">Word Bank</span><span className="word-bank-hint">Drag or tap to place</span></div><div className="word-bank" id="word-box"></div></div><div className="feedback-card" id="feedback"></div><div className="action-bar"><div className="action-group"><button className="action-btn hint-btn" id="hint-btn"><span className="action-icon">💡</span><span className="action-text">Hint</span></button><button className="action-btn listen-btn" id="read-passage-btn"><span className="action-icon">🔊</span><span className="action-text">Listen</span></button><button className="action-btn reset-btn" id="reset-words-btn"><span className="action-icon">↺</span><span className="action-text">Reset</span></button></div><button className="submit-btn" id="submit-btn"><span className="submit-text">Check Answers</span><span className="submit-icon">✓</span></button><div className="nav-group"><button className="nav-btn prev-btn" id="prev-btn" disabled><span className="nav-icon">←</span></button><button className="nav-btn next-btn" id="next-btn"><span className="nav-icon">→</span></button></div></div></div>
         </main>
       </div>
-
-      {tab === 'review' ? <ReviewMode /> : null}
 
       <div className="hidden">
         <button id="clear-btn"></button><button id="share-btn"></button><span id="score">0</span><span id="stars">0/3</span><span id="coins">0</span><span id="streak">0</span><span id="level">Apprentice</span><span id="progress"></span><span id="timer">60s</span><span id="achievements"></span><span id="themes-info"></span><div id="progress-bar"></div><div id="timer-bar"></div><div id="timer-container"></div><div id="progress-bar-container"></div><span id="completed-count">0</span><span id="total-score-summary">0</span><span id="missed-clues-summary"></span><button id="toggle-theme"></button><select id="level-select"><option value="p1">P1</option></select>

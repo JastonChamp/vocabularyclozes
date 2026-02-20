@@ -4,7 +4,6 @@ import { registerSW } from 'virtual:pwa-register';
 import App from './App';
 import './styles.css';
 import './tailwind.css';
-import './i18n/config';
 
 registerSW({ immediate: true });
 
