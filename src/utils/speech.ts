@@ -13,7 +13,7 @@ export function loadVoices(selectEl) {
 export function speak(text) {
   if (!window.speechSynthesis) return;
   const utterance = new SpeechSynthesisUtterance(text);
-  const selected = document.getElementById('voice-select').value;
+  const selected = (document.getElementById('voice-select') as HTMLSelectElement | null)?.value;
   if (selected) {
     utterance.voice = speechSynthesis.getVoices().find(v => v.name === selected);
   }
