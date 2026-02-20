@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { initVocabularyApp } from './legacy/app';
 import { useAppStore } from './store/appStore';
@@ -7,16 +7,18 @@ import { ReviewMode } from './components/ReviewMode';
 export default function App() {
   const language = useAppStore((s) => s.language);
   const [tab, setTab] = useState<'learn' | 'review'>('learn');
+  const hasInitializedLearnMode = useRef(false);
 
   useEffect(() => {
-    if (tab === 'learn') {
-      initVocabularyApp();
-    }
+    if (tab !== 'learn' || hasInitializedLearnMode.current) return;
+
+    initVocabularyApp();
+    hasInitializedLearnMode.current = true;
   }, [tab]);
 
   return (
     <div className="min-h-screen" data-language={language}>
-      {/* Review tab (merge-safe addition) */}
+      {/* Review tab */}
       <div className="mx-auto flex max-w-5xl gap-2 px-4 pt-4">
         <button onClick={() => setTab('learn')} className={`rounded-full px-4 py-2 text-sm font-semibold ${tab === 'learn' ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-200'}`}>
           Learn Mode
