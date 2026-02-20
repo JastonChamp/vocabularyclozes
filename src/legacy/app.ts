@@ -1,5 +1,6 @@
-import { passages } from './data/passages.js';
-import { speak, loadVoices } from './utils/speech.js';
+// @ts-nocheck
+import { passages } from '../data/passages';
+import { speak, loadVoices } from '../utils/speech';
 
 // ============================================
 // STATE MANAGEMENT
@@ -81,48 +82,44 @@ const achievements = [
 const $ = (id) => document.getElementById(id);
 const $$ = (sel) => document.querySelectorAll(sel);
 
-// Main elements
-const passageText = $("passage-text");
-const wordBox = $("word-box");
-const feedbackDisplay = $("feedback");
-const submitBtn = $("submit-btn");
-const prevBtn = $("prev-btn");
-const nextBtn = $("next-btn");
-const hintBtn = $("hint-btn");
-const readBtn = $("read-passage-btn");
-const resetBtn = $("reset-words-btn");
-const categorySelect = $("vocab-category");
-const timerSelect = $("timer-setting");
-const themeSelect = $("theme-select");
-const textSizeSlider = $("text-size-slider");
+let passageText;
+let wordBox;
+let feedbackDisplay;
+let submitBtn;
+let prevBtn;
+let nextBtn;
+let hintBtn;
+let readBtn;
+let resetBtn;
+let categorySelect;
+let timerSelect;
+let themeSelect;
+let textSizeSlider;
 
-// Sidebar elements
-const sidebar = $("sidebar");
-const sidebarClose = $("sidebar-close");
-const menuToggle = $("menu-toggle");
-const levelPills = $("level-pills");
-const toggleDyslexiaBtn = $("toggle-dyslexia");
-const toggleSoundBtn = $("toggle-sound");
-const exportStatsBtn = $("export-stats-btn");
-const resetStatsBtn = $("reset-stats-btn");
+let sidebar;
+let sidebarClose;
+let menuToggle;
+let levelPills;
+let toggleDyslexiaBtn;
+let toggleSoundBtn;
+let exportStatsBtn;
+let resetStatsBtn;
 
-// Modals
-const onboardingModal = $("onboarding-modal");
-const startLearningBtn = $("start-learning-btn");
-const dailyChallengeModal = $("daily-challenge-modal");
-const openDailyChallengeBtn = $("open-daily-challenge");
-const closeDailyModalBtn = $("close-daily-modal");
-const startDailyBtn = $("start-daily-btn");
+let onboardingModal;
+let startLearningBtn;
+let dailyChallengeModal;
+let openDailyChallengeBtn;
+let closeDailyModalBtn;
+let startDailyBtn;
 
-// Popups
-const achievementPopup = $("achievement-popup");
-const achievementName = $("achievement-name");
-const streakPopup = $("streak-popup");
-const streakPopupCount = $("streak-popup-count");
-const xpPopup = $("xp-popup");
-const xpAmount = $("xp-amount");
-const loadingScreen = $("loading-screen");
-const confettiContainer = $("confetti-container");
+let achievementPopup;
+let achievementName;
+let streakPopup;
+let streakPopupCount;
+let xpPopup;
+let xpAmount;
+let loadingScreen;
+let confettiContainer;
 
 // ============================================
 // UTILITY FUNCTIONS
@@ -134,11 +131,6 @@ function shuffle(arr) {
     [copy[i], copy[j]] = [copy[j], copy[i]];
   }
   return copy;
-}
-
-function getCurrentPassage() {
-  const data = getLevelData();
-  return data[state.currentPassageIndex];
 }
 
 function getLevelData() {
@@ -433,9 +425,8 @@ function startTimer() {
 // ============================================
 function displayPassage() {
   clearInterval(state.timerInterval);
-  state.stars = 0;
-  state.timeLeft = 0;
   const data = getLevelData();
+
   if (!data.length) {
     passageText.innerHTML = "<p>No passages available for this selection.</p>";
     wordBox.innerHTML = "";
@@ -518,10 +509,15 @@ function bindInteractions() {
   // Keyword hints
   $$('.keyword').forEach(el => {
     el.onclick = () => {
-      const idx = +el.className.match(/kw-(\d+)/)[1] - 1;
-      const hint = getCurrentPassage().hints[idx];
-      feedbackDisplay.textContent = hint;
-      speak(hint);
+      const match = el.className.match(/kw-(\d+)/);
+      if (match) {
+        const idx = +match[1] - 1;
+        const data = getLevelData()[state.currentPassageIndex];
+        if (data.hints && data.hints[idx]) {
+          showFeedback(data.hints[idx]);
+          if (state.soundEnabled) speak(data.hints[idx]);
+        }
+      }
     };
   });
 
@@ -530,9 +526,11 @@ function bindInteractions() {
     btn.onclick = (e) => {
       e.stopPropagation();
       const idx = +btn.dataset.blank - 1;
-      const hint = getCurrentPassage().hints[idx];
-      feedbackDisplay.textContent = hint;
-      speak(hint);
+      const data = getLevelData()[state.currentPassageIndex];
+      if (data.hints && data.hints[idx]) {
+        showFeedback(data.hints[idx]);
+        if (state.soundEnabled) speak(data.hints[idx]);
+      }
     };
   });
 }
@@ -544,35 +542,30 @@ function selectWord(el) {
 }
 
 function placeWord(blank, txt) {
-  blank.textContent = txt.trim();
-  const wasCorrect = checkSingle(blank);
-
-  if (wasCorrect) {
-    const match = Array.from(document.querySelectorAll('.word'))
-      .find(w => w.textContent.trim() === txt.trim());
-    if (match) match.remove();
-  }
-
+  blank.textContent = txt;
+  checkSingle(blank);
   state.selectedWord = null;
-  document.querySelectorAll('.word').forEach(w => w.classList.remove('selected'));
+  $$('.word').forEach(w => w.classList.remove('selected'));
+
+  // Remove used word from word box
+  const match = Array.from($$('.word')).find(w => w.textContent === txt);
+  if (match) match.remove();
 }
 
 function checkSingle(blank) {
   const idx = +blank.dataset.blank - 1;
-  const correct = getCurrentPassage().answers[idx];
-  const isCorrect = blank.textContent.trim().toLowerCase() === correct.toLowerCase();
+  const p = getLevelData()[state.currentPassageIndex];
+  const correct = p.answers[idx];
 
-  if (isCorrect) {
+  if (blank.textContent.toLowerCase() === correct.toLowerCase()) {
     blank.classList.add('correct');
     blank.classList.remove('incorrect');
-    feedbackDisplay.textContent = 'Correct!';
-    speak('Correct');
+    showFeedback('Correct! ✓', 'success');
+    if (state.soundEnabled) speak('Correct');
 
-    // remove any existing explanation when the answer is correct
-    const after = blank.nextElementSibling &&
-      blank.nextElementSibling.classList.contains('hint-for-blank')
-        ? blank.nextElementSibling
-        : blank;
+    // Remove existing explanation
+    const after = blank.nextElementSibling?.classList.contains('hint-for-blank')
+      ? blank.nextElementSibling : blank;
     const span = after.nextElementSibling;
     if (span?.classList.contains('explanation')) span.remove();
 
@@ -601,18 +594,18 @@ function checkSingle(blank) {
     // Highlight keywords
     $$('.kw-' + (idx + 1)).forEach(el => el.classList.add('highlighted'));
   }
-
-  return isCorrect;
 }
 
 // ============================================
 // ANSWER CHECKING
 // ============================================
 function checkAnswers() {
-  const p = getCurrentPassage();
-  const blanks = document.querySelectorAll('.blank');
-  let allGood = true;
-  blanks.forEach((b,i) => {
+  clearInterval(state.timerInterval);
+  const p = getLevelData()[state.currentPassageIndex];
+  const blanks = $$('.blank');
+  let correctCount = 0;
+
+  blanks.forEach((b, i) => {
     const ans = p.answers[i];
     if (b.textContent.toLowerCase() === ans.toLowerCase()) {
       b.classList.add('correct');
@@ -641,32 +634,42 @@ function checkAnswers() {
       span.textContent = exp;
     }
   });
-  blanks.forEach((b,i) => {
-    const ans = p.answers[i];
-    if (b.textContent.toLowerCase() !== ans.toLowerCase()) {
-      const clue = p.clueWords && p.clueWords[i] ? p.clueWords[i][0] : `blank${i+1}`;
-      stats.missed[clue] = (stats.missed[clue] || 0) + 1;
-    }
-  });
-    if (allGood) {
-      state.score += 10;
-      state.stars = Math.min(3, state.stars + 1);
-      state.coins += 10;
-      checkUnlocks();
-      saveProgress();
-      feedbackDisplay.textContent = 'Well done!';
-      speak('Well done');
-      stats.completed++;
-      stats.score = state.score;
-      updateLevel();
-      saveStats();
-      renderDashboard();
-    } else {
-    feedbackDisplay.textContent = 'Check your answers!';
-    speak('Check your answers');
-    stats.score = state.score;
-  saveStats();
-  renderDashboard();
+
+  const totalBlanks = blanks.length;
+  const accuracy = Math.round((correctCount / totalBlanks) * 100);
+  const isPerfect = correctCount === totalBlanks;
+
+  // Calculate stars
+  if (accuracy >= 100) state.stars = 3;
+  else if (accuracy >= 80) state.stars = 2;
+  else if (accuracy >= 60) state.stars = 1;
+  else state.stars = 0;
+
+  // Calculate XP earned
+  let xpEarned = correctCount * 10;
+  if (isPerfect) xpEarned += 20; // Perfect bonus
+  if (state.streak > 0) xpEarned += state.streak * 2; // Streak bonus
+
+  if (isPerfect) {
+    state.score += 10;
+    state.gems += 10;
+    state.totalStars += state.stars;
+    state.passagesCompleted++;
+
+    updateStreak();
+    createConfetti();
+    showFeedback(`Perfect! +${xpEarned} XP 🎉`, 'success');
+    if (state.soundEnabled) speak('Excellent work!');
+
+    stats.completed++;
+  } else if (accuracy >= 60) {
+    state.gems += 5;
+    state.totalStars += state.stars;
+    showFeedback(`Good job! ${accuracy}% correct. +${xpEarned} XP`, 'success');
+    if (state.soundEnabled) speak('Good job!');
+  } else {
+    showFeedback(`Keep practicing! ${accuracy}% correct.`, 'error');
+    if (state.soundEnabled) speak('Keep practicing!');
   }
 
   addXp(xpEarned);
@@ -703,20 +706,15 @@ function initEventListeners() {
       }
     };
   }
-};
-hintBtn.onclick         = () => {
-  const hint = getCurrentPassage().hints[0];
-  feedbackDisplay.textContent = hint;
-  speak(hint);
-};
-clearBtn.onclick        = displayPassage;
-resetBtn.onclick        = displayPassage;
-shareBtn.onclick        = () => {
- if (navigator.clipboard) {
-    navigator.clipboard.writeText(`Score: ${state.score}, Level: ${state.level}`);
-    feedbackDisplay.textContent = 'Copied!';
-  } else {
-    feedbackDisplay.textContent = 'Clipboard not supported';
+
+  if (hintBtn) {
+    hintBtn.onclick = () => {
+      const data = getLevelData()[state.currentPassageIndex];
+      if (data.hints?.[0]) {
+        showFeedback(data.hints[0]);
+        if (state.soundEnabled) speak(data.hints[0]);
+      }
+    };
   }
 
   if (readBtn) {
@@ -739,46 +737,6 @@ shareBtn.onclick        = () => {
       displayPassage();
     };
   }
-};
-readBtn.onclick         = () => {
-  speak(getCurrentPassage().text.replace(/___\s*\(\d\)\s*___/g,'blank'));
-};
-categorySelect.onchange  = e => { state.currentCategory = e.target.value; state.currentPassageIndex=0; displayPassage(); };
-levelSelect.onchange     = e => { state.currentLevel = e.target.value; state.currentPassageIndex=0; displayPassage(); };
-timerSelect.onchange     = startTimer;
-toggleThemeBtn.onclick   = () => {
-  document.body.classList.toggle('light-mode');
-  toggleThemeBtn.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
-};
-toggleDyslexiaBtn.onclick= () => document.body.classList.toggle('dyslexia');
-let sizeTimeout;
-textSizeSlider.oninput   = e => {
-  clearTimeout(sizeTimeout);
-  sizeTimeout = setTimeout(() => {
-    const size = e.target.value;
-    passageText.style.fontSize = `${size}rem`;
-    wordBox.style.fontSize = `${size}rem`;
-    localStorage.setItem('textSize', size);
-  }, 100);
-};
-themeSelect.onchange      = e => {
-  const themeClasses = ['light-mode', 'theme1', 'theme2', 'theme3', 'theme4'];
-  document.body.classList.remove(...themeClasses);
-
-  if (e.target.value !== 'default') {
-    document.body.classList.add(e.target.value);
-  }
-
-  if (!document.body.classList.contains('sparkle')) {
-    document.body.classList.add('sparkle');
-  }
-
-  localStorage.setItem('selectedTheme', e.target.value);
-};
-sidebarToggle.onclick     = () => sidebar.classList.toggle('open');
-document.getElementById('tutorial-close-btn').onclick = () => {
-  document.getElementById('tutorial-modal').style.display = 'none';
-};
 
   // Level pills
   if (levelPills) {
@@ -928,39 +886,55 @@ document.getElementById('tutorial-close-btn').onclick = () => {
 // ============================================
 // INITIALIZATION
 // ============================================
-window.addEventListener('DOMContentLoaded', () => {
-  // Load voices
+export function initVocabularyApp() {
+  passageText = $("passage-text");
+  wordBox = $("word-box");
+  feedbackDisplay = $("feedback");
+  submitBtn = $("submit-btn");
+  prevBtn = $("prev-btn");
+  nextBtn = $("next-btn");
+  hintBtn = $("hint-btn");
+  readBtn = $("read-passage-btn");
+  resetBtn = $("reset-words-btn");
+  categorySelect = $("vocab-category");
+  timerSelect = $("timer-setting");
+  themeSelect = $("theme-select");
+  textSizeSlider = $("text-size-slider");
+  sidebar = $("sidebar");
+  sidebarClose = $("sidebar-close");
+  menuToggle = $("menu-toggle");
+  levelPills = $("level-pills");
+  toggleDyslexiaBtn = $("toggle-dyslexia");
+  toggleSoundBtn = $("toggle-sound");
+  exportStatsBtn = $("export-stats-btn");
+  resetStatsBtn = $("reset-stats-btn");
+  onboardingModal = $("onboarding-modal");
+  startLearningBtn = $("start-learning-btn");
+  dailyChallengeModal = $("daily-challenge-modal");
+  openDailyChallengeBtn = $("open-daily-challenge");
+  closeDailyModalBtn = $("close-daily-modal");
+  startDailyBtn = $("start-daily-btn");
+  achievementPopup = $("achievement-popup");
+  achievementName = $("achievement-name");
+  streakPopup = $("streak-popup");
+  streakPopupCount = $("streak-popup-count");
+  xpPopup = $("xp-popup");
+  xpAmount = $("xp-amount");
+  loadingScreen = $("loading-screen");
+  confettiContainer = $("confetti-container");
+
   loadVoices($("voice-select"));
-
-  // Update level from saved XP
   updateLevel();
-
-  // Show onboarding if first time
-  if (!state.hasSeenOnboarding) {
-    onboardingModal?.classList.remove('hidden');
-  } else {
-    onboardingModal?.classList.add('hidden');
-  }
-
-  // Initialize event listeners
+  if (!state.hasSeenOnboarding) onboardingModal?.classList.remove('hidden');
+  else onboardingModal?.classList.add('hidden');
   initEventListeners();
-
-  // Display first passage
   displayPassage();
-
-  // Update UI
   updateUI();
-
-  // Hide loading screen
-  setTimeout(() => {
-    loadingScreen?.classList.add('hidden');
-  }, 500);
-
-  // Check for streak
+  setTimeout(() => loadingScreen?.classList.add('hidden'), 500);
   const today = new Date().toDateString();
   const yesterday = new Date(Date.now() - 86400000).toDateString();
   if (state.lastPlayedDate && state.lastPlayedDate !== today && state.lastPlayedDate !== yesterday) {
     state.streak = 0;
     saveProgress();
   }
-});
+}
