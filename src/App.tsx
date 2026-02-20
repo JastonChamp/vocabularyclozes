@@ -9,11 +9,14 @@ export default function App() {
   const [tab, setTab] = useState<'learn' | 'review'>('learn');
 
   useEffect(() => {
-    initVocabularyApp();
-  }, []);
+    if (tab === 'learn') {
+      initVocabularyApp();
+    }
+  }, [tab]);
 
   return (
     <div className="min-h-screen" data-language={language}>
+      {/* Review tab (merge-safe addition) */}
       <div className="mx-auto flex max-w-5xl gap-2 px-4 pt-4">
         <button onClick={() => setTab('learn')} className={`rounded-full px-4 py-2 text-sm font-semibold ${tab === 'learn' ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-200'}`}>
           Learn Mode
