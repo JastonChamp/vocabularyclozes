@@ -1,36 +1,32 @@
 import { useCallback, useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
-import type { ClozeExercise } from '@/types/exercise';
+import type { ExerciseBase } from '@/types/exercise';
 
-type ExerciseRow = ClozeExercise & {
+type ExerciseRow = ExerciseBase & {
   id: string;
+  slug?: string;
+  content: Record<string, unknown>;
   is_published: boolean;
   created_at: string;
 };
 
-export function useExercises(filters?: { format?: string; language?: string; level?: string; theme?: string }) {
+export function useExercises(filters?: { type?: string; language?: string; level?: string }) {
   const [data, setData] = useState<ExerciseRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const listExercises = useCallback(async () => {
     setLoading(true);
-    let query = supabase
-      .from('exercises')
-      .select('*')
-      .eq('type', 'cloze')
-      .order('created_at', { ascending: false });
-
-    if (filters?.format) query = query.eq('format', filters.format);
+    let query = supabase.from('exercises').select('*').order('created_at', { ascending: false });
+    if (filters?.type) query = query.eq('type', filters.type);
     if (filters?.language) query = query.eq('language', filters.language);
     if (filters?.level) query = query.eq('level', filters.level);
-    if (filters?.theme) query = query.eq('theme', filters.theme);
 
     const { data: rows, error: err } = await query;
     if (err) setError(err.message);
     setData((rows as ExerciseRow[]) ?? []);
     setLoading(false);
-  }, [filters?.format, filters?.language, filters?.level, filters?.theme]);
+  }, [filters?.language, filters?.level, filters?.type]);
 
   const createExercise = useCallback(async (payload: Omit<ExerciseRow, 'id' | 'created_at'>) => {
     const { data: row, error: err } = await supabase

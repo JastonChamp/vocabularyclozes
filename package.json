@@ -6,11 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "typecheck": "tsc -b --pretty false",
     "preview": "vite preview",
-    "test": "node scripts/tests/run-tests.js",
-    "seed:csv": "node scripts/admin/seed-exercises.mjs csv",
-    "seed:ai": "node scripts/admin/seed-exercises.mjs ai"
+    "test": "node scripts/tests/run-tests.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",

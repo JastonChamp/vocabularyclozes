@@ -1,9 +1,7 @@
-# Supabase hooks (cloze-only)
+# Supabase CRUD hooks
 
-- `useExercises`: CRUD for cloze exercises in `exercises` table (`type='cloze'`, format-aware).
-- `useProfile`: learner profile read/write.
-- `useUserProgress`: SRS progress rows (`interval`, `repetitions`, `ease_factor`, `due_date`).
-- `useReviewQueue`: client-side adaptive due-today queue.
-- `useVocabularyMeta`: Smart Tutor glossary lookup from `vocabulary_meta`.
+- `useExercises`: list/create/update/delete exercises.
+- `useProfile`: fetch/upsert profile preferences.
+- `useUserProgress`: list/upsert/delete SRS rows keyed by `user_id + exercise_id + word_id`.
 
-All features in this repo remain strictly cloze-focused.
+These hooks assume `src/lib/supabase.ts` is configured with `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`.
