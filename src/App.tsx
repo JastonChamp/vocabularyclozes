@@ -1,32 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { initVocabularyApp } from './legacy/app';
 import { useAppStore } from './store/appStore';
-import { ReviewMode } from './components/ReviewMode';
 
 export default function App() {
   const language = useAppStore((s) => s.language);
-  const [tab, setTab] = useState<'learn' | 'review'>('learn');
-  const hasInitializedLearnMode = useRef(false);
 
   useEffect(() => {
-    if (tab !== 'learn' || hasInitializedLearnMode.current) return;
-
     initVocabularyApp();
-    hasInitializedLearnMode.current = true;
-  }, [tab]);
+  }, []);
 
   return (
     <div className="min-h-screen" data-language={language}>
-      {/* Review tab */}
-      <div className="mx-auto flex max-w-5xl gap-2 px-4 pt-4">
-        <button onClick={() => setTab('learn')} className={`rounded-full px-4 py-2 text-sm font-semibold ${tab === 'learn' ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-200'}`}>
-          Learn Mode
-        </button>
-        <button onClick={() => setTab('review')} className={`rounded-full px-4 py-2 text-sm font-semibold ${tab === 'review' ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-200'}`}>
-          Review Mode
-        </button>
-      </div>
       <div id="loading-screen" className="loading-screen"><div className="loader"><div className="loader-ring"></div><div className="loader-text">VocabMaster Pro</div></div></div>
       <div id="confetti-container" className="confetti-container"></div>
       <div id="achievement-popup" className="achievement-popup"><div className="achievement-content"><div className="achievement-icon">🏆</div><div className="achievement-text"><span className="achievement-title">Achievement Unlocked!</span><span className="achievement-name" id="achievement-name"></span></div></div></div>
@@ -43,7 +28,7 @@ export default function App() {
 
       <div id="daily-challenge-modal" className="modal-overlay hidden"><div className="modal-card daily-modal"><button className="modal-close" id="close-daily-modal">×</button><div className="daily-header"><div className="daily-icon">🎯</div><h2>Daily Challenge</h2><p className="daily-date" id="daily-date"></p></div><div className="daily-content"><div className="daily-challenge-card" id="daily-challenge-info"><div className="challenge-type">Today's Focus</div><div className="challenge-category" id="daily-category">Context Inference</div><div className="challenge-goal">Complete 3 passages perfectly</div></div></div><button className="btn btn-primary" id="start-daily-btn">Accept Challenge</button></div></div>
 
-      <div className="app-container" style={{ display: tab === 'learn' ? undefined : 'none' }}>
+      <div className="app-container">
         <aside className="sidebar" id="sidebar">{/* legacy sidebar preserved */}
           <div className="sidebar-header"><div className="brand"><span className="brand-icon">📚</span><span className="brand-text">VocabMaster</span><span className="brand-pro">PRO</span></div><button className="sidebar-close" id="sidebar-close">×</button></div>
           <div className="stats-cards"><div className="stat-card stat-streak"><span className="stat-icon">🔥</span><span className="stat-value" id="streak-count">0</span><span className="stat-label">Day Streak</span></div><div className="stat-card stat-gems"><span className="stat-icon">💎</span><span className="stat-value" id="gems-count">0</span><span className="stat-label">Gems</span></div><div className="stat-card stat-stars"><span className="stat-icon">⭐</span><span className="stat-value" id="total-stars">0</span><span className="stat-label">Stars</span></div><div className="stat-card stat-mastery"><span className="stat-icon">🎯</span><span className="stat-value" id="mastery-percent">0%</span><span className="stat-label">Mastery</span></div></div>
@@ -56,8 +41,6 @@ export default function App() {
           <div className="game-area"><div className="timer-section" id="timer-section"><div className="timer-bar"><div className="timer-fill" id="timer-fill"></div></div><span className="timer-text" id="timer-text">60s</span></div><div className="passage-card"><div className="passage-header"><span className="passage-badge" id="category-badge">Context Inference</span><span className="passage-level" id="level-badge">Level P1</span></div><div className="passage-content" id="passage-text"></div></div><div className="word-bank-card"><div className="word-bank-header"><span className="word-bank-title">Word Bank</span><span className="word-bank-hint">Drag or tap to place</span></div><div className="word-bank" id="word-box"></div></div><div className="feedback-card" id="feedback"></div><div className="action-bar"><div className="action-group"><button className="action-btn hint-btn" id="hint-btn"><span className="action-icon">💡</span><span className="action-text">Hint</span></button><button className="action-btn listen-btn" id="read-passage-btn"><span className="action-icon">🔊</span><span className="action-text">Listen</span></button><button className="action-btn reset-btn" id="reset-words-btn"><span className="action-icon">↺</span><span className="action-text">Reset</span></button></div><button className="submit-btn" id="submit-btn"><span className="submit-text">Check Answers</span><span className="submit-icon">✓</span></button><div className="nav-group"><button className="nav-btn prev-btn" id="prev-btn" disabled><span className="nav-icon">←</span></button><button className="nav-btn next-btn" id="next-btn"><span className="nav-icon">→</span></button></div></div></div>
         </main>
       </div>
-
-      {tab === 'review' ? <ReviewMode /> : null}
 
       <div className="hidden">
         <button id="clear-btn"></button><button id="share-btn"></button><span id="score">0</span><span id="stars">0/3</span><span id="coins">0</span><span id="streak">0</span><span id="level">Apprentice</span><span id="progress"></span><span id="timer">60s</span><span id="achievements"></span><span id="themes-info"></span><div id="progress-bar"></div><div id="timer-bar"></div><div id="timer-container"></div><div id="progress-bar-container"></div><span id="completed-count">0</span><span id="total-score-summary">0</span><span id="missed-clues-summary"></span><button id="toggle-theme"></button><select id="level-select"><option value="p1">P1</option></select>
