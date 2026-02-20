@@ -1,0 +1,141 @@
+{
+  "exercise": {
+    "type": "cloze",
+    "format": "progressive_story",
+    "language": "en",
+    "level": "p5",
+    "title": "River Cleanup Day",
+    "theme": "environment",
+    "tags": ["psle", "environment", "progressive-context"],
+    "content": {
+      "passage": "At sunrise, the students gathered by the river with gloves and bags. They worked in small teams and stayed ___[BLANK_1]___ even when the weather became warm. By noon, the riverbank looked much cleaner, and everyone felt ___[BLANK_2]___ of their effort. Their teacher reminded them that small actions can ___[BLANK_3]___ a big difference over time.",
+      "sentences": [
+        "At sunrise, the students gathered by the river with gloves and bags.",
+        "They worked in small teams and stayed ___[BLANK_1]___ even when the weather became warm.",
+        "By noon, the riverbank looked much cleaner, and everyone felt ___[BLANK_2]___ of their effort.",
+        "Their teacher reminded them that small actions can ___[BLANK_3]___ a big difference over time."
+      ],
+      "blanks": [
+        {
+          "id": "1",
+          "answer": "focused",
+          "hint": "They kept paying attention to the task.",
+          "difficulty": "easy",
+          "distractors": ["sleepy", "noisy"]
+        },
+        {
+          "id": "2",
+          "answer": "proud",
+          "hint": "A feeling after doing something good.",
+          "difficulty": "medium",
+          "distractors": ["afraid", "confused"]
+        },
+        {
+          "id": "3",
+          "answer": "make",
+          "hint": "Complete the phrase: ___ a difference.",
+          "difficulty": "hard",
+          "distractors": ["borrow", "forget"]
+        }
+      ],
+      "wordbank": ["focused", "proud", "make", "sleepy", "noisy", "afraid", "confused", "borrow", "forget"],
+      "progressiveContext": {
+        "enabled": true,
+        "revealOrder": ["1", "2", "3"],
+        "hintDependencies": [
+          {
+            "blankId": "2",
+            "dependsOnBlankId": "1",
+            "unlockedHint": "Because they stayed focused, they felt positive about results."
+          },
+          {
+            "blankId": "3",
+            "dependsOnBlankId": "2",
+            "unlockedHint": "Feeling proud comes when actions make impact."
+          }
+        ]
+      }
+    }
+  },
+  "vocabulary_meta_samples": [
+    {
+      "word": "focused",
+      "psle_level": "P4-P5",
+      "rich_json": {
+        "contextExplanation": "In this passage, focused means the students kept their minds on cleaning and did not get distracted.",
+        "exampleSentences": [
+          "Mina stayed focused during her maths revision.",
+          "Please stay focused while crossing the road.",
+          "The team remained focused until the project was done."
+        ],
+        "mnemonic": "FOCUSED = Fewer Outside Clues, Use Sharp Eyes Daily.",
+        "etymology": "From Latin focus, meaning fireplace/hearth; later used as a center point.",
+        "commonMistakes": [
+          {
+            "wrongWord": "sleepy",
+            "whyWrong": "Sleepy describes feeling tired, not paying attention to a task.",
+            "correctTip": "If the sentence is about concentration, choose focused."
+          }
+        ],
+        "relatedWords": {
+          "synonyms": ["attentive", "concentrated"],
+          "antonyms": ["distracted", "careless"],
+          "wordFamily": ["focus", "focuses", "focusing"]
+        },
+        "rootAffixNote": "-ed shows past form or adjective state in context."
+      }
+    },
+    {
+      "word": "proud",
+      "psle_level": "P3-P5",
+      "rich_json": {
+        "contextExplanation": "Proud fits because the students achieved something meaningful and felt good about it.",
+        "exampleSentences": [
+          "I felt proud when I helped my classmate.",
+          "Her parents were proud of her kindness.",
+          "The school was proud of the science fair winners."
+        ],
+        "mnemonic": "PROUD = Positive Result, Own it, Understand the joy, Do your best.",
+        "etymology": "From Old French prud/prod, linked to being worthy or valiant.",
+        "commonMistakes": [
+          {
+            "wrongWord": "afraid",
+            "whyWrong": "Afraid is a fear feeling, opposite of happy achievement feelings.",
+            "correctTip": "When success appears in context, proud is often a better fit."
+          }
+        ],
+        "relatedWords": {
+          "synonyms": ["pleased", "satisfied"],
+          "antonyms": ["ashamed", "embarrassed"],
+          "wordFamily": ["pride", "proudly"]
+        }
+      }
+    },
+    {
+      "word": "make",
+      "psle_level": "P1-P6",
+      "rich_json": {
+        "contextExplanation": "In 'make a difference', make means to cause or create an effect.",
+        "exampleSentences": [
+          "Small habits can make your room tidy.",
+          "Kind words can make someone smile.",
+          "Practice will make your writing stronger."
+        ],
+        "mnemonic": "MAKE = Move Action, Keep Effect.",
+        "etymology": "From Old English macian, meaning to construct or prepare.",
+        "commonMistakes": [
+          {
+            "wrongWord": "borrow",
+            "whyWrong": "Borrow means take temporarily; it does not mean to create an effect.",
+            "correctTip": "Use make with 'a difference', 'a plan', or 'a change'."
+          }
+        ],
+        "relatedWords": {
+          "synonyms": ["create", "cause"],
+          "antonyms": ["destroy", "prevent"],
+          "wordFamily": ["maker", "making", "made"]
+        }
+      }
+    }
+  ]
+}

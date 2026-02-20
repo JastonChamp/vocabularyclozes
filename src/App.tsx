@@ -1,0 +1,67 @@
+import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import { initVocabularyApp } from './legacy/app';
+import { useAppStore } from './store/appStore';
+import { ReviewMode } from './components/ReviewMode';
+
+export default function App() {
+  const language = useAppStore((s) => s.language);
+  const [tab, setTab] = useState<'learn' | 'review'>('learn');
+  const hasInitializedLearnMode = useRef(false);
+
+  useEffect(() => {
+    if (tab !== 'learn' || hasInitializedLearnMode.current) return;
+
+    initVocabularyApp();
+    hasInitializedLearnMode.current = true;
+  }, [tab]);
+
+  return (
+    <div className="min-h-screen" data-language={language}>
+      {/* Review tab */}
+      <div className="mx-auto flex max-w-5xl gap-2 px-4 pt-4">
+        <button onClick={() => setTab('learn')} className={`rounded-full px-4 py-2 text-sm font-semibold ${tab === 'learn' ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-200'}`}>
+          Learn Mode
+        </button>
+        <button onClick={() => setTab('review')} className={`rounded-full px-4 py-2 text-sm font-semibold ${tab === 'review' ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-200'}`}>
+          Review Mode
+        </button>
+      </div>
+      <div id="loading-screen" className="loading-screen"><div className="loader"><div className="loader-ring"></div><div className="loader-text">VocabMaster Pro</div></div></div>
+      <div id="confetti-container" className="confetti-container"></div>
+      <div id="achievement-popup" className="achievement-popup"><div className="achievement-content"><div className="achievement-icon">🏆</div><div className="achievement-text"><span className="achievement-title">Achievement Unlocked!</span><span className="achievement-name" id="achievement-name"></span></div></div></div>
+      <div id="streak-popup" className="streak-popup"><div className="streak-flames">🔥</div><div className="streak-count" id="streak-popup-count">5</div><div className="streak-label">Day Streak!</div></div>
+      <div id="xp-popup" className="xp-popup">+<span id="xp-amount">50</span> XP</div>
+
+      <div id="onboarding-modal" className="modal-overlay">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="modal-card onboarding-modal">
+          <div className="onboarding-header"><div className="onboarding-logo"><span className="logo-icon">📚</span><span className="logo-text">VocabMaster Pro</span></div><h2>Welcome to Your Learning Journey!</h2><p className="onboarding-subtitle">Master vocabulary through engaging, context-based exercises</p></div>
+          <div className="onboarding-steps"><div className="onboarding-step"><div className="step-icon">🎯</div><div className="step-content"><h3>Fill the Blanks</h3><p>Drag words from the bank or tap to place them in context</p></div></div><div className="onboarding-step"><div className="step-icon">💡</div><div className="step-content"><h3>Use Hints Wisely</h3><p>Click highlighted keywords or use hints when stuck</p></div></div><div className="onboarding-step"><div className="step-icon">🚀</div><div className="step-content"><h3>Level Up</h3><p>Earn XP, unlock achievements, and track your mastery</p></div></div></div>
+          <button id="start-learning-btn" className="btn btn-primary btn-large pulse-animation">Start Learning<span className="btn-arrow">→</span></button>
+        </motion.div>
+      </div>
+
+      <div id="daily-challenge-modal" className="modal-overlay hidden"><div className="modal-card daily-modal"><button className="modal-close" id="close-daily-modal">×</button><div className="daily-header"><div className="daily-icon">🎯</div><h2>Daily Challenge</h2><p className="daily-date" id="daily-date"></p></div><div className="daily-content"><div className="daily-challenge-card" id="daily-challenge-info"><div className="challenge-type">Today's Focus</div><div className="challenge-category" id="daily-category">Context Inference</div><div className="challenge-goal">Complete 3 passages perfectly</div></div></div><button className="btn btn-primary" id="start-daily-btn">Accept Challenge</button></div></div>
+
+      <div className="app-container" style={{ display: tab === 'learn' ? undefined : 'none' }}>
+        <aside className="sidebar" id="sidebar">{/* legacy sidebar preserved */}
+          <div className="sidebar-header"><div className="brand"><span className="brand-icon">📚</span><span className="brand-text">VocabMaster</span><span className="brand-pro">PRO</span></div><button className="sidebar-close" id="sidebar-close">×</button></div>
+          <div className="stats-cards"><div className="stat-card stat-streak"><span className="stat-icon">🔥</span><span className="stat-value" id="streak-count">0</span><span className="stat-label">Day Streak</span></div><div className="stat-card stat-gems"><span className="stat-icon">💎</span><span className="stat-value" id="gems-count">0</span><span className="stat-label">Gems</span></div><div className="stat-card stat-stars"><span className="stat-icon">⭐</span><span className="stat-value" id="total-stars">0</span><span className="stat-label">Stars</span></div><div className="stat-card stat-mastery"><span className="stat-icon">🎯</span><span className="stat-value" id="mastery-percent">0%</span><span className="stat-label">Mastery</span></div></div>
+          <button className="daily-challenge-btn" id="open-daily-challenge"><span className="daily-btn-icon">🎯</span><span className="daily-btn-text">Daily Challenge</span><span className="daily-btn-badge" id="daily-status">NEW</span></button>
+          <nav className="sidebar-nav"><div className="nav-section"><h3 className="nav-title">Learning Mode</h3><div className="category-selector"><select id="vocab-category" className="select-modern"><option value="contextInference">🔍 Context Inference</option><option value="definitionMatch">📖 Definition Match</option><option value="synonymContrast">🔄 Synonym Contrast</option><option value="morphologicalAffix">🔤 Morphological Affix</option><option value="collocationCloze">🔗 Collocation Cloze</option><option value="grammaticalRole">📝 Grammatical Role</option><option value="connectorClue">🔀 Connector Clue</option></select></div><p className="category-desc" id="category-description">Learn words from surrounding context clues.</p></div><div className="nav-section"><h3 className="nav-title">Difficulty Level</h3><div className="level-pills" id="level-pills"><button className="level-pill active" data-level="p1">P1</button><button className="level-pill" data-level="p2">P2</button><button className="level-pill" data-level="p3">P3</button><button className="level-pill" data-level="p4">P4</button><button className="level-pill" data-level="p5">P5</button><button className="level-pill" data-level="p6">P6</button></div></div></nav>
+          <div className="settings-section"><div className="setting-row"><span className="setting-label">Timer</span><select id="timer-setting" className="select-small"><option value="off">Off</option><option value="120">2 min</option><option value="60">1 min</option><option value="30">30 sec</option></select></div><div className="setting-row"><span className="setting-label">Theme</span><select id="theme-select" className="select-small"><option value="default">Midnight</option><option value="light">Daylight</option><option value="ocean">Ocean</option><option value="forest">Forest</option><option value="sunset">Sunset</option></select></div><div className="setting-row"><span className="setting-label">Text Size</span><input type="range" id="text-size-slider" min="1" max="1.8" step="0.1" defaultValue="1.2" className="slider-modern" /></div><div className="setting-row"><span className="setting-label">Voice</span><select id="voice-select" className="select-small"></select></div><div className="toggle-buttons"><button className="toggle-btn" id="toggle-dyslexia"><span className="toggle-icon">Aa</span><span className="toggle-text">Dyslexia Font</span></button><button className="toggle-btn" id="toggle-sound"><span className="toggle-icon">🔊</span><span className="toggle-text">Sound</span></button></div></div>
+          <div className="sidebar-footer"><button className="btn-ghost" id="export-stats-btn">Export Progress</button><button className="btn-ghost btn-danger" id="reset-stats-btn">Reset All</button></div>
+        </aside>
+        <main className="main-content"><header className="top-bar"><button className="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button><div className="top-stats"><div className="top-stat"><span className="top-stat-icon">🔥</span><span className="top-stat-value" id="top-streak">0</span></div><div className="top-stat"><span className="top-stat-icon">💎</span><span className="top-stat-value" id="top-gems">0</span></div><div className="top-stat"><span className="top-stat-icon">⭐</span><span className="top-stat-value" id="top-stars">0/3</span></div></div><div className="progress-indicator"><span className="progress-text" id="passage-progress">1 / 10</span><div className="progress-bar-mini"><div className="progress-fill-mini" id="progress-fill-mini"></div></div></div></header>
+          <div className="game-area"><div className="timer-section" id="timer-section"><div className="timer-bar"><div className="timer-fill" id="timer-fill"></div></div><span className="timer-text" id="timer-text">60s</span></div><div className="passage-card"><div className="passage-header"><span className="passage-badge" id="category-badge">Context Inference</span><span className="passage-level" id="level-badge">Level P1</span></div><div className="passage-content" id="passage-text"></div></div><div className="word-bank-card"><div className="word-bank-header"><span className="word-bank-title">Word Bank</span><span className="word-bank-hint">Drag or tap to place</span></div><div className="word-bank" id="word-box"></div></div><div className="feedback-card" id="feedback"></div><div className="action-bar"><div className="action-group"><button className="action-btn hint-btn" id="hint-btn"><span className="action-icon">💡</span><span className="action-text">Hint</span></button><button className="action-btn listen-btn" id="read-passage-btn"><span className="action-icon">🔊</span><span className="action-text">Listen</span></button><button className="action-btn reset-btn" id="reset-words-btn"><span className="action-icon">↺</span><span className="action-text">Reset</span></button></div><button className="submit-btn" id="submit-btn"><span className="submit-text">Check Answers</span><span className="submit-icon">✓</span></button><div className="nav-group"><button className="nav-btn prev-btn" id="prev-btn" disabled><span className="nav-icon">←</span></button><button className="nav-btn next-btn" id="next-btn"><span className="nav-icon">→</span></button></div></div></div>
+        </main>
+      </div>
+
+      {tab === 'review' ? <ReviewMode /> : null}
+
+      <div className="hidden">
+        <button id="clear-btn"></button><button id="share-btn"></button><span id="score">0</span><span id="stars">0/3</span><span id="coins">0</span><span id="streak">0</span><span id="level">Apprentice</span><span id="progress"></span><span id="timer">60s</span><span id="achievements"></span><span id="themes-info"></span><div id="progress-bar"></div><div id="timer-bar"></div><div id="timer-container"></div><div id="progress-bar-container"></div><span id="completed-count">0</span><span id="total-score-summary">0</span><span id="missed-clues-summary"></span><button id="toggle-theme"></button><select id="level-select"><option value="p1">P1</option></select>
+      </div>
+    </div>
+  );
+}
