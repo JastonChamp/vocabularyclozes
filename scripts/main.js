@@ -506,6 +506,15 @@ function bindInteractions() {
     b.onclick = () => {
       if (state.selectedWord) {
         placeWord(b, state.selectedWord.textContent);
+      } else {
+        // Click on a filled blank with no word selected: return word to bank
+        const word = b.textContent.trim();
+        if (word) {
+          returnWordToBank(word);
+          clearBlankState(b);
+          b.textContent = '';
+          feedbackDisplay.textContent = '';
+        }
       }
     };
     b.ondragover = e => e.preventDefault();
@@ -543,15 +552,49 @@ function selectWord(el) {
   state.selectedWord = el;
 }
 
-function placeWord(blank, txt) {
-  blank.textContent = txt.trim();
-  const wasCorrect = checkSingle(blank);
+function returnWordToBank(word) {
+  const p = getCurrentPassage();
+  const wordIdx = p.wordBox.indexOf(word);
+  const def = (p.hints && wordIdx >= 0 && wordIdx < p.hints.length) ? p.hints[wordIdx] : '';
+  const wordEl = document.createElement('div');
+  wordEl.className = 'word';
+  wordEl.draggable = true;
+  wordEl.tabIndex = 0;
+  wordEl.innerHTML = `<span data-def="${def}">${word}</span>`;
+  wordBox.appendChild(wordEl);
+  wordEl.onclick = () => selectWord(wordEl);
+  wordEl.ondragstart = e => {
+    e.dataTransfer.setData('text/plain', wordEl.textContent);
+    wordEl.classList.add('dragging');
+  };
+  wordEl.ondragend = () => wordEl.classList.remove('dragging');
+}
 
-  if (wasCorrect) {
-    const match = Array.from(document.querySelectorAll('.word'))
-      .find(w => w.textContent.trim() === txt.trim());
-    if (match) match.remove();
+function clearBlankState(blank) {
+  blank.classList.remove('correct', 'incorrect');
+  const after = blank.nextElementSibling?.classList.contains('hint-for-blank')
+    ? blank.nextElementSibling : blank;
+  const expSpan = after.nextElementSibling;
+  if (expSpan?.classList.contains('explanation')) expSpan.remove();
+  const idx = +blank.dataset.blank - 1;
+  $$('.kw-' + (idx + 1)).forEach(el => el.classList.remove('highlighted'));
+}
+
+function placeWord(blank, txt) {
+  // Return previously placed word to bank when replacing
+  const oldWord = blank.textContent.trim();
+  if (oldWord) {
+    clearBlankState(blank);
+    returnWordToBank(oldWord);
   }
+
+  blank.textContent = txt.trim();
+  checkSingle(blank);
+
+  // Always remove the placed word from the bank
+  const match = Array.from(document.querySelectorAll('.word'))
+    .find(w => w.textContent.trim() === txt.trim());
+  if (match) match.remove();
 
   state.selectedWord = null;
   document.querySelectorAll('.word').forEach(w => w.classList.remove('selected'));
@@ -609,12 +652,14 @@ function checkSingle(blank) {
 // ANSWER CHECKING
 // ============================================
 function checkAnswers() {
+  clearInterval(state.timerInterval);
   const p = getCurrentPassage();
   const blanks = document.querySelectorAll('.blank');
-  let allGood = true;
-  blanks.forEach((b,i) => {
+  let correctCount = 0;
+
+  blanks.forEach((b, i) => {
     const ans = p.answers[i];
-    if (b.textContent.toLowerCase() === ans.toLowerCase()) {
+    if (b.textContent.trim().toLowerCase() === ans.toLowerCase()) {
       b.classList.add('correct');
       b.classList.remove('incorrect');
       correctCount++;
@@ -641,32 +686,40 @@ function checkAnswers() {
       span.textContent = exp;
     }
   });
-  blanks.forEach((b,i) => {
-    const ans = p.answers[i];
-    if (b.textContent.toLowerCase() !== ans.toLowerCase()) {
-      const clue = p.clueWords && p.clueWords[i] ? p.clueWords[i][0] : `blank${i+1}`;
-      stats.missed[clue] = (stats.missed[clue] || 0) + 1;
-    }
-  });
-    if (allGood) {
-      state.score += 10;
-      state.stars = Math.min(3, state.stars + 1);
-      state.coins += 10;
-      checkUnlocks();
-      saveProgress();
-      feedbackDisplay.textContent = 'Well done!';
-      speak('Well done');
-      stats.completed++;
-      stats.score = state.score;
-      updateLevel();
-      saveStats();
-      renderDashboard();
-    } else {
-    feedbackDisplay.textContent = 'Check your answers!';
-    speak('Check your answers');
-    stats.score = state.score;
-  saveStats();
-  renderDashboard();
+
+  const totalBlanks = blanks.length;
+  const accuracy = totalBlanks > 0 ? Math.round((correctCount / totalBlanks) * 100) : 0;
+  const isPerfect = correctCount === totalBlanks;
+
+  // Calculate stars
+  if (accuracy >= 100) state.stars = 3;
+  else if (accuracy >= 80) state.stars = 2;
+  else if (accuracy >= 60) state.stars = 1;
+  else state.stars = 0;
+
+  // Calculate XP
+  let xpEarned = correctCount * 10;
+  if (isPerfect) xpEarned += 20;
+  if (state.streak > 0) xpEarned += state.streak * 2;
+
+  if (isPerfect) {
+    state.score += 10;
+    state.gems += 10;
+    state.totalStars += state.stars;
+    state.passagesCompleted++;
+    updateStreak();
+    createConfetti();
+    showFeedback(`Perfect! +${xpEarned} XP 🎉`, 'success');
+    speak('Excellent work!');
+    stats.completed++;
+  } else if (accuracy >= 60) {
+    state.gems += 5;
+    state.totalStars += state.stars;
+    showFeedback(`Good job! ${accuracy}% correct. +${xpEarned} XP`, 'success');
+    speak('Good job!');
+  } else {
+    showFeedback(`Keep practicing! ${accuracy}% correct.`, 'error');
+    speak('Keep practicing!');
   }
 
   addXp(xpEarned);

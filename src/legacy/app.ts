@@ -497,6 +497,15 @@ function bindInteractions() {
     b.onclick = () => {
       if (state.selectedWord) {
         placeWord(b, state.selectedWord.textContent);
+      } else {
+        // Click on a filled blank with no word selected: return word to bank
+        const word = b.textContent.trim();
+        if (word) {
+          returnWordToBank(word);
+          clearBlankState(b);
+          b.textContent = '';
+          showFeedback('');
+        }
       }
     };
     b.ondragover = e => e.preventDefault();
@@ -541,7 +550,42 @@ function selectWord(el) {
   state.selectedWord = el;
 }
 
+function returnWordToBank(word) {
+  const p = getLevelData()[state.currentPassageIndex];
+  const wordIdx = p.wordBox.indexOf(word);
+  const def = (p.hints && wordIdx >= 0 && wordIdx < p.hints.length) ? p.hints[wordIdx] : '';
+  const wordEl = document.createElement('div');
+  wordEl.className = 'word';
+  wordEl.draggable = true;
+  wordEl.tabIndex = 0;
+  wordEl.innerHTML = `<span data-def="${def}">${word}</span>`;
+  wordBox.appendChild(wordEl);
+  wordEl.onclick = () => selectWord(wordEl);
+  wordEl.ondragstart = e => {
+    e.dataTransfer.setData('text/plain', wordEl.textContent);
+    wordEl.classList.add('dragging');
+  };
+  wordEl.ondragend = () => wordEl.classList.remove('dragging');
+}
+
+function clearBlankState(blank) {
+  blank.classList.remove('correct', 'incorrect');
+  const after = blank.nextElementSibling?.classList.contains('hint-for-blank')
+    ? blank.nextElementSibling : blank;
+  const expSpan = after.nextElementSibling;
+  if (expSpan?.classList.contains('explanation')) expSpan.remove();
+  const idx = +blank.dataset.blank - 1;
+  $$('.kw-' + (idx + 1)).forEach(el => el.classList.remove('highlighted'));
+}
+
 function placeWord(blank, txt) {
+  // Return previously placed word to bank when replacing
+  const oldWord = blank.textContent.trim();
+  if (oldWord) {
+    clearBlankState(blank);
+    returnWordToBank(oldWord);
+  }
+
   blank.textContent = txt;
   checkSingle(blank);
   state.selectedWord = null;

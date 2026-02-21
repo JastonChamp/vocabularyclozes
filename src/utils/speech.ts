@@ -1,4 +1,5 @@
 export function loadVoices(selectEl) {
+  if (!selectEl) return;
   function populateVoices() {
     const voices = speechSynthesis.getVoices();
     selectEl.innerHTML = voices
@@ -12,6 +13,7 @@ export function loadVoices(selectEl) {
 
 export function speak(text) {
   if (!window.speechSynthesis) return;
+  speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(text);
   const selected = (document.getElementById('voice-select') as HTMLSelectElement | null)?.value;
   if (selected) {
